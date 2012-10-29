@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dictionary EnglishName="Russian" CultureName="Русский" Culture="ru">
+  <Value Id="Typhoon" Text="Тайфун" Description="Тайфун" ApplicationName="Тайфун" Title="Тайфун" FlowDirection="LeftToRight"/>
+  <Value Id="CommandStation" Text="командная станция"/>
+  <Value Id="Version" Text="Версия:"/>
+  <Value Id="Author" Text="Автор:"/>
+
+  <Value Id="New" Text="Новый" ToolTip="Новый" />
+  <Value Id="Open" Text="Открыть..." ToolTip="Открыть..." />
+  <Value Id="Save" Text="Сохранить" ToolTip="Сохранить" />
+  <Value Id="SaveAs" Text="Сохранить как..." />
+  <Value Id="Print" Text="Печать..." />
+  <Value Id="SendInEmail" Text="Отправить по почте..." />
+
+  <Value Id="Power" Text="Питание" />
+  <Value Id="On" Text="Вкл." />
+  <Value Id="Off" Text="Выкл." />
+
+
+  <Value Id="RecentLayouts" Content="Недавние макеты" />
+  <Value Id="LayoutFilesFilter" Text="Файлы макетов|*.layout|Все файлы|*.*" />
+  <Value Id="DecoderFilesFilter" Text="Файлы декодеров|*.decoder|Все файлы|*.*" />
+  <Value Id="ImageFilesFilter" Text="Файлы изображений|*.jpg;*.gif;*.bmp;*.png;*.tiff|Все файлы|*.*" />
+  <Value Id="Untitled" Text="Без имени" />
+
+
+
+
+  <Value Id="Connection" Text="Соединение" />
+  <Value Id="Station" Text="Станция" />
+  <Value Id="MainTrack" Text="Главный путь" />
+  <Value Id="ProgramTrack" Text="Программный путь" />
+  <Value Id="Throttles" Text="Пульты" Title="Пульты" />
+  
+  <!-- Page titles -->
+  <Value Id="MainMenu" Text="Главное меню" Title="Главное меню" />
+  <Value Id="Database" Text="База данных" />
+  <Value Id="Operation" Text="Управление" />
+  <Value Id="LayoutTopology" Text="Схема макета" />
+  <Value Id="Manual" Text="Справка" />
+  <Value Id="HomePage" Text="Домашняя страница"/>
+
+
+  <Value Id="Type" Header="Тип" />
+  <Value Id="All" Text="Все" Content="Все" />
+  <Value Id="Locomotives" Text="Локомотивы" Content="Локомотивы" Header="Локомотивы" />
+  <Value Id="Locomotive" Text="Локомотив" Header="Локомотив"/>
+  <Value Id="Locomotive2" Text="Локомотив:"/>
+  <Value Id="Consists" Text="Составы" Content="Составы" />
+  <!--<Value Id="Consist" Text="Состав" />-->
+  <Value Id="Turnouts" Text="Стрелки" Content="Стрелки" />
+  <Value Id="Signals" Text="Сигналы" Content="Сигналы" />
+  <Value Id="Turntables" Text="Поворотные круги" Content="Поворотные круги" />
+  <Value Id="AccessoryGroups" Text="Группы аксессуаров" Content="Группы аксессуаров" />
+
+  <!-- Message box texts-->
+  <Value Id="InvalidLayoutFile" Text="Неверный файл макета!" />
+  <Value Id="ExitProgram" Text="Закрыть программу?" />
+  <Value Id="SaveCurrentLayout" Text="Сохранить текущий макет?" />
+  <Value Id="AdapterConnected" Text="Адаптер подключен!" />
+  <Value Id="AdapterDisconnected" Text="Адаптер отключен!" />
+  <Value Id="DeleteSelectedItem" Text="Удалить выбранный элемент?" />
+  <Value Id="InvalidDecoderFile" Text="Неправильный формат файла декодера!" />
+  <Value Id="IPServerDisconnected" Text="IP-сервер недоступен!" />
+  <Value Id="NavigationError" Text="Не удалось открыть " />
+  <Value Id="OperationError" Text="Операция не выполнена!" />
+  <Value Id="OperationOK" Text="Операция выполнена успешно!" />
+  <Value Id="ResetDecoder" Text="Выполнить сброс декодера к заводским настройкам?" />
+  <Value Id="PleaseWait" BusyContent="Пожалуйста, подождите..." />
+  <Value Id="SaveCurrentDecoder" Text="Сохранить текущий декодер?" />
+
+
+
+
+
+  <Value Id="Common" Text="Общие" Header="Общие" />
+  <!--<Value Id="Properties" Text="Свойства" Header="Свойства" />-->
+  <Value Id="Programming" Text="Программирование" Header="Программирование" />
+  <Value Id="OperationTest" Text="Операционный тест" Header="Операционный тест" />
+  
+  
+  
+  <Value Id="Image" Text="Изображение:" Header="Изображение" />
+  <Value Id="Name" Text="Имя:" Header="Имя" />
+  <Value Id="Description" Text="Описание:" Header="Описание" />
+  <Value Id="SpeedSteps" Text="Формат:" Header="Формат" />
+  <Value Id="Address" Header="Адрес" />
+  <Value Id="PrimaryAddress" Text="Первичный адрес:" Header="Первичный адрес" />
+  <Value Id="ExtendedAddress" Text="Расширенный адрес:" Header="Расширенный адрес" />
+  <Value Id="UseExtendedAddress" Text="Исп. расшир. адрес:" Header="Исп. расшир. адрес" />
+  <Value Id="UsedInConsist" Header="Исп. в составе" />
+  <Value Id="ConsistAddress" Text="Адрес состава:" Header="Адрес состава" />
+  <Value Id="ConsistNormalDirection" Text="Движение в составе вперед:" Header="Движение в составе вперед" />
+  <Value Id="Decoder" Text="Декодер:" Header="Декодер" />
+  <Value Id="Decoders" Text="Декодеры" Title="Декодеры" />
+  <Value Id="MobileDecoder" Text="Мобильный декодер:" />
+  <Value Id="SoundDecoder" Text="Звуковой декодер:" />
+  <Value Id="Manufacturer" Text="Производитель:" />
+  <Value Id="Model" Text="Модель:" />
+
+
+
+  <Value Id="Light" Content="Свет" />
+  <Value Id="Brake" Content="Тормоз" Text="Тормоз" />
+  <Value Id="Stop" Content="Стоп" Text="Стоп" />
+  <Value Id="Forward" Header="Вперед" Text="Вперед" />
+  <Value Id="Forward2" Text="Вперед:" />
+  <!--<Value Id="Reverse" Content="Назад" Text="Назад" />-->
+
+
+  <Value Id="Import" Text="Импорт" />
+  <Value Id="Export" Text="Экспорт" />
+  <Value Id="Select" Text="Выбрать" ToolTip="Выбрать" />
+  <Value Id="Add" Text="Добавить" ToolTip="Добавить" />
+  <Value Id="Delete" Text="Удалить" ToolTip="Удалить" />
+  <Value Id="Clear" Text="Очистить" ToolTip="Очистить" />
+  <Value Id="Reset" Text="Сброс" ToolTip="Сброс" />
+
+  <Value Id="Mode" Text="Режим:" />
+  <Value Id="Read" Text="Прочитать" />
+  <Value Id="Write" Text="Записать" />
+  <!--<Value Id="Features" Text="Характеристики" />-->
+  <Value Id="Feature" Header="Характеристика" />
+  <Value Id="Value" Header="Значение" />
+  <Value Id="Parameter" Header="Параметр" />
+  <Value Id="Range" Header="Диапазон" />
+  <Value Id="Default" Header="По умолчанию" />
+  <Value Id="Actions" Header="Действия" />
+  <Value Id="Up" Text="Вверх" />
+  <Value Id="Down" Text="Вниз" />
+  
+  
+  <!--<Value Id="IPServerNameOrIPAddress" Text="Имя или IP-адрес станции:" />-->
+
+
+
+  <!--
+  <Value Id="0" FlowDirection="LeftToRight" Title="Demo Window" Width="700" Height="340" />
+  <Value Id="1" Content="This is a simple text" />
+  <Value Id="2" Text="This is a formatted text. For example, the width of this window is {0}, and its height is {1}" />
+  <Value Id="3" ToolTip="Simple Tool Tip" Text="This control takes width, height, color and flow direction from the dictionary" Width="650" Height="50" Background="DarkGray" />
+  <Value Id="4" Text="Another way to pass a dynamic Uid" />
+  <Value Id="5" Text="Text and color within a Data Template for instance {0}" Foreground="Silver" />
+  <Value Id="6" Text="Different text and different color within a Data Template for instance {0}" Foreground="Gold" />
+  <Value Id="7" Source="Images\Hebrew.jpg" />
+  <Value Id="8" Content="Exit" />
+  <Value Id="9" Content="Show Error" />
+  <Value Id="10" Content="Change Data" />
+  <Value Id="NotEnoughMemory" Message="There is not enough memory" />
+  <Value Id="11" ToolTip="Apple" />
+  <Value Id="12" ToolTip="Bannana" />
+  <Value Id="13" ToolTip="Melon" />
+  -->
+  
+  <Value Id="GridViewGroupPanelText" Text="Для группировки по колонке перетащите сюда ее заголовок" />
+  <Value Id="GridViewGroupPanelTopTextGrouped" Text="Сгруппировано по:" />
+  <Value Id="GridViewClearFilter" Text="Сбросить фильтр" />
+  <Value Id="GridViewFilter" Text="Отфильтровать" />
+  <Value Id="GridViewGroupPanelTopText" Text="Group Header" />
+  <Value Id="GridViewAlwaysVisibleNewRow" Text="Нажмите здесь для добавления нового элемента" />
+  <Value Id="GridViewFilterAnd" Text="И" />
+  <Value Id="GridViewFilterContains" Text="Содержит" />
+  <Value Id="GridViewFilterDoesNotContain" Text="Не содержит" />
+  <Value Id="GridViewFilterEndsWith" Text="Заканчивается на" />
+  <Value Id="GridViewFilterIsContainedIn" Text="Содержится в" />
+  <Value Id="GridViewFilterIsEqualTo" Text="Равно" />
+  <Value Id="GridViewFilterIsGreaterThan" Text="Больше" />
+  <Value Id="GridViewFilterIsGreaterThanOrEqualTo" Text="Больше или равно" />
+  <Value Id="GridViewFilterIsLessThan" Text="Меньше" />
+  <Value Id="GridViewFilterIsLessThanOrEqualTo" Text="Меньше или равно" />
+  <Value Id="GridViewFilterIsNotEqualTo" Text="Не равно" />
+  <Value Id="GridViewFilterOr" Text="Или" />
+  <Value Id="GridViewFilterSelectAll" Text="Выбрать все" />
+  <Value Id="GridViewFilterStartsWith" Text="Начинается с" />
+  <Value Id="GridViewFilterShowRowsWithValueThat" Text="Показать строки, которые" />
+  <Value Id="GridViewFilterMatchCase" Text="Совпадает регистр" />
+</Dictionary>

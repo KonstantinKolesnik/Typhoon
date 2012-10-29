@@ -1,0 +1,42 @@
+﻿<Page x:Class="Typhoon.CommandStation.UI.Pages.pageLayoutTopology"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+      xmlns:telerikTransitions="clr-namespace:Telerik.Windows.Controls.TransitionEffects;assembly=Telerik.Windows.Controls" 
+      xmlns:local="clr-namespace:Typhoon.CommandStation"
+      xmlns:controls="clr-namespace:Typhoon.CommandStation.Controls"
+      xmlns:loc="clr-namespace:Typhoon.Localization;assembly=Typhoon.Localization"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" TextOptions.TextFormattingMode="Display" FontSize="11" Name="page"
+      
+      loc:Translate.Uid="LayoutTopology"
+      Title="{loc:Translate Layout Topology}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" CornerRadius="3 3 0 0" BorderBrush="{StaticResource PageTitleBorderBrush}" BorderThickness="1" Background="{StaticResource Bar}">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock VerticalAlignment="Center">
+                    <Hyperlink NavigateUri="pageMenu.xaml"><TextBlock loc:Translate.Uid="MainMenu" Text="{loc:Translate Main menu}" Style="{StaticResource PageNavigationItemText}"/></Hyperlink>
+                </TextBlock>
+                <Image Style="{StaticResource PageTitleImage}" Source="{StaticResource LayoutIcon}"/>
+                <TextBlock Style="{StaticResource PageTitleText}" loc:Translate.Uid="LayoutTopology" Text="{loc:Translate Layout topology}"/>
+            </StackPanel>
+        </Border>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </Grid>
+</Page>

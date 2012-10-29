@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Typhoon.CommandStation.Controls.ucConsistItemList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+      xmlns:local="clr-namespace:Typhoon.CommandStation"
+      xmlns:controls="clr-namespace:Typhoon.CommandStation.Controls"
+      xmlns:loc="clr-namespace:Typhoon.Localization;assembly=Typhoon.Localization"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" TextOptions.TextFormattingMode="Display" FontSize="11" Name="uc">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type telerik:GridViewColumn}">
+            <Setter Property="HeaderTextAlignment" Value="Center"/>
+        </Style>
+        
+        <DataTemplate x:Key="LocomotiveIDCellTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Path=ImageSource, UpdateSourceTrigger=PropertyChanged}" Height="18" Stretch="Uniform" VerticalAlignment="Center" Margin="3, 0" />
+                <TextBlock Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Margin="3, 0"/>
+            </StackPanel>
+        </DataTemplate>
+        <Style x:Key="ItemContainerStyle" TargetType="{x:Type telerik:RadComboBoxItem}">
+            <Setter Property="IsEnabled" Value="{Binding IsUsedInConsist, Converter={StaticResource InverseBooleanConverter}}"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <telerik:RadToolBar Grid.Row="0" Style="{StaticResource Toolbar}" VerticalAlignment="Top">
+            <telerik:RadRibbonButton loc:Translate.Uid="Add" Text="{loc:Translate Add}" Command="local:RoutedCommands.AddConsistItem" SmallImage="{StaticResource AddIconSmall}" Size="Medium"/>
+            <telerik:RadRibbonButton loc:Translate.Uid="Delete" Text="{loc:Translate Delete}" Command="local:RoutedCommands.DeleteConsistItem" SmallImage="{StaticResource DeleteIconSmall}" Size="Medium"/>
+            <telerik:RadToolBarSeparator/>
+            <telerik:RadRibbonButton loc:Translate.Uid="Up" Text="{loc:Translate Up}" Command="local:RoutedCommands.ConsistItemUp" SmallImage="{StaticResource UpIconSmall}" Size="Medium"/>
+            <telerik:RadRibbonButton loc:Translate.Uid="Down" Text="{loc:Translate Down}" Command="local:RoutedCommands.ConsistItemDown" SmallImage="{StaticResource DownIconSmall}" Size="Medium"/>
+        </telerik:RadToolBar>
+
+        <telerik:RadGridView x:Name="gvConsistItems" Grid.Row="1"
+                             ItemsSource="{Binding Path=Consist.Items, ElementName=uc}"
+                             SelectedItem="{Binding Path=ConsistItem, ElementName=uc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             IsReadOnly="False"
+                             CanUserFreezeColumns="False" CanUserDeleteRows="False" CanUserInsertRows="False"
+                             IsFilteringAllowed="True"
+                             AutoGenerateColumns="False"
+                             RowIndicatorVisibility="Collapsed"
+                             GridLinesVisibility="None"
+                             SelectionMode="Single"
+                             ShowColumnFooters="False" ShowGroupPanel="False"
+                             >
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewComboBoxColumn
+                    loc:Translate.Uid="Locomotive" Header="{loc:Translate Locomotive}"
+                    DataMemberBinding="{Binding LocomotiveID}"
+                    ItemTemplate="{StaticResource LocomotiveIDCellTemplate}"
+                    IsGroupable="False" IsSortable="False" IsFilterable="False" UniqueName="cbLocomotive"
+                    ItemsSource="{Binding Path=Layout.Locomotives, UpdateSourceTrigger=PropertyChanged}"
+                    SelectedValueMemberPath="ID"
+                    >
+                    <telerik:GridViewComboBoxColumn.EditorStyle>
+                        <Style TargetType="telerik:RadComboBox">
+                            <Setter Property="ItemContainerStyle" Value="{StaticResource ItemContainerStyle}"/>
+                            <EventSetter Event="SelectionChanged" Handler="ComboBox_SelectionChanged" />
+                        </Style>
+                    </telerik:GridViewComboBoxColumn.EditorStyle>
+                </telerik:GridViewComboBoxColumn>
+                <telerik:GridViewCheckBoxColumn loc:Translate.Uid="Forward" Header="{loc:Translate Forward}" DataMemberBinding="{Binding Forward}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+    </Grid>
+</UserControl>

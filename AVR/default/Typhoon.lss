@@ -1,0 +1,1172 @@
+
+Typhoon.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000514  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000002c  00800060  00000514  000005a8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000026  0080008c  0080008c  000005d4  2**0
+                  ALLOC
+  3 .stab         000006b4  00000000  00000000  000005d4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000085  00000000  00000000  00000c88  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 000000a0  00000000  00000000  00000d0d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 000001e3  00000000  00000000  00000dad  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00000817  00000000  00000000  00000f90  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 00000530  00000000  00000000  000017a7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   0000095a  00000000  00000000  00001cd7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000140  00000000  00000000  00002634  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    000002ff  00000000  00000000  00002774  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    00000139  00000000  00000000  00002a73  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	12 c0       	rjmp	.+36     	; 0x26 <__ctors_end>
+   2:	2a c0       	rjmp	.+84     	; 0x58 <__bad_interrupt>
+   4:	29 c0       	rjmp	.+82     	; 0x58 <__bad_interrupt>
+   6:	28 c0       	rjmp	.+80     	; 0x58 <__bad_interrupt>
+   8:	74 c0       	rjmp	.+232    	; 0xf2 <__vector_4>
+   a:	26 c0       	rjmp	.+76     	; 0x58 <__bad_interrupt>
+   c:	25 c0       	rjmp	.+74     	; 0x58 <__bad_interrupt>
+   e:	24 c0       	rjmp	.+72     	; 0x58 <__bad_interrupt>
+  10:	23 c0       	rjmp	.+70     	; 0x58 <__bad_interrupt>
+  12:	22 c0       	rjmp	.+68     	; 0x58 <__bad_interrupt>
+  14:	21 c0       	rjmp	.+66     	; 0x58 <__bad_interrupt>
+  16:	20 c0       	rjmp	.+64     	; 0x58 <__bad_interrupt>
+  18:	1f c0       	rjmp	.+62     	; 0x58 <__bad_interrupt>
+  1a:	1e c0       	rjmp	.+60     	; 0x58 <__bad_interrupt>
+  1c:	1d c0       	rjmp	.+58     	; 0x58 <__bad_interrupt>
+  1e:	1c c0       	rjmp	.+56     	; 0x58 <__bad_interrupt>
+  20:	1b c0       	rjmp	.+54     	; 0x58 <__bad_interrupt>
+  22:	1a c0       	rjmp	.+52     	; 0x58 <__bad_interrupt>
+  24:	19 c0       	rjmp	.+50     	; 0x58 <__bad_interrupt>
+
+00000026 <__ctors_end>:
+  26:	11 24       	eor	r1, r1
+  28:	1f be       	out	0x3f, r1	; 63
+  2a:	cf ed       	ldi	r28, 0xDF	; 223
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_copy_data>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	e4 e1       	ldi	r30, 0x14	; 20
+  36:	f5 e0       	ldi	r31, 0x05	; 5
+  38:	02 c0       	rjmp	.+4      	; 0x3e <__SP_H__>
+  3a:	05 90       	lpm	r0, Z+
+  3c:	0d 92       	st	X+, r0
+  3e:	ac 38       	cpi	r26, 0x8C	; 140
+  40:	b1 07       	cpc	r27, r17
+  42:	d9 f7       	brne	.-10     	; 0x3a <__CCP__+0x6>
+
+00000044 <__do_clear_bss>:
+  44:	10 e0       	ldi	r17, 0x00	; 0
+  46:	ac e8       	ldi	r26, 0x8C	; 140
+  48:	b0 e0       	ldi	r27, 0x00	; 0
+  4a:	01 c0       	rjmp	.+2      	; 0x4e <.do_clear_bss_start>
+
+0000004c <.do_clear_bss_loop>:
+  4c:	1d 92       	st	X+, r1
+
+0000004e <.do_clear_bss_start>:
+  4e:	a2 3b       	cpi	r26, 0xB2	; 178
+  50:	b1 07       	cpc	r27, r17
+  52:	e1 f7       	brne	.-8      	; 0x4c <.do_clear_bss_loop>
+  54:	16 d0       	rcall	.+44     	; 0x82 <main>
+  56:	5c c2       	rjmp	.+1208   	; 0x510 <_exit>
+
+00000058 <__bad_interrupt>:
+  58:	d3 cf       	rjmp	.-90     	; 0x0 <__vectors>
+
+0000005a <InitHardware>:
+void InitHardware()
+{
+    // Timer1 initialization done in InitDCCOut();
+
+	// Port B
+	PORTB = (0<<EN_MAIN)
+  5a:	84 e6       	ldi	r24, 0x64	; 100
+  5c:	88 bb       	out	0x18, r24	; 24
+		  | (0<<DCC)
+	      | (0<<NDCC)
+		  | (1<<SHORT_MAIN)    	// pull up (0 active)
+		  | (1<<SHORT_PROG)     // pull up (0 active)
+		  | (0<<LED_RS232);    	// low = turn off
+	DDRB  = (1<<EN_MAIN)  		// out
+  5e:	8b e9       	ldi	r24, 0x9B	; 155
+  60:	87 bb       	out	0x17, r24	; 23
+		  | (0<<SHORT_MAIN)		// in
+		  | (0<<SHORT_PROG)		// in
+		  | (1<<LED_RS232);		// out
+
+	// Port D
+	PORTD |= (1<<MY_RXD)			// pullup
+  62:	82 b3       	in	r24, 0x12	; 18
+  64:	83 60       	ori	r24, 0x03	; 3
+  66:	82 bb       	out	0x12, r24	; 18
+	      | (1<<MY_TXD)
+		  //| (0<<LED_ACK)
+	      | (0<<LED_SHORT_MAIN)
+	      | (0<<LED_SHORT_PROG);
+	DDRD  |= (0<<MY_RXD)    	// in
+  68:	81 b3       	in	r24, 0x11	; 17
+  6a:	82 63       	ori	r24, 0x32	; 50
+  6c:	81 bb       	out	0x11, r24	; 17
+	      | (1<<MY_TXD)   		// out
+		  //| (1<<LED_ACK)		// out
+	      | (1<<LED_SHORT_MAIN)	// out
+	      | (1<<LED_SHORT_PROG);// out
+
+    ACSR=0x80; // 0b100000000 (ACD = On) - Analog comparator disabled
+  6e:	80 e8       	ldi	r24, 0x80	; 128
+  70:	88 b9       	out	0x08, r24	; 8
+	//SFIOR=0x00;
+	MCUCR &= 0b01111111; // PUD = 0: no "pull up disabled"
+  72:	85 b7       	in	r24, 0x35	; 53
+  74:	8f 77       	andi	r24, 0x7F	; 127
+  76:	85 bf       	out	0x35, r24	; 53
+}
+  78:	08 95       	ret
+
+0000007a <InitInterrupt>:
+//----------------------------------------------------------------------------------------
+void InitInterrupt()
+{
+    TIMSK = (1<<OCIE1A)      // Timer1/Counter1 Compare A Interrupt; reassigned in InitDCCOut
+  7a:	80 e4       	ldi	r24, 0x40	; 64
+  7c:	89 bf       	out	0x39, r24	; 57
+		  | (0<<TOIE0);      // Timer0/Counter0 Overflow Interrupt
+
+	//GIMSK = (1<<PCIE);		 // pin change interrupt enabled
+	//PCMSK = 0b01100100;		 // PCINT 2,5,7 enabled
+
+	sei();
+  7e:	78 94       	sei
+}
+  80:	08 95       	ret
+
+00000082 <main>:
+//----------------------------------------------------------------------------------------
+int main()
+{
+	InitHardware();
+  82:	eb df       	rcall	.-42     	; 0x5a <InitHardware>
+	MCUCR &= 0b01111111; // PUD = 0: no "pull up disabled"
+}
+//----------------------------------------------------------------------------------------
+void InitInterrupt()
+{
+    TIMSK = (1<<OCIE1A)      // Timer1/Counter1 Compare A Interrupt; reassigned in InitDCCOut
+  84:	80 e4       	ldi	r24, 0x40	; 64
+  86:	89 bf       	out	0x39, r24	; 57
+		  | (0<<TOIE0);      // Timer0/Counter0 Overflow Interrupt
+
+	//GIMSK = (1<<PCIE);		 // pin change interrupt enabled
+	//PCMSK = 0b01100100;		 // PCINT 2,5,7 enabled
+
+	sei();
+  88:	78 94       	sei
+//----------------------------------------------------------------------------------------
+int main()
+{
+	InitHardware();
+	InitInterrupt();
+    InitDCCOut();
+  8a:	07 d0       	rcall	.+14     	; 0x9a <InitDCCOut>
+    InitRS232(BAUD_57600);//BAUD_19200);
+  8c:	83 e0       	ldi	r24, 0x03	; 3
+  8e:	3c d1       	rcall	.+632    	; 0x308 <InitRS232>
+
+	MAIN_TRACK_OFF;
+  90:	c0 98       	cbi	0x18, 0	; 24
+	PROG_TRACK_OFF;
+  92:	c1 98       	cbi	0x18, 1	; 24
+    //SendStartupMessages();          // issue defined power up sequence on tracks
+	*/
+    
+    while (1)
+    {
+    	CheckState();     // check short
+  94:	fd d1       	rcall	.+1018   	; 0x490 <CheckState>
+        //RunOrganizer(); // run command organizer, depending on state, it will execute normal track operation or programming
+        //RunProgrammer();
+        //#if (XPRESSNET_ENABLED == 1 && LOCO_DATABASE == NAMED)
+        //	run_database();                  // check transfer of loco database 
+        //#endif
+        RunParser(); // check commands from PC
+  96:	dd d1       	rcall	.+954    	; 0x452 <RunParser>
+  98:	fd cf       	rjmp	.-6      	; 0x94 <main+0x12>
+
+0000009a <InitDCCOut>:
+	}
+}
+//----------------------------------------------------------------------------------------
+void InitDCCOut()
+{
+	DCCIdle.Size = 2;
+  9a:	82 e0       	ldi	r24, 0x02	; 2
+  9c:	80 93 a0 00 	sts	0x00A0, r24
+    DCCIdle.Dcc[0] = 0xFF;
+  a0:	8f ef       	ldi	r24, 0xFF	; 255
+  a2:	80 93 a1 00 	sts	0x00A1, r24
+    DCCIdle.Dcc[1] = 0x00;
+  a6:	10 92 a2 00 	sts	0x00A2, r1
+
+	//DCCReset.Size = 2;
+    //DCCReset.Dcc[0] = 0x00;
+    //DCCReset.Dcc[1] = 0x00;
+
+	NextMessageCount = 0;
+  aa:	10 92 8c 00 	sts	0x008C, r1
+
+    doi.State = Idle;
+  ae:	10 92 95 00 	sts	0x0095, r1
+{
+    doi.RailcomEnabled = 1;
+}
+void DCCOutDisableRailcom()
+{
+    doi.RailcomEnabled = 0;
+  b2:	10 92 9f 00 	sts	0x009F, r1
+
+//----------------------------------------------------------------------------------------
+static inline void SetBit(bool bit) __attribute__((always_inline));
+void SetBit(bool bit)
+{
+	TCCR1A = (1<<COM1A1) | (0<<COM1A0)  //  "0" OC1A(=DCC) on compare match
+  b6:	80 eb       	ldi	r24, 0xB0	; 176
+  b8:	8f bd       	out	0x2f, r24	; 47
+           | (1<<COM1B1) | (1<<COM1B0)  //  "1" OC1B(=NDCC) on compare match
+           | (0<<WGM11)  | (0<<WGM10);  //  CTC (+ WGM12, WGM13) (сброс при совпадении), TOP = OCR1A
+
+	OCR1A = OCR1B = F_CPU * (bit == 0 ? PERIOD_0 : PERIOD_1) / 2 / 1000000L; // 928/464 ticks
+  ba:	20 ed       	ldi	r18, 0xD0	; 208
+  bc:	31 e0       	ldi	r19, 0x01	; 1
+  be:	39 bd       	out	0x29, r19	; 41
+  c0:	28 bd       	out	0x28, r18	; 40
+  c2:	28 b5       	in	r18, 0x28	; 40
+  c4:	39 b5       	in	r19, 0x29	; 41
+  c6:	3b bd       	out	0x2b, r19	; 43
+  c8:	2a bd       	out	0x2a, r18	; 42
+    //#endif
+
+    SetBit(1); // init COMP regs.
+
+	// set Timer/Counter1
+    TCNT1 = 0; // no prescaler
+  ca:	1d bc       	out	0x2d, r1	; 45
+  cc:	1c bc       	out	0x2c, r1	; 44
+    
+	TCCR1A = (1<<COM1A1) | (0<<COM1A0)  //  "0" OC1A(=DCC) on compare match
+  ce:	8f bd       	out	0x2f, r24	; 47
+           | (1<<COM1B1) | (1<<COM1B0)  //  "1" OC1B(=NDCC) on compare match
+           | (0<<WGM11)  | (0<<WGM10);  //  CTC (+ WGM12, WGM13) (сброс при совпадении), TOP = OCR1A
+    
+	TCCR1B = (0<<ICNC1)  | (0<<ICES1)   // Noise Canceler: Off
+  d0:	89 e0       	ldi	r24, 0x09	; 9
+  d2:	8e bd       	out	0x2e, r24	; 46
+           | (0<<WGM13)  | (1<<WGM12)
+           | (0<<CS12)   | (0<<CS11)    | (1<<CS10);  // no prescaler, source = sys_clk
+
+	TCCR1C = (0<<FOC1A)  | (0<<FOC1B);  //  reserved in PWM, set to zero
+  d4:	12 bc       	out	0x22, r1	; 34
+
+    TIMSK |= (1<<OCIE1A);// | 				// разрешения прерывания по событию "совпадение А" таймера/счетчика Т1
+  d6:	89 b7       	in	r24, 0x39	; 57
+  d8:	80 64       	ori	r24, 0x40	; 64
+  da:	89 bf       	out	0x39, r24	; 57
+			 //(0<<OCIE1B);				// разрешения прерывания по событию "совпадение B" таймера/счетчика Т1
+}
+  dc:	08 95       	ret
+
+000000de <DCCOutEnableRailcom>:
+//-------------------------------------------------------------------------------------
+// RailCom Interface
+//-------------------------------------------------------------------------------------
+void DCCOutEnableRailcom()
+{
+    doi.RailcomEnabled = 1;
+  de:	81 e0       	ldi	r24, 0x01	; 1
+  e0:	80 93 9f 00 	sts	0x009F, r24
+}
+  e4:	08 95       	ret
+
+000000e6 <DCCOutDisableRailcom>:
+void DCCOutDisableRailcom()
+{
+    doi.RailcomEnabled = 0;
+  e6:	10 92 9f 00 	sts	0x009F, r1
+}
+  ea:	08 95       	ret
+
+000000ec <DCCOutQueryRailcom>:
+unsigned char DCCOutQueryRailcom()
+{
+    return doi.RailcomEnabled;
+}
+  ec:	80 91 9f 00 	lds	r24, 0x009F
+  f0:	08 95       	ret
+
+000000f2 <__vector_4>:
+    }
+}
+*/
+//----------------------------------------------------------------------------------------
+ISR(TIMER1_COMPA_vect)
+{
+  f2:	1f 92       	push	r1
+  f4:	0f 92       	push	r0
+  f6:	0f b6       	in	r0, 0x3f	; 63
+  f8:	0f 92       	push	r0
+  fa:	11 24       	eor	r1, r1
+  fc:	2f 93       	push	r18
+  fe:	3f 93       	push	r19
+ 100:	4f 93       	push	r20
+ 102:	5f 93       	push	r21
+ 104:	6f 93       	push	r22
+ 106:	7f 93       	push	r23
+ 108:	8f 93       	push	r24
+ 10a:	9f 93       	push	r25
+ 10c:	af 93       	push	r26
+ 10e:	bf 93       	push	r27
+ 110:	ef 93       	push	r30
+ 112:	ff 93       	push	r31
+    // phase 0: just repeat same duration, but invert output.
+    // phase 1: create new bit.
+
+    if (!(PINB & (1<<DCC))) // phase 0: just repeat same duration, but invert output.
+ 114:	b3 99       	sbic	0x16, 3	; 22
+ 116:	03 c0       	rjmp	.+6      	; 0x11e <__vector_4+0x2c>
+    	}
+        else
+		*/
+        {
+			// invert output
+            TCCR1A = (1<<COM1A1) | (1<<COM1A0)  //  "1" OC1A(=DCC) on compare match
+ 118:	80 ee       	ldi	r24, 0xE0	; 224
+ 11a:	8f bd       	out	0x2f, r24	; 47
+ 11c:	e4 c0       	rjmp	.+456    	; 0x2e6 <__vector_4+0x1f4>
+	    //       | (1<<COM1B1) | (1<<COM1B0)  //  "1" OC1B(=NDCC) on compare match
+	    //       | (0<<WGM11)  | (0<<WGM10);  //  CTC (+ WGM12, WGM13) (сброс при совпадении), TOP = OCR1A
+		//return;
+		*/
+
+		switch (doi.State)
+ 11e:	80 91 95 00 	lds	r24, 0x0095
+ 122:	82 30       	cpi	r24, 0x02	; 2
+ 124:	09 f4       	brne	.+2      	; 0x128 <__vector_4+0x36>
+ 126:	69 c0       	rjmp	.+210    	; 0x1fa <__vector_4+0x108>
+ 128:	83 30       	cpi	r24, 0x03	; 3
+ 12a:	30 f4       	brcc	.+12     	; 0x138 <__vector_4+0x46>
+ 12c:	88 23       	and	r24, r24
+ 12e:	71 f0       	breq	.+28     	; 0x14c <__vector_4+0x5a>
+ 130:	81 30       	cpi	r24, 0x01	; 1
+ 132:	09 f0       	breq	.+2      	; 0x136 <__vector_4+0x44>
+ 134:	d8 c0       	rjmp	.+432    	; 0x2e6 <__vector_4+0x1f4>
+ 136:	56 c0       	rjmp	.+172    	; 0x1e4 <__vector_4+0xf2>
+ 138:	84 30       	cpi	r24, 0x04	; 4
+ 13a:	09 f4       	brne	.+2      	; 0x13e <__vector_4+0x4c>
+ 13c:	a9 c0       	rjmp	.+338    	; 0x290 <__vector_4+0x19e>
+ 13e:	84 30       	cpi	r24, 0x04	; 4
+ 140:	08 f4       	brcc	.+2      	; 0x144 <__vector_4+0x52>
+ 142:	89 c0       	rjmp	.+274    	; 0x256 <__vector_4+0x164>
+ 144:	85 30       	cpi	r24, 0x05	; 5
+ 146:	09 f0       	breq	.+2      	; 0x14a <__vector_4+0x58>
+ 148:	ce c0       	rjmp	.+412    	; 0x2e6 <__vector_4+0x1f4>
+ 14a:	c1 c0       	rjmp	.+386    	; 0x2ce <__vector_4+0x1dc>
+				else
+					LED_SHORT_PROG_OFF;
+				*/
+
+				//Msg = (NextMessageCount == 0 ? (PROG_IS_ON ? DCCReset : DCCIdle) : NextMessage);
+				Msg = (NextMessageCount == 0 ? DCCIdle : NextMessage);
+ 14c:	80 91 8c 00 	lds	r24, 0x008C
+ 150:	88 23       	and	r24, r24
+ 152:	51 f4       	brne	.+20     	; 0x168 <__vector_4+0x76>
+ 154:	a0 e9       	ldi	r26, 0x90	; 144
+ 156:	b0 e0       	ldi	r27, 0x00	; 0
+ 158:	e0 ea       	ldi	r30, 0xA0	; 160
+ 15a:	f0 e0       	ldi	r31, 0x00	; 0
+ 15c:	85 e0       	ldi	r24, 0x05	; 5
+ 15e:	01 90       	ld	r0, Z+
+ 160:	0d 92       	st	X+, r0
+ 162:	81 50       	subi	r24, 0x01	; 1
+ 164:	e1 f7       	brne	.-8      	; 0x15e <__vector_4+0x6c>
+ 166:	09 c0       	rjmp	.+18     	; 0x17a <__vector_4+0x88>
+ 168:	a0 e9       	ldi	r26, 0x90	; 144
+ 16a:	b0 e0       	ldi	r27, 0x00	; 0
+ 16c:	e5 ea       	ldi	r30, 0xA5	; 165
+ 16e:	f0 e0       	ldi	r31, 0x00	; 0
+ 170:	85 e0       	ldi	r24, 0x05	; 5
+ 172:	01 90       	ld	r0, Z+
+ 174:	0d 92       	st	X+, r0
+ 176:	81 50       	subi	r24, 0x01	; 1
+ 178:	e1 f7       	brne	.-8      	; 0x172 <__vector_4+0x80>
+				memcpy(doi.Dcc, Msg.Dcc, sizeof(doi.Dcc));
+ 17a:	80 91 91 00 	lds	r24, 0x0091
+ 17e:	90 91 92 00 	lds	r25, 0x0092
+ 182:	a0 91 93 00 	lds	r26, 0x0093
+ 186:	b0 91 94 00 	lds	r27, 0x0094
+ 18a:	80 93 96 00 	sts	0x0096, r24
+ 18e:	90 93 97 00 	sts	0x0097, r25
+ 192:	a0 93 98 00 	sts	0x0098, r26
+ 196:	b0 93 99 00 	sts	0x0099, r27
+				doi.ByteCount = Msg.Size;
+ 19a:	80 91 90 00 	lds	r24, 0x0090
+ 19e:	80 93 9b 00 	sts	0x009B, r24
+	            doi.ByteIdx = 0;
+ 1a2:	10 92 9a 00 	sts	0x009A, r1
+	            doi.XORByte = 0;
+ 1a6:	10 92 9e 00 	sts	0x009E, r1
+	            //doi.Type = NextMessage.Type;      	// remember type in case feedback is required
+				doi.BitCount = (PROG_IS_ON ? 22 : 15); 	// min 20; min 14;
+ 1aa:	b1 99       	sbic	0x16, 1	; 22
+ 1ac:	02 c0       	rjmp	.+4      	; 0x1b2 <__vector_4+0xc0>
+ 1ae:	8f e0       	ldi	r24, 0x0F	; 15
+ 1b0:	01 c0       	rjmp	.+2      	; 0x1b4 <__vector_4+0xc2>
+ 1b2:	86 e1       	ldi	r24, 0x16	; 22
+ 1b4:	80 93 9c 00 	sts	0x009C, r24
+				doi.State = Preamble;
+ 1b8:	81 e0       	ldi	r24, 0x01	; 1
+ 1ba:	80 93 95 00 	sts	0x0095, r24
+				if (NextMessageCount > 0)
+ 1be:	80 91 8c 00 	lds	r24, 0x008C
+ 1c2:	88 23       	and	r24, r24
+ 1c4:	09 f4       	brne	.+2      	; 0x1c8 <__vector_4+0xd6>
+ 1c6:	8f c0       	rjmp	.+286    	; 0x2e6 <__vector_4+0x1f4>
+				{
+					NextMessageCount--;
+ 1c8:	80 91 8c 00 	lds	r24, 0x008C
+ 1cc:	81 50       	subi	r24, 0x01	; 1
+ 1ce:	80 93 8c 00 	sts	0x008C, r24
+					if (NextMessageCount == 0)
+ 1d2:	80 91 8c 00 	lds	r24, 0x008C
+ 1d6:	88 23       	and	r24, r24
+ 1d8:	09 f0       	breq	.+2      	; 0x1dc <__vector_4+0xea>
+ 1da:	85 c0       	rjmp	.+266    	; 0x2e6 <__vector_4+0x1f4>
+						USARTWriteString("SR*");
+ 1dc:	80 e6       	ldi	r24, 0x60	; 96
+ 1de:	90 e0       	ldi	r25, 0x00	; 0
+ 1e0:	e4 d0       	rcall	.+456    	; 0x3aa <USARTWriteString>
+ 1e2:	81 c0       	rjmp	.+258    	; 0x2e6 <__vector_4+0x1f4>
+
+//----------------------------------------------------------------------------------------
+static inline void SetBit(bool bit) __attribute__((always_inline));
+void SetBit(bool bit)
+{
+	TCCR1A = (1<<COM1A1) | (0<<COM1A0)  //  "0" OC1A(=DCC) on compare match
+ 1e4:	80 eb       	ldi	r24, 0xB0	; 176
+ 1e6:	8f bd       	out	0x2f, r24	; 47
+           | (1<<COM1B1) | (1<<COM1B0)  //  "1" OC1B(=NDCC) on compare match
+           | (0<<WGM11)  | (0<<WGM10);  //  CTC (+ WGM12, WGM13) (сброс при совпадении), TOP = OCR1A
+
+	OCR1A = OCR1B = F_CPU * (bit == 0 ? PERIOD_0 : PERIOD_1) / 2 / 1000000L; // 928/464 ticks
+ 1e8:	80 ed       	ldi	r24, 0xD0	; 208
+ 1ea:	91 e0       	ldi	r25, 0x01	; 1
+ 1ec:	99 bd       	out	0x29, r25	; 41
+ 1ee:	88 bd       	out	0x28, r24	; 40
+ 1f0:	88 b5       	in	r24, 0x28	; 40
+ 1f2:	99 b5       	in	r25, 0x29	; 41
+ 1f4:	9b bd       	out	0x2b, r25	; 43
+ 1f6:	8a bd       	out	0x2a, r24	; 42
+ 1f8:	42 c0       	rjmp	.+132    	; 0x27e <__vector_4+0x18c>
+
+//----------------------------------------------------------------------------------------
+static inline void SetBit(bool bit) __attribute__((always_inline));
+void SetBit(bool bit)
+{
+	TCCR1A = (1<<COM1A1) | (0<<COM1A0)  //  "0" OC1A(=DCC) on compare match
+ 1fa:	80 eb       	ldi	r24, 0xB0	; 176
+ 1fc:	8f bd       	out	0x2f, r24	; 47
+           | (1<<COM1B1) | (1<<COM1B0)  //  "1" OC1B(=NDCC) on compare match
+           | (0<<WGM11)  | (0<<WGM10);  //  CTC (+ WGM12, WGM13) (сброс при совпадении), TOP = OCR1A
+
+	OCR1A = OCR1B = F_CPU * (bit == 0 ? PERIOD_0 : PERIOD_1) / 2 / 1000000L; // 928/464 ticks
+ 1fe:	80 ea       	ldi	r24, 0xA0	; 160
+ 200:	93 e0       	ldi	r25, 0x03	; 3
+ 202:	99 bd       	out	0x29, r25	; 41
+ 204:	88 bd       	out	0x28, r24	; 40
+ 206:	88 b5       	in	r24, 0x28	; 40
+ 208:	99 b5       	in	r25, 0x29	; 41
+ 20a:	9b bd       	out	0x2b, r25	; 43
+ 20c:	8a bd       	out	0x2a, r24	; 42
+					*/
+	            }
+	            break;
+	        case StartBit:
+	            SetBit(0);
+	            if (doi.ByteCount == 0) // all bytes are sent, now send XOR byte
+ 20e:	90 91 9b 00 	lds	r25, 0x009B
+ 212:	80 91 9e 00 	lds	r24, 0x009E
+ 216:	99 23       	and	r25, r25
+ 218:	39 f4       	brne	.+14     	; 0x228 <__vector_4+0x136>
+	            {
+	                doi.CurrentByte = doi.XORByte;
+ 21a:	80 93 9d 00 	sts	0x009D, r24
+	                doi.BitCount = 8;
+ 21e:	88 e0       	ldi	r24, 0x08	; 8
+ 220:	80 93 9c 00 	sts	0x009C, r24
+	                doi.State = XOR;
+ 224:	84 e0       	ldi	r24, 0x04	; 4
+ 226:	50 c0       	rjmp	.+160    	; 0x2c8 <__vector_4+0x1d6>
+	            }
+	            else // get next byte
+	            {
+	                doi.ByteCount--;
+ 228:	91 50       	subi	r25, 0x01	; 1
+ 22a:	90 93 9b 00 	sts	0x009B, r25
+	                doi.CurrentByte = doi.Dcc[doi.ByteIdx++];
+ 22e:	20 91 9a 00 	lds	r18, 0x009A
+ 232:	e2 2f       	mov	r30, r18
+ 234:	f0 e0       	ldi	r31, 0x00	; 0
+ 236:	eb 56       	subi	r30, 0x6B	; 107
+ 238:	ff 4f       	sbci	r31, 0xFF	; 255
+ 23a:	91 81       	ldd	r25, Z+1	; 0x01
+ 23c:	90 93 9d 00 	sts	0x009D, r25
+ 240:	2f 5f       	subi	r18, 0xFF	; 255
+ 242:	20 93 9a 00 	sts	0x009A, r18
+	                doi.XORByte ^= doi.CurrentByte;
+ 246:	89 27       	eor	r24, r25
+ 248:	80 93 9e 00 	sts	0x009E, r24
+	                doi.BitCount = 8;
+ 24c:	88 e0       	ldi	r24, 0x08	; 8
+ 24e:	80 93 9c 00 	sts	0x009C, r24
+	                doi.State = Byte;
+ 252:	83 e0       	ldi	r24, 0x03	; 3
+ 254:	39 c0       	rjmp	.+114    	; 0x2c8 <__vector_4+0x1d6>
+	            }
+	            break;
+	        case Byte: // data byte
+	            SetBit((doi.CurrentByte & 0x80 ?  1: 0)); // 0b10000000 - most left bit
+ 256:	80 91 9d 00 	lds	r24, 0x009D
+
+//----------------------------------------------------------------------------------------
+static inline void SetBit(bool bit) __attribute__((always_inline));
+void SetBit(bool bit)
+{
+	TCCR1A = (1<<COM1A1) | (0<<COM1A0)  //  "0" OC1A(=DCC) on compare match
+ 25a:	90 eb       	ldi	r25, 0xB0	; 176
+ 25c:	9f bd       	out	0x2f, r25	; 47
+           | (1<<COM1B1) | (1<<COM1B0)  //  "1" OC1B(=NDCC) on compare match
+           | (0<<WGM11)  | (0<<WGM10);  //  CTC (+ WGM12, WGM13) (сброс при совпадении), TOP = OCR1A
+
+	OCR1A = OCR1B = F_CPU * (bit == 0 ? PERIOD_0 : PERIOD_1) / 2 / 1000000L; // 928/464 ticks
+ 25e:	87 ff       	sbrs	r24, 7
+ 260:	03 c0       	rjmp	.+6      	; 0x268 <__vector_4+0x176>
+ 262:	20 ed       	ldi	r18, 0xD0	; 208
+ 264:	31 e0       	ldi	r19, 0x01	; 1
+ 266:	02 c0       	rjmp	.+4      	; 0x26c <__vector_4+0x17a>
+ 268:	20 ea       	ldi	r18, 0xA0	; 160
+ 26a:	33 e0       	ldi	r19, 0x03	; 3
+ 26c:	39 bd       	out	0x29, r19	; 41
+ 26e:	28 bd       	out	0x28, r18	; 40
+ 270:	28 b5       	in	r18, 0x28	; 40
+ 272:	39 b5       	in	r19, 0x29	; 41
+ 274:	3b bd       	out	0x2b, r19	; 43
+ 276:	2a bd       	out	0x2a, r18	; 42
+	                doi.State = Byte;
+	            }
+	            break;
+	        case Byte: // data byte
+	            SetBit((doi.CurrentByte & 0x80 ?  1: 0)); // 0b10000000 - most left bit
+	            doi.CurrentByte <<= 1; // bit sent, shift to next bit
+ 278:	88 0f       	add	r24, r24
+ 27a:	80 93 9d 00 	sts	0x009D, r24
+	            doi.BitCount--;
+ 27e:	80 91 9c 00 	lds	r24, 0x009C
+ 282:	81 50       	subi	r24, 0x01	; 1
+ 284:	80 93 9c 00 	sts	0x009C, r24
+	            if (doi.BitCount == 0)
+ 288:	88 23       	and	r24, r24
+ 28a:	69 f5       	brne	.+90     	; 0x2e6 <__vector_4+0x1f4>
+	                doi.State = StartBit;
+ 28c:	82 e0       	ldi	r24, 0x02	; 2
+ 28e:	1c c0       	rjmp	.+56     	; 0x2c8 <__vector_4+0x1d6>
+	            break;
+	        case XOR: // error sum
+	            SetBit((doi.CurrentByte & 0x80 ?  1: 0)); // 0b10000000 - most left bit
+ 290:	80 91 9d 00 	lds	r24, 0x009D
+
+//----------------------------------------------------------------------------------------
+static inline void SetBit(bool bit) __attribute__((always_inline));
+void SetBit(bool bit)
+{
+	TCCR1A = (1<<COM1A1) | (0<<COM1A0)  //  "0" OC1A(=DCC) on compare match
+ 294:	90 eb       	ldi	r25, 0xB0	; 176
+ 296:	9f bd       	out	0x2f, r25	; 47
+           | (1<<COM1B1) | (1<<COM1B0)  //  "1" OC1B(=NDCC) on compare match
+           | (0<<WGM11)  | (0<<WGM10);  //  CTC (+ WGM12, WGM13) (сброс при совпадении), TOP = OCR1A
+
+	OCR1A = OCR1B = F_CPU * (bit == 0 ? PERIOD_0 : PERIOD_1) / 2 / 1000000L; // 928/464 ticks
+ 298:	87 ff       	sbrs	r24, 7
+ 29a:	03 c0       	rjmp	.+6      	; 0x2a2 <__vector_4+0x1b0>
+ 29c:	20 ed       	ldi	r18, 0xD0	; 208
+ 29e:	31 e0       	ldi	r19, 0x01	; 1
+ 2a0:	02 c0       	rjmp	.+4      	; 0x2a6 <__vector_4+0x1b4>
+ 2a2:	20 ea       	ldi	r18, 0xA0	; 160
+ 2a4:	33 e0       	ldi	r19, 0x03	; 3
+ 2a6:	39 bd       	out	0x29, r19	; 41
+ 2a8:	28 bd       	out	0x28, r18	; 40
+ 2aa:	28 b5       	in	r18, 0x28	; 40
+ 2ac:	39 b5       	in	r19, 0x29	; 41
+ 2ae:	3b bd       	out	0x2b, r19	; 43
+ 2b0:	2a bd       	out	0x2a, r18	; 42
+	            if (doi.BitCount == 0)
+	                doi.State = StartBit;
+	            break;
+	        case XOR: // error sum
+	            SetBit((doi.CurrentByte & 0x80 ?  1: 0)); // 0b10000000 - most left bit
+	            doi.CurrentByte <<= 1; // bit sent, shift to next bit
+ 2b2:	88 0f       	add	r24, r24
+ 2b4:	80 93 9d 00 	sts	0x009D, r24
+	            doi.BitCount--;
+ 2b8:	80 91 9c 00 	lds	r24, 0x009C
+ 2bc:	81 50       	subi	r24, 0x01	; 1
+ 2be:	80 93 9c 00 	sts	0x009C, r24
+	            if (doi.BitCount == 0) // XOR is sent
+ 2c2:	88 23       	and	r24, r24
+ 2c4:	81 f4       	brne	.+32     	; 0x2e6 <__vector_4+0x1f4>
+	            {
+	                doi.State = EndBit;
+ 2c6:	85 e0       	ldi	r24, 0x05	; 5
+ 2c8:	80 93 95 00 	sts	0x0095, r24
+ 2cc:	0c c0       	rjmp	.+24     	; 0x2e6 <__vector_4+0x1f4>
+
+//----------------------------------------------------------------------------------------
+static inline void SetBit(bool bit) __attribute__((always_inline));
+void SetBit(bool bit)
+{
+	TCCR1A = (1<<COM1A1) | (0<<COM1A0)  //  "0" OC1A(=DCC) on compare match
+ 2ce:	80 eb       	ldi	r24, 0xB0	; 176
+ 2d0:	8f bd       	out	0x2f, r24	; 47
+           | (1<<COM1B1) | (1<<COM1B0)  //  "1" OC1B(=NDCC) on compare match
+           | (0<<WGM11)  | (0<<WGM10);  //  CTC (+ WGM12, WGM13) (сброс при совпадении), TOP = OCR1A
+
+	OCR1A = OCR1B = F_CPU * (bit == 0 ? PERIOD_0 : PERIOD_1) / 2 / 1000000L; // 928/464 ticks
+ 2d2:	80 ed       	ldi	r24, 0xD0	; 208
+ 2d4:	91 e0       	ldi	r25, 0x01	; 1
+ 2d6:	99 bd       	out	0x29, r25	; 41
+ 2d8:	88 bd       	out	0x28, r24	; 40
+ 2da:	88 b5       	in	r24, 0x28	; 40
+ 2dc:	99 b5       	in	r25, 0x29	; 41
+ 2de:	9b bd       	out	0x2b, r25	; 43
+ 2e0:	8a bd       	out	0x2a, r24	; 42
+					*/
+	            }
+	            break;
+			case EndBit:
+	            SetBit(1);
+	            doi.State = Idle;
+ 2e2:	10 92 95 00 	sts	0x0095, r1
+			*/
+			default:
+				break;
+		}
+	}
+}
+ 2e6:	ff 91       	pop	r31
+ 2e8:	ef 91       	pop	r30
+ 2ea:	bf 91       	pop	r27
+ 2ec:	af 91       	pop	r26
+ 2ee:	9f 91       	pop	r25
+ 2f0:	8f 91       	pop	r24
+ 2f2:	7f 91       	pop	r23
+ 2f4:	6f 91       	pop	r22
+ 2f6:	5f 91       	pop	r21
+ 2f8:	4f 91       	pop	r20
+ 2fa:	3f 91       	pop	r19
+ 2fc:	2f 91       	pop	r18
+ 2fe:	0f 90       	pop	r0
+ 300:	0f be       	out	0x3f, r0	; 63
+ 302:	0f 90       	pop	r0
+ 304:	1f 90       	pop	r1
+ 306:	18 95       	reti
+
+00000308 <InitRS232>:
+BaudRate actualBaudRate;
+
+//----------------------------------------------------------------------------------------
+void InitRS232(BaudRate baudRate)
+{
+    unsigned char sreg = SREG;
+ 308:	2f b7       	in	r18, 0x3f	; 63
+    cli();
+ 30a:	f8 94       	cli
+
+    actualBaudRate = baudRate;
+ 30c:	80 93 aa 00 	sts	0x00AA, r24
+	uint16_t ubrr; // baud rate value
+
+	// calculations are done at mult 100 to avoid integer cast errors +50 is added
+    
+	// ubrr = baudRate * 16 / F_CPU - 1
+	switch (baudRate)
+ 310:	82 30       	cpi	r24, 0x02	; 2
+ 312:	09 f1       	breq	.+66     	; 0x356 <InitRS232+0x4e>
+ 314:	83 30       	cpi	r24, 0x03	; 3
+ 316:	28 f4       	brcc	.+10     	; 0x322 <InitRS232+0x1a>
+ 318:	88 23       	and	r24, r24
+ 31a:	99 f0       	breq	.+38     	; 0x342 <InitRS232+0x3a>
+ 31c:	81 30       	cpi	r24, 0x01	; 1
+ 31e:	39 f4       	brne	.+14     	; 0x32e <InitRS232+0x26>
+ 320:	15 c0       	rjmp	.+42     	; 0x34c <InitRS232+0x44>
+ 322:	84 30       	cpi	r24, 0x04	; 4
+ 324:	11 f1       	breq	.+68     	; 0x36a <InitRS232+0x62>
+ 326:	84 30       	cpi	r24, 0x04	; 4
+ 328:	d8 f0       	brcs	.+54     	; 0x360 <InitRS232+0x58>
+ 32a:	86 30       	cpi	r24, 0x06	; 6
+ 32c:	29 f0       	breq	.+10     	; 0x338 <InitRS232+0x30>
+	{
+	    default:
+		case BAUD_2400:
+		    // ubrr = (uint16_t) ((uint32_t) F_CPU/(16*2400L) - 1);
+            ubrr = (uint16_t) ((uint32_t)(F_CPU/(16*24L) - 100L + 50L) / 100);
+			my_UCSRA = (1 << my_RXC) | (1 << my_TXC);
+ 32e:	80 ec       	ldi	r24, 0xC0	; 192
+ 330:	8b b9       	out	0x0b, r24	; 11
+ 332:	8f ec       	ldi	r24, 0xCF	; 207
+ 334:	90 e0       	ldi	r25, 0x00	; 0
+		    break;
+ 336:	1d c0       	rjmp	.+58     	; 0x372 <InitRS232+0x6a>
+		case BAUD_4800:
+		    // ubrr = (uint16_t) ((uint32_t) F_CPU/(16*4800L) - 1);
+            ubrr = (uint16_t) ((uint32_t) (F_CPU/(16*48L) - 100L + 50L) / 100);
+			my_UCSRA = (1 << my_RXC) | (1 << my_TXC);
+ 338:	80 ec       	ldi	r24, 0xC0	; 192
+ 33a:	8b b9       	out	0x0b, r24	; 11
+ 33c:	87 e6       	ldi	r24, 0x67	; 103
+ 33e:	90 e0       	ldi	r25, 0x00	; 0
+		    break;
+ 340:	18 c0       	rjmp	.+48     	; 0x372 <InitRS232+0x6a>
+		case BAUD_9600:
+		    //   UBRRL = 103; // 19200bps @ 16.00MHz
+			// ubrr = (uint16_t) ((uint32_t) F_CPU/(16*9600L) - 1);
+            ubrr = (uint16_t) ((uint32_t) (F_CPU/(16*96L) - 100L + 50L) / 100);
+			my_UCSRA = (1 << my_RXC) | (1 << my_TXC);
+ 342:	80 ec       	ldi	r24, 0xC0	; 192
+ 344:	8b b9       	out	0x0b, r24	; 11
+ 346:	83 e3       	ldi	r24, 0x33	; 51
+ 348:	90 e0       	ldi	r25, 0x00	; 0
+		    break;
+ 34a:	13 c0       	rjmp	.+38     	; 0x372 <InitRS232+0x6a>
+		case BAUD_19200:
+		    //   UBRRL = 51; // 19200bps @ 16.00MHz
+			//ubrr = (uint16_t) ((uint32_t) F_CPU/(16*19200L) - 1);
+            ubrr = (uint16_t) ((uint32_t) (F_CPU/(16*192L) - 100L + 50L) / 100);
+			my_UCSRA = (1 << my_RXC) | (1 << my_TXC);
+ 34c:	80 ec       	ldi	r24, 0xC0	; 192
+ 34e:	8b b9       	out	0x0b, r24	; 11
+ 350:	89 e1       	ldi	r24, 0x19	; 25
+ 352:	90 e0       	ldi	r25, 0x00	; 0
+		    break;
+ 354:	0e c0       	rjmp	.+28     	; 0x372 <InitRS232+0x6a>
+		case BAUD_38400:
+		    //   UBRRL = 25; // 38400bps @ 16.00MHz
+			// ubrr = (uint16_t) ((uint32_t) F_CPU/(16*38400L) - 1);
+            ubrr = (uint16_t) ((uint32_t) (F_CPU/(16*384L) - 100L + 50L) / 100);
+			my_UCSRA = (1 << my_RXC) | (1 << my_TXC) ; // High Speed Mode, nur div 8
+ 356:	80 ec       	ldi	r24, 0xC0	; 192
+ 358:	8b b9       	out	0x0b, r24	; 11
+ 35a:	8c e0       	ldi	r24, 0x0C	; 12
+ 35c:	90 e0       	ldi	r25, 0x00	; 0
+		    break;
+ 35e:	09 c0       	rjmp	.+18     	; 0x372 <InitRS232+0x6a>
+		case BAUD_57600:
+		    // ubrr = (uint16_t) ((uint32_t) F_CPU/(8*57600L) - 1);
+            ubrr = (uint16_t) ((uint32_t) (F_CPU/(8*576L) - 100L + 50L) / 100);
+			my_UCSRA = (1 << my_RXC) | (1 << my_TXC) | (1 << my_U2X);  // High Speed Mode, nur div 8
+ 360:	82 ec       	ldi	r24, 0xC2	; 194
+ 362:	8b b9       	out	0x0b, r24	; 11
+ 364:	80 e1       	ldi	r24, 0x10	; 16
+ 366:	90 e0       	ldi	r25, 0x00	; 0
+		    break;
+ 368:	04 c0       	rjmp	.+8      	; 0x372 <InitRS232+0x6a>
+		case BAUD_115200:
+		    // ubrr = (uint16_t) ((uint32_t) F_CPU/(8*115200L) - 1);
+            ubrr = (uint16_t)((uint32_t)(F_CPU/(8*1152L) - 100L + 50L) / 100);
+			my_UCSRA = (1 << my_RXC) | (1 << my_TXC) | (1 << my_U2X);  // High Speed Mode
+ 36a:	82 ec       	ldi	r24, 0xC2	; 194
+ 36c:	8b b9       	out	0x0b, r24	; 11
+ 36e:	88 e0       	ldi	r24, 0x08	; 8
+ 370:	90 e0       	ldi	r25, 0x00	; 0
+		    break;
+	}
+    my_UBRRH = (uint8_t)(ubrr>>8);
+ 372:	12 b8       	out	0x02, r1	; 2
+    my_UBRRL = (uint8_t)ubrr;
+ 374:	89 b9       	out	0x09, r24	; 9
+
+	// enable Receiver, Transmitter
+    my_UCSRB = 0; // stop everything
+ 376:	1a b8       	out	0x0a, r1	; 10
+    my_UCSRB = (1 << my_RXEN) | (1 << my_TXEN);
+ 378:	88 e1       	ldi	r24, 0x18	; 24
+ 37a:	8a b9       	out	0x0a, r24	; 10
+
+    // Data mode 8N1, async
+    my_UCSRC = (0 << my_UMSEL)        // 0 = asynchronous mode
+ 37c:	86 e0       	ldi	r24, 0x06	; 6
+ 37e:	83 b9       	out	0x03, r24	; 3
+
+    // Flush Receive-Buffer
+	unsigned char dummy;
+    do
+    {
+        dummy = my_UDR;
+ 380:	8c b1       	in	r24, 0x0c	; 12
+    }
+    while (my_UCSRA & (1 << my_RXC));
+ 382:	5f 99       	sbic	0x0b, 7	; 11
+ 384:	fd cf       	rjmp	.-6      	; 0x380 <InitRS232+0x78>
+    my_UCSRA |= (1 << my_RXC);
+ 386:	5f 9a       	sbi	0x0b, 7	; 11
+    my_UCSRA |= (1 << my_TXC);
+ 388:	5e 9a       	sbi	0x0b, 6	; 11
+    dummy = my_UDR;
+ 38a:	8c b1       	in	r24, 0x0c	; 12
+
+    LED_RS232_OFF;
+ 38c:	c7 98       	cbi	0x18, 7	; 24
+    
+    SREG = sreg;
+ 38e:	2f bf       	out	0x3f, r18	; 63
+}
+ 390:	08 95       	ret
+
+00000392 <USARTReadChar>:
+{
+	unsigned char res;
+
+	//Wait untill a data is available
+	//while(!(my_UCSRA & (1<<my_RXC))); // this leads to continuous waiting for PC command
+	if (!(my_UCSRA & (1<<my_RXC)))
+ 392:	5f 9b       	sbis	0x0b, 7	; 11
+ 394:	04 c0       	rjmp	.+8      	; 0x39e <USARTReadChar+0xc>
+		return 0;
+
+	//Now USART has got data from host and is available is buffer
+	res = my_UDR;
+ 396:	8c b1       	in	r24, 0x0c	; 12
+
+	// В случае ошибки вернуть 0
+	if (my_UCSRA & ((1<<my_FE)|(1<<my_DOR)|(1<<my_UPE)))
+ 398:	9b b1       	in	r25, 0x0b	; 11
+ 39a:	9c 71       	andi	r25, 0x1C	; 28
+ 39c:	09 f0       	breq	.+2      	; 0x3a0 <USARTReadChar+0xe>
+ 39e:	80 e0       	ldi	r24, 0x00	; 0
+		return 0;
+	return res;
+}
+ 3a0:	08 95       	ret
+
+000003a2 <USARTWriteChar>:
+//----------------------------------------------------------------------------------------
+void USARTWriteChar(unsigned char data)
+{
+	//Wait untill the transmitter is ready
+	while(!(my_UCSRA & (1<<my_UDRE)));
+ 3a2:	5d 9b       	sbis	0x0b, 5	; 11
+ 3a4:	fe cf       	rjmp	.-4      	; 0x3a2 <USARTWriteChar>
+	//Now write the data to USART buffer
+	my_UDR = data;
+ 3a6:	8c b9       	out	0x0c, r24	; 12
+}
+ 3a8:	08 95       	ret
+
+000003aa <USARTWriteString>:
+//----------------------------------------------------------------------------------------
+void USARTWriteString(const char* s)
+{
+ 3aa:	fc 01       	movw	r30, r24
+    LED_RS232_ON;
+ 3ac:	c7 9a       	sbi	0x18, 7	; 24
+	
+	char c;
+	while ((c = *s++)) USARTWriteChar(c);
+ 3ae:	03 c0       	rjmp	.+6      	; 0x3b6 <USARTWriteString+0xc>
+}
+//----------------------------------------------------------------------------------------
+void USARTWriteChar(unsigned char data)
+{
+	//Wait untill the transmitter is ready
+	while(!(my_UCSRA & (1<<my_UDRE)));
+ 3b0:	5d 9b       	sbis	0x0b, 5	; 11
+ 3b2:	fe cf       	rjmp	.-4      	; 0x3b0 <USARTWriteString+0x6>
+	//Now write the data to USART buffer
+	my_UDR = data;
+ 3b4:	8c b9       	out	0x0c, r24	; 12
+void USARTWriteString(const char* s)
+{
+    LED_RS232_ON;
+	
+	char c;
+	while ((c = *s++)) USARTWriteChar(c);
+ 3b6:	81 91       	ld	r24, Z+
+ 3b8:	88 23       	and	r24, r24
+ 3ba:	d1 f7       	brne	.-12     	; 0x3b0 <USARTWriteString+0x6>
+
+	LED_RS232_OFF;
+ 3bc:	c7 98       	cbi	0x18, 7	; 24
+}
+ 3be:	08 95       	ret
+
+000003c0 <ParseCommand>:
+	}
+}
+//----------------------------------------------------------------------------------------
+void ParseCommand()
+{
+	if (pccSize == 0)
+ 3c0:	80 91 8e 00 	lds	r24, 0x008E
+ 3c4:	88 23       	and	r24, r24
+ 3c6:	09 f4       	brne	.+2      	; 0x3ca <ParseCommand+0xa>
+ 3c8:	43 c0       	rjmp	.+134    	; 0x450 <ParseCommand+0x90>
+		return;
+
+	LED_RS232_ON;
+ 3ca:	c7 9a       	sbi	0x18, 7	; 24
+
+	unsigned char dccSize = 0;
+	unsigned char i;
+
+	switch (pcc[0])
+ 3cc:	80 91 ab 00 	lds	r24, 0x00AB
+ 3d0:	84 34       	cpi	r24, 0x44	; 68
+ 3d2:	19 f0       	breq	.+6      	; 0x3da <ParseCommand+0x1a>
+ 3d4:	83 35       	cpi	r24, 0x53	; 83
+ 3d6:	d9 f5       	brne	.+118    	; 0x44e <ParseCommand+0x8e>
+ 3d8:	15 c0       	rjmp	.+42     	; 0x404 <ParseCommand+0x44>
+	{
+		case 'D': // dcc command
+			dccSize = (unsigned char)pcc[1];
+ 3da:	80 91 ac 00 	lds	r24, 0x00AC
+			NextMessage.Size = dccSize;
+ 3de:	80 93 a5 00 	sts	0x00A5, r24
+ 3e2:	ed ea       	ldi	r30, 0xAD	; 173
+ 3e4:	f0 e0       	ldi	r31, 0x00	; 0
+ 3e6:	a6 ea       	ldi	r26, 0xA6	; 166
+ 3e8:	b0 e0       	ldi	r27, 0x00	; 0
+			ParseCommand(); // pcc is w/o '*' at the end
+		}
+	}
+}
+//----------------------------------------------------------------------------------------
+void ParseCommand()
+ 3ea:	90 e0       	ldi	r25, 0x00	; 0
+ 3ec:	8e 0f       	add	r24, r30
+ 3ee:	9f 1f       	adc	r25, r31
+	switch (pcc[0])
+	{
+		case 'D': // dcc command
+			dccSize = (unsigned char)pcc[1];
+			NextMessage.Size = dccSize;
+			for (i = 0; i < dccSize; i++)
+ 3f0:	02 c0       	rjmp	.+4      	; 0x3f6 <ParseCommand+0x36>
+				NextMessage.Dcc[i] = (unsigned char)pcc[i + 2];
+ 3f2:	21 91       	ld	r18, Z+
+ 3f4:	2d 93       	st	X+, r18
+	switch (pcc[0])
+	{
+		case 'D': // dcc command
+			dccSize = (unsigned char)pcc[1];
+			NextMessage.Size = dccSize;
+			for (i = 0; i < dccSize; i++)
+ 3f6:	e8 17       	cp	r30, r24
+ 3f8:	f9 07       	cpc	r31, r25
+ 3fa:	d9 f7       	brne	.-10     	; 0x3f2 <ParseCommand+0x32>
+				NextMessage.Dcc[i] = (unsigned char)pcc[i + 2];
+			NextMessageCount = 1;
+ 3fc:	81 e0       	ldi	r24, 0x01	; 1
+ 3fe:	80 93 8c 00 	sts	0x008C, r24
+			break;
+ 402:	25 c0       	rjmp	.+74     	; 0x44e <ParseCommand+0x8e>
+		case 'S': // station command
+			if (pcc[1] == 'R' && NextMessageCount == 0) // query for ready
+ 404:	80 91 ac 00 	lds	r24, 0x00AC
+ 408:	82 35       	cpi	r24, 0x52	; 82
+ 40a:	39 f4       	brne	.+14     	; 0x41a <ParseCommand+0x5a>
+ 40c:	80 91 8c 00 	lds	r24, 0x008C
+ 410:	88 23       	and	r24, r24
+ 412:	19 f4       	brne	.+6      	; 0x41a <ParseCommand+0x5a>
+				USARTWriteString("SR*");
+ 414:	84 e6       	ldi	r24, 0x64	; 100
+ 416:	90 e0       	ldi	r25, 0x00	; 0
+ 418:	c8 df       	rcall	.-112    	; 0x3aa <USARTWriteString>
+			if (pcc[1] == '0') // main track on
+ 41a:	80 91 ac 00 	lds	r24, 0x00AC
+ 41e:	80 33       	cpi	r24, 0x30	; 48
+ 420:	11 f4       	brne	.+4      	; 0x426 <ParseCommand+0x66>
+				MAIN_TRACK_ON;
+ 422:	c0 9a       	sbi	0x18, 0	; 24
+ 424:	0f c0       	rjmp	.+30     	; 0x444 <ParseCommand+0x84>
+			if (pcc[1] == '1') // main track off
+ 426:	81 33       	cpi	r24, 0x31	; 49
+ 428:	11 f4       	brne	.+4      	; 0x42e <ParseCommand+0x6e>
+				MAIN_TRACK_OFF;
+ 42a:	c0 98       	cbi	0x18, 0	; 24
+ 42c:	0b c0       	rjmp	.+22     	; 0x444 <ParseCommand+0x84>
+			if (pcc[1] == '2') // prog track on
+ 42e:	82 33       	cpi	r24, 0x32	; 50
+ 430:	11 f4       	brne	.+4      	; 0x436 <ParseCommand+0x76>
+				PROG_TRACK_ON;
+ 432:	c1 9a       	sbi	0x18, 1	; 24
+ 434:	07 c0       	rjmp	.+14     	; 0x444 <ParseCommand+0x84>
+			if (pcc[1] == '3') // prog track off
+ 436:	83 33       	cpi	r24, 0x33	; 51
+ 438:	11 f4       	brne	.+4      	; 0x43e <ParseCommand+0x7e>
+				PROG_TRACK_OFF;
+ 43a:	c1 98       	cbi	0x18, 1	; 24
+ 43c:	03 c0       	rjmp	.+6      	; 0x444 <ParseCommand+0x84>
+			if (pcc[1] == '4') // Railcom On
+ 43e:	84 33       	cpi	r24, 0x34	; 52
+ 440:	09 f4       	brne	.+2      	; 0x444 <ParseCommand+0x84>
+				DCCOutEnableRailcom();
+ 442:	4d de       	rcall	.-870    	; 0xde <DCCOutEnableRailcom>
+			if (pcc[1] == '5') // Railcom Off
+ 444:	80 91 ac 00 	lds	r24, 0x00AC
+ 448:	85 33       	cpi	r24, 0x35	; 53
+ 44a:	09 f4       	brne	.+2      	; 0x44e <ParseCommand+0x8e>
+				DCCOutDisableRailcom();
+ 44c:	4c de       	rcall	.-872    	; 0xe6 <DCCOutDisableRailcom>
+			break;
+	}
+
+	LED_RS232_OFF;
+ 44e:	c7 98       	cbi	0x18, 7	; 24
+ 450:	08 95       	ret
+
+00000452 <RunParser>:
+
+void ParseCommand();
+//----------------------------------------------------------------------------------------
+void RunParser()
+{
+    unsigned char c = USARTReadChar();
+ 452:	9f df       	rcall	.-194    	; 0x392 <USARTReadChar>
+	if (c != 0)
+ 454:	88 23       	and	r24, r24
+ 456:	d9 f0       	breq	.+54     	; 0x48e <RunParser+0x3c>
+ 458:	90 91 8d 00 	lds	r25, 0x008D
+	{
+		if (c != '*') // '*' - is end of command
+ 45c:	8a 32       	cpi	r24, 0x2A	; 42
+ 45e:	69 f0       	breq	.+26     	; 0x47a <RunParser+0x28>
+		{
+			pcc[pccIdx] = c;
+ 460:	e9 2f       	mov	r30, r25
+ 462:	f0 e0       	ldi	r31, 0x00	; 0
+ 464:	e5 55       	subi	r30, 0x55	; 85
+ 466:	ff 4f       	sbci	r31, 0xFF	; 255
+ 468:	80 83       	st	Z, r24
+			pccIdx++;
+ 46a:	9f 5f       	subi	r25, 0xFF	; 255
+ 46c:	90 93 8d 00 	sts	0x008D, r25
+			if (pccIdx >= MAX_PCC_SIZE)
+ 470:	97 30       	cpi	r25, 0x07	; 7
+ 472:	68 f0       	brcs	.+26     	; 0x48e <RunParser+0x3c>
+				pccIdx = 0;
+ 474:	10 92 8d 00 	sts	0x008D, r1
+ 478:	08 95       	ret
+		}
+		else
+		{
+			pcc[pccIdx] = 0;
+ 47a:	e9 2f       	mov	r30, r25
+ 47c:	f0 e0       	ldi	r31, 0x00	; 0
+ 47e:	e5 55       	subi	r30, 0x55	; 85
+ 480:	ff 4f       	sbci	r31, 0xFF	; 255
+ 482:	10 82       	st	Z, r1
+			pccSize = pccIdx;
+ 484:	90 93 8e 00 	sts	0x008E, r25
+			pccIdx = 0;
+ 488:	10 92 8d 00 	sts	0x008D, r1
+			ParseCommand(); // pcc is w/o '*' at the end
+ 48c:	99 df       	rcall	.-206    	; 0x3c0 <ParseCommand>
+ 48e:	08 95       	ret
+
+00000490 <CheckState>:
+ 490:	b5 99       	sbic	0x16, 5	; 22
+ 492:	12 c0       	rjmp	.+36     	; 0x4b8 <CheckState+0x28>
+ 494:	c0 98       	cbi	0x18, 0	; 24
+ 496:	95 9a       	sbi	0x12, 5	; 18
+ 498:	88 e6       	ldi	r24, 0x68	; 104
+ 49a:	90 e0       	ldi	r25, 0x00	; 0
+ 49c:	86 df       	rcall	.-244    	; 0x3aa <USARTWriteString>
+{
+	uint16_t __ticks;
+	double __tmp = ((F_CPU) / 4e3) * __ms;
+#if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__)
+	extern void __builtin_avr_delay_cycles(unsigned long);
+	__builtin_avr_delay_cycles(__tmp);
+ 49e:	8f ef       	ldi	r24, 0xFF	; 255
+ 4a0:	9e e9       	ldi	r25, 0x9E	; 158
+ 4a2:	a4 e2       	ldi	r26, 0x24	; 36
+ 4a4:	81 50       	subi	r24, 0x01	; 1
+ 4a6:	90 40       	sbci	r25, 0x00	; 0
+ 4a8:	a0 40       	sbci	r26, 0x00	; 0
+ 4aa:	e1 f7       	brne	.-8      	; 0x4a4 <CheckState+0x14>
+ 4ac:	00 c0       	rjmp	.+0      	; 0x4ae <CheckState+0x1e>
+ 4ae:	00 00       	nop
+ 4b0:	95 98       	cbi	0x12, 5	; 18
+ 4b2:	8e e6       	ldi	r24, 0x6E	; 110
+ 4b4:	90 e0       	ldi	r25, 0x00	; 0
+ 4b6:	79 df       	rcall	.-270    	; 0x3aa <USARTWriteString>
+ 4b8:	b6 99       	sbic	0x16, 6	; 22
+ 4ba:	12 c0       	rjmp	.+36     	; 0x4e0 <CheckState+0x50>
+ 4bc:	c1 98       	cbi	0x18, 1	; 24
+ 4be:	94 9a       	sbi	0x12, 4	; 18
+ 4c0:	84 e7       	ldi	r24, 0x74	; 116
+ 4c2:	90 e0       	ldi	r25, 0x00	; 0
+ 4c4:	72 df       	rcall	.-284    	; 0x3aa <USARTWriteString>
+ 4c6:	8f ef       	ldi	r24, 0xFF	; 255
+ 4c8:	9e e9       	ldi	r25, 0x9E	; 158
+ 4ca:	a4 e2       	ldi	r26, 0x24	; 36
+ 4cc:	81 50       	subi	r24, 0x01	; 1
+ 4ce:	90 40       	sbci	r25, 0x00	; 0
+ 4d0:	a0 40       	sbci	r26, 0x00	; 0
+ 4d2:	e1 f7       	brne	.-8      	; 0x4cc <CheckState+0x3c>
+ 4d4:	00 c0       	rjmp	.+0      	; 0x4d6 <CheckState+0x46>
+ 4d6:	00 00       	nop
+ 4d8:	94 98       	cbi	0x12, 4	; 18
+ 4da:	8a e7       	ldi	r24, 0x7A	; 122
+ 4dc:	90 e0       	ldi	r25, 0x00	; 0
+ 4de:	65 df       	rcall	.-310    	; 0x3aa <USARTWriteString>
+ 4e0:	b2 99       	sbic	0x16, 2	; 22
+ 4e2:	0a c0       	rjmp	.+20     	; 0x4f8 <CheckState+0x68>
+ 4e4:	80 91 8f 00 	lds	r24, 0x008F
+ 4e8:	88 23       	and	r24, r24
+ 4ea:	31 f4       	brne	.+12     	; 0x4f8 <CheckState+0x68>
+ 4ec:	81 e0       	ldi	r24, 0x01	; 1
+ 4ee:	80 93 8f 00 	sts	0x008F, r24
+ 4f2:	80 e8       	ldi	r24, 0x80	; 128
+ 4f4:	90 e0       	ldi	r25, 0x00	; 0
+ 4f6:	59 df       	rcall	.-334    	; 0x3aa <USARTWriteString>
+ 4f8:	b2 9b       	sbis	0x16, 2	; 22
+ 4fa:	09 c0       	rjmp	.+18     	; 0x50e <CheckState+0x7e>
+ 4fc:	80 91 8f 00 	lds	r24, 0x008F
+ 500:	88 23       	and	r24, r24
+ 502:	29 f0       	breq	.+10     	; 0x50e <CheckState+0x7e>
+ 504:	10 92 8f 00 	sts	0x008F, r1
+ 508:	86 e8       	ldi	r24, 0x86	; 134
+ 50a:	90 e0       	ldi	r25, 0x00	; 0
+ 50c:	4e df       	rcall	.-356    	; 0x3aa <USARTWriteString>
+ 50e:	08 95       	ret
+
+00000510 <_exit>:
+ 510:	f8 94       	cli
+
+00000512 <__stop_program>:
+ 512:	ff cf       	rjmp	.-2      	; 0x512 <__stop_program>

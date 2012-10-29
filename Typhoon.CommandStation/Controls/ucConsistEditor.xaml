@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Typhoon.CommandStation.Controls.ucConsistEditor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+      xmlns:local="clr-namespace:Typhoon.CommandStation"
+      xmlns:controls="clr-namespace:Typhoon.CommandStation.Controls"
+      xmlns:loc="clr-namespace:Typhoon.Localization;assembly=Typhoon.Localization"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" TextOptions.TextFormattingMode="Display" FontSize="11" Name="uc">
+    
+    <telerik:RadTabControl BackgroundVisibility="Collapsed" Background="Transparent" TabOrientation="Horizontal" TabStripPlacement="Top" Align="Left" DropDownDisplayMode="Visible">
+        <telerik:RadTabItem loc:Translate.Uid="Common" Header="{loc:Translate Common}" IsSelected="True">
+            <controls:ucLayoutItemCommonPropertiesEditor LayoutItem="{Binding Path=Consist, ElementName=uc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </telerik:RadTabItem>
+        <telerik:RadTabItem loc:Translate.Uid="Locomotives" Header="{loc:Translate Locomotives}">
+            <controls:ucConsistItemList Consist="{Binding Path=Consist, ElementName=uc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="150"/>
+        </telerik:RadTabItem>
+        <telerik:RadTabItem loc:Translate.Uid="OperationTest" Header="{loc:Translate Operation test}">
+            <!--<controls:ucConsistOperator Consist="{Binding Path=Consist, ElementName=uc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>-->
+        </telerik:RadTabItem>
+    </telerik:RadTabControl>
+</UserControl>

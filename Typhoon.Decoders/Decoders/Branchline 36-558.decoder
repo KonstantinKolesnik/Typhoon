@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Decoder type="Locomotive">
+  <Feature Name="Model" Value="Branchline 36-558"/>
+  <Feature Name="Plug" Value="NEM651 6 pin connector"/>
+  <Feature Name="Motor output" Value="500 mA"/>
+  <Feature Name="Function outputs" Value="100 mA"/>
+  <Feature Name="Programming methods" Value="All"/>
+  <Feature Name="Function F0" Value="Directional lighting"/>
+  <Feature Name="Function F7" Value="Light Dimming"/>
+
+  <Parameter Group="Manufacturer" Name="Version No." CVMaps="7-255" Value="1" ReadOnly="1"/>
+  <Parameter Group="Manufacturer" Name="Manufacturer" CVMaps="8-255" Value="141" ReadOnly="1"/>
+
+  <Parameter Group="Address" Name="Primary address" CVMaps="1-255" Min="1" Max="127" Default="3"/>
+  <Parameter Group="Address" Name="Use extended address" CVMaps="29-32" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Address" Name="Extended address" CVMaps="18-255;17-255" Min="0" Max="10239" Default="3"/>
+
+  <Parameter Group="Speed" Name="28&amp;128 speed steps" CVMaps="29-2" Default="1">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Speed" Name="V min" CVMaps="2-255" Min="0" Max="255" Default="0"/>
+  <Parameter Group="Speed" Name="Acceleration rate" CVMaps="3-255" Min="0" Max="255" Default="0"/>
+  <Parameter Group="Speed" Name="Deceleration rate" CVMaps="4-255" Min="0" Max="255" Default="0"/>
+  <Parameter Group="Speed" Name="Forward trim" CVMaps="66-255" Min="0" Max="128" Default="128"/>
+  <Parameter Group="Speed" Name="Reverse trim" CVMaps="95-255" Min="0" Max="128" Default="128"/>
+  <Parameter Group="Speed" Name="Packet time-out" CVMaps="11-255" Min="0" Max="255" Default="0"/>
+  <Parameter Group="Speed" Name="Use speed table" CVMaps="29-16" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Speed" Name="Speed table type" CVMaps="25-255" Default="0">
+    <ParameterChoiceValue Value="0" Name="Straight line"/>
+    <ParameterChoiceValue Value="3" Name="Logarithmic curve 1"/>
+    <ParameterChoiceValue Value="4" Name="Logarithmic curve 2"/>
+    <ParameterChoiceValue Value="5" Name="Logarithmic curve 3"/>
+    <ParameterChoiceValue Value="6" Name="Logarithmic curve 4"/>
+    <ParameterChoiceValue Value="7" Name="Logarithmic curve 5"/>
+    <ParameterChoiceValue Value="8" Name="Logarithmic curve 6"/>
+    <ParameterChoiceValue Value="9" Name="Logarithmic curve 7"/>
+    <ParameterChoiceValue Value="10" Name="Exponential curve 1"/>
+    <ParameterChoiceValue Value="11" Name="Exponential curve 2"/>
+    <ParameterChoiceValue Value="12" Name="Exponential curve 3"/>
+    <ParameterChoiceValue Value="13" Name="Exponential curve 4"/>
+    <ParameterChoiceValue Value="14" Name="Exponential curve 5"/>
+    <ParameterChoiceValue Value="15" Name="Exponential curve 6"/>
+    <ParameterChoiceValue Value="16" Name="User defined"/>
+  </Parameter>
+  
+  <Parameter Group="User speed table" Name="Speed step 1" CVMaps="67-255" Min="0" Max="255" Default="9"/>
+  <Parameter Group="User speed table" Name="Speed step 2" CVMaps="68-255" Min="0" Max="255" Default="18"/>
+  <Parameter Group="User speed table" Name="Speed step 3" CVMaps="69-255" Min="0" Max="255" Default="27"/>
+  <Parameter Group="User speed table" Name="Speed step 4" CVMaps="70-255" Min="0" Max="255" Default="36"/>
+  <Parameter Group="User speed table" Name="Speed step 5" CVMaps="71-255" Min="0" Max="255" Default="45"/>
+  <Parameter Group="User speed table" Name="Speed step 6" CVMaps="72-255" Min="0" Max="255" Default="55"/>
+  <Parameter Group="User speed table" Name="Speed step 7" CVMaps="73-255" Min="0" Max="255" Default="64"/>
+  <Parameter Group="User speed table" Name="Speed step 8" CVMaps="74-255" Min="0" Max="255" Default="73"/>
+  <Parameter Group="User speed table" Name="Speed step 9" CVMaps="75-255" Min="0" Max="255" Default="82"/>
+  <Parameter Group="User speed table" Name="Speed step 10" CVMaps="76-255" Min="0" Max="255" Default="91"/>
+  <Parameter Group="User speed table" Name="Speed step 11" CVMaps="77-255" Min="0" Max="255" Default="100"/>
+  <Parameter Group="User speed table" Name="Speed step 12" CVMaps="78-255" Min="0" Max="255" Default="109"/>
+  <Parameter Group="User speed table" Name="Speed step 13" CVMaps="79-255" Min="0" Max="255" Default="118"/>
+  <Parameter Group="User speed table" Name="Speed step 14" CVMaps="80-255" Min="0" Max="255" Default="127"/>
+  <Parameter Group="User speed table" Name="Speed step 15" CVMaps="81-255" Min="0" Max="255" Default="137"/>
+  <Parameter Group="User speed table" Name="Speed step 16" CVMaps="82-255" Min="0" Max="255" Default="146"/>
+  <Parameter Group="User speed table" Name="Speed step 17" CVMaps="83-255" Min="0" Max="255" Default="155"/>
+  <Parameter Group="User speed table" Name="Speed step 18" CVMaps="84-255" Min="0" Max="255" Default="164"/>
+  <Parameter Group="User speed table" Name="Speed step 19" CVMaps="85-255" Min="0" Max="255" Default="173"/>
+  <Parameter Group="User speed table" Name="Speed step 20" CVMaps="86-255" Min="0" Max="255" Default="182"/>
+  <Parameter Group="User speed table" Name="Speed step 21" CVMaps="87-255" Min="0" Max="255" Default="191"/>
+  <Parameter Group="User speed table" Name="Speed step 22" CVMaps="88-255" Min="0" Max="255" Default="200"/>
+  <Parameter Group="User speed table" Name="Speed step 23" CVMaps="89-255" Min="0" Max="255" Default="209"/>
+  <Parameter Group="User speed table" Name="Speed step 24" CVMaps="90-255" Min="0" Max="255" Default="219"/>
+  <Parameter Group="User speed table" Name="Speed step 25" CVMaps="91-255" Min="0" Max="255" Default="228"/>
+  <Parameter Group="User speed table" Name="Speed step 26" CVMaps="92-255" Min="0" Max="255" Default="237"/>
+  <Parameter Group="User speed table" Name="Speed step 27" CVMaps="93-255" Min="0" Max="255" Default="246"/>
+  <Parameter Group="User speed table" Name="Speed step 28" CVMaps="94-255" Min="0" Max="255" Default="255"/>
+
+  <Parameter Group="EMF" Name="PID Kp coefficient" CVMaps="209-255" Min="0" Max="255" Default="25"/>
+  <Parameter Group="EMF" Name="PID Kl coefficient" CVMaps="210-255" Min="0" Max="255" Default="20"/>
+  <Parameter Group="EMF" Name="BEMF feedback cutout" CVMaps="10-255" Min="0" Max="255" Default="0"/>
+  <Parameter Group="EMF" Name="BEMF feedback intensity" CVMaps="212-255" Min="0" Max="255" Default="50"/>
+  <Parameter Group="EMF" Name="BEMF sample period" CVMaps="213-255" Min="0" Max="255" Default="8"/>
+  <Parameter Group="EMF" Name="BEMF sample window size" CVMaps="214-255" Min="0" Max="255" Default="8"/>
+  <Parameter Group="EMF" Name="BEMF reference voltage" CVMaps="216-255" Min="0" Max="255" Default="160"/>
+  <Parameter Group="EMF" Name="Motor control register" CVMaps="217-255" Min="0" Max="255" Default="2"/>
+
+  <Parameter Group="Lighting" Name="Lighting control" CVMaps="49-255" Default="1">
+    <ParameterBitFlagValue Value="1" Name="F1"/>
+  </Parameter>
+  <Parameter Group="Lighting" Name="Lighting control" CVMaps="50-255" Default="1">
+    <ParameterBitFlagValue Value="1" Name="F1"/>
+  </Parameter>
+  <Parameter Group="Lighting" Name="Lighting flash rate" CVMaps="59-255" Default="3">
+    <ParameterBitFlagValue Value="1" Name="F1"/>
+    <ParameterBitFlagValue Value="2" Name="F2"/>
+    <ParameterBitFlagValue Value="4" Name="F3"/>
+    <ParameterBitFlagValue Value="8" Name="F4"/>
+    <ParameterBitFlagValue Value="16" Name="F5"/>
+    <ParameterBitFlagValue Value="32" Name="F6"/>
+    <ParameterBitFlagValue Value="64" Name="F7"/>
+    <ParameterBitFlagValue Value="128" Name="F8"/>
+  </Parameter>
+
+  <Parameter Group="Configuration" Name="Reverse direction" CVMaps="29-1" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Configuration" Name="Operation on DC" CVMaps="29-4" Default="1">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Configuration" Name="F11 brake rate" CVMaps="61-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="F1"/>
+    <ParameterBitFlagValue Value="2" Name="F2"/>
+    <ParameterBitFlagValue Value="4" Name="F3"/>
+    <ParameterBitFlagValue Value="8" Name="F4"/>
+    <ParameterBitFlagValue Value="16" Name="F5"/>
+    <ParameterBitFlagValue Value="32" Name="F6"/>
+    <ParameterBitFlagValue Value="64" Name="F7"/>
+    <ParameterBitFlagValue Value="128" Name="F8"/>
+  </Parameter>
+
+  <Parameter Group="Consist" Name="Consist address" CVMaps="19-127" Min="0" Max="127" Default="0"/>
+  <Parameter Group="Consist" Name="Consist direction" CVMaps="19-128" Default="0">
+    <ParameterChoiceValue Value="0" Name="Normal"/>
+    <ParameterChoiceValue Value="1" Name="Reversed"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Consist acceleration" CVMaps="23-127" Min="0" Max="255" Default="0"/>
+  <Parameter Group="Consist" Name="Consist braking rate" CVMaps="24-127" Min="0" Max="255" Default="0"/>
+  <Parameter Group="Consist" Name="Assign F0 forward to consist" CVMaps="22-1" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F0 reverse to consist" CVMaps="22-2" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F1 to consist" CVMaps="21-1" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F2 to consist" CVMaps="21-2" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F3 to consist" CVMaps="21-4" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F4 to consist" CVMaps="21-8" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F5 to consist" CVMaps="21-16" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F6 to consist" CVMaps="21-32" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F7 to consist" CVMaps="21-64" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F8 to consist" CVMaps="21-128" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F9 to consist" CVMaps="22-4" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F10 to consist" CVMaps="22-8" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F11 to consist" CVMaps="22-16" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Consist" Name="Assign F12 to consist" CVMaps="22-32" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+
+  <Parameter Group="Lock" Name="Lock ID" CVMaps="16-255" Min="0" Max="255" Default="0"/>
+  <Parameter Group="Lock" Name="Unlock ID" CVMaps="15-255" Min="0" Max="255" Default="0"/>
+
+  <Parameter Group="Function mapping" Name="F0 front" CVMaps="33-255" Default="1">
+    <ParameterBitFlagValue Value="1" Name="Output 1"/>
+    <ParameterBitFlagValue Value="2" Name="Output 2"/>
+    <ParameterBitFlagValue Value="4" Name="Output 3"/>
+    <ParameterBitFlagValue Value="8" Name="Output 4"/>
+    <ParameterBitFlagValue Value="16" Name="Output 5"/>
+    <ParameterBitFlagValue Value="32" Name="Output 6"/>
+    <ParameterBitFlagValue Value="64" Name="Output 7"/>
+    <ParameterBitFlagValue Value="128" Name="Output 8"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F0 rear" CVMaps="34-255" Default="2">
+    <ParameterBitFlagValue Value="1" Name="Output 1"/>
+    <ParameterBitFlagValue Value="2" Name="Output 2"/>
+    <ParameterBitFlagValue Value="4" Name="Output 3"/>
+    <ParameterBitFlagValue Value="8" Name="Output 4"/>
+    <ParameterBitFlagValue Value="16" Name="Output 5"/>
+    <ParameterBitFlagValue Value="32" Name="Output 6"/>
+    <ParameterBitFlagValue Value="64" Name="Output 7"/>
+    <ParameterBitFlagValue Value="128" Name="Output 8"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F1" CVMaps="35-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 1"/>
+    <ParameterBitFlagValue Value="2" Name="Output 2"/>
+    <ParameterBitFlagValue Value="4" Name="Output 3"/>
+    <ParameterBitFlagValue Value="8" Name="Output 4"/>
+    <ParameterBitFlagValue Value="16" Name="Output 5"/>
+    <ParameterBitFlagValue Value="32" Name="Output 6"/>
+    <ParameterBitFlagValue Value="64" Name="Output 7"/>
+    <ParameterBitFlagValue Value="128" Name="Output 8"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F2" CVMaps="36-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 1"/>
+    <ParameterBitFlagValue Value="2" Name="Output 2"/>
+    <ParameterBitFlagValue Value="4" Name="Output 3"/>
+    <ParameterBitFlagValue Value="8" Name="Output 4"/>
+    <ParameterBitFlagValue Value="16" Name="Output 5"/>
+    <ParameterBitFlagValue Value="32" Name="Output 6"/>
+    <ParameterBitFlagValue Value="64" Name="Output 7"/>
+    <ParameterBitFlagValue Value="128" Name="Output 8"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F3" CVMaps="37-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 1"/>
+    <ParameterBitFlagValue Value="2" Name="Output 2"/>
+    <ParameterBitFlagValue Value="4" Name="Output 3"/>
+    <ParameterBitFlagValue Value="8" Name="Output 4"/>
+    <ParameterBitFlagValue Value="16" Name="Output 5"/>
+    <ParameterBitFlagValue Value="32" Name="Output 6"/>
+    <ParameterBitFlagValue Value="64" Name="Output 7"/>
+    <ParameterBitFlagValue Value="128" Name="Output 8"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F4" CVMaps="38-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 4"/>
+    <ParameterBitFlagValue Value="2" Name="Output 5"/>
+    <ParameterBitFlagValue Value="4" Name="Output 6"/>
+    <ParameterBitFlagValue Value="8" Name="Output 7"/>
+    <ParameterBitFlagValue Value="16" Name="Output 8"/>
+    <ParameterBitFlagValue Value="32" Name="Output 9"/>
+    <ParameterBitFlagValue Value="64" Name="Output 10"/>
+    <ParameterBitFlagValue Value="128" Name="Output 11"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F5" CVMaps="39-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 4"/>
+    <ParameterBitFlagValue Value="2" Name="Output 5"/>
+    <ParameterBitFlagValue Value="4" Name="Output 6"/>
+    <ParameterBitFlagValue Value="8" Name="Output 7"/>
+    <ParameterBitFlagValue Value="16" Name="Output 8"/>
+    <ParameterBitFlagValue Value="32" Name="Output 9"/>
+    <ParameterBitFlagValue Value="64" Name="Output 10"/>
+    <ParameterBitFlagValue Value="128" Name="Output 11"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F6" CVMaps="40-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 4"/>
+    <ParameterBitFlagValue Value="2" Name="Output 5"/>
+    <ParameterBitFlagValue Value="4" Name="Output 6"/>
+    <ParameterBitFlagValue Value="8" Name="Output 7"/>
+    <ParameterBitFlagValue Value="16" Name="Output 8"/>
+    <ParameterBitFlagValue Value="32" Name="Output 9"/>
+    <ParameterBitFlagValue Value="64" Name="Output 10"/>
+    <ParameterBitFlagValue Value="128" Name="Output 11"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F7" CVMaps="41-255" Default="16">
+    <ParameterBitFlagValue Value="1" Name="Output 4"/>
+    <ParameterBitFlagValue Value="2" Name="Output 5"/>
+    <ParameterBitFlagValue Value="4" Name="Output 6"/>
+    <ParameterBitFlagValue Value="8" Name="Output 7"/>
+    <ParameterBitFlagValue Value="16" Name="Output 8"/>
+    <ParameterBitFlagValue Value="32" Name="Output 9"/>
+    <ParameterBitFlagValue Value="64" Name="Output 10"/>
+    <ParameterBitFlagValue Value="128" Name="Output 11"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F8" CVMaps="42-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 4"/>
+    <ParameterBitFlagValue Value="2" Name="Output 5"/>
+    <ParameterBitFlagValue Value="4" Name="Output 6"/>
+    <ParameterBitFlagValue Value="8" Name="Output 7"/>
+    <ParameterBitFlagValue Value="16" Name="Output 8"/>
+    <ParameterBitFlagValue Value="32" Name="Output 9"/>
+    <ParameterBitFlagValue Value="64" Name="Output 10"/>
+    <ParameterBitFlagValue Value="128" Name="Output 11"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F9" CVMaps="43-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 7"/>
+    <ParameterBitFlagValue Value="2" Name="Output 8"/>
+    <ParameterBitFlagValue Value="4" Name="Output 9"/>
+    <ParameterBitFlagValue Value="8" Name="Output 10"/>
+    <ParameterBitFlagValue Value="16" Name="Output 11"/>
+    <ParameterBitFlagValue Value="32" Name="Output 12"/>
+    <ParameterBitFlagValue Value="64" Name="Output 13"/>
+    <ParameterBitFlagValue Value="128" Name="Output 14"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F10" CVMaps="44-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 7"/>
+    <ParameterBitFlagValue Value="2" Name="Output 8"/>
+    <ParameterBitFlagValue Value="4" Name="Output 9"/>
+    <ParameterBitFlagValue Value="8" Name="Output 10"/>
+    <ParameterBitFlagValue Value="16" Name="Output 11"/>
+    <ParameterBitFlagValue Value="32" Name="Output 12"/>
+    <ParameterBitFlagValue Value="64" Name="Output 13"/>
+    <ParameterBitFlagValue Value="128" Name="Output 14"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F11" CVMaps="45-255" Default="64">
+    <ParameterBitFlagValue Value="1" Name="Output 7"/>
+    <ParameterBitFlagValue Value="2" Name="Output 8"/>
+    <ParameterBitFlagValue Value="4" Name="Output 9"/>
+    <ParameterBitFlagValue Value="8" Name="Output 10"/>
+    <ParameterBitFlagValue Value="16" Name="Output 11"/>
+    <ParameterBitFlagValue Value="32" Name="Output 12"/>
+    <ParameterBitFlagValue Value="64" Name="Output 13"/>
+    <ParameterBitFlagValue Value="128" Name="Output 14"/>
+  </Parameter>
+  <Parameter Group="Function mapping" Name="F12" CVMaps="46-255" Default="0">
+    <ParameterBitFlagValue Value="1" Name="Output 7"/>
+    <ParameterBitFlagValue Value="2" Name="Output 8"/>
+    <ParameterBitFlagValue Value="4" Name="Output 9"/>
+    <ParameterBitFlagValue Value="8" Name="Output 10"/>
+    <ParameterBitFlagValue Value="16" Name="Output 11"/>
+    <ParameterBitFlagValue Value="32" Name="Output 12"/>
+    <ParameterBitFlagValue Value="64" Name="Output 13"/>
+    <ParameterBitFlagValue Value="128" Name="Output 14"/>
+  </Parameter>
+
+  <Parameter Group="User Identification" Name="User ID 1" CVMaps="105-255" Min="0" Max="255" Default="0"/>
+  <Parameter Group="User Identification" Name="User ID 2" CVMaps="106-255" Min="0" Max="255" Default="0"/>
+</Decoder>

@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2B5F4B2-6E66-4176-BBAA-F126512C7DCB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Typhoon.CommandStation</RootNamespace>
+    <AssemblyName>Typhoon.CommandStation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Install\- Development\Prg\Typhoon\- ClickOnce\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CommandStation.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>37AEB020ACE585C1B33C2100BCD422B506AE1A24</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Typhoon.CommandStation_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.DataVisualization, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Docking, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Gauge, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.RibbonBar, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Data, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="..\Typhoon.API\NetworkMessageID.cs">
+      <Link>NetworkMessageID.cs</Link>
+    </Compile>
+    <Compile Include="Controls\ucConsistEditor.xaml.cs">
+      <DependentUpon>ucConsistEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucConsistItemList.xaml.cs">
+      <DependentUpon>ucConsistItemList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDecoderEditor.xaml.cs">
+      <DependentUpon>ucDecoderEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageSender.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="Controls\ucConsistList.xaml.cs">
+      <DependentUpon>ucConsistList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucFullList.xaml.cs">
+      <DependentUpon>ucFullList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucLayoutItemCommonPropertiesEditor.xaml.cs">
+      <DependentUpon>ucLayoutItemCommonPropertiesEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucLocomotiveEditor.xaml.cs">
+      <DependentUpon>ucLocomotiveEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucLocomotiveList.xaml.cs">
+      <DependentUpon>ucLocomotiveList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucPager.xaml.cs">
+      <DependentUpon>ucPager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileRegistrationHelper.cs" />
+    <Compile Include="Operators\AccessoryOperator.cs" />
+    <Compile Include="Operators\LocomotiveOperator.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\pageDatabase.xaml.cs">
+      <DependentUpon>pageDatabase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\pageDecoders.xaml.cs">
+      <DependentUpon>pageDecoders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\pageHomePage.xaml.cs">
+      <DependentUpon>pageHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\pageLayoutTopology.xaml.cs">
+      <DependentUpon>pageLayoutTopology.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\pageManual.xaml.cs">
+      <DependentUpon>pageManual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\pageMenu.xaml.cs">
+      <DependentUpon>pageMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\pageOperation.xaml.cs">
+      <DependentUpon>pageOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Station.cs" />
+    <Compile Include="Controls\ucLocomotiveDecoderProperties.xaml.cs">
+      <DependentUpon>ucLocomotiveDecoderProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucLocomotiveOperator.xaml.cs">
+      <DependentUpon>ucLocomotiveOperator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDecoderProgramming.xaml.cs">
+      <DependentUpon>ucDecoderProgramming.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\ucConsistEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucConsistList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucConsistItemList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucDecoderEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucFullList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucLayoutItemCommonPropertiesEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucLocomotiveEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucLocomotiveList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucPager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\pageDatabase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\pageDecoders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\pageHomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\pageLayoutTopology.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\pageManual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\pageMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\pageOperation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucLocomotiveDecoderProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucLocomotiveOperator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucDecoderProgramming.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RoutedCommands.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Options.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Typhoon.Core\Typhoon.Core.csproj">
+      <Project>{C1B8B31C-88D4-43B6-8179-98A27C44AAB5}</Project>
+      <Name>Typhoon.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Typhoon.Decoders\Typhoon.Decoders.csproj">
+      <Project>{52133582-D7C3-433B-B0F5-B6D5651B4399}</Project>
+      <Name>Typhoon.Decoders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Typhoon.Layouts\Typhoon.Layouts.csproj">
+      <Project>{FB19AC0E-87EC-42B3-85AE-1C40E7A3B127}</Project>
+      <Name>Typhoon.Layouts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Typhoon.Localization\Typhoon.Localization.csproj">
+      <Project>{9BCB9A7E-33DE-4136-8666-8BC3FB260E9B}</Project>
+      <Name>Typhoon.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Typhoon.Net\Typhoon.Net.csproj">
+      <Project>{2BA276B6-6D72-4175-9A17-7C239F1737E4}</Project>
+      <Name>Typhoon.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Typhoon.NMRA\Typhoon.NMRA.csproj">
+      <Project>{84D700E3-24FC-40B7-87A0-2B341F4DD0C8}</Project>
+      <Name>Typhoon.NMRA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Typhoon.ValueConverters\Typhoon.ValueConverters.csproj">
+      <Project>{12196C51-7C03-4F2B-9237-2562096BD1AF}</Project>
+      <Name>Typhoon.ValueConverters</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Options.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\Info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CommandStation_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\Decoder_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MainTrack.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ProgramTrack.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Delete_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Parameter.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Parameter_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Read.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Train.jpg" />
+    <Resource Include="Images\Write.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Read_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Write_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ParameterWarning_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ParameterOK_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Info_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Short_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="de\Telerik.Windows.Controls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\Telerik.Windows.Controls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\Telerik.Windows.Controls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="FTD2XX_NET">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="it\Telerik.Windows.Controls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="nl\Telerik.Windows.Controls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="tr\Telerik.Windows.Controls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Parameters_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\railcom.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reverse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CommandStation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CommandStation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\Home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\wifi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\Internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Operation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Throttle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Layout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LedGreen_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LedRed_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\IPServer_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\Decoder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\LedRed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\LedGreen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Loco.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LocoBrake.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LocoStop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Short.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Up_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Down_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Unused\Decoder2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Decoder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StationConnected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StationDisconnected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Import.png" />
+    <Resource Include="Images\Export.png" />
+    <Resource Include="Images\PowerOn.png" />
+    <Resource Include="Images\PowerOff.png" />
+    <Resource Include="Images\LedGrey_32.ico" />
+    <Resource Include="Images\LedGrey_16.ico" />
+    <Resource Include="Images\LedGreen_16.ico" />
+    <Resource Include="Images\LedRed_16.ico" />
+    <Content Include="Languages\ru.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Editors\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

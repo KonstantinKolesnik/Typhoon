@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Decoder Type="Locomotive">
+  <Feature Name="Model" Value="NMRA Standard"/>
+  <Feature Name="Programming methods" Value="All"/>
+
+  <Parameter Group="Manufacturer" Name="Version No." CVMaps="7-255" Value="0" ReadOnly="1"/>
+  <Parameter Group="Manufacturer" Name="Manufacturer" CVMaps="8-255" Value="0" ReadOnly="1"/>
+
+  <Parameter Group="Address" Name="Primary address" CVMaps="1-255" Min="1" Max="127" Default="3"/>
+  <Parameter Group="Address" Name="Use extended address" CVMaps="29-32" Default="0">
+    <ParameterEnumValue Value="0" Name="No"/>
+    <ParameterEnumValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Address" Name="Extended address" CVMaps="18-255;17-255" Min="0" Max="10239" Default="3"/>
+
+  <Parameter Group="Speed" Name="28&amp;128 speed steps" CVMaps="29-2" Default="1">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+
+
+
+
+
+
+
+
+
+
+
+  <Parameter group="Speed" name="28/128 speed steps enabled" cv="29" bit="1" min="0" max="1" default="1"/>
+  <Parameter group="Speed" name="V start" cv="2" min="0" max="255"/>
+  <Parameter group="Speed" name="V mid" cv="6" min="0" max="255"/>
+  <Parameter group="Speed" name="V high" cv="5" min="0" max="255"/>
+  <Parameter group="Speed" name="Kick start" cv="65" min="0" max="255"/>
+  <Parameter group="Speed" name="EMF feedback cutout" cv="10" min="1" max="128"/>
+  <Parameter group="Speed" name="Acceleration rate" cv="3" min="0" max="255"/>
+  <Parameter group="Speed" name="Deceleration rate" cv="4" min="0" max="255"/>
+  <Parameter group="Speed" name="Forward trim" cv="66" min="0" max="255"/>
+  <Parameter group="Speed" name="Reverse trim" cv="95" min="0" max="255"/>
+
+  <Parameter group="Speed table" name="Speed table enabled" cv="29" bit="4" min="0" max="1" default="0"/>
+  
+
+  <Parameter group="Automatic Stopping" name="Auto Stop in the presence of an asymmetrical DCC signal which is more positive on the right rail enabled" cv="27" bit="0" min="0" max="1"/>
+  <Parameter group="Automatic Stopping" name="Auto Stop in the presence of an asymmetrical DCC signal which is more positive on the left rail enabled" cv="27" bit="1" min="0" max="1"/>
+  <Parameter group="Automatic Stopping" name="Auto Stop in the presence of an Signal Controlled Influence cutout signal enabled" cv="27" bit="2" min="0" max="1"/>
+  <Parameter group="Automatic Stopping" name="Auto Stop in the presence of reverse polarity DC enabled" cv="27" bit="4" min="0" max="1"/>
+  <Parameter group="Automatic Stopping" name="Auto Stop in the presence of forward polarity DC enabled" cv="27" bit="5" min="0" max="1"/>
+
+  <Parameter group="Configuration" name="Reverse direction enabled" cv="29" bit="0" min="0" max="1" default="0"/>
+  <Parameter group="Configuration" name="Operation on DC enabled" cv="29" bit="2" min="0" max="1" default="0"/>
+  <!-- <Parameter name="Is accessory decoder" cv="29" bit="7" default="0"/> -->
+
+  <Parameter group="Railcom" name="Railcom enabled" cv="29" bit="3" min="0" max="1" default="0"/>
+  <Parameter group="Railcom" name="Unsolicited decoder initiated transmission enabled" cv="28" bit="0" min="0" max="1"/>
+  <Parameter group="Railcom" name="Initiated broadcast transmission using asymmetrical DCC signal enabled" cv="28" bit="1" min="0" max="1"/>
+  <Parameter group="Railcom" name="Initiated broadcast transmission using signal controlled influence signal enabled" cv="28" bit="2" min="0" max="1"/>
+
+
+
+
+  <Parameter group="Other" name="Packet time-out" cv="11" min="0" max="255"/>
+  <Parameter group="Other" name="Error information" cv="30" readonly="1"/>
+
+
+
+  <Parameter group="User Identification" name="User ID 1" cv="105" min="0" max="255"/>
+  <Parameter group="User Identification" name="User ID 2" cv="106" min="0" max="255"/>
+
+  <Parameter group="Manufacturer Specific" name="CV47" cv="47"/>
+  <Parameter group="Manufacturer Specific" name="CV48" cv="48"/>
+  <Parameter group="Manufacturer Specific" name="CV49" cv="49"/>
+  <Parameter group="Manufacturer Specific" name="CV50" cv="50"/>
+  <Parameter group="Manufacturer Specific" name="CV51" cv="51"/>
+  <Parameter group="Manufacturer Specific" name="CV52" cv="52"/>
+  <Parameter group="Manufacturer Specific" name="CV53" cv="53"/>
+  <Parameter group="Manufacturer Specific" name="CV54" cv="54"/>
+  <Parameter group="Manufacturer Specific" name="CV55" cv="55"/>
+  <Parameter group="Manufacturer Specific" name="CV56" cv="56"/>
+  <Parameter group="Manufacturer Specific" name="CV57" cv="57"/>
+  <Parameter group="Manufacturer Specific" name="CV58" cv="58"/>
+  <Parameter group="Manufacturer Specific" name="CV59" cv="59"/>
+  <Parameter group="Manufacturer Specific" name="CV60" cv="60"/>
+  <Parameter group="Manufacturer Specific" name="CV61" cv="61"/>
+  <Parameter group="Manufacturer Specific" name="CV62" cv="62"/>
+  <Parameter group="Manufacturer Specific" name="CV63" cv="63"/>
+  <Parameter group="Manufacturer Specific" name="CV64" cv="64"/>
+  <Parameter group="Manufacturer Specific" name="CV112" cv="112"/>
+  <Parameter group="Manufacturer Specific" name="CV113" cv="113"/>
+  <Parameter group="Manufacturer Specific" name="CV114" cv="114"/>
+  <Parameter group="Manufacturer Specific" name="CV115" cv="115"/>
+  <Parameter group="Manufacturer Specific" name="CV116" cv="116"/>
+  <Parameter group="Manufacturer Specific" name="CV117" cv="117"/>
+  <Parameter group="Manufacturer Specific" name="CV118" cv="118"/>
+  <Parameter group="Manufacturer Specific" name="CV119" cv="119"/>
+  <Parameter group="Manufacturer Specific" name="CV120" cv="120"/>
+  <Parameter group="Manufacturer Specific" name="CV121" cv="121"/>
+  <Parameter group="Manufacturer Specific" name="CV122" cv="122"/>
+  <Parameter group="Manufacturer Specific" name="CV123" cv="123"/>
+  <Parameter group="Manufacturer Specific" name="CV124" cv="124"/>
+  <Parameter group="Manufacturer Specific" name="CV125" cv="125"/>
+  <Parameter group="Manufacturer Specific" name="CV126" cv="126"/>
+  <Parameter group="Manufacturer Specific" name="CV127" cv="127"/>
+  <Parameter group="Manufacturer Specific" name="CV128" cv="128"/>
+  <Parameter group="Manufacturer Specific" name="CV129" cv="129"/>
+  <Parameter group="Manufacturer Specific" name="CV130" cv="130"/>
+  <Parameter group="Manufacturer Specific" name="CV131" cv="131"/>
+  <Parameter group="Manufacturer Specific" name="CV132" cv="132"/>
+  <Parameter group="Manufacturer Specific" name="CV133" cv="133"/>
+  <Parameter group="Manufacturer Specific" name="CV134" cv="134"/>
+  <Parameter group="Manufacturer Specific" name="CV135" cv="135"/>
+  <Parameter group="Manufacturer Specific" name="CV136" cv="136"/>
+  <Parameter group="Manufacturer Specific" name="CV137" cv="137"/>
+  <Parameter group="Manufacturer Specific" name="CV138" cv="138"/>
+  <Parameter group="Manufacturer Specific" name="CV139" cv="139"/>
+  <Parameter group="Manufacturer Specific" name="CV140" cv="140"/>
+  <Parameter group="Manufacturer Specific" name="CV141" cv="141"/>
+  <Parameter group="Manufacturer Specific" name="CV142" cv="142"/>
+  <Parameter group="Manufacturer Specific" name="CV143" cv="143"/>
+  <Parameter group="Manufacturer Specific" name="CV144" cv="144"/>
+  <Parameter group="Manufacturer Specific" name="CV145" cv="145"/>
+  <Parameter group="Manufacturer Specific" name="CV146" cv="146"/>
+  <Parameter group="Manufacturer Specific" name="CV147" cv="147"/>
+  <Parameter group="Manufacturer Specific" name="CV148" cv="148"/>
+  <Parameter group="Manufacturer Specific" name="CV149" cv="149"/>
+  <Parameter group="Manufacturer Specific" name="CV150" cv="150"/>
+  <Parameter group="Manufacturer Specific" name="CV151" cv="151"/>
+  <Parameter group="Manufacturer Specific" name="CV152" cv="152"/>
+  <Parameter group="Manufacturer Specific" name="CV153" cv="153"/>
+  <Parameter group="Manufacturer Specific" name="CV154" cv="154"/>
+  <Parameter group="Manufacturer Specific" name="CV155" cv="155"/>
+  <Parameter group="Manufacturer Specific" name="CV156" cv="156"/>
+  <Parameter group="Manufacturer Specific" name="CV157" cv="157"/>
+  <Parameter group="Manufacturer Specific" name="CV158" cv="158"/>
+  <Parameter group="Manufacturer Specific" name="CV159" cv="159"/>
+  <Parameter group="Manufacturer Specific" name="CV160" cv="160"/>
+  <Parameter group="Manufacturer Specific" name="CV161" cv="161"/>
+  <Parameter group="Manufacturer Specific" name="CV162" cv="162"/>
+  <Parameter group="Manufacturer Specific" name="CV163" cv="163"/>
+  <Parameter group="Manufacturer Specific" name="CV164" cv="164"/>
+  <Parameter group="Manufacturer Specific" name="CV165" cv="165"/>
+  <Parameter group="Manufacturer Specific" name="CV166" cv="166"/>
+  <Parameter group="Manufacturer Specific" name="CV167" cv="167"/>
+  <Parameter group="Manufacturer Specific" name="CV168" cv="168"/>
+  <Parameter group="Manufacturer Specific" name="CV169" cv="169"/>
+  <Parameter group="Manufacturer Specific" name="CV170" cv="170"/>
+  <Parameter group="Manufacturer Specific" name="CV171" cv="171"/>
+  <Parameter group="Manufacturer Specific" name="CV172" cv="172"/>
+  <Parameter group="Manufacturer Specific" name="CV173" cv="173"/>
+  <Parameter group="Manufacturer Specific" name="CV174" cv="174"/>
+  <Parameter group="Manufacturer Specific" name="CV175" cv="175"/>
+  <Parameter group="Manufacturer Specific" name="CV176" cv="176"/>
+  <Parameter group="Manufacturer Specific" name="CV177" cv="177"/>
+  <Parameter group="Manufacturer Specific" name="CV178" cv="178"/>
+  <Parameter group="Manufacturer Specific" name="CV179" cv="179"/>
+  <Parameter group="Manufacturer Specific" name="CV180" cv="180"/>
+  <Parameter group="Manufacturer Specific" name="CV181" cv="181"/>
+  <Parameter group="Manufacturer Specific" name="CV182" cv="182"/>
+  <Parameter group="Manufacturer Specific" name="CV183" cv="183"/>
+  <Parameter group="Manufacturer Specific" name="CV184" cv="184"/>
+  <Parameter group="Manufacturer Specific" name="CV185" cv="185"/>
+  <Parameter group="Manufacturer Specific" name="CV186" cv="186"/>
+  <Parameter group="Manufacturer Specific" name="CV187" cv="187"/>
+  <Parameter group="Manufacturer Specific" name="CV188" cv="188"/>
+  <Parameter group="Manufacturer Specific" name="CV189" cv="189"/>
+  <Parameter group="Manufacturer Specific" name="CV190" cv="190"/>
+  <Parameter group="Manufacturer Specific" name="CV191" cv="191"/>
+  <Parameter group="Manufacturer Specific" name="CV192" cv="192"/>
+  <Parameter group="Manufacturer Specific" name="CV193" cv="193"/>
+  <Parameter group="Manufacturer Specific" name="CV194" cv="194"/>
+  <Parameter group="Manufacturer Specific" name="CV195" cv="195"/>
+  <Parameter group="Manufacturer Specific" name="CV196" cv="196"/>
+  <Parameter group="Manufacturer Specific" name="CV197" cv="197"/>
+  <Parameter group="Manufacturer Specific" name="CV198" cv="198"/>
+  <Parameter group="Manufacturer Specific" name="CV199" cv="199"/>
+  <Parameter group="Manufacturer Specific" name="CV200" cv="200"/>
+  <Parameter group="Manufacturer Specific" name="CV201" cv="201"/>
+  <Parameter group="Manufacturer Specific" name="CV202" cv="202"/>
+  <Parameter group="Manufacturer Specific" name="CV203" cv="203"/>
+  <Parameter group="Manufacturer Specific" name="CV204" cv="204"/>
+  <Parameter group="Manufacturer Specific" name="CV205" cv="205"/>
+  <Parameter group="Manufacturer Specific" name="CV206" cv="206"/>
+  <Parameter group="Manufacturer Specific" name="CV207" cv="207"/>
+  <Parameter group="Manufacturer Specific" name="CV208" cv="208"/>
+  <Parameter group="Manufacturer Specific" name="CV209" cv="209"/>
+  <Parameter group="Manufacturer Specific" name="CV210" cv="210"/>
+  <Parameter group="Manufacturer Specific" name="CV211" cv="211"/>
+  <Parameter group="Manufacturer Specific" name="CV212" cv="212"/>
+  <Parameter group="Manufacturer Specific" name="CV213" cv="213"/>
+  <Parameter group="Manufacturer Specific" name="CV214" cv="214"/>
+  <Parameter group="Manufacturer Specific" name="CV215" cv="215"/>
+  <Parameter group="Manufacturer Specific" name="CV216" cv="216"/>
+  <Parameter group="Manufacturer Specific" name="CV217" cv="217"/>
+  <Parameter group="Manufacturer Specific" name="CV218" cv="218"/>
+  <Parameter group="Manufacturer Specific" name="CV219" cv="219"/>
+  <Parameter group="Manufacturer Specific" name="CV220" cv="220"/>
+  <Parameter group="Manufacturer Specific" name="CV221" cv="221"/>
+  <Parameter group="Manufacturer Specific" name="CV222" cv="222"/>
+  <Parameter group="Manufacturer Specific" name="CV223" cv="223"/>
+  <Parameter group="Manufacturer Specific" name="CV224" cv="224"/>
+  <Parameter group="Manufacturer Specific" name="CV225" cv="225"/>
+  <Parameter group="Manufacturer Specific" name="CV226" cv="226"/>
+  <Parameter group="Manufacturer Specific" name="CV227" cv="227"/>
+  <Parameter group="Manufacturer Specific" name="CV228" cv="228"/>
+  <Parameter group="Manufacturer Specific" name="CV229" cv="229"/>
+  <Parameter group="Manufacturer Specific" name="CV230" cv="230"/>
+  <Parameter group="Manufacturer Specific" name="CV231" cv="231"/>
+  <Parameter group="Manufacturer Specific" name="CV232" cv="232"/>
+  <Parameter group="Manufacturer Specific" name="CV233" cv="233"/>
+  <Parameter group="Manufacturer Specific" name="CV234" cv="234"/>
+  <Parameter group="Manufacturer Specific" name="CV235" cv="235"/>
+  <Parameter group="Manufacturer Specific" name="CV236" cv="236"/>
+  <Parameter group="Manufacturer Specific" name="CV237" cv="237"/>
+  <Parameter group="Manufacturer Specific" name="CV238" cv="238"/>
+  <Parameter group="Manufacturer Specific" name="CV239" cv="239"/>
+  <Parameter group="Manufacturer Specific" name="CV240" cv="240"/>
+  <Parameter group="Manufacturer Specific" name="CV241" cv="241"/>
+  <Parameter group="Manufacturer Specific" name="CV242" cv="242"/>
+  <Parameter group="Manufacturer Specific" name="CV243" cv="243"/>
+  <Parameter group="Manufacturer Specific" name="CV244" cv="244"/>
+  <Parameter group="Manufacturer Specific" name="CV245" cv="245"/>
+  <Parameter group="Manufacturer Specific" name="CV246" cv="246"/>
+  <Parameter group="Manufacturer Specific" name="CV247" cv="247"/>
+  <Parameter group="Manufacturer Specific" name="CV248" cv="248"/>
+  <Parameter group="Manufacturer Specific" name="CV249" cv="249"/>
+  <Parameter group="Manufacturer Specific" name="CV250" cv="250"/>
+  <Parameter group="Manufacturer Specific" name="CV251" cv="251"/>
+  <Parameter group="Manufacturer Specific" name="CV252" cv="252"/>
+  <Parameter group="Manufacturer Specific" name="CV253" cv="253"/>
+  <Parameter group="Manufacturer Specific" name="CV254" cv="254"/>
+  <Parameter group="Manufacturer Specific" name="CV255" cv="255"/>
+  <Parameter group="Manufacturer Specific" name="CV256" cv="256"/>
+</Decoder>

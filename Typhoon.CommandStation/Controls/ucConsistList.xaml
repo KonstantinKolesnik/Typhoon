@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Typhoon.CommandStation.Controls.ucConsistList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+      xmlns:local="clr-namespace:Typhoon.CommandStation"
+      xmlns:controls="clr-namespace:Typhoon.CommandStation.Controls"
+      xmlns:loc="clr-namespace:Typhoon.Localization;assembly=Typhoon.Localization"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" TextOptions.TextFormattingMode="Display" FontSize="11" Name="uc">
+    <UserControl.Resources>
+        <!--<DataTemplate x:Key="GroupHeaderTemplate">
+            <telerik:RadExpander>
+                <telerik:RadExpander.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Tag="Consist" Margin="5,0,0,0" VerticalAlignment="Center">
+                            <TextBlock.Text>
+                                <loc:Translate Default="Consist">
+						            <Binding RelativeSource="{x:Static RelativeSource.Self}" Path="Tag" />
+					            </loc:Translate>
+				            </TextBlock.Text>
+                        </TextBlock>
+                        <TextBlock Text="{Binding Header}" FontWeight="Bold" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </telerik:RadExpander.Header>
+
+            </telerik:RadExpander>
+        </DataTemplate>-->
+
+        <DataTemplate x:Key="RowDetails">
+            <controls:ucConsistEditor Consist="{Binding}" Margin="35,0,0,0" />
+        </DataTemplate>
+        <Style TargetType="{x:Type telerik:GridViewColumn}">
+            <Setter Property="HeaderTextAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <telerik:RadToolBar Grid.Row="0" Style="{StaticResource Toolbar}" VerticalAlignment="Top">
+            <telerik:RadRibbonButton loc:Translate.Uid="Add" Text="{loc:Translate Add}" Command="local:RoutedCommands.AddConsist" SmallImage="{StaticResource AddIconSmall}" Size="Medium"/>
+            <telerik:RadRibbonButton loc:Translate.Uid="Delete" Text="{loc:Translate Delete}" Command="local:RoutedCommands.DeleteLayoutItem" SmallImage="{StaticResource DeleteIconSmall}" Size="Medium"/>
+            <telerik:RadToolBarSeparator/>
+            <telerik:RadRibbonButton loc:Translate.Uid="Import" Text="{loc:Translate Import}" Command="local:RoutedCommands.ImportLayoutItem" SmallImage="{StaticResource ImportIconSmall}" Size="Medium"/>
+            <telerik:RadRibbonButton loc:Translate.Uid="Export" Text="{loc:Translate Export}" Command="local:RoutedCommands.ExportLayoutItem" SmallImage="{StaticResource ExportIconSmall}" Size="Medium"/>
+        </telerik:RadToolBar>
+
+        <!--GroupHeaderTemplate="{StaticResource GroupHeaderTemplate}"-->
+        <telerik:RadGridView x:Name="gvConsists" Grid.Row="1"
+                             ItemsSource="{Binding Path=Layout.Items, ElementName=uc}"
+                             SelectedItem="{Binding Path=Consist, ElementName=uc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             RowDetailsTemplate="{StaticResource RowDetails}"
+                             IsReadOnly="True"
+                             CanUserFreezeColumns="False" CanUserDeleteRows="False" CanUserInsertRows="False"
+                             IsFilteringAllowed="True"
+                             AutoGenerateColumns="False"
+                             RowIndicatorVisibility="Collapsed"
+                             GridLinesVisibility="None"
+                             SelectionMode="Single"
+                             ShowColumnFooters="True" ShowGroupPanel="False">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewToggleRowDetailsColumn />
+                <telerik:GridViewImageColumn loc:Translate.Uid="Image" Header="{loc:Translate Image}" IsGroupable="False" IsSortable="False" IsFilterable="False" DataMemberBinding="{Binding ImageSource}" ImageHeight="18" ImageStretch="Uniform">
+                    <telerik:GridViewImageColumn.AggregateFunctions>
+                        <telerik:CountFunction Caption="Σ = "/>
+                    </telerik:GridViewImageColumn.AggregateFunctions>
+                </telerik:GridViewImageColumn>
+                <telerik:GridViewDataColumn loc:Translate.Uid="Name" Header="{loc:Translate Name}" DataMemberBinding="{Binding Name}"/>
+            </telerik:RadGridView.Columns>
+            <telerik:RadGridView.FilterDescriptors>
+                <telerik:FilterDescriptor Member="Type" Operator="IsEqualTo" Value="Consist"/>
+            </telerik:RadGridView.FilterDescriptors>
+        </telerik:RadGridView>
+    </Grid>
+</UserControl>

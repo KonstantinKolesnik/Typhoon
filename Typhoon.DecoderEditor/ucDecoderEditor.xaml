@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Typhoon.DecoderEditor.ucDecoderEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:Typhoon.DecoderEditor"
+             xmlns:loc="clr-namespace:Typhoon.Localization;assembly=Typhoon.Localization"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" TextOptions.TextFormattingMode="Display" SnapsToDevicePixels="True" FontSize="11" Name="uc">
+    <UserControl.Resources>
+        <DataTemplate x:Key="ImageCellTemplate">
+            <Image Source="{StaticResource InfoIconSmall}" VerticalAlignment="Center"/>
+        </DataTemplate>
+    </UserControl.Resources>
+    
+    <Grid>
+        <telerik:RadTabControl BackgroundVisibility="Collapsed" Background="Transparent" TabOrientation="Horizontal" TabStripPlacement="Top" Align="Left" DropDownDisplayMode="Visible">
+            
+            <telerik:RadTabItem loc:Translate.Uid="Features" Header="{loc:Translate Features}" IsSelected="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <telerik:RadToolBar Grid.Row="0" Style="{StaticResource Toolbar}">
+                        <!--<telerik:RadRibbonButton loc:Translate.Uid="Add" Text="{loc:Translate Add}" Command="local:RoutedCommands.AddLocomotive" LargeImage="{StaticResource AddIconSmall}" Size="Medium"/>
+                        <telerik:RadRibbonButton loc:Translate.Uid="Delete" Text="{loc:Translate Delete}" Command="local:RoutedCommands.DeleteLayoutItem" LargeImage="{StaticResource DeleteIconSmall}" Size="Medium"/>-->
+                    </telerik:RadToolBar>
+
+                    <telerik:RadGridView Grid.Row="1"
+                        ItemsSource="{Binding Path=Decoder.Features, ElementName=uc}"
+                        IsReadOnly="False"
+                        AutoGenerateColumns="False" RowIndicatorVisibility="Collapsed"
+                        CanUserFreezeColumns="False" CanUserSortColumns="False" CanUserInsertRows="True" CanUserDeleteRows="True"
+                        IsFilteringAllowed="False" ShowGroupPanel="False" SelectionUnit="FullRow" GridLinesVisibility="None">
+                        <telerik:RadGridView.Columns>
+                            <telerik:GridViewDataColumn CellTemplate="{StaticResource ImageCellTemplate}" HeaderTextAlignment="Center" IsReadOnly="True"/>
+                            <telerik:GridViewDataColumn loc:Translate.Uid="Feature" Header="{loc:Translate Feature}" DataMemberBinding="{Binding Name}" HeaderTextAlignment="Center"/>
+                            <telerik:GridViewDataColumn loc:Translate.Uid="Value" Header="{loc:Translate Value}" DataMemberBinding="{Binding Value}" HeaderTextAlignment="Center"/>
+                        </telerik:RadGridView.Columns>
+                    </telerik:RadGridView>
+                </Grid>
+            </telerik:RadTabItem>
+            
+            <telerik:RadTabItem loc:Translate.Uid="Parameters" Header="{loc:Translate Parameters}">
+
+            </telerik:RadTabItem>
+        </telerik:RadTabControl>
+    </Grid>
+</UserControl>

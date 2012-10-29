@@ -1,0 +1,41 @@
+﻿<Application x:Class="Typhoon.DecoderEditor.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:Typhoon.DecoderEditor"
+             xmlns:loc="clr-namespace:Typhoon.Localization;assembly=Typhoon.Localization"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <LinearGradientBrush x:Key="Bar" StartPoint="0.5,0" EndPoint="0.5,1" Opacity="1.0">
+            <GradientStop Offset="0" Color="#878787" />
+            <GradientStop Offset="0.46" Color="#4C4C4C" />
+            <GradientStop Offset="0.48" Color="#232323" />
+            <GradientStop Offset="0.5" Color="#141414" />
+            <GradientStop Offset="1" Color="#585858" />
+        </LinearGradientBrush>
+
+        <Style x:Key="Toolbar" TargetType="{x:Type telerik:RadToolBar}">
+            <Setter Property="GripVisibility" Value="Collapsed" />
+            <Setter Property="OverflowButtonVisibility" Value="Collapsed" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <!--<Setter Property="FontWeight" Value="Bold" />-->
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="{StaticResource Bar}" />
+            <!--<Setter Property="Opacity" Value="0.1" />-->
+        </Style>
+
+
+        <!-- Bitmaps -->
+        <BitmapImage x:Key="DecoderIcon" UriSource="/Typhoon.DecoderEditor;component/Images/Decoder.ico"/>
+        <BitmapImage x:Key="NewIcon" UriSource="/Typhoon.DecoderEditor;component/Images/New.png"/>
+        <BitmapImage x:Key="OpenIcon" UriSource="/Typhoon.DecoderEditor;component/Images/Open.png"/>
+        <BitmapImage x:Key="SaveIcon" UriSource="/Typhoon.DecoderEditor;component/Images/Save.png"/>
+        <BitmapImage x:Key="SaveAsIcon" UriSource="/Typhoon.DecoderEditor;component/Images/Save.png"/>
+        <BitmapImage x:Key="PrintIcon" UriSource="/Typhoon.DecoderEditor;component/Images/Print.png"/>
+        <BitmapImage x:Key="MailIcon" UriSource="/Typhoon.DecoderEditor;component/Images/Mail.png"/>
+
+        <BitmapImage x:Key="InfoIconSmall" UriSource="/Typhoon.DecoderEditor;component/Images/Info_16.ico"/>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,48 @@
+﻿<Window x:Class="Typhoon.DecoderEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:telerikTransitions="clr-namespace:Telerik.Windows.Controls.TransitionEffects;assembly=Telerik.Windows.Controls"
+        xmlns:local="clr-namespace:Typhoon.DecoderEditor"
+        xmlns:loc="clr-namespace:Typhoon.Localization;assembly=Typhoon.Localization"
+        
+        Name="wnd"
+        TextOptions.TextFormattingMode="Display"
+        TextOptions.TextRenderingMode="ClearType"
+        UseLayoutRounding="True"
+        WindowStartupLocation="CenterScreen"
+        SnapsToDevicePixels="True"
+        ResizeMode="CanResizeWithGrip"
+        Width="900"
+        Height="700"
+        MinWidth="900"
+        MinHeight="700"
+        Icon="{StaticResource DecoderIcon}"
+    
+        Loaded="MainWindow_Loaded"
+        Closing="MainWindow_Closing"
+    
+        loc:Translate.Uid="Typhoon"
+        FlowDirection="{loc:Translate LeftToRight}"
+        Title="{Binding Path=Model.Title, ElementName=wnd}"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Tool bar -->
+        <telerik:RadToolBar Grid.Row="0" Style="{StaticResource Toolbar}" HorizontalAlignment="Stretch">
+            <telerik:RadRibbonButton loc:Translate.Uid="New" Text="{loc:Translate New}" Command="local:RoutedCommands.NewDecoder" LargeImage="{StaticResource NewIcon}" Size="Large"/>
+            <telerik:RadRibbonButton loc:Translate.Uid="Open" Text="{loc:Translate Open...}" Command="local:RoutedCommands.OpenDecoder" LargeImage="{StaticResource OpenIcon}" Size="Large"/>
+            <telerik:RadRibbonButton loc:Translate.Uid="Save" Text="{loc:Translate Save}" Command="local:RoutedCommands.SaveDecoder" LargeImage="{StaticResource SaveIcon}" Size="Large"/>
+            <telerik:RadRibbonButton loc:Translate.Uid="SaveAs" Text="{loc:Translate SaveAs...}" Command="local:RoutedCommands.SaveAsDecoder" LargeImage="{StaticResource SaveAsIcon}" Size="Large"/>
+            <telerik:RadToolBarSeparator />
+            <telerik:RadRibbonButton loc:Translate.Uid="Print" Text="{loc:Translate Print...}" Command="local:RoutedCommands.PrintDecoder" LargeImage="{StaticResource PrintIcon}" Size="Large"/>
+            <telerik:RadRibbonButton loc:Translate.Uid="SendInEmail" Text="{loc:Translate Send in e-mail...}" Command="local:RoutedCommands.EmailDecoder" LargeImage="{StaticResource MailIcon}" Size="Large"/>
+        </telerik:RadToolBar>
+
+        <local:ucDecoderEditor Grid.Row="1" Decoder="{Binding Path=Model.Decoder, ElementName=wnd}"/>
+    </Grid>
+</Window>

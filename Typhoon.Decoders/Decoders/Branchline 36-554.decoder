@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Decoder Type="Locomotive">
+  <Feature Name="Model" Value="Branchline 36-554"/>
+  <Feature Name="Plug" Value="NEM 21 pin connector"/>
+  <Feature Name="Motor output" Value="700 mA"/>
+  <Feature Name="Function F0" Value="Directional lighting"/>
+  <Feature Name="Function F1" Value="Auxilary output 180mA"/>
+  <Feature Name="Function F3" Value="Shunting speed reduction selection"/>
+  <Feature Name="Function F4" Value="Inertia on/off"/>
+
+  <Parameter Group="Manufacturer" Name="Version No." CVMaps="7-255" Value="0" ReadOnly="1"/>
+  <Parameter Group="Manufacturer" Name="Manufacturer" CVMaps="8-255" Value="151" ReadOnly="1"/>
+  
+  <Parameter Group="Address" Name="Primary address" CVMaps="1-255" Min="1" Max="127" Default="3"/>
+  <Parameter Group="Address" Name="Use extended address" CVMaps="29-32" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Address" Name="Extended address" CVMaps="18-255;17-255" Min="0" Max="9999" Default="0"/>
+
+  <Parameter Group="Speed" Name="28&amp;128 speed steps" CVMaps="29-2" Default="1">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Speed" Name="V min" CVMaps="2-255" Min="1" Max="63" Default="3"/>
+  <Parameter Group="Speed" Name="V max" CVMaps="5-255" Min="0" Max="63" Default="63"/>
+  <Parameter Group="Speed" Name="Acceleration rate" CVMaps="3-255" Min="0" Max="63" Default="8"/>
+  <Parameter Group="Speed" Name="Deceleration rate" CVMaps="4-255" Min="0" Max="63" Default="6"/>
+
+  <Parameter Group="Configuration" Name="Reverse direction" CVMaps="29-1" Default="0">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Configuration" Name="Operation on DC" CVMaps="29-4" Default="1">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="Configuration" Name="Lenz DC brake mode" CVMaps="51-1" Default="1">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+
+  <Parameter Group="EMF" Name="Back EMF" CVMaps="49-1" Default="1">
+    <ParameterChoiceValue Value="0" Name="No"/>
+    <ParameterChoiceValue Value="1" Name="Yes"/>
+  </Parameter>
+  <Parameter Group="EMF" Name="Feedback parameter K" CVMaps="54-255" Min="0" Max="63" Default="32"/>
+  <Parameter Group="EMF" Name="Feedback parameter I" CVMaps="55-255" Min="0" Max="63" Default="24"/>
+  
+  <Parameter Group="Lightning" Name="F0/F1 brightness" CVMaps="63-255" Min="0" Max="7" Default="7"/>
+</Decoder>

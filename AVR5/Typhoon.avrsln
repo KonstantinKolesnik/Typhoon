@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{D1100916-62DA-4D80-A9B4-55A1E7CCEEB3}") = "Adapter", "Adapter\Adapter.avrgccproj", "{CC8FD423-314D-49CC-AEC4-98C5916CF74D}"
+EndProject
+Project("{D1100916-62DA-4D80-A9B4-55A1E7CCEEB3}") = "Typhoon.Adapter", "Typhoon.Adapter\Typhoon.Adapter.avrgccproj", "{C99A946B-C8EA-4D9F-902B-B9A651AB18E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC8FD423-314D-49CC-AEC4-98C5916CF74D}.Debug|AVR.ActiveCfg = Debug|AVR
+		{CC8FD423-314D-49CC-AEC4-98C5916CF74D}.Release|AVR.ActiveCfg = Release|AVR
+		{C99A946B-C8EA-4D9F-902B-B9A651AB18E8}.Debug|AVR.ActiveCfg = Debug|AVR
+		{C99A946B-C8EA-4D9F-902B-B9A651AB18E8}.Debug|AVR.Build.0 = Debug|AVR
+		{C99A946B-C8EA-4D9F-902B-B9A651AB18E8}.Release|AVR.ActiveCfg = Release|AVR
+		{C99A946B-C8EA-4D9F-902B-B9A651AB18E8}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

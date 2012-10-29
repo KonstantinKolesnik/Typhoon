@@ -1,0 +1,430 @@
+﻿<Window x:Class="Typhoon.CommandStation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:telerikTransitions="clr-namespace:Telerik.Windows.Controls.TransitionEffects;assembly=Telerik.Windows.Controls"
+        xmlns:local="clr-namespace:Typhoon.CommandStation"
+        xmlns:loc="clr-namespace:Typhoon.Localization;assembly=Typhoon.Localization"
+        
+        Name="wnd"
+        TextOptions.TextFormattingMode="Display"
+        TextOptions.TextRenderingMode="ClearType"
+        UseLayoutRounding="True"
+        WindowStartupLocation="CenterScreen"
+        SnapsToDevicePixels="True"
+        ResizeMode="CanResizeWithGrip"
+        Width="900"
+        Height="700"
+        MinWidth="900"
+        MinHeight="700"
+        Icon="{StaticResource CommandStationIcon}"
+        Background="Black"
+    
+        Loaded="MainWindow_Loaded"
+        Closing="MainWindow_Closing"
+    
+        loc:Translate.Uid="Typhoon"
+        FlowDirection="{loc:Translate LeftToRight}"
+        Title="{Binding Path=Model.Title, ElementName=wnd}"
+        >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Background -->
+        <!--<Image Grid.Row="0" Grid.RowSpan="3" Stretch="Uniform" Source="{StaticResource BackgroundPicture}" Opacity="0.4" />-->
+        <Image Grid.Row="0" Grid.RowSpan="3" Stretch="UniformToFill" Source="{StaticResource TrainPicture}" Opacity="0.2" />
+
+        <!-- Tool bar -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+                    
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Image Width="56" Height="56" Stretch="Uniform" Margin="10,0" VerticalAlignment="Bottom">
+                    <Image.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Model.ServerFinder.IsServerAvailable, ElementName=wnd}" Value="True">
+                                    <Setter Property="Image.Source" Value="{StaticResource StationConnectedIcon}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Path=Model.ServerFinder.IsServerAvailable, ElementName=wnd}" Value="False">
+                                    <Setter Property="Image.Source" Value="{StaticResource StationDisconnectedIcon}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+                <Grid VerticalAlignment="Bottom" Margin="10,0,3,0">
+                    <TextBlock loc:Translate.Uid="Typhoon" Text="{loc:Translate Typhoon}" Foreground="DimGray" FontSize="36"/>
+                    <TextBlock loc:Translate.Uid="Typhoon" Text="{loc:Translate Typhoon}" Foreground="White" FontSize="36" Margin="1,1,0,0"/>
+                </Grid>
+                <TextBlock x:Name="lblVersion" Text="gfuy" Foreground="White" Margin="0,0,10,0" FontSize="10" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Status -->
+            <Grid Grid.Column="1" HorizontalAlignment="Left">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" loc:Translate.Uid="Connection" Text="{loc:Translate Connection}" Style="{StaticResource StatusBarItemText}" FontSize="11"/>
+                <Image Grid.Row="0" Grid.Column="1">
+                    <Image.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Model.TCPClient.IsStarted, ElementName=wnd, Mode=OneWay}" Value="True">
+                                    <Setter Property="Image.Source" Value="{StaticResource LedGreenIconSmall}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Path=Model.TCPClient.IsStarted, ElementName=wnd, Mode=OneWay}" Value="False">
+                                    <Setter Property="Image.Source" Value="{StaticResource LedGreyIconSmall}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" loc:Translate.Uid="MainTrack" Text="{loc:Translate Main track}" Style="{StaticResource StatusBarItemText}" FontSize="11"/>
+                <Image Grid.Row="1" Grid.Column="1">
+                    <Image.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Model.MainBoosterIsActive, ElementName=wnd}" Value="True">
+                                    <Setter Property="Image.Source" Value="{StaticResource LedGreenIconSmall}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Path=Model.MainBoosterIsActive, ElementName=wnd}" Value="False">
+                                    <Setter Property="Image.Source" Value="{StaticResource LedGreyIconSmall}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Path=Model.MainBoosterCurrent, ElementName=wnd}" Style="{StaticResource StatusBarItemText}" Width="50" TextAlignment="Right" FontSize="11"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" loc:Translate.Uid="ProgramTrack" Text="{loc:Translate Program track}" Style="{StaticResource StatusBarItemText}" FontSize="11"/>
+                <Image Grid.Row="2" Grid.Column="1">
+                    <Image.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Model.ProgBoosterIsActive, ElementName=wnd}" Value="True">
+                                    <Setter Property="Image.Source" Value="{StaticResource LedGreenIconSmall}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Path=Model.ProgBoosterIsActive, ElementName=wnd}" Value="False">
+                                    <Setter Property="Image.Source" Value="{StaticResource LedGreyIconSmall}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+                <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding Path=Model.ProgBoosterCurrent, ElementName=wnd}" Style="{StaticResource StatusBarItemText}" Width="50" TextAlignment="Right" FontSize="11"/>
+            </Grid>
+
+            <!-- Navigation -->
+            <StackPanel Grid.Column="2" Margin="50,0" Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Collapsed">
+                <TextBlock Margin="15,0">
+                    <Hyperlink NavigateUri="\UI\Pages\pageDatabase.xaml">
+                        <StackPanel Orientation="Vertical">
+                            <Image Width="56" Height="56" Stretch="Uniform" Source="{StaticResource DatabaseIcon}" HorizontalAlignment="Center"/>
+                            <TextBlock loc:Translate.Uid="Database" Text="{loc:Translate Database}" HorizontalAlignment="Center" FontSize="11"/>
+                        </StackPanel>
+                    </Hyperlink>
+                </TextBlock>
+                <TextBlock Margin="15,0">
+                    <Hyperlink NavigateUri="\UI\Pages\pageOperation.xaml">
+                        <StackPanel Orientation="Vertical">
+                            <Image Width="56" Height="56" Stretch="Uniform" Source="{StaticResource OperationIcon}" HorizontalAlignment="Center"/>
+                            <TextBlock loc:Translate.Uid="Operation" Text="{loc:Translate Operation}" HorizontalAlignment="Center" FontSize="11"/>
+                        </StackPanel>
+                    </Hyperlink>
+                </TextBlock>
+                <TextBlock Margin="15,0">
+                    <Hyperlink NavigateUri="\UI\Pages\pageManual.xaml">
+                        <StackPanel Orientation="Vertical">
+                            <Image Width="56" Height="56" Stretch="Uniform" Source="{StaticResource InfoIcon}" HorizontalAlignment="Center"/>
+                            <TextBlock loc:Translate.Uid="Manual" Text="{loc:Translate Manual}" HorizontalAlignment="Center" FontSize="11"/>
+                        </StackPanel>
+                    </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+            
+            <!-- Menu -->
+            <telerik:RadToolBar Grid.Column="2" Style="{StaticResource Toolbar}" HorizontalAlignment="Left" Visibility="Visible" >
+                <!--<telerik:RadRibbonSplitButton loc:Translate.Uid="Station" Text="{loc:Translate Station}" Command="local:RoutedCommands.StationConnection" Size="Large" DropDownPlacement="Bottom">
+                    <telerik:RadRibbonSplitButton.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Model.ServerFinder.IsServerAvailable, ElementName=wnd}" Value="True">
+                                    <Setter Property="telerik:RadRibbonSplitButton.LargeImage" Value="{StaticResource StationConnectedIcon}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Path=Model.ServerFinder.IsServerAvailable, ElementName=wnd}" Value="False">
+                                    <Setter Property="telerik:RadRibbonSplitButton.LargeImage" Value="{StaticResource StationDisconnectedIcon}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </telerik:RadRibbonSplitButton.Style>
+                    <telerik:RadRibbonSplitButton.DropDownContent>
+                        <StackPanel Grid.Row="0" Background="{StaticResource Bar}" Orientation="Horizontal">
+                            <TextBlock loc:Translate.Uid="IPServerNameOrIPAddress" Text="{loc:Translate Server name or IP-address:}" Style="{StaticResource StatusBarItemText}" />
+                            <TextBox x:Name="tbIPAddress" Width="150" Margin="3,2" VerticalAlignment="Center" TextChanged="tbIPAddress_TextChanged"/>
+                        </StackPanel>
+                    </telerik:RadRibbonSplitButton.DropDownContent>
+                </telerik:RadRibbonSplitButton>-->
+                
+                <telerik:RadRibbonButton loc:Translate.Uid="New" Text="{loc:Translate New}" Command="local:RoutedCommands.NewLayout" LargeImage="{StaticResource NewIcon}" Size="Large" telerik:ScreenTip.Title="New (Ctrl+N)" telerik:ScreenTip.Description="Close current layout and open new one."/>
+                <telerik:RadRibbonButton loc:Translate.Uid="Open" Text="{loc:Translate Open...}" Command="local:RoutedCommands.OpenLayout" LargeImage="{StaticResource OpenIcon}" Size="Large"/>
+                <telerik:RadRibbonButton loc:Translate.Uid="Save" Text="{loc:Translate Save}" Command="local:RoutedCommands.SaveLayout" LargeImage="{StaticResource SaveIcon}" Size="Large"/>
+                <telerik:RadRibbonButton loc:Translate.Uid="SaveAs" Text="{loc:Translate SaveAs...}" Command="local:RoutedCommands.SaveAsLayout" LargeImage="{StaticResource SaveAsIcon}" Size="Large"/>
+                <telerik:RadToolBarSeparator />
+                <telerik:RadRibbonButton loc:Translate.Uid="SendInEmail" Text="{loc:Translate Send in e-mail...}" Command="local:RoutedCommands.EmailLayout" LargeImage="{StaticResource MailIcon}" Size="Large"/>
+                <telerik:RadRibbonButton loc:Translate.Uid="Print" Text="{loc:Translate Print...}" Command="local:RoutedCommands.PrintLayout" LargeImage="{StaticResource PrintIcon}" Size="Large"/>
+                <telerik:RadToolBarSeparator />
+                <telerik:RadRibbonButton loc:Translate.Uid="Import" Command="local:RoutedCommands.ImportLayout" Text="{loc:Translate Import}" LargeImage="{StaticResource ImportIcon}" Size="Large"/>
+                <telerik:RadRibbonButton loc:Translate.Uid="Export" Command="local:RoutedCommands.ExportLayout" Text="{loc:Translate Export}" LargeImage="{StaticResource ExportIcon}" Size="Large"/>
+            </telerik:RadToolBar>
+
+            <StackPanel Grid.Column="3" Orientation="Horizontal" Visibility="Collapsed">
+                <telerik:RadRibbonButton loc:Translate.Uid="Brake" Text="{loc:Translate Brake}" Foreground="White" LargeImage="{StaticResource LocoBrakeIcon}" Size="Large"/>
+                <telerik:RadRibbonButton loc:Translate.Uid="Stop" Text="{loc:Translate Stop}" Foreground="White" LargeImage="{StaticResource LocoStopIcon}" Size="Large"/>
+                <telerik:RadToolBarSeparator />
+                <telerik:RadRibbonButton loc:Translate.Uid="Power" Text="{loc:Translate Power}" Foreground="White" Size="Large">
+                    <telerik:RadRibbonButton.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Model.StationPower, ElementName=wnd}" Value="True">
+                                    <Setter Property="telerik:RadRibbonButton.LargeImage" Value="{StaticResource PowerOnIcon}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Path=Model.StationPower, ElementName=wnd}" Value="False">
+                                    <Setter Property="telerik:RadRibbonButton.LargeImage" Value="{StaticResource PowerOffIcon}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </telerik:RadRibbonButton.Style>
+                </telerik:RadRibbonButton>
+            </StackPanel>
+            
+            <!-- Break/Stop/Power -->
+            <telerik:RadToolBar Grid.Column="3" Style="{StaticResource Toolbar}" Visibility="Visible">
+                <telerik:RadRibbonButton loc:Translate.Uid="Brake" Text="{loc:Translate Brake}" Command="local:RoutedCommands.AllBrake" LargeImage="{StaticResource LocoBrakeIcon}" Size="Large"/>
+                <telerik:RadRibbonButton loc:Translate.Uid="Stop" Text="{loc:Translate Stop}" Command="local:RoutedCommands.AllStop" LargeImage="{StaticResource LocoStopIcon}" Size="Large"/>
+                <!--<telerik:RadRibbonButton loc:Translate.Uid="Reset" Text="{loc:Translate Reset}" Command="local:RoutedCommands.AllReset" LargeImage="{StaticResource OffIcon}" Size="Large"/>-->
+                <telerik:RadToolBarSeparator />
+                <!--<telerik:RadRibbonButton loc:Translate.Uid="Options" Text="{loc:Translate Options}" Command="local:RoutedCommands.StationOptions" LargeImage="{StaticResource LocoBrakeIcon}" Size="Large"/>-->
+                <!--<telerik:RadToolBarSeparator />-->
+                <telerik:RadRibbonButton loc:Translate.Uid="Power" Text="{loc:Translate Power}" Command="local:RoutedCommands.StationPower" Size="Large">
+                    <telerik:RadRibbonButton.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Model.StationPower, ElementName=wnd}" Value="True">
+                                    <Setter Property="telerik:RadRibbonButton.LargeImage" Value="{StaticResource PowerOnIcon}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Path=Model.StationPower, ElementName=wnd}" Value="False">
+                                    <Setter Property="telerik:RadRibbonButton.LargeImage" Value="{StaticResource PowerOffIcon}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </telerik:RadRibbonButton.Style>
+                </telerik:RadRibbonButton>
+            </telerik:RadToolBar>
+            
+            <!--<telerik:RadExpander Grid.Column="3" ExpandDirection="Left" IsExpanded="True" telerik:AnimationManager.IsAnimationEnabled="True">
+                <telerik:RadExpander.Header>
+                    <TextBlock Text="Status" Foreground="LightGray">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                              <ScaleTransform/>
+                              <SkewTransform/>
+                              <RotateTransform/>
+                              <TranslateTransform/>
+                            </TransformGroup>
+    					</TextBlock.RenderTransform>
+                    </TextBlock>
+                </telerik:RadExpander.Header>
+                <telerik:RadExpander.Content>
+                </telerik:RadExpander.Content>
+            </telerik:RadExpander>-->
+        </Grid>
+        
+        <!-- Content frame -->
+        <Frame Grid.Row="1" Source="\UI\Pages\pageMenu.xaml" NavigationUIVisibility="Hidden" NavigationFailed="Frame_NavigationFailed"/>
+
+        <!-- Status bar -->
+        <StatusBar Grid.Row="2" Style="{StaticResource StatusBar}" Visibility="Collapsed">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"/>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+
+            <StatusBarItem>
+                <Border Style="{StaticResource StatusBarItemBorder}">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock loc:Translate.Uid="MainTrack" Text="{loc:Translate Main track}" Style="{StaticResource StatusBarItemText}"/>
+                            <TextBlock Text="{Binding Path=Model.MainBoosterCurrent, ElementName=wnd}" Style="{StaticResource StatusBarItemText}" Width="50" TextAlignment="Right"/>
+                        </StackPanel>
+                        <Image>
+                            <Image.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Model.MainBoosterIsActive, ElementName=wnd}" Value="True">
+                                            <Setter Property="Image.Source" Value="{StaticResource LedGreenIconSmall}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Model.MainBoosterIsActive, ElementName=wnd}" Value="False">
+                                            <Setter Property="Image.Source" Value="{StaticResource LedGreyIconSmall}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Border Style="{StaticResource StatusBarItemBorder}">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock loc:Translate.Uid="ProgramTrack" Text="{loc:Translate Program track}" Style="{StaticResource StatusBarItemText}"/>
+                            <TextBlock Text="{Binding Path=Model.ProgBoosterCurrent, ElementName=wnd}" Style="{StaticResource StatusBarItemText}" Width="50" TextAlignment="Right"/>
+                        </StackPanel>
+                        <Image>
+                            <Image.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Model.ProgBoosterIsActive, ElementName=wnd}" Value="True">
+                                            <Setter Property="Image.Source" Value="{StaticResource LedGreenIconSmall}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Model.ProgBoosterIsActive, ElementName=wnd}" Value="False">
+                                            <Setter Property="Image.Source" Value="{StaticResource LedGreyIconSmall}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Border Style="{StaticResource StatusBarItemBorder}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="64" Height="64" Stretch="Uniform">
+                            <Image.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Model.ServerFinder.IsServerAvailable, ElementName=wnd}" Value="True">
+                                            <Setter Property="Image.Source" Value="{StaticResource StationConnectedIcon}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Model.ServerFinder.IsServerAvailable, ElementName=wnd}" Value="False">
+                                            <Setter Property="Image.Source" Value="{StaticResource StationDisconnectedIcon}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                        <TextBlock loc:Translate.Uid="Station" Text="{loc:Translate Station}" Style="{StaticResource StatusBarItemText}"/>
+                        <Image>
+                            <Image.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Model.TCPClient.IsStarted, ElementName=wnd, Mode=OneWay}" Value="True">
+                                            <Setter Property="Image.Source" Value="{StaticResource LedGreenIconSmall}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Model.TCPClient.IsStarted, ElementName=wnd, Mode=OneWay}" Value="False">
+                                            <Setter Property="Image.Source" Value="{StaticResource LedGreyIconSmall}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+
+            <!--<StatusBarItem>
+                <Border Style="{StaticResource StatusBarItemBorder}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Railcom" Style="{StaticResource StatusBarItemText}"/>
+                        <Image>
+                            <Image.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Model.Station.RailcomActive, ElementName=wnd}" Value="True">
+                                            <Setter Property="Image.Source" Value="{StaticResource OnIconSmall}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Model.Station.RailcomActive, ElementName=wnd}" Value="False">
+                                            <Setter Property="Image.Source" Value="{StaticResource OffIconSmall}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>-->
+            <!--<StatusBarItem>
+                <Border Style="{StaticResource StatusBarItemBorder}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{StaticResource MainTrackIcon}" Width="16" Height="16" Stretch="Uniform"/>
+                        <TextBlock loc:Translate.Uid="MainTrack" Text="{loc:Translate Main track}" Style="{StaticResource StatusBarItemText}"/>
+                        <Image Width="16" Height="16" Stretch="Uniform">
+                            <Image.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Model.Station.MainTrackActive, ElementName=wnd}" Value="True">
+                                            <Setter Property="Image.Source" Value="{StaticResource OnIconSmall}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Model.Station.MainTrackActive, ElementName=wnd}" Value="False">
+                                            <Setter Property="Image.Source" Value="{StaticResource OffIconSmall}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Model.Station.MainTrackShortCircuitBlocked, ElementName=wnd}" Value="True">
+                                            <Setter Property="Image.Source" Value="{StaticResource ShortIconSmall}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>-->
+            <!--<StatusBarItem>
+                <Border Style="{StaticResource StatusBarItemBorder}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{StaticResource ProgramTrackIcon}" Width="16" Height="16" Stretch="Uniform"/>
+                        <TextBlock loc:Translate.Uid="ProgramTrack" Text="{loc:Translate Program track}" Style="{StaticResource StatusBarItemText}"/>
+                        <Image Width="16" Height="16" Stretch="Uniform">
+                            <Image.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Model.Station.ProgramTrackActive, ElementName=wnd}" Value="True">
+                                            <Setter Property="Image.Source" Value="{StaticResource OnIconSmall}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Model.Station.ProgramTrackActive, ElementName=wnd}" Value="False">
+                                            <Setter Property="Image.Source" Value="{StaticResource OffIconSmall}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=Model.Station.ProgramTrackShortCircuitBlocked, ElementName=wnd}" Value="True">
+                                            <Setter Property="Image.Source" Value="{StaticResource ShortIconSmall}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>-->
+        </StatusBar>
+    </Grid>
+</Window>

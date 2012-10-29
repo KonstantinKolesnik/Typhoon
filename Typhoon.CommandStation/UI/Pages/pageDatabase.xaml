@@ -1,0 +1,89 @@
+﻿<Page x:Class="Typhoon.CommandStation.UI.Pages.pageDatabase"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+      xmlns:telerikTransitions="clr-namespace:Telerik.Windows.Controls.TransitionEffects;assembly=Telerik.Windows.Controls" 
+      xmlns:local="clr-namespace:Typhoon.CommandStation"
+      xmlns:controls="clr-namespace:Typhoon.CommandStation.Controls"
+      xmlns:loc="clr-namespace:Typhoon.Localization;assembly=Typhoon.Localization"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" TextOptions.TextFormattingMode="Display" FontSize="11" Name="page"
+      
+      loc:Translate.Uid="Database"
+      Title="{loc:Translate Database}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" CornerRadius="3 3 0 0" BorderBrush="{StaticResource PageTitleBorderBrush}" BorderThickness="1" Background="{StaticResource Bar}">
+            <Grid>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center">
+                        <Hyperlink NavigateUri="pageMenu.xaml"><TextBlock loc:Translate.Uid="MainMenu" Text="{loc:Translate Main menu}" Style="{StaticResource PageNavigationItemText}"/></Hyperlink>
+                    </TextBlock>
+                    <Image Style="{StaticResource PageTitleImage}" Source="{StaticResource DatabaseIcon}"/>
+                    <TextBlock Style="{StaticResource PageTitleText}" loc:Translate.Uid="Database" Text="{loc:Translate Database}"/>
+                </StackPanel>
+                
+                <controls:ucPager x:Name="pagerItemTypes" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <controls:ucPager.Items>
+                        <ListBoxItem loc:Translate.Uid="All" Content="{loc:Translate All}">
+                            <ListBoxItem.Tag>
+                                <controls:ucFullList Layout="{Binding Layout}"/>
+                            </ListBoxItem.Tag>
+                        </ListBoxItem>
+                        <ListBoxItem loc:Translate.Uid="Locomotives" Content="{loc:Translate Locomotives}">
+                            <ListBoxItem.Tag>
+                                <controls:ucLocomotiveList Layout="{Binding Layout}"/>
+                            </ListBoxItem.Tag>
+                        </ListBoxItem>
+                        <ListBoxItem loc:Translate.Uid="Consists" Content="{loc:Translate Consists}">
+                            <ListBoxItem.Tag>
+                                <controls:ucConsistList Layout="{Binding Layout}"/>
+                            </ListBoxItem.Tag>
+                        </ListBoxItem>
+                        <ListBoxItem loc:Translate.Uid="Turnouts" Content="{loc:Translate Turnouts}">
+                            <!--<ListBoxItem.Tag>
+                                <controls:ucTurnoutList Layout="{Binding Layout}"/>
+                            </ListBoxItem.Tag>-->
+                        </ListBoxItem>
+                        <ListBoxItem loc:Translate.Uid="Signals" Content="{loc:Translate Signals}">
+                            <!--<ListBoxItem.Tag>
+                                <controls:ucSignalList Layout="{Binding Layout}"/>
+                            </ListBoxItem.Tag>-->
+                        </ListBoxItem>
+                        <ListBoxItem loc:Translate.Uid="Turntables" Content="{loc:Translate Turntables}">
+                            <!--<ListBoxItem.Tag>
+                                <controls:ucTurntableList Layout="{Binding Layout}"/>
+                            </ListBoxItem.Tag>-->
+                        </ListBoxItem>
+                        <ListBoxItem loc:Translate.Uid="AccessoryGroups" Content="{loc:Translate Accessory groups}">
+                            <!--<ListBoxItem.Tag>
+                                <controls:ucAccessoryGroupList Layout="{Binding Layout}"/>
+                            </ListBoxItem.Tag>-->
+                        </ListBoxItem>
+                    </controls:ucPager.Items>
+                </controls:ucPager>
+            </Grid>
+        </Border>
+
+        <telerik:RadTransitionControl Grid.Row="1" Content="{Binding Path=ListBox.SelectedItem.Tag, ElementName=pagerItemTypes}">
+            <telerik:RadTransitionControl.Transition>
+                <!--<telerikTransitions:FadeTransition />-->
+                <!--<telerikTransitions:FlipWarpTransition />-->
+                <!--<telerikTransitions:LinearFadeTransition />-->
+                <!--<telerikTransitions:MappedLightTransition />-->
+                <!--<telerikTransitions:MotionBlurredZoomTransition />-->
+                <!--<telerikTransitions:PerspectiveRotationTransition />-->
+                <!--<telerikTransitions:PixelateTransition />-->
+                <!--<telerikTransitions:RollTransition />-->
+                <!--<telerikTransitions:SlideAndZoomTransition />-->
+                <telerikTransitions:WaveTransition />
+            </telerik:RadTransitionControl.Transition>
+        </telerik:RadTransitionControl>
+    </Grid>
+</Page>
