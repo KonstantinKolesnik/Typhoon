@@ -1,0 +1,34 @@
+﻿<Application 
+    x:Class="Typhoon.WPClient.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching"
+            Closing="Application_Closing" 
+            Activated="Application_Activated"
+            Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+    <Application.Resources>
+        <BitmapImage x:Key="TrainPicture" UriSource="/Typhoon.WPClient;component/Images/Train.jpg"/>
+        <BitmapImage x:Key="Database" UriSource="/Typhoon.WPClient;component/Images/Database.png"/>
+        <BitmapImage x:Key="Operation" UriSource="/Typhoon.WPClient;component/Images/Operation.png"/>
+        <BitmapImage x:Key="StationConnected" UriSource="/Typhoon.WPClient;component/Images/StationConnected.png"/>
+        <BitmapImage x:Key="StationDisconnected" UriSource="/Typhoon.WPClient;component/Images/StationDisconnected.png"/>
+
+
+
+
+
+
+
+
+
+
+
+    </Application.Resources>
+</Application>
