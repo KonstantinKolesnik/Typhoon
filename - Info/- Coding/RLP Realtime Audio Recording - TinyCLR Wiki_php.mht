@@ -1,0 +1,4885 @@
+From: "Saved by Windows Internet Explorer 9"
+Subject: RLP Realtime Audio Recording - TinyCLR Wiki
+Date: Mon, 3 Oct 2011 16:45:14 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC81EB.D3072420"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17514
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/index.php?title=RLP_Realtime_Audio_Recording
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" =
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML=20
+dir=3D"ltr" lang=3D"en" xml:lang=3D"en" =
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD>
+<META content=3D"text/html; charset=3Dutf-8" =
+http-equiv=3D"Content-Type">
+<META content=3D"text/css" http-equiv=3D"Content-Style-Type">
+<META name=3D"GENERATOR" content=3D"MSHTML 9.00.8112.16434">
+<META name=3D"keywords" content=3D"RLP Realtime Audio Recording,First =
+Project"><LINK=20
+rel=3D"shortcut icon" href=3D"/favicon.ico"><LINK title=3D"TinyCLR Wiki =
+(en)" rel=3D"search"=20
+type=3D"application/opensearchdescription+xml" =
+href=3D"/opensearch_desc.php"><LINK=20
+title=3D"Creative Commons" rel=3D"meta" type=3D"application/rdf+xml" =
+href=3D"/index.php?title=3DRLP_Realtime_Audio_Recording&amp;action=3Dcrea=
+tivecommons"><LINK=20
+rel=3D"copyright" =
+href=3D"http://creativecommons.org/licenses/by-sa/3.0/"><LINK=20
+title=3D"TinyCLR Wiki RSS Feed" rel=3D"alternate" =
+type=3D"application/rss+xml" =
+href=3D"/index.php?title=3DSpecial:RecentChanges&amp;feed=3Drss"><LINK=20
+title=3D"TinyCLR Wiki Atom Feed" rel=3D"alternate" =
+type=3D"application/atom+xml" =
+href=3D"/index.php?title=3DSpecial:RecentChanges&amp;feed=3Datom"><TITLE>=
+RLP=20
+Realtime Audio Recording - TinyCLR Wiki</TITLE>
+<STYLE type=3D"text/css" media=3D"screen,projection">/*<![CDATA[*/ =
+@import "/skins/cavendish/main.css"; /*]]>*/</STYLE>
+<LINK rel=3D"stylesheet" type=3D"text/css" =
+href=3D"http://wiki.tinyclr.com/skins/common/commonPrint.css"=20
+media=3D"print">
+<SCRIPT type=3D"text/javascript" =
+src=3D"http://wiki.tinyclr.com/index.php?title=3D-&amp;action=3Draw&amp;g=
+en=3Djs&amp;useskin=3Dcavendish"></SCRIPT>
+=09
+<SCRIPT type=3D"text/javascript" =
+src=3D"http://wiki.tinyclr.com/skins/common/wikibits.js"></SCRIPT>
+<!-- Head Scripts -->
+<SCRIPT type=3D"text/javascript" =
+src=3D"http://wiki.tinyclr.com/skins/common/ajax.js?207"></SCRIPT>
+
+<STYLE type=3D"text/css">/*<![CDATA[*/=0A=
+.source-csharp {line-height: normal;}=0A=
+.source-csharp li, .source-csharp pre {=0A=
+	line-height: normal; border: 0px none white;=0A=
+}=0A=
+/**=0A=
+ * GeSHi Dynamically Generated Stylesheet=0A=
+ * --------------------------------------=0A=
+ * Dynamically generated stylesheet for csharp=0A=
+ * CSS class: source-csharp, CSS id: =0A=
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann=0A=
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)=0A=
+ * --------------------------------------=0A=
+ */=0A=
+.csharp.source-csharp .de1, .csharp.source-csharp .de2 {font: normal =
+normal 1em/1.2em monospace; margin:0; padding:0; background:none; =
+vertical-align:top;}=0A=
+.csharp.source-csharp  {font-family:monospace;}=0A=
+.csharp.source-csharp .imp {font-weight: bold; color: red;}=0A=
+.csharp.source-csharp li, .csharp.source-csharp .li1 {font-weight: =
+normal; vertical-align:top;}=0A=
+.csharp.source-csharp .ln {width:1px;text-align:right;margin:0;padding:0 =
+2px;vertical-align:top;}=0A=
+.csharp.source-csharp .li2 {font-weight: bold; vertical-align:top;}=0A=
+.csharp.source-csharp .kw1 {color: #0600FF; font-weight: bold;}=0A=
+.csharp.source-csharp .kw2 {color: #FF8000; font-weight: bold;}=0A=
+.csharp.source-csharp .kw3 {color: #008000;}=0A=
+.csharp.source-csharp .kw4 {color: #0000ff; font-weight: bold;}=0A=
+.csharp.source-csharp .kw5 {color: #000;}=0A=
+.csharp.source-csharp .kw6 {color: #0091bc;}=0A=
+.csharp.source-csharp .co1 {color: #008000;}=0A=
+.csharp.source-csharp .co2 {color: #008000;}=0A=
+.csharp.source-csharp .co3 {color: #000;}=0A=
+.csharp.source-csharp .coMULTI {color: #008000;}=0A=
+.csharp.source-csharp .es0 {color: #008080; font-weight: bold;}=0A=
+.csharp.source-csharp .es_h {color: #008080; font-weight: bold;}=0A=
+.csharp.source-csharp .br0 {color: #000;}=0A=
+.csharp.source-csharp .sy0 {color: #000;}=0A=
+.csharp.source-csharp .st0 {color: #c60000;}=0A=
+.csharp.source-csharp .st_h {color: #c60000;}=0A=
+.csharp.source-csharp .nu0 {color: #000;}=0A=
+.csharp.source-csharp .me1 {color: #000;}=0A=
+.csharp.source-csharp .me2 {color: #000;}=0A=
+.csharp.source-csharp .ln-xtra, .csharp.source-csharp li.ln-xtra, =
+.csharp.source-csharp div.ln-xtra {background-color: #ffc;}=0A=
+.csharp.source-csharp span.xtra { display:block; }=0A=
+=0A=
+/*]]>*/=0A=
+</STYLE>
+
+<STYLE type=3D"text/css">/*<![CDATA[*/=0A=
+@import =
+"/index.php?title=3DMediaWiki:Geshi.css&usemsgcache=3Dyes&action=3Draw&ct=
+ype=3Dtext/css&smaxage=3D18000";=0A=
+/*]]>*/=0A=
+</STYLE>
+</HEAD>
+<BODY>
+<DIV id=3D"internal"></DIV>
+<DIV id=3D"container">
+<DIV id=3D"header"><A id=3D"contentTop" name=3D"top"></A>
+<H1><A title=3D"Main Page" =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DMain_Page">RLP=20
+Realtime Audio Recording</A></H1>
+<UL>
+  <LI class=3D"selected"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Reco=
+rding">Page</A></LI>
+  <LI class=3D"new"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DTalk:RLP_Realtime_Audio=
+_Recording&amp;action=3Dedit&amp;redlink=3D1">Discussion</A></LI>
+  <LI><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Reco=
+rding&amp;action=3Dedit">View=20
+  source</A></LI>
+  <LI><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Reco=
+rding&amp;action=3Dhistory">History</A></LI></UL>
+<FORM id=3D"search" name=3D"searchform" =
+action=3D"/index.php?title=3DSpecial:Search">
+<DIV><LABEL for=3D"q">Search</LABEL><INPUT accessKey=3D"f" id=3D"q" =
+name=3D"search"=20
+type=3D"text"><INPUT id=3D"searchGoButton" class=3D"searchButton" =
+name=3D"go" value=3D"Go" type=3D"submit">&nbsp;<INPUT =
+class=3D"searchButton" name=3D"fulltext" value=3D"Search" =
+type=3D"submit"></DIV></FORM></DIV>
+<DIV id=3D"mBody">
+<DIV id=3D"side">
+<UL id=3D"nav">
+  <LI><SPAN>Personal tools</SPAN>
+  <UL>
+    <LI id=3D"pt-login"><A =
+href=3D"http://www.tinyclr.com/login/?from=3Dhttp%3A%2F%2Fwiki.tinyclr.co=
+m">
+    						Log in</A></LI>
+    <LI id=3D"pt-home"><A href=3D"http://www.tinyclr.com/">						Return =
+to=20
+    TinyCLR.com</A></LI></UL></LI>
+  <LI><SPAN>FREE E-Books</SPAN>
+  <UL>
+    <LI id=3D"n-Beginner-Guide"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Beginner_Guide=
+_ebook">Beginner=20
+    Guide</A></LI>
+    <LI id=3D"n-Beginner-Porting-Guide"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Beginner_Porti=
+ng_Guide_ebook">Beginner=20
+    Porting Guide</A></LI></UL></LI>
+  <LI><SPAN>Project Categories</SPAN>
+  <UL>
+    <LI id=3D"n-Display"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Display">Displ=
+ay</A></LI>
+    <LI id=3D"n-Hardware"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Hardware">Hard=
+ware</A></LI>
+    <LI id=3D"n-Interfaces"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Interfaces">In=
+terfaces</A></LI>
+    <LI id=3D"n-Internet-Applications"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Internet_Appli=
+cations">Internet=20
+    Applications</A></LI>
+    <LI id=3D"n-Motor"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Motor">Motor</=
+A></LI>
+    <LI id=3D"n-Multimedia"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Multimedia">Mu=
+ltimedia</A></LI>
+    <LI id=3D"n-Networking"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Networking">Ne=
+tworking</A></LI>
+    <LI id=3D"n-Peripheral"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Peripheral">Pe=
+ripheral</A></LI>
+    <LI id=3D"n-Sensors"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Sensors">Senso=
+rs</A></LI>
+    <LI id=3D"n-Storage"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Storage">Stora=
+ge</A></LI>
+    <LI id=3D"n-Technology"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Technology">Te=
+chnology</A></LI>
+    <LI id=3D"n-USB"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:USB">USB</A></=
+LI>
+    <LI id=3D"n-Wireless"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Wireless">Wire=
+less</A></LI></UL></LI>
+  <LI><SPAN>Navigation</SPAN>
+  <UL>
+    <LI id=3D"n-Devices"><A=20
+    =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DDevices">Devices</A></L=
+I>
+    <LI id=3D"n-All-Files!"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DSpecial:PrefixIndex">Al=
+l=20
+    Files!</A></LI>
+    <LI id=3D"n-mainpage-description"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DMain_Page">Main=20
+    Page</A></LI>
+    <LI id=3D"n-recentchanges"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DSpecial:RecentChanges">=
+Recent=20
+    changes</A></LI>
+    <LI id=3D"n-randompage"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DSpecial:Random">Random =
+
+    page</A></LI>
+    <LI id=3D"n-help"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DHelp:Contents">Help</A>=
+</LI></UL></LI>
+  <LI><SPAN>Toolbox</SPAN>
+  <UL>
+    <LI id=3D"t-whatlinkshere"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DSpecial:WhatLinksHere/R=
+LP_Realtime_Audio_Recording">What=20
+    links here</A></LI>
+    <LI id=3D"t-recentchangeslinked"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DSpecial:RecentChangesLi=
+nked/RLP_Realtime_Audio_Recording">Related=20
+    changes</A></LI>
+    <LI id=3D"t-specialpages"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DSpecial:SpecialPages">S=
+pecial=20
+    pages</A></LI></UL></LI></UL></DIV><!-- end of SIDE div -->
+<DIV id=3D"mainContent">
+<H1>RLP Realtime Audio Recording</H1>
+<H3 id=3D"siteSub">From TinyCLR Wiki</H3>
+<DIV id=3D"contentSub"></DIV><!-- start content -->
+<P><BR></P>
+<TABLE style=3D"width: 250px;" border=3D"1">
+  <TBODY>
+  <TR>
+    <TH> Start with <A title=3D"First Project" =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DFirst_Project">=20
+      this tutorial</A> first</TH></TR></TBODY></TABLE>
+<TABLE style=3D"background: rgb(242, 242, 242); padding: 0px 10px 10px; =
+border: 1px solid rgb(192, 192, 192); width: 250px; margin-left: 20px; =
+float: right;">
+  <CAPTION style=3D"padding-bottom: 10px;"> RLP Real-time Audio =
+Recording
+</CAPTION>
+  <TBODY>
+  <TR>
+    <TD style=3D"padding-top: 10px;"> <B>Difficulty</B></TD></TR>
+  <TR>
+    <TD> Intermediate</TD></TR>
+  <TR>
+    <TD style=3D"padding-top: 10px;"> <B>Related Reading</B></TD></TR>
+  <TR>
+    <TD> None</TD></TR>
+  <TR>
+    <TD style=3D"padding-top: 10px;"> <B>Assemblies Needed</B></TD></TR>
+  <TR>
+    <TD> Not known</TD></TR>
+  <TR>
+    <TD style=3D"padding-top: 10px;"> <B>Hardware =
+Requirements</B></TD></TR>
+  <TR>
+    <TD> Any GHI NETMF hardware</TD></TR>
+  <TR>
+    <TD style=3D"padding-top: 10px;"> <A class=3D"image" =
+title=3D"GHI.jpg" =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DFile:GHI.jpg"><IMG=20
+      border=3D"0" alt=3D"" =
+src=3D"http://wiki.tinyclr.com/images/thumb/b/b1/GHI.jpg/250px-GHI.jpg"=20
+      width=3D"250" height=3D"83"></A></TD></TR>
+  <TR>
+    <TD> <A class=3D"external text" =
+title=3D"http://www.tinyclr.com/support" =
+href=3D"http://www.tinyclr.com/support"=20
+      rel=3D"nofollow">Downloads &amp; Tutorials</A> =
+Page</TD></TR></TBODY></TABLE>
+<P>Although we can record any sound from analog signal in NETMF. But the =
+problem=20
+here is our code in NETMF is executed very slow. So it seems we can not =
+record=20
+and save sound data that has good quality. Example, we need record sound =
+from=20
+micro phone and save it with 8KHz. It requires we have to run a loop =
+8000 times=20
+per second to receive analog signals from analog pin. We can not do it =
+in NETMF,=20
+it is really can not reach 8000 loops for each second.</P>
+<P>But by using RLP, we can do that. RLP is executed in native side and =
+it is=20
+completely to reach 8000 loops per second and more. We will introduce to =
+you=20
+about using RLP to record sound and save it to WAV file. We will create =
+a simple=20
+format of WAV, it has 8 bit, mono, 8KHz and deploy in EMX board.</P>
+<TABLE id=3D"toc" class=3D"toc" summary=3D"Contents">
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id=3D"toctitle">
+      <H2>Contents</H2></DIV>
+      <UL>
+        <LI class=3D"toclevel-1"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Reco=
+rding#WAV_Format"><SPAN=20
+        class=3D"tocnumber">1</SPAN> <SPAN class=3D"toctext">WAV=20
+        Format</SPAN></A></LI>
+        <LI class=3D"toclevel-1"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Reco=
+rding#Code_in_Native_side"><SPAN=20
+        class=3D"tocnumber">2</SPAN> <SPAN class=3D"toctext">Code in =
+Native=20
+        side</SPAN></A></LI>
+        <LI class=3D"toclevel-1"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Reco=
+rding#Code_on_Managed_side"><SPAN=20
+        class=3D"tocnumber">3</SPAN> <SPAN class=3D"toctext">Code on =
+Managed=20
+        side</SPAN></A></LI>
+        <LI class=3D"toclevel-1"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Reco=
+rding#Blocking_problem_in_RLP"><SPAN=20
+        class=3D"tocnumber">4</SPAN> <SPAN class=3D"toctext">Blocking =
+problem in=20
+        RLP</SPAN></A></LI>
+        <LI class=3D"toclevel-1"><A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Reco=
+rding#Using_parameter_in_RLP_Task"><SPAN=20
+        class=3D"tocnumber">5</SPAN> <SPAN class=3D"toctext">Using =
+parameter in RLP=20
+        Task</SPAN></A></LI></UL></TD></TR></TBODY></TABLE>
+<SCRIPT type=3D"text/javascript"> if (window.showTocToggle) { var =
+tocShowText =3D "show"; var tocHideText =3D "hide"; showTocToggle(); } =
+</SCRIPT>
+<A id=3D"WAV_Format" name=3D"WAV_Format"></A>
+<H2> <SPAN class=3D"mw-headline">WAV Format</SPAN></H2>
+<P>First of all, we have to know about structure of WAV with 8 bit, =
+8KHz. You=20
+can read here:</P>
+<P><A class=3D"external free" =
+title=3D"https://ccrma.stanford.edu/courses/422/projects/WaveFormat/"=20
+href=3D"https://ccrma.stanford.edu/courses/422/projects/WaveFormat/" =
+rel=3D"nofollow">https://ccrma.stanford.edu/courses/422/projects/WaveForm=
+at/</A>
+</P>
+<P>Maybe it will make you confused. So I will explain them with easier =
+way.</P>
+<P>WAV file uses the first 44 bytes to save its header. Here is =
+detail:</P>
+<P>- Index 0-3: Text "RIFF"</P>
+<P>- Index 4-7: Save size of the rest of data in all file.</P>
+<P>More simple, this value =3D size of file - 8. </P>
+<P>(Size of file =3D size of sound data + 44)</P>
+<P>- Index 8-11: Text "WAVE"</P>
+<P>- Index 12-15: Text "fmt "</P>
+<P>- Index 16-19: 16 for PCM. </P>
+<P>- Index 20-21: 1 if it is not compression</P>
+<P>- Index 22-23: Mono =3D 1, Stereo =3D 2, etc.</P>
+<P>- Index 24-27: SampleRate 8000, 44100, etc.</P>
+<P>- Index 28-31: SampleRate * NumChannels * BitsPerSample/8. In this =
+case, it=20
+is 8000</P>
+<P>- Index 32-33: NumChannels * BitsPerSample/8. In our case, it is =
+1.</P>
+<P>- Index 34-35: Bits Per Sample. Our case is 8.</P>
+<P>- Index 36-39: Text "data"</P>
+<P>- Index 40-43: The size of sound data.</P>
+<P>- Index 44 - end of file: Sound data</P><A id=3D"Code_in_Native_side" =
+name=3D"Code_in_Native_side"></A>
+<H2> <SPAN class=3D"mw-headline">Code in Native side</SPAN></H2>
+<P>Next, we have to write code in native side, compile to make elf file =
+then=20
+include it to our project. Here is the code we did:</P><PRE>#define =
+ADC_DATA_BASE_ADDRESS 0xE0034010=0A=
+#define RLP_ADDRESS		0xA0F00000 //for EMX=0A=
+#define RLP_SIZE		0x000FFFFC //for EMX=0A=
+int GHAL_AnalogIn_Read(unsigned char channel)=0A=
+{=0A=
+        return ((*((int*)(ADC_DATA_BASE_ADDRESS) + channel)) &gt;&gt;8) =
+&amp; 0x3FF;=0A=
+}=0A=
+int ReadAudio(unsigned int *generalArray, void **args, unsigned int =
+argsCount , =0A=
+              unsigned int *argSize)=0A=
+{=0A=
+        unsigned char *buffer =3D (unsigned char*)args[0];=0A=
+        int buffer_lengh =3D argSize[0];=0A=
+        unsigned char channel =3D *(unsigned char*)args[1];=0A=
+        int i=3D0;=0A=
+        while(i&lt;buffer_lengh)=0A=
+        {=0A=
+           buffer[i] =3D GHAL_AnalogIn_Read(channel);=0A=
+           i++;=0A=
+           RLPext-&gt;Delay(125);=0A=
+        }=0A=
+        return 0;=0A=
+}=0A=
+</PRE>
+<P>In this code above, we use <B>Delay(125)</B>, it comes from RLP =
+extension=20
+function. Note that the correct RLP region address and size must be =
+updated in=20
+the header file (RLP.h) before using the extensions. These are defined =
+as=20
+RLP_ADDRESS and RLP_SIZE</P><PRE>#define RLP_ADDRESS		0xA0F00000 //EMX=0A=
+#define RLP_SIZE		0x000FFFFC //EMX=0A=
+</PRE>
+<P>For USBizi or ChipworkX, look this ones:</P><PRE>// ChipworkX=0A=
+#define RLP_ADDRESS		0xA0000000=0A=
+#define RLP_SIZE		0x001FB3FC=0A=
+</PRE><PRE>// USBizi=0A=
+#define RLP_ADDRESS		0x40000440=0A=
+#define RLP_SIZE		0x000027FC=0A=
+</PRE>
+<P>That are all we need in native side. Compile them then add to your C# =
+
+project.</P><A id=3D"Code_on_Managed_side" =
+name=3D"Code_on_Managed_side"></A>
+<H2> <SPAN class=3D"mw-headline">Code on Managed side</SPAN></H2>
+<P>In C# project, we will develop a function to read analog signals from =
+analog=20
+input pin. We have to declare a variable as a RLP object. We also need =
+to have a=20
+byte array buffer to contain data sound.</P>
+<DIV style=3D"text-align: left;" dir=3D"ltr" class=3D"mw-geshi">
+<DIV class=3D"csharp source-csharp"><PRE class=3D"de1"><SPAN =
+class=3D"kw1">static</SPAN> RLP<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Procedure</SPAN> ReadAudio<SPAN class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">static</SPAN> <SPAN class=3D"kw4">byte</SPAN><SPAN =
+class=3D"br0">[</SPAN><SPAN class=3D"br0">]</SPAN> dataRPLWave <SPAN =
+class=3D"sy0">=3D</SPAN> <SPAN class=3D"kw4">new</SPAN> <SPAN =
+class=3D"kw4">byte</SPAN><SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">4</SPAN><SPAN class=3D"sy0">*</SPAN><SPAN =
+class=3D"nu0">8000</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">// time length of wav =
+file</SPAN>=0A=
+<SPAN class=3D"kw1">static</SPAN> <SPAN class=3D"kw4">void</SPAN> =
+RecordWAV<SPAN class=3D"br0">(</SPAN>AnalogIn<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"kw6">Pin</SPAN> channel, <SPAN =
+class=3D"kw4">byte</SPAN><SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"br0">]</SPAN> data<SPAN class=3D"br0">)</SPAN>=0A=
+        <SPAN class=3D"br0">{</SPAN>=0A=
+            AnalogIn ain <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"kw4">new</SPAN> AnalogIn<SPAN =
+class=3D"br0">(</SPAN>channel<SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            ReadAudio<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Invoke</SPAN><SPAN class=3D"br0">(</SPAN>data, <SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"kw4">byte</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"br0">(</SPAN>channel<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            ain<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Dispose</SPAN><SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+        <SPAN class=3D"br0">}</SPAN></PRE></DIV></DIV>
+<P>And a function names <B>SaveWAVFileFormat</B> to make structure and =
+save WAV=20
+file to USB. </P>
+<P>Below is full code in managed side to control recording sound. Every =
+time you=20
+press UP button on board, it will receive analog signal from input pin =
+6, then=20
+save them to USB as WAV file (8 bit, 8KHz, mono). File has time length =
+is 4=20
+seconds. </P>
+<DIV style=3D"text-align: left;" dir=3D"ltr" class=3D"mw-geshi">
+<DIV class=3D"csharp source-csharp"><PRE class=3D"de1"><SPAN =
+class=3D"kw1">using</SPAN> <SPAN class=3D"co3">System</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">System.IO</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">Microsoft.SPOT.Presentation</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">Microsoft.SPOT.Presentation.Media</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">Microsoft.SPOT.Hardware</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">GHIElectronics.NETMF.Hardware</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">GHIElectronics.NETMF.System</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">GHIElectronics.NETMF.Native</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">Microsoft.SPOT</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">Microsoft.SPOT.IO</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">GHIElectronics.NETMF.IO</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">System.Threading</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+<SPAN class=3D"kw1">using</SPAN> <SPAN =
+class=3D"co3">GHIElectronics.NETMF.USBHost</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+&nbsp;=0A=
+<SPAN class=3D"kw1">namespace</SPAN> EMX_RecordWAV=0A=
+<SPAN class=3D"br0">{</SPAN>=0A=
+    <SPAN class=3D"kw1">public</SPAN> <SPAN class=3D"kw4">class</SPAN> =
+Program=0A=
+    <SPAN class=3D"br0">{</SPAN>=0A=
+&nbsp;=0A=
+        <SPAN class=3D"kw1">static</SPAN> PersistentStorage _ps<SPAN =
+class=3D"sy0">;</SPAN>=0A=
+        <SPAN class=3D"kw1">static</SPAN> RLP<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Procedure</SPAN> =
+ReadAudio<SPAN class=3D"sy0">;</SPAN>=0A=
+        <SPAN class=3D"kw1">static</SPAN> <SPAN =
+class=3D"kw4">byte</SPAN><SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"br0">]</SPAN> dataRPLWave <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"kw4">new</SPAN> <SPAN class=3D"kw4">byte</SPAN><SPAN =
+class=3D"br0">[</SPAN><SPAN class=3D"nu0">4</SPAN><SPAN =
+class=3D"sy0">*</SPAN><SPAN class=3D"nu0">8000</SPAN><SPAN =
+class=3D"br0">]</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+        <SPAN class=3D"kw1">static</SPAN> AnalogOut aout <SPAN =
+class=3D"sy0">=3D</SPAN> <SPAN class=3D"kw4">new</SPAN> AnalogOut<SPAN =
+class=3D"br0">(</SPAN>AnalogOut<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"kw6">Pin</SPAN><SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Aout0</SPAN><SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+        <SPAN class=3D"kw1">public</SPAN> <SPAN =
+class=3D"kw1">static</SPAN> <SPAN class=3D"kw4">void</SPAN> Main<SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"br0">)</SPAN>=0A=
+        <SPAN class=3D"br0">{</SPAN>=0A=
+            InputPort up <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"kw4">new</SPAN> InputPort<SPAN class=3D"br0">(</SPAN>Cpu<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"kw6">Pin</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">GPIO_Pin4</SPAN>, <SPAN =
+class=3D"kw1">false</SPAN>, Port<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">ResistorMode</SPAN><SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">PullUp</SPAN><SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"kw6">USBHostController</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">DeviceConnectedEvent</SPAN> =
+<SPAN class=3D"sy0">+=3D</SPAN> DeviceConnectedEvent<SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            RemovableMedia<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Insert</SPAN> <SPAN class=3D"sy0">+=3D</SPAN> =
+RemovableMedia_Insert<SPAN class=3D"sy0">;</SPAN>=0A=
+            RemovableMedia<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Eject</SPAN> <SPAN class=3D"sy0">+=3D</SPAN> =
+RemovableMedia_Eject<SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">// Init RLP</SPAN>=0A=
+            <SPAN class=3D"kw4">byte</SPAN><SPAN =
+class=3D"br0">[</SPAN><SPAN class=3D"br0">]</SPAN> elf_file <SPAN =
+class=3D"sy0">=3D</SPAN> <SPAN class=3D"kw6">Resources</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">GetBytes</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"kw6">Resources</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">BinaryResources</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">RLP_Recorde</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            RLP<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">LoadELF</SPAN><SPAN class=3D"br0">(</SPAN>elf_file<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            RLP<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InitializeBSSRegion</SPAN><SPAN =
+class=3D"br0">(</SPAN>elf_file<SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            ReadAudio <SPAN class=3D"sy0">=3D</SPAN> RLP<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">GetProcedure</SPAN><SPAN =
+class=3D"br0">(</SPAN>elf_file, <SPAN =
+class=3D"st0">"ReadAudio"</SPAN><SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            elf_file <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"kw1">null</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"kw1">while</SPAN> <SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"kw1">true</SPAN><SPAN =
+class=3D"br0">)</SPAN>=0A=
+            <SPAN class=3D"br0">{</SPAN>=0A=
+                <SPAN class=3D"kw1">while</SPAN> <SPAN =
+class=3D"br0">(</SPAN>up<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Read</SPAN><SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"br0">)</SPAN>=0A=
+                <SPAN class=3D"br0">{</SPAN>=0A=
+                    <SPAN class=3D"kw6">Thread</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Sleep</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"nu0">10</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+                <SPAN class=3D"br0">}</SPAN>=0A=
+                RecordWAV<SPAN class=3D"br0">(</SPAN>AnalogIn<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"kw6">Pin</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Ain6</SPAN>, dataRPLWave<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+                SaveWAVFileFormat<SPAN =
+class=3D"br0">(</SPAN>dataRPLWave<SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+                <SPAN class=3D"kw6">Thread</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Sleep</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"nu0">10</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+                <SPAN class=3D"br0">}</SPAN>   =0A=
+        <SPAN class=3D"br0">}</SPAN>=0A=
+        <SPAN class=3D"kw1">static</SPAN> <SPAN =
+class=3D"kw4">void</SPAN> DeviceConnectedEvent<SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"kw6">USBH_Device</SPAN> device<SPAN =
+class=3D"br0">)</SPAN>=0A=
+        <SPAN class=3D"br0">{</SPAN>  =0A=
+            <SPAN class=3D"kw1">if</SPAN> <SPAN =
+class=3D"br0">(</SPAN>device<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">TYPE</SPAN> <SPAN class=3D"sy0">=3D=3D</SPAN> <SPAN =
+class=3D"kw6">USBH_DeviceType</SPAN><SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">MassStorage</SPAN><SPAN class=3D"br0">)</SPAN>=0A=
+            <SPAN class=3D"br0">{</SPAN>=0A=
+                _ps <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"kw4">new</SPAN> PersistentStorage<SPAN =
+class=3D"br0">(</SPAN>device<SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+                _ps<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">MountFileSystem</SPAN><SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"br0">}</SPAN>=0A=
+        <SPAN class=3D"br0">}</SPAN>      =0A=
+        <SPAN class=3D"kw1">static</SPAN> <SPAN =
+class=3D"kw4">void</SPAN> RemovableMedia_Insert<SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"kw4">object</SPAN> sender, =
+MediaEventArgs e<SPAN class=3D"br0">)</SPAN>=0A=
+        <SPAN class=3D"br0">{</SPAN>=0A=
+            <SPAN class=3D"kw6">Debug</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Print</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"st0">"Storage <SPAN =
+class=3D"es0">\"</SPAN>"</SPAN> <SPAN class=3D"sy0">+</SPAN> e<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Volume</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">RootDirectory</SPAN> <SPAN =
+class=3D"sy0">+</SPAN>=0A=
+            <SPAN class=3D"st0">"<SPAN class=3D"es0">\"</SPAN> =
+detected."</SPAN><SPAN class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+        <SPAN class=3D"br0">}</SPAN>=0A=
+        <SPAN class=3D"kw1">static</SPAN> <SPAN =
+class=3D"kw4">void</SPAN> RemovableMedia_Eject<SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"kw4">object</SPAN> sender, =
+MediaEventArgs e<SPAN class=3D"br0">)</SPAN>=0A=
+        <SPAN class=3D"br0">{</SPAN>=0A=
+            <SPAN class=3D"kw6">Debug</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Print</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"st0">"Storage <SPAN =
+class=3D"es0">\"</SPAN>"</SPAN> <SPAN class=3D"sy0">+</SPAN> e<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Volume</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">RootDirectory</SPAN> <SPAN =
+class=3D"sy0">+</SPAN>=0A=
+            <SPAN class=3D"st0">"<SPAN class=3D"es0">\"</SPAN> is =
+ejected."</SPAN><SPAN class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+        <SPAN class=3D"br0">}</SPAN>=0A=
+        <SPAN class=3D"kw1">static</SPAN> <SPAN =
+class=3D"kw4">void</SPAN> RecordWAV<SPAN =
+class=3D"br0">(</SPAN>AnalogIn<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"kw6">Pin</SPAN> channel, <SPAN class=3D"kw4">byte</SPAN><SPAN =
+class=3D"br0">[</SPAN><SPAN class=3D"br0">]</SPAN> data<SPAN =
+class=3D"br0">)</SPAN>=0A=
+        <SPAN class=3D"br0">{</SPAN>=0A=
+            AnalogIn ain <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"kw4">new</SPAN> AnalogIn<SPAN =
+class=3D"br0">(</SPAN>channel<SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            ReadAudio<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Invoke</SPAN><SPAN class=3D"br0">(</SPAN>data, <SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"kw4">byte</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"br0">(</SPAN>channel<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            ain<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Dispose</SPAN><SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+        <SPAN class=3D"br0">}</SPAN>=0A=
+        <SPAN class=3D"kw1">static</SPAN> <SPAN =
+class=3D"kw4">void</SPAN> SaveWAVFileFormat<SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"kw4">byte</SPAN><SPAN =
+class=3D"br0">[</SPAN><SPAN class=3D"br0">]</SPAN> inputData<SPAN =
+class=3D"br0">)</SPAN>=0A=
+        <SPAN class=3D"br0">{</SPAN>=0A=
+            <SPAN class=3D"kw4">int</SPAN> intValue<SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"kw4">byte</SPAN><SPAN =
+class=3D"br0">[</SPAN><SPAN class=3D"br0">]</SPAN> textValue<SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">// 44 is size of WAV header.</SPAN>=0A=
+            <SPAN class=3D"kw4">byte</SPAN><SPAN =
+class=3D"br0">[</SPAN><SPAN class=3D"br0">]</SPAN> dataWAV <SPAN =
+class=3D"sy0">=3D</SPAN> <SPAN class=3D"kw4">new</SPAN> <SPAN =
+class=3D"kw4">byte</SPAN><SPAN class=3D"br0">[</SPAN>inputData<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Length</SPAN><SPAN =
+class=3D"sy0">+</SPAN><SPAN class=3D"nu0">44</SPAN><SPAN =
+class=3D"br0">]</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 0-3 RIFF</SPAN>=0A=
+            textValue <SPAN class=3D"sy0">=3D</SPAN> Encoding<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">UTF8</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">GetBytes</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"st0">"RIFF"</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">0</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">0</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//R</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">1</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">1</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//I</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">2</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">2</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//F</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">3</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">3</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//F</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 4-7 size of file - 8</SPAN>=0A=
+            intValue <SPAN class=3D"sy0">=3D</SPAN> dataWAV<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Length</SPAN> <SPAN =
+class=3D"sy0">-</SPAN> <SPAN class=3D"nu0">8</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            Utility<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InsertValueIntoArray</SPAN><SPAN =
+class=3D"br0">(</SPAN>dataWAV, <SPAN class=3D"nu0">4</SPAN>, <SPAN =
+class=3D"nu0">4</SPAN>, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">uint</SPAN><SPAN class=3D"br0">)</SPAN>intValue<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 8-11 WAVE</SPAN>=0A=
+            textValue <SPAN class=3D"sy0">=3D</SPAN> Encoding<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">UTF8</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">GetBytes</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"st0">"WAVE"</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">8</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">0</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> =0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">9</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">1</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> =0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">10</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">2</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> =0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">11</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">3</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 12-15 fmt</SPAN>=0A=
+            textValue <SPAN class=3D"sy0">=3D</SPAN> Encoding<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">UTF8</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">GetBytes</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"st0">"fmt "</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">12</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">0</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//f</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">13</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">1</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//m</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">14</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">2</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//t</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">15</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">3</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//' '</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 16-19 PCM standart: 16</SPAN>=0A=
+            intValue <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"nu0">16</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            Utility<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InsertValueIntoArray</SPAN><SPAN =
+class=3D"br0">(</SPAN>dataWAV, <SPAN class=3D"nu0">16</SPAN>, <SPAN =
+class=3D"nu0">4</SPAN>, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">uint</SPAN><SPAN class=3D"br0">)</SPAN>intValue<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 20-21 AudioFormat  PCM =3D =
+1</SPAN>=0A=
+            intValue <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"nu0">1</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            Utility<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InsertValueIntoArray</SPAN><SPAN =
+class=3D"br0">(</SPAN>dataWAV, <SPAN class=3D"nu0">20</SPAN>, <SPAN =
+class=3D"nu0">2</SPAN>, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">uint</SPAN><SPAN class=3D"br0">)</SPAN>intValue<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 22-23 NumChannels     Mono =3D =
+1, Stereo =3D 2, etc.</SPAN>=0A=
+            intValue <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"nu0">1</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            Utility<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InsertValueIntoArray</SPAN><SPAN =
+class=3D"br0">(</SPAN>dataWAV, <SPAN class=3D"nu0">22</SPAN>, <SPAN =
+class=3D"nu0">2</SPAN>, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">uint</SPAN><SPAN class=3D"br0">)</SPAN>intValue<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 24-27 SampleRate       8000, =
+44100, etc.</SPAN>=0A=
+            intValue <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"nu0">8000</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            Utility<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InsertValueIntoArray</SPAN><SPAN =
+class=3D"br0">(</SPAN>dataWAV, <SPAN class=3D"nu0">24</SPAN>, <SPAN =
+class=3D"nu0">4</SPAN>, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">uint</SPAN><SPAN class=3D"br0">)</SPAN>intValue<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 28-31 ByteRate       8000</SPAN>=0A=
+            intValue <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"nu0">8000</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            Utility<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InsertValueIntoArray</SPAN><SPAN =
+class=3D"br0">(</SPAN>dataWAV, <SPAN class=3D"nu0">28</SPAN>, <SPAN =
+class=3D"nu0">4</SPAN>, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">uint</SPAN><SPAN class=3D"br0">)</SPAN>intValue<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 32-33 BlockAlign 1</SPAN>=0A=
+            intValue <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"nu0">1</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            Utility<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InsertValueIntoArray</SPAN><SPAN =
+class=3D"br0">(</SPAN>dataWAV, <SPAN class=3D"nu0">32</SPAN>, <SPAN =
+class=3D"nu0">2</SPAN>, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">uint</SPAN><SPAN class=3D"br0">)</SPAN>intValue<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 34-35 BitsPerSample 8</SPAN>=0A=
+            intValue <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"nu0">8</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            Utility<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InsertValueIntoArray</SPAN><SPAN =
+class=3D"br0">(</SPAN>dataWAV, <SPAN class=3D"nu0">34</SPAN>, <SPAN =
+class=3D"nu0">2</SPAN>, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">uint</SPAN><SPAN class=3D"br0">)</SPAN>intValue<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 36-39 data</SPAN>=0A=
+            textValue <SPAN class=3D"sy0">=3D</SPAN>  Encoding<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">UTF8</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">GetBytes</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"st0">"data"</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">36</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">0</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//d</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">37</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">1</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//a</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">38</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">2</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//t</SPAN>=0A=
+            dataWAV<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">39</SPAN><SPAN class=3D"br0">]</SPAN> <SPAN =
+class=3D"sy0">=3D</SPAN> textValue<SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">3</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">;</SPAN> <SPAN class=3D"co1">//a</SPAN>=0A=
+            <SPAN class=3D"co1">//Index: 40-43 Size of data array</SPAN>=0A=
+            intValue <SPAN class=3D"sy0">=3D</SPAN> inputData<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Length</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            Utility<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">InsertValueIntoArray</SPAN><SPAN =
+class=3D"br0">(</SPAN>dataWAV, <SPAN class=3D"nu0">40</SPAN>, <SPAN =
+class=3D"nu0">4</SPAN>, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">uint</SPAN><SPAN class=3D"br0">)</SPAN>intValue<SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">//Copy data to make file</SPAN>=0A=
+            Array<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Copy</SPAN><SPAN class=3D"br0">(</SPAN>inputData, <SPAN =
+class=3D"nu0">0</SPAN>, dataWAV, <SPAN class=3D"nu0">44</SPAN>, =
+inputData<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Length</SPAN><SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"co1">// Save to USB</SPAN>=0A=
+            <SPAN class=3D"kw4">string</SPAN> rootDirectory <SPAN =
+class=3D"sy0">=3D</SPAN> VolumeInfo<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">GetVolumes</SPAN><SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"br0">[</SPAN><SPAN =
+class=3D"nu0">0</SPAN><SPAN class=3D"br0">]</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">RootDirectory</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            FileStream FileHandle <SPAN class=3D"sy0">=3D</SPAN> <SPAN =
+class=3D"kw4">new</SPAN> FileStream<SPAN =
+class=3D"br0">(</SPAN>rootDirectory=0A=
+               <SPAN class=3D"sy0">+</SPAN> <SPAN =
+class=3D"st_h">@"\out.wav"</SPAN>, FileMode<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Create</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            FileHandle<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Write</SPAN><SPAN class=3D"br0">(</SPAN>dataWAV, <SPAN =
+class=3D"nu0">0</SPAN>, dataWAV<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Length</SPAN><SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN>=0A=
+            FileHandle<SPAN class=3D"sy0">.</SPAN><SPAN =
+class=3D"me1">Close</SPAN><SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+            <SPAN class=3D"kw6">Debug</SPAN><SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Print</SPAN><SPAN =
+class=3D"br0">(</SPAN><SPAN class=3D"st0">"Saved!"</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN>=0A=
+        <SPAN class=3D"br0">}</SPAN>=0A=
+    <SPAN class=3D"br0">}</SPAN>=0A=
+<SPAN class=3D"br0">}</SPAN></PRE></DIV></DIV>
+<P>This code can reach our requirements to create WAV file. But there is =
+one=20
+issue is happened. Every time you press button UP, code in native side =
+will be=20
+executed, and you can't do any thing during this time. It is because =
+when the=20
+native task runs, it blocks all other managed/native threads/tasks. Once =
+the=20
+task finishes, the managed threads will continue to run.</P><A =
+id=3D"Blocking_problem_in_RLP"=20
+name=3D"Blocking_problem_in_RLP"></A>
+<H2> <SPAN class=3D"mw-headline">Blocking problem in RLP</SPAN></H2>
+<P>This section we will solve the blocking problem on RLP by using RLP=20
+Extension. The extensions provide additional functionalities and =
+procedures that=20
+can be called from your native code. For example, installing an =
+interrupt=20
+service routine, allocating memory...etc One of the extensions is native =
+tasks=20
+support. A task must be initialized first and then it can be scheduled =
+to run=20
+together with the other threads when appropriate or it can be scheduled =
+to run=20
+after a specific amount of time. When the native task runs, it blocks =
+all other=20
+managed/native threads/tasks. Once the task finishes, the managed =
+threads will=20
+continue to run.</P>
+<P>Come back our issue, when we invoke one function from RLP by command: =
+</P>
+<DIV style=3D"text-align: left;" dir=3D"ltr" class=3D"mw-geshi">
+<DIV class=3D"csharp source-csharp"><PRE class=3D"de1">ReadAudio<SPAN =
+class=3D"sy0">.</SPAN><SPAN class=3D"me1">Invoke</SPAN><SPAN =
+class=3D"br0">(</SPAN>data, <SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"kw4">byte</SPAN><SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"br0">(</SPAN>channel<SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"br0">)</SPAN><SPAN class=3D"sy0">;</SPAN></PRE></DIV></DIV>
+<P><B>ReadAudio</B> in native side will be executed and everything will =
+be=20
+stopped in managed side. If we need to record 4 second, we have to wait =
+for 4=20
+seconds, record 8 seconds, wait 8 seconds.  But we look at =
+<B>ReadAudio</B>=20
+function in native side, we will see: </P>
+<DIV style=3D"text-align: left;" dir=3D"ltr" class=3D"mw-geshi">
+<DIV class=3D"csharp source-csharp"><PRE class=3D"de1">RLPext<SPAN =
+class=3D"sy0">-&gt;</SPAN>Delay<SPAN class=3D"br0">(</SPAN><SPAN =
+class=3D"nu0">125</SPAN><SPAN class=3D"br0">)</SPAN><SPAN =
+class=3D"sy0">;</SPAN></PRE></DIV></DIV>
+<P>It means there is free time and no any program use it. Based on this, =
+we will=20
+use this space time to go back managed side and do something we want =
+while wait=20
+native side finish its task. In <B>ReadAudio</B> function, we have to =
+create a=20
+object RLP_Task and change some code, like this:</P><PRE>RLP_Task =
+myTask1;=0A=
+int ReadAudio(unsigned int *generalArray, void **args, unsigned int =
+argsCount ,  =0A=
+             unsigned int *argSize)=0A=
+{=0A=
+       buffer_lengh =3D argSize[0];=0A=
+       buffer =3D RLPext-&gt;malloc(buffer_lengh);=0A=
+       channel =3D *(unsigned char*)args[1];=0A=
+       i=3D0;=0A=
+       // Init task=0A=
+       RLPext-&gt;Task.Initialize(&amp;myTask1, MyTaskCallback, 0, =
+RLP_TRUE);=0A=
+       // start task=0A=
+       RLPext-&gt;Task.Schedule(&amp;myTask1);=0A=
+       return 0;=0A=
+}=0A=
+</PRE>
+<P>In this above code, we have a parameter <B>MyTaskCallback</B>. =
+Because=20
+<B>ReadAudio</B> is called just one time from managed side so if we put =
+our code=20
+to read analog signals inside this function, we have to wait 4 seconds =
+to=20
+finish, but if we don't have code to read analog signals here, how can =
+we get=20
+analog signals? To solve this issue, we put code reading signals to a =
+new=20
+function, it is <B>MyTaskCallback</B>.</P>
+<P>Although system just call <B>ReadAudio</B> one time, but =
+<B>ReadAudio</B>=20
+have a task, and this task will call <B>MyTaskCallback</B> after every a =
+
+specified time period. To define a specified time period, we will need a =
+
+function from RLP, it is:</P><PRE>void ScheduleTimeOffset(RLP_Task =
+*task, unsigned int timeOffset_us)=0A=
+</PRE>
+<P><BR>Below is full definition of <B>MyTaskCallback</B></P><PRE>void =
+MyTaskCallback(void *arg)=0A=
+{=0A=
+       if (i&lt;buffer_lengh)=0A=
+       {=0A=
+       	buffer[i] =3D GHAL_AnalogIn_Read(channel);=0A=
+       	i++;=0A=
+       	RLPext-&gt;Task.ScheduleTimeOffset(&amp;myTask1, 125);=0A=
+       }=0A=
+       else=0A=
+       {=0A=
+       	RLPext-&gt;PostManagedEvent(5);=0A=
+       	RLPext-&gt;Task.Abort(&amp;myTask1);=0A=
+       }=0A=
+}=0A=
+</PRE>
+<P>This function means after every 125 microsecond, system will call =
+alternate=20
+between managed side and native side.</P>
+<P>We also have&nbsp;:</P><PRE>               =
+RLPext-&gt;PostManagedEvent(5);=0A=
+               RLPext-&gt;Task.Abort(&amp;myTask1);=0A=
+</PRE>
+<P>The first line, it just send a number to managed side to confirm that =
+i=20
+equals buffer length, that means task is finished. After that, we need =
+to free=20
+memory by the second line.</P>
+<P>Now we have "2 thread", the first thread will run within 125 =
+microsecond,=20
+then the second one will run within 125 microsecond, then go back the =
+first one,=20
+then go back the second one....until we abort task. So we can do =
+something we=20
+want in managed side while RLP running.</P><A =
+id=3D"Using_parameter_in_RLP_Task"=20
+name=3D"Using_parameter_in_RLP_Task"></A>
+<H2> <SPAN class=3D"mw-headline">Using parameter in RLP Task</SPAN></H2>
+<P>A new problem will happen, all value in <B>buffer</B> will be set by =
+0=20
+although we it was set already by this command:</P><PRE>if =
+(i&lt;buffer_lengh)=0A=
+{=0A=
+    buffer[i] =3D GHAL_AnalogIn_Read(channel);=0A=
+    i++;=0A=
+    RLPext-&gt;Task.ScheduleTimeOffset(&amp;myTask1, 125);=0A=
+}=0A=
+</PRE>
+<P>The problem here is system will call <B>ReadAudio</B> just one time =
+and=20
+within 125 microsecond, <B>ReadAudio</B> will be returned and from now, =
+it will=20
+never be called any more except you call it one more time by your =
+code.</P>
+<P>It means all parameter go with <B>ReadAudio</B> are also never exist =
+in=20
+native side any more. It still exist in managed side if you declare it =
+by static=20
+but it is not in native side. So that is why after you wait for 4 =
+seconds,=20
+everything you have now is array that doesn't have any change.</P>
+<P>To solve this issue, we have to create a new array in native side =
+with length=20
+is length of array in managed side. We will call it as a buffer array, =
+and all=20
+data that we have from analog input pin we will save to this buffer. =
+After=20
+native side finish task, we need to send a event to managed side to =
+confirm that=20
+task is finished, like this command below:</P><PRE> =
+RLPext-&gt;PostManagedEvent(5);=0A=
+</PRE>
+<P>Then managed side will send to native side a array by invoking a =
+method=20
+<B>SendArrayToManage</B>, we will copy data from buffet to this array. =
+Code in=20
+native side will like this:</P><PRE>int SendArrayToManage(unsigned int =
+*generalArray, void **args, unsigned int =0A=
+                     argsCount , unsigned int *argSize)=0A=
+{=0A=
+  unsigned char *bufferReceive =3D (unsigned char*)args[0];=0A=
+  for (i=3D0; i&lt;buffer_lengh; i++)=0A=
+  {=0A=
+    bufferReceive[i] =3D buffer[i];=0A=
+  }=0A=
+  return channel;  =0A=
+}=0A=
+</PRE>
+<P>Now we have array data to make WAV file. This is just a simple =
+example about=20
+RLP. Please visit this page for advance RLP:<A class=3D"external free" =
+title=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Document=
+ation/Index.html"=20
+href=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documenta=
+tion/Index.html"=20
+rel=3D"nofollow">http://www.ghielectronics.com/downloads/NETMF/Library%20=
+Documentation/Index.html</A>
+</P><!-- =0A=
+NewPP limit report=0A=
+Preprocessor node count: 18/1000000=0A=
+Post-expand include size: 0/2097152 bytes=0A=
+Template argument size: 0/2097152 bytes=0A=
+Expensive parser function count: 0/100=0A=
+--><!-- Saved in parser cache with key =
+tinyclr_wikidb:pcache:idhash:1343-0!1!0!!en!2!edit=3D0 and timestamp =
+20111003133205 -->
+<DIV class=3D"printfooter">Retrieved from "<A =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Reco=
+rding">http://wiki.tinyclr.com/index.php?title=3DRLP_Realtime_Audio_Recor=
+ding</A>"</DIV>
+<DIV id=3D"catlinks">
+<DIV id=3D"catlinks" class=3D"catlinks">
+<DIV id=3D"mw-normal-catlinks"><A title=3D"Special:Categories" =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DSpecial:Categories">Cat=
+egories</A>:=20
+<SPAN dir=3D"ltr"><A class=3D"new" title=3D"Category:Intermediate =
+Tutorial (page does not exist)"=20
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Intermediate_T=
+utorial&amp;action=3Dedit&amp;redlink=3D1">Intermediate=20
+Tutorial</A></SPAN> | <SPAN dir=3D"ltr"><A class=3D"new" =
+title=3D"Category:Tutorial (page does not exist)"=20
+href=3D"http://wiki.tinyclr.com/index.php?title=3DCategory:Tutorial&amp;a=
+ction=3Dedit&amp;redlink=3D1">Tutorial</A></SPAN></DIV></DIV></DIV><!-- =
+end content --></DIV><!-- end of MAINCONTENT div --></DIV><!-- end of =
+MBODY div -->
+<DIV id=3D"footer">
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD width=3D"1%" noWrap=3D"nowrap" align=3D"left">
+      <DIV id=3D"f-copyrightico"><A =
+href=3D"http://creativecommons.org/licenses/by-sa/3.0/"><IMG=20
+      alt=3D"Attribution-ShareAlike 3.0 Unported" =
+src=3D"http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></A></DIV></TD=
+>
+    <TD align=3D"center"><SPAN id=3D"f-lastmod"> This page was last =
+modified on 16=20
+      June 2011, at 14:32.</SPAN><SPAN id=3D"f-viewcount">This page has =
+been=20
+      accessed 1,093 times. </SPAN>
+      <UL id=3D"f-list">
+        <LI id=3D"f-copyright">Content is available under <A =
+class=3D"external "=20
+        title=3D"http://creativecommons.org/licenses/by-sa/3.0/" =
+href=3D"http://creativecommons.org/licenses/by-sa/3.0/">Attribution-Share=
+Alike=20
+        3.0 Unported</A>.</LI>
+        <LI id=3D"f-about"><A title=3D"TinyCLR Wiki:About" =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DTinyCLR_Wiki:About">Abo=
+ut=20
+        TinyCLR Wiki</A></LI>
+        <LI id=3D"f-disclaimer"><A title=3D"TinyCLR Wiki:General =
+disclaimer" =
+href=3D"http://wiki.tinyclr.com/index.php?title=3DTinyCLR_Wiki:General_di=
+sclaimer">Disclaimers</A></LI></UL></TD>
+    <TD width=3D"1%" noWrap=3D"nowrap" align=3D"right">
+      <DIV id=3D"f-poweredbyico"><A =
+href=3D"http://www.mediawiki.org/"><IMG alt=3D"Powered by MediaWiki"=20
+      =
+src=3D"http://wiki.tinyclr.com/skins/common/images/poweredby_mediawiki_88=
+x31.png"></A></DIV></TD></TR></TBODY></TABLE></DIV><!-- end of the =
+FOOTER div -->
+</DIV><!-- end of the CONTAINER div --><!-- Served in 0.195 secs. =
+--></BODY></HTML>
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://wiki.tinyclr.com/images/thumb/b/b1/GHI.jpg/250px-GHI.jpg
+
+/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcg
+SlBFRyB2NjIpLCBxdWFsaXR5ID0gOTUK/9sAQwACAQEBAQECAQEBAgICAgIEAwICAgIFBAQDBAYF
+BgYGBQYGBgcJCAYHCQcGBggLCAkKCgoKCgYICwwLCgwJCgoK/9sAQwECAgICAgIFAwMFCgcGBwoK
+CgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoK/8AAEQgAUwD6
+AwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMF
+BQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkq
+NDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqi
+o6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/E
+AB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMR
+BAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVG
+R0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKz
+tLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A
+/cbnsPpxS4PP+FIcH+nFGBn/AOtQAuOep/Kjp6/lSY9/0oHH/wCqgBfz/Kj8/wAqqaxrmlaDaG91
+W7WJB0z1b2A6mvK/H/7SOpaYskHhLQ4lK/duL4ls8f3FIx+Zr08vyjH5pPloQv5vRfeeXmWc5dlU
+ObETs+y1f3L9T18nHJJor4w8dftZ/H6yd5NM8bR2w7JFpluQP++42NecXn/BR/8Aaf8ABN4Z59e0
+zV41PMGo6TGoI+sIjP6193hPCfibG0+ajOk325pJ/wDpFvxPz/F+L/C+BqctaFVLvyxa/wDS7/gf
+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
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
+
+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
+AABJRU5ErkJggg==
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://wiki.tinyclr.com/skins/common/images/poweredby_mediawiki_88x31.png
+
+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
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/content.css
+
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0px 0px 1em 1em;
+}
+li {
+	margin-top: 0.2em; margin-bottom: 0.2em;
+}
+sup {
+	font-size: 70%;
+}
+form {
+	margin: 0px; display: inline;
+}
+label {
+	font-weight: bold;
+}
+.subtitle {
+	font-style: italic;
+}
+div.para {
+	margin: 1em 0px;
+}
+div.para > ul {
+	margin-top: 0.2em; margin-bottom: 0.2em;
+}
+div.para > ol {
+	margin-top: 0.2em; margin-bottom: 0.2em;
+}
+div.para > blockquote {
+	margin-top: 0.2em; margin-bottom: 0.2em;
+}
+div.section {
+	padding-left: 3%; display: block;
+}
+div.section > h2 {
+	margin-left: -1.3%;
+}
+div.section > h3 {
+	margin-left: -1.3%;
+}
+div.section > h4 {
+	margin-left: -1.3%;
+}
+div.section > h5 {
+	margin-left: -1.3%;
+}
+div.section > h6 {
+	margin-left: -1.3%;
+}
+.block {
+	margin: 0.1em 1em; display: block;
+}
+.imgright {
+	margin: 0px 0px 2em 2em; float: right;
+}
+.first {
+	margin-top: 0px;
+}
+:link img {
+	border: 0px currentColor;
+}
+:visited img {
+	border: 0px currentColor;
+}
+.deepLevel #mainContent :link img {
+	border: solid currentColor;
+}
+.deepLevel #mainContent :visited img {
+	border: solid currentColor;
+}
+.deepLevel #mainContent #buttons :link img {
+	border: 0px currentColor;
+}
+.deepLevel #mainContent #buttons :visited img {
+	border: 0px currentColor;
+}
+.ex-ref {
+	font-style: italic;
+}
+dl.toc dt {
+	font-size: 110%; margin-top: 1em;
+}
+dl.toc p {
+	margin: 0px; text-indent: 1em;
+}
+dl.toc p:first-child {
+	text-indent: 0px;
+}
+dl.toc > dd {
+	margin-left: 1em;
+}
+ol.toc ol {
+	list-style-type: circle;
+}
+ol.toc > li > ol {
+	font-size: 90%;
+}
+ul.snav {
+	margin: 0.7em 10%; padding: 0.2em; text-align: center; list-style-type: =
+none;
+}
+ul.snav > li {
+	margin: 0px; padding: 0px;
+}
+ul.snav > li {
+	display: inline;
+}
+ul.snav > li::before {
+	content: " | ";
+}
+ul.snav > li:first-child::before {
+	content: "";
+}
+a.cont {
+	text-align: right; margin-right: 0px; display: block;
+}
+blockquote > address {
+	text-indent: -1em; padding-left: 1em;
+}
+blockquote > address::before {
+	content: "\2015";
+}
+div.quote {
+	margin: 1em;
+}
+div.epigraph {
+	margin: 1em;
+}
+div.quote q {
+	margin: 0px 0.5em; text-indent: -0.5em; display: block;
+}
+div.epigraph q {
+	margin: 0px 0.5em; text-indent: -0.5em; display: block;
+}
+div.quote cite {
+	padding: 0px 1em; text-align: right; text-indent: -1em; display: block;
+}
+div.epigraph cite {
+	padding: 0px 1em; text-align: right; text-indent: -1em; display: block;
+}
+div.quote cite::before {
+	content: "\2015";
+}
+div.epigraph cite::before {
+	content: "\2015";
+}
+blockquote.epigraph {
+	text-align: right; font-style: italic;
+}
+div.epigraph q {
+	text-align: right; font-style: italic;
+}
+blockquote.epigraph em {
+	font-style: normal;
+}
+div.epigraph q em {
+	font-style: normal;
+}
+blockquote.epigraph address {
+	font-style: normal;
+}
+div.epigraph cite {
+	font-style: normal;
+}
+.note {
+	font-style: italic;
+}
+.note::before {
+	content: "Note: ";
+}
+.remark {
+	font-size: smaller;
+}
+.remark::before {
+	content: "[";
+}
+.remark::after {
+	content: "]";
+}
+.sidenote {
+	margin: 0.75em 0.5em; padding: 0.2em; border: 1px solid currentColor; =
+width: 30%; clear: both; float: right; min-width: 15em;
+}
+.sidenote h1 {
+	font-size: 1.4em;
+}
+.sidenote h2 {
+	font-size: 1.25em;
+}
+.sidenote h3 {
+	font-size: 1.1em;
+}
+.key-point > h1:first-child {
+	margin-top: 0px;
+}
+.key-point > h2:first-child {
+	margin-top: 0px;
+}
+.key-point > h3:first-child {
+	margin-top: 0px;
+}
+.key-point > h4:first-child {
+	margin-top: 0px;
+}
+.key-point > h5:first-child {
+	margin-top: 0px;
+}
+.key-point > h6:first-child {
+	margin-top: 0px;
+}
+strong.stronger {
+	font-style: italic; font-weight: bold;
+}
+strong.very-strong {
+	text-transform: uppercase; font-weight: bold;
+}
+*.important {
+	margin: 1em; padding: 0.1em; border: solid rgb(255, 0, 0); font-size: =
+larger;
+}
+div.important {
+	margin: 1em; padding: 0.1em; border: solid rgb(255, 0, 0); font-size: =
+larger;
+}
+p.important {
+	margin: 1em; padding: 0.1em; border: solid rgb(255, 0, 0); font-size: =
+larger;
+}
+span.important {
+	margin: 0px; padding: 0px; border: 0px currentColor; color: rgb(204, 0, =
+0); font-size: smaller;
+}
+pre.screen {
+	margin: 1em 0.5em; padding: 0.2em; border: 1px solid currentColor; =
+overflow: auto; font-family: monospace; white-space: pre;
+}
+div.screen {
+	margin: 1em 0.5em; padding: 0.2em; border: 1px solid currentColor;
+}
+span.application {
+	font-style: italic;
+}
+kbd.long {
+	margin: 0.1em 1em; display: block;
+}
+kbd.command {
+	white-space: pre;
+}
+code.command {
+	white-space: pre;
+}
+code.filename {
+	font-style: italic; white-space: nowrap;
+}
+code {
+	font-size: 1em;
+}
+pre {
+	font-size: 1em;
+}
+code {
+	white-space: nowrap;
+}
+code.long {
+	margin: 0.1em 1em; display: block; white-space: normal;
+}
+pre.code {
+	margin: 1em 0.5em; padding: 0.2em; border: 1px solid currentColor; =
+overflow: auto;
+}
+pre.code .remark {
+	font-size: 1em; font-style: italic;
+}
+pre.code .remark::before {
+	content: "";
+}
+pre.code .remark::after {
+	content: "";
+}
+pre.code .note::before {
+	content: "";
+}
+.example {
+	margin: 1em 3%; padding: 0.25em; border: solid currentColor;
+}
+.example::before {
+	font-weight: bold; display: block; content: "Example";
+}
+[title].example::before {
+	content: "Example: " attr(title);
+}
+pre.bad {
+	border: 3px dashed red;
+}
+div.bad {
+	border: 3px dashed red;
+}
+.example.bad::before {
+	content: "Incorrect Example";
+}
+[title].example.bad::before {
+	content: "Incorrect Example: " attr(title);
+}
+pre.good {
+	border: 3px double lime;
+}
+div.good {
+	border: 3px double lime;
+}
+.example.good::before {
+	content: "Correct Example";
+}
+[title].example.good::before {
+	content: "Correct Example: " attr(title);
+}
+.figure {
+	margin: 0.75em auto; display: block;
+}
+.screenshot {
+	margin: 0.75em auto; display: block;
+}
+object.figure object {
+	margin: 0px auto; display: block;
+}
+object.screenshot object {
+	margin: 0px auto; display: block;
+}
+object.figure img {
+	margin: 0px auto; display: block;
+}
+object.screenshot object {
+	margin: 0px auto; display: block;
+}
+[title].screenshot::after {
+	margin: 0px 8% 0.05em; text-align: right; font-size: small; font-style: =
+italic; display: block; content: attr(title);
+}
+[title].figure::after {
+	margin: 0px 8% 0.05em; text-align: right; font-size: small; font-style: =
+italic; display: block; content: attr(title);
+}
+.co {
+	text-decoration: underline;
+}
+.callout {
+	text-decoration: underline;
+}
+.qandaset .question {
+	font-size: large; font-weight: bold;
+}
+.qandaset .answer {
+	margin-top: 1em;
+}
+table.data {
+	margin: 0.5em auto; border: 1px solid currentColor; border-collapse: =
+collapse;
+}
+table.data caption {
+	margin: 1em auto 0.2em; text-align: center; font-size: small; =
+font-style: italic;
+}
+table.data th {
+	padding: 0.2em; border: 1px solid currentColor; vertical-align: =
+baseline;
+}
+table.data td {
+	padding: 0.2em; border: 1px solid currentColor; vertical-align: =
+baseline;
+}
+table.data tbody th:first-child {
+	text-align: right;
+}
+table.data thead th {
+	vertical-align: bottom;
+}
+address {
+	text-align: right;
+}
+.author {
+	text-align: left; margin-bottom: 1em;
+}
+#mainContent > h1:first-child {
+	margin-top: 0px;
+}
+#mainContent > h2:first-child {
+	margin-top: 0px;
+}
+#mainContent > h3:first-child {
+	margin-top: 0px;
+}
+#mainContent > h4:first-child {
+	margin-top: 0px;
+}
+#mainContent > h5:first-child {
+	margin-top: 0px;
+}
+#mainContent > h6:first-child {
+	margin-top: 0px;
+}
+#side > h1:first-child {
+	margin-top: 0px;
+}
+#side > h2:first-child {
+	margin-top: 0px;
+}
+#side > h3:first-child {
+	margin-top: 0px;
+}
+#side > h4:first-child {
+	margin-top: 0px;
+}
+#side > h5:first-child {
+	margin-top: 0px;
+}
+#side > h6:first-child {
+	margin-top: 0px;
+}
+.productlist {
+	margin: 0px; padding: 0px 0px 0px 5px;
+}
+.productlist li {
+	list-style: none; padding: 0px 0px 1em; clear: left; margin-left: 0px;
+}
+.productlist h3 {
+	margin: 0px 0px 0.2em;
+}
+.productlist img {
+	margin: 0px 0.5em 1em 0px; float: left;
+}
+.flLeft {
+	margin: 5px 10px 5px 0px; float: left;
+}
+.flRight {
+	margin: 5px 0px 5px 10px; float: right;
+}
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/template.css
+
+body {
+	background: url("body_back.gif") repeat-x rgb(255, 255, 255);
+}
+#header {
+	background: url("header_bl.png") repeat-x left bottom rgb(69, 83, 114); =
+padding: 15px 0px; height: 3em; position: relative; min-height: 39px; =
+voice-family: inherit;
+}
+#ignored {
+=09
+}
+#header h1 {
+	background: url("header_tl.gif") no-repeat; margin: 0px; left: 0px; =
+top: 0px; height: 8px; font-size: 2px; position: absolute; z-index: 100;
+}
+#header h1 a {
+	background: url("header_logo.gif") no-repeat; width: 268px; height: =
+64px; text-indent: -700em; text-decoration: none; display: block;
+}
+#header ul {
+	background: url("header_br.gif") no-repeat right bottom; list-style: =
+none; margin: 0px; padding: 0px 15px 0px 0px; width: auto; right: 0px; =
+bottom: 0px; position: absolute; z-index: 90;
+}
+#header li {
+	background: url("header_tab.gif") no-repeat 100% -600px; margin: 0px =
+1px 0px 0px; padding: 0px 6px 0px 0px; border-bottom-color: rgb(81, 83, =
+88); border-bottom-width: 1px; border-bottom-style: solid; float: right;
+}
+#header ul a {
+	background: url("header_tab.gif") no-repeat 0% -600px; padding: 4px 4px =
+4px 10px; color: rgb(255, 255, 255); font-weight: bold; text-decoration: =
+none; float: left; display: block;
+}
+#header ul li:hover a {
+	background-position: 0% -400px;
+}
+#header ul li:hover {
+	background-position: 100% -400px;
+}
+body.sectionAbout li#menu_aboutus a {
+	background-position: 0% -200px; color: rgb(0, 51, 153);
+}
+body.sectionProducts li#menu_products a {
+	background-position: 0% -200px; color: rgb(0, 51, 153);
+}
+body.sectionSupport li#menu_support a {
+	background-position: 0% -200px; color: rgb(0, 51, 153);
+}
+body.sectionDevelopers li#menu_developers a {
+	background-position: 0% -200px; color: rgb(0, 51, 153);
+}
+body.sectionStore li#menu_store a {
+	background-position: 0% -200px; color: rgb(0, 51, 153);
+}
+body.sectionAbout li#menu_aboutus {
+	background-position: 100% -200px; border-bottom-color: rgb(255, 255, =
+255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+body.sectionProducts li#menu_products {
+	background-position: 100% -200px; border-bottom-color: rgb(255, 255, =
+255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+body.sectionSupport li#menu_support {
+	background-position: 100% -200px; border-bottom-color: rgb(255, 255, =
+255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+body.sectionDevelopers li#menu_developers {
+	background-position: 100% -200px; border-bottom-color: rgb(255, 255, =
+255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+body.sectionStore li#menu_store {
+	background-position: 100% -200px; border-bottom-color: rgb(255, 255, =
+255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+body.sectionAbout li#menu_aboutus:hover {
+	background-position: 100% 0%;
+}
+body.sectionProducts li#menu_products:hover {
+	background-position: 100% 0%;
+}
+body.sectionSupport li#menu_support:hover {
+	background-position: 100% 0%;
+}
+body.sectionDevelopers li#menu_developers:hover {
+	background-position: 100% 0%;
+}
+body.sectionStore li#menu_store:hover {
+	background-position: 100% 0%;
+}
+body.sectionAbout li#menu_aboutus:hover a {
+	color: rgb(51, 51, 51);
+}
+body.sectionProducts li#menu_products:hover a {
+	color: rgb(51, 51, 51);
+}
+body.sectionSupport li#menu_support:hover a {
+	color: rgb(51, 51, 51);
+}
+body.sectionDevelopers li#menu_developers:hover a {
+	color: rgb(51, 51, 51);
+}
+body.sectionStore li#menu_store:hover a {
+	color: rgb(51, 51, 51);
+}
+#header form {
+	background: url("header_tr.gif") no-repeat right top; margin: 0px; =
+padding: 12px 20px 0px 0px; top: 0px; text-align: right; right: 0px; =
+white-space: nowrap; position: absolute;
+}
+#header form label {
+	color: rgb(255, 255, 255); font-size: 85%;
+}
+#header form input {
+	font-size: 85%;
+}
+#header form #submit {
+	background: rgb(106, 115, 137); border-width: 1px; border-style: solid; =
+border-color: rgb(144, 151, 162) rgb(40, 48, 67) rgb(40, 48, 67) =
+rgb(144, 151, 162); padding: 1px 4px; color: rgb(255, 255, 255); =
+font-size: 85%;
+}
+#header form #q {
+	background: rgb(192, 192, 192); padding: 2px; border: 1px solid =
+rgb(128, 128, 128); width: 170px; font-size: 85%;
+}
+#header form #q:hover {
+	background: rgb(255, 255, 255);
+}
+#header form #q:focus {
+	background: rgb(255, 255, 255);
+}
+#nav {
+	background: rgb(242, 242, 242);
+}
+#nav {
+	list-style: none; margin: 0px; padding: 0px;
+}
+#nav ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+#nav {
+	margin-bottom: 1em;
+}
+#nav li {
+	margin: 0px; padding: 0px; display: inline;
+}
+#nav li span {
+	background: rgb(53, 53, 53); padding: 6px 10px; color: rgb(255, 255, =
+255); font-weight: bold; display: block;
+}
+#nav li span #configParent {
+	padding: 0px; font-weight: normal; display: inline;
+}
+#nav li span #configuration {
+	padding: 0px; font-weight: normal; display: inline;
+}
+#nav li a {
+	background: rgb(242, 242, 242); border-width: 1px; border-style: solid; =
+border-color: rgb(255, 255, 255) rgb(192, 192, 192) rgb(192, 192, 192); =
+padding: 8px 10px; color: rgb(0, 0, 0); text-decoration: none; display: =
+block;
+}
+#nav li a:hover {
+	background: rgb(14, 95, 164); border: 1px solid rgb(14, 95, 164); =
+color: rgb(255, 255, 255);
+}
+#nav li li span {
+	padding: 4px 8px 4px 20px;
+}
+#nav li li a {
+	padding: 6px 8px 6px 20px;
+}
+#oN {
+	background-color: rgb(16, 102, 171);
+}
+#oN:hover {
+	background-color: rgb(198, 220, 220);
+}
+#footer {
+	margin: 2em 0px; padding: 1em 0px; text-align: center; =
+border-top-color: rgb(153, 153, 153); border-top-width: 1px; =
+border-top-style: solid;
+}
+#footer ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+#footer li {
+	display: inline;
+}
+#footer a {
+	white-space: nowrap;
+}
+#footer p {
+	color: rgb(102, 102, 102);
+}
+#footer p a {
+	color: rgb(102, 102, 102);
+}
+#footer p a:hover {
+	color: rgb(0, 0, 0);
+}
+#footer p span {
+	padding-right: 1em;
+}
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/basetemplate.css
+
+body {
+	margin: 20px; min-width: 610px;
+}
+#container {
+	margin: 15px auto; max-width: 70em;
+}
+#mBody {
+	padding: 0px 0px 1em; clear: both;
+}
+#side {
+	width: 23%; margin-bottom: 1em; float: left;
+}
+#side ul {
+	margin-top: 0px;
+}
+#mainContent {
+	width: 75%; margin-bottom: 1em; float: right;
+}
+.nomenu #mainContent {
+	width: 100%; float: none;
+}
+.bodyleft {
+	width: 75% !important; float: right !important;
+}
+.right#mainContent {
+	width: 62%; float: left;
+}
+.right#side {
+	width: 35%; float: right;
+}
+#header {
+	margin-bottom: 1em;
+}
+#header ul {
+	margin: 0px 0px 1em; padding: 0px;
+}
+#header li {
+	margin: 0px; padding: 0px 20px 0px 0px; display: inline; white-space: =
+nowrap;
+}
+#getcd {
+	margin: 1em 0px 0px 45px;
+}
+#footer {
+	clear: both; margin-top: 1em;
+}
+#footer ul {
+	margin: 0px 0px 1em; padding: 0px;
+}
+#footer li {
+	margin: 0px; padding: 0px 20px 0px 0px; display: inline; white-space: =
+nowrap;
+}
+#footer p {
+	margin: 0.6em 0px;
+}
+.skipLink {
+	left: -999px; width: 990px; position: absolute;
+}
+hr.hide {
+	display: none;
+}
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/cavendish.css
+
+body {
+	background: rgb(255, 255, 255); color: rgb(0, 0, 0);
+}
+#mainContent {
+	background: rgb(255, 255, 255); color: rgb(0, 0, 0); line-height: 1.3;
+}
+#side {
+	background: rgb(255, 255, 255); color: rgb(0, 0, 0); line-height: 1.3;
+}
+.deepLevel #mainContent {
+	line-height: 1.4;
+}
+#nav {
+	line-height: 1em;
+}
+hr {
+	margin: 2em 0px; height: 1px; color: rgb(0, 0, 0); background-color: =
+rgb(0, 0, 0);
+}
+input[type=3D'submit'] {
+	font-weight: bold;
+}
+body {
+	font-family: verdana, sans-serif; font-size: small; voice-family: =
+inherit;
+}
+td {
+	font-family: verdana, sans-serif; font-size: small; voice-family: =
+inherit;
+}
+th {
+	font-family: verdana, sans-serif; font-size: small; voice-family: =
+inherit;
+}
+input {
+	font-family: verdana, sans-serif; font-size: small; voice-family: =
+inherit;
+}
+h1 {
+	margin: 1em 0px 0.2em; font-family: arial, verdana, sans-serif; =
+border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; =
+border-bottom-style: solid;
+}
+h2 {
+	margin: 1em 0px 0.2em; font-family: arial, verdana, sans-serif; =
+border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; =
+border-bottom-style: solid;
+}
+h3 {
+	margin: 1em 0px 0.2em; font-family: arial, verdana, sans-serif; =
+border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; =
+border-bottom-style: solid;
+}
+h4 {
+	margin: 1em 0px 0.2em; font-family: arial, verdana, sans-serif; =
+border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; =
+border-bottom-style: solid;
+}
+h5 {
+	margin: 1em 0px 0.2em; font-family: arial, verdana, sans-serif; =
+border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; =
+border-bottom-style: solid;
+}
+h6 {
+	margin: 1em 0px 0.2em; font-family: arial, verdana, sans-serif; =
+border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; =
+border-bottom-style: solid;
+}
+li h1 {
+	border: currentColor;
+}
+li h2 {
+	border: currentColor;
+}
+li h3 {
+	border: currentColor;
+}
+li h4 {
+	border: currentColor;
+}
+li h5 {
+	border: currentColor;
+}
+li h6 {
+	border: currentColor;
+}
+#header h1 {
+	border: 0px currentColor;
+}
+h1 {
+	font-size: 160%; font-weight: normal;
+}
+h2 {
+	font-size: 150%; font-weight: normal;
+}
+h3 {
+	font-size: 120%;
+}
+h4 {
+	font-size: 100%;
+}
+h5 {
+	font-size: 90%;
+}
+h6 {
+	border: 0px currentColor; font-size: 90%;
+}
+:link {
+	color: rgb(0, 51, 153);
+}
+:visited {
+	color: rgb(102, 51, 102);
+}
+:hover:link {
+	color: rgb(51, 51, 51);
+}
+:hover:visited {
+	color: rgb(51, 51, 51);
+}
+:active:link {
+	color: rgb(0, 0, 0);
+}
+:active:link {
+	color: rgb(0, 0, 0);
+}
+.note {
+	color: rgb(102, 102, 102); font-style: normal;
+}
+.remark {
+	color: rgb(102, 102, 102);
+}
+.sidenote {
+	border: rgb(102, 102, 102);
+}
+.key-point::before {
+	background: url("../../images/key-point_tr.gif") no-repeat right top; =
+margin: -15px -15px 0px; border: currentColor; height: 15px; =
+line-height: 0.1; font-size: 1px; display: block; content: =
+url("../../images/key-point_tl.gif");
+}
+.key-point {
+	background: url("../../images/key-point_back.gif") repeat-y right =
+rgb(228, 236, 236); padding: 15px; margin-bottom: 1em;
+}
+.key-point::after {
+	background: url("../../images/key-point_br.gif") no-repeat right =
+bottom; margin: -15px; height: 8px; line-height: 0.1; padding-top: 15px; =
+clear: both; font-size: 1px; display: block; content: =
+url("../../images/key-point_bl.gif");
+}
+.key-point h2 {
+	border: currentColor; color: rgb(76, 92, 92); margin-top: 0px;
+}
+.key-point h3 {
+	border: currentColor; color: rgb(76, 92, 92); margin-top: 0px;
+}
+.key-point h4 {
+	border: currentColor; color: rgb(76, 92, 92); margin-top: 0px;
+}
+.key-point h5 {
+	border: currentColor; color: rgb(76, 92, 92); margin-top: 0px;
+}
+.news dt {
+	color: rgb(102, 102, 102); font-weight: normal;
+}
+.news dt a {
+	font-weight: bold;
+}
+ul.compact {
+	padding-left: 20px; margin-left: 0px;
+}
+kbd {
+	margin: 0.1em; padding: 0.1em; border: 1px rgb(204, 204, 204);
+}
+kbd.command {
+	color: rgb(107, 88, 57);
+}
+code.command {
+	color: rgb(107, 88, 57);
+}
+pre.code {
+	background: rgb(238, 236, 246);
+}
+code > em {
+	font-style: normal;
+}
+code > strong {
+	font-style: normal;
+}
+pre.code > em {
+	font-style: normal;
+}
+pre.code > strong {
+	font-style: normal;
+}
+div.example {
+	border-color: rgb(85, 79, 160);
+}
+div.example::before {
+	color: rgb(102, 102, 102);
+}
+ol.faq li a {
+	text-decoration: none; border-bottom-color: rgb(108, 152, 238); =
+border-bottom-width: 1px; border-bottom-style: dotted;
+}
+ol.faq li a:hover {
+	border-color: rgb(0, 51, 153);
+}
+table.data thead th {
+	background: rgb(228, 236, 236); empty-cells: hide;
+}
+table.data th {
+	border: 1px solid rgb(204, 204, 204);
+}
+table.data td {
+	border: 1px solid rgb(204, 204, 204);
+}
+tr.odd {
+	background: rgb(245, 245, 245);
+}
+address {
+	color: rgb(102, 102, 102);
+}
+.productlist h3 {
+	border: currentColor;
+}
+.key-point h1 {
+	margin: 0px;
+}
+.key-point h3 {
+	margin: 0px;
+}
+#product-desc h2 {
+	height: 25px; line-height: 2px; text-indent: -700em; font-size: 2px;
+}
+#product-desc p {
+	padding-left: 170px;
+}
+#product-desc ul {
+	padding-left: 190px; margin-bottom: 0px;
+}
+#key-desc {
+	padding-left: 190px; margin-bottom: 0px;
+}
+#product-side {
+	margin-left: 65%;
+}
+#key-side {
+	margin-left: 65%;
+}
+#product-side ul {
+	padding-bottom: 0px; padding-left: 20px; margin-left: 0px;
+}
+#key-side ul {
+	padding-bottom: 0px; padding-left: 20px; margin-left: 0px;
+}
+#product-side li {
+	padding-bottom: 0.2em;
+}
+#key-side {
+	padding-bottom: 0.2em;
+}
+#product-desc {
+	padding: 40px 0px 25px; width: 60%; color: rgb(76, 92, 92); =
+line-height: 140%; float: left;
+}
+#key-desc {
+	padding: 40px 0px 25px; width: 60%; color: rgb(76, 92, 92); =
+line-height: 140%; float: left;
+}
+#key-desc {
+	padding: 0px;
+}
+#key-side {
+	color: rgb(76, 92, 92);
+}
+.product-firefox {
+	background: url("../../images/product-firefox-screen.png") no-repeat;
+}
+.product-thunderbird {
+	background: url("../../images/product-thunderbird-screen.png") =
+no-repeat;
+}
+.product-camino {
+	background: url("../../images/product-camino-screen.png") no-repeat;
+}
+.product-mozilla {
+	background: url("../../images/product-mozilla-screen.png") no-repeat;
+}
+#product-side .download h3 {
+	margin: 0px; color: rgb(29, 145, 1); font-size: 140%; font-weight: =
+bold;
+}
+.download h3 :link {
+	color: rgb(29, 145, 1);
+}
+.download h3 :visited {
+	color: rgb(29, 145, 1);
+}
+.download h3 :active:link {
+	color: rgb(29, 145, 1);
+}
+.download h3 :active:visited {
+	color: rgb(29, 145, 1);
+}
+.download h3 :hover:link {
+	color: rgb(21, 107, 1);
+}
+.download h3 :hover:visited {
+	color: rgb(21, 107, 1);
+}
+.download li {
+	margin: 0px; padding: 0px;
+}
+.download ul {
+	padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;
+}
+.other a:link {
+	color: rgb(102, 102, 102);
+}
+.other a:visited {
+	color: rgb(102, 102, 102);
+}
+.download .other a:hover {
+	color: rgb(0, 0, 0);
+}
+.download::before {
+	margin: -15px -15px 0px; border: currentColor; height: 15px; =
+line-height: 0.1; font-size: 1px; display: block; content: =
+url("../../images/download_tl.gif");
+}
+.download {
+	background: url("../../images/download_back.gif") no-repeat right top =
+rgb(196, 239, 161); padding: 15px 45px 15px 15px; margin-bottom: 0.5em;
+}
+.download::after {
+	background: url("../../images/download_br.gif") no-repeat right bottom; =
+margin: -10px -45px -15px -15px; height: 8px; line-height: 0.1; =
+padding-top: 15px; font-size: 1px; display: block; content: =
+url("../../images/download_bl.gif");
+}
+.configParent {
+	font-size: 85%; display: block;
+}
+.shop::before {
+	margin: -15px -15px 0px; border: currentColor; height: 15px; =
+line-height: 0.1; font-size: 1px; display: block; content: =
+url("../../images/shop_tl.gif");
+}
+.shopmoz::before {
+	margin: -15px -15px 0px; border: currentColor; height: 15px; =
+line-height: 0.1; font-size: 1px; display: block; content: =
+url("../../images/shop_tl.gif");
+}
+.shop {
+	background: url("../../images/shop_back.gif") no-repeat right top =
+rgb(192, 220, 220); padding: 15px 70px 15px 15px;
+}
+.shopmoz {
+	background: url("../../images/shopmoz_back.gif") no-repeat right top =
+rgb(192, 220, 220); padding: 15px 70px 15px 15px;
+}
+.shop::after {
+	background: url("../../images/shop_br.gif") no-repeat right bottom; =
+margin: -10px -70px -15px -15px; height: 8px; line-height: 0.1; =
+padding-top: 15px; font-size: 1px; display: block; content: =
+url("../../images/shop_bl.gif");
+}
+.shopmoz::after {
+	background: url("../../images/shop_br.gif") no-repeat right bottom; =
+margin: -10px -70px -15px -15px; height: 8px; line-height: 0.1; =
+padding-top: 15px; font-size: 1px; display: block; content: =
+url("../../images/shop_bl.gif");
+}
+#ffcentral-desc {
+	background: url("../../products/firefox/t-welcomefirefox.gif") =
+no-repeat; width: 60%; line-height: 140%; float: left;
+}
+#ffcentral-desc div {
+	padding: 40px 0px 0px 100px;
+}
+#ffcentral h3 {
+	color: rgb(76, 92, 92); margin-top: 0px;
+}
+#ffcentral h2 {
+	color: rgb(76, 92, 92); margin-top: 0px;
+}
+#ffcentral p {
+	color: rgb(76, 92, 92); margin-top: 0px;
+}
+#ffcentral ul {
+	color: rgb(76, 92, 92); margin-top: 0px;
+}
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/skins/cavendish/main.css
+
+@import url( content.css );
+@import url( template.css );
+@import url( basetemplate.css );
+@import url( cavendish.css );
+#header ul {
+	margin: 0px; padding-right: 1em;
+}
+#header li {
+	padding: 0px 6px 0px 0px; margin-right: 2px;
+}
+#header ul li.selected a {
+	color: rgb(69, 83, 114);
+}
+#header ul li.selected {
+	background-position: 100% -200px; border-bottom-color: rgb(255, 255, =
+255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+body {
+	padding-top: 0px; margin-top: 0px; background-color: rgb(255, 255, =
+255);
+}
+div#header {
+	clear: both;
+}
+#header h1 a {
+	background: url("title.png") no-repeat; margin: 12px 0px 0px 10px; =
+width: 280px; height: 42px;
+}
+a.new {
+	color: rgb(186, 0, 0);
+}
+#p-personal a.new {
+	color: rgb(186, 0, 0);
+}
+a.new:visited {
+	color: rgb(165, 88, 88);
+}
+#p-personal a.new:visited {
+	color: rgb(165, 88, 88);
+}
+h1 {
+=09
+}
+h2 {
+=09
+}
+h3 {
+	font-size: 1.3em; font-weight: bold;
+}
+h4 {
+	font-size: 1.2em; font-weight: bold;
+}
+h5 {
+	font-size: 1.1em; font-weight: bold;
+}
+#siteSub {
+	display: none;
+}
+#contentSub {
+	margin: 0px 0px 1.4em 1em; width: auto; color: rgb(125, 125, 125); =
+line-height: 1.2em; font-size: 84%;
+}
+span.subpages {
+	display: block;
+}
+.usermessage {
+	margin: 2em 0em 1em; padding: 0.5em 1em; border: 1px solid rgb(255, =
+165, 0); color: black; font-weight: bold; vertical-align: middle; =
+background-color: rgb(255, 206, 123);
+}
+#siteNotice {
+	padding: 0px 0.9em; text-align: center; font-size: 95%;
+}
+#siteNotice p {
+	margin: 0px; padding: 0px;
+}
+.error {
+	color: red; font-size: larger;
+}
+#catlinks {
+	padding: 3px 5px; border: 1px solid rgb(170, 170, 170); clear: both; =
+margin-top: 1em; background-color: rgb(249, 249, 249);
+}
+p.catlinks {
+	padding: 0px; display: inline;
+}
+.documentDescription {
+	margin: 1em 0em; line-height: 1.5em; font-weight: bold; display: block;
+}
+.documentByLine {
+	text-align: right; color: rgb(118, 121, 124); clear: both; font-size: =
+90%; font-weight: normal;
+}
+.center {
+	width: 100%; text-align: center;
+}
+*.center * {
+	margin-right: auto; margin-left: auto;
+}
+.small {
+	font-size: 94%;
+}
+.small * {
+	font-size: 94%;
+}
+table.small {
+	font-size: 100%;
+}
+#toc {
+	padding: 5px; border: 1px solid rgb(170, 170, 170); font-size: 95%; =
+background-color: rgb(249, 249, 249);
+}
+#toc .tocindent {
+	margin-left: 2em;
+}
+#toc .tocline {
+	margin-bottom: 0px;
+}
+#toc p {
+	margin: 0px;
+}
+#toc .toctoggle {
+	font-size: 94%;
+}
+#toc .editsection {
+	font-size: 94%; margin-top: 0.7em;
+}
+div.floatright {
+	margin: 0px 0px 0.5em 0.5em; border: 0px currentColor; clear: right; =
+float: right; position: relative;
+}
+table.floatright {
+	margin: 0px 0px 0.5em 0.5em; border: 0px currentColor; clear: right; =
+float: right; position: relative;
+}
+div.floatright p {
+	font-style: italic;
+}
+div.floatleft {
+	margin: 0px 0.5em 0.5em 0px; border: 0px currentColor; float: left; =
+position: relative;
+}
+table.floatleft {
+	margin: 0px 0.5em 0.5em 0px; border: 0px currentColor; float: left; =
+position: relative;
+}
+div.floatleft p {
+	font-style: italic;
+}
+div.thumb {
+	border-style: solid; border-color: white; width: auto; margin-bottom: =
+0.5em;
+}
+div.thumb div {
+	padding: 3px !important; border: 1px solid rgb(204, 204, 204); =
+text-align: center; overflow: hidden; font-size: 94%; background-color: =
+rgb(249, 249, 249);
+}
+div.thumb div a img {
+	border: 1px solid rgb(204, 204, 204);
+}
+div.thumb div div.thumbcaption {
+	padding: 0.3em 0px 0.1em; border: currentColor; text-align: left; =
+line-height: 1.4em;
+}
+div.magnify {
+	border: currentColor !important; float: right;
+}
+div.magnify a {
+	border: currentColor !important; display: block;
+}
+div.magnify img {
+	border: currentColor !important; display: block;
+}
+div.tright {
+	border-width: 0.5em 0px 0.8em 1.4em; clear: right; float: right;
+}
+div.tleft {
+	border-width: 0.5em 1.4em 0.8em 0px; margin-right: 0.5em; float: left;
+}
+.urlexpansion {
+	display: none;
+}
+.hiddenStructure {
+	display: none;
+}
+img.tex {
+	vertical-align: middle;
+}
+span.texhtml {
+	font-family: serif;
+}
+table.rimage {
+	text-align: center; margin-bottom: 1em; margin-left: 1em; float: right; =
+position: relative;
+}
+.toccolours {
+	padding: 5px; border: 1px solid rgb(170, 170, 170); font-size: 95%; =
+background-color: rgb(249, 249, 249);
+}
+div.townBox {
+	background: white; padding: 0.3em; border: 1px solid gray; width: =
+200px; overflow: hidden; clear: right; margin-left: 1em; float: right; =
+position: relative;
+}
+div.townBox dl {
+	margin: 0px 0px 0.3em; padding: 0px; font-size: 96%;
+}
+div.townBox dl dt {
+	margin: 0.4em 0px 0px;
+}
+div.townBox dl dd {
+	margin: 0.1em 0px 0px 1.1em; background-color: rgb(243, 243, 243);
+}
+.special li {
+	margin: 0px; padding: 0px; line-height: 1.4em;
+}
+.autocomment {
+	color: gray;
+}
+#pagehistory span.user {
+	margin-right: 0.4em; margin-left: 1.4em;
+}
+#pagehistory span.minor {
+	font-weight: bold;
+}
+#pagehistory li {
+	border: 1px solid white;
+}
+#pagehistory li.selected {
+	border: 1px dashed rgb(170, 170, 170); background-color: rgb(249, 249, =
+249);
+}
+table.diff {
+	background: white;
+}
+td.diff-otitle {
+	background: rgb(255, 255, 255);
+}
+td.diff-ntitle {
+	background: rgb(255, 255, 255);
+}
+td.diff-addedline {
+	background: rgb(204, 255, 204); font-size: smaller;
+}
+td.diff-deletedline {
+	background: rgb(255, 255, 170); font-size: smaller;
+}
+td.diff-context {
+	background: rgb(238, 238, 238); font-size: smaller;
+}
+span.diffchange {
+	color: red; font-weight: bold;
+}
+#mBody a[href^=3D'http://'] {
+	background: url("external.png") no-repeat right; padding-right: 13px;
+}
+#mBody a[href^=3D'gopher://'] {
+	background: url("external.png") no-repeat right; padding-right: 13px;
+}
+#mBody a[href^=3D'https://'] {
+	background: url("lock_icon.gif") no-repeat right; padding-right: 16px;
+}
+.link-https {
+	background: url("lock_icon.gif") no-repeat right; padding-right: 16px;
+}
+#mBody a[href^=3D'mailto:'] {
+	background: url("mail_icon.gif") no-repeat right; padding-right: 18px;
+}
+.link-mailto {
+	background: url("mail_icon.gif") no-repeat right; padding-right: 18px;
+}
+#mBody a[href^=3D'news://'] {
+	background: url("news_icon.png") no-repeat right; padding-right: 18px;
+}
+#mBody a[href^=3D'ftp://'] {
+	background: url("file_icon.gif") no-repeat right; padding-right: 18px;
+}
+.link-ftp {
+	background: url("file_icon.gif") no-repeat right; padding-right: 18px;
+}
+#mBody a[href^=3D'irc://'] {
+	background: url("discussionitem_icon.gif") no-repeat right; =
+padding-right: 18px;
+}
+.link-irc {
+	background: url("discussionitem_icon.gif") no-repeat right; =
+padding-right: 18px;
+}
+#mBody a.extiw {
+	padding: 0px; color: rgb(51, 102, 187);
+}
+#mBody a.extiw:active {
+	padding: 0px; color: rgb(51, 102, 187);
+}
+#mBody a.external {
+	color: rgb(51, 102, 187);
+}
+#mBody .plainlinks a {
+	padding: 0px;
+}
+.portlet {
+	margin: 0px 0px 0.5em 0em; padding: 0px; border: currentColor; width: =
+11.6em; overflow: hidden; float: none;
+}
+.portlet h4 {
+	font-size: 95%; font-weight: normal; white-space: nowrap;
+}
+.portlet h5 {
+	padding: 0em 1em 0em 0.5em; height: 1em; text-transform: lowercase; =
+font-size: 91%; font-weight: normal; display: inline; white-space: =
+nowrap;
+}
+.portlet h6 {
+	background: rgb(255, 174, 46); border-width: 1px; border-style: solid =
+solid none; border-color: rgb(47, 111, 171); padding: 0em 1em; height: =
+1.2em; text-transform: lowercase; font-size: 1em; font-weight: normal; =
+display: block; white-space: nowrap;
+}
+.pBody {
+	background: white; padding: 0px 0.8em 0.3em 0.5em; border: 1px solid =
+rgb(170, 170, 170); font-size: 95%; border-collapse: collapse;
+}
+.portlet h1 {
+	margin: 0px; padding: 0px;
+}
+.portlet h2 {
+	margin: 0px; padding: 0px;
+}
+.portlet h3 {
+	margin: 0px; padding: 0px;
+}
+.portlet h4 {
+	margin: 0px; padding: 0px;
+}
+.portlet ul {
+	line-height: 1.5em; font-size: 95%; list-style-type: square; =
+list-style-image: url("bullet.gif");
+}
+.portlet li {
+	margin: 0px; padding: 0px;
+}
+#p-logo {
+	left: 0px; top: 0px; width: 12em; height: 155px; overflow: visible; =
+position: absolute; z-index: 3;
+}
+#p-logo h5 {
+	display: none;
+}
+#p-logo a {
+	background-position: 35% 50% !important; width: 12.2em; height: 155px; =
+text-decoration: none; display: block; background-repeat: no-repeat;
+}
+#p-logo a:hover {
+	background-position: 35% 50% !important; width: 12.2em; height: 155px; =
+text-decoration: none; display: block; background-repeat: no-repeat;
+}
+#p-nav {
+	position: relative; z-index: 3;
+}
+#p-search {
+	position: relative; z-index: 3;
+}
+#p-search .pBody {
+	text-align: center;
+}
+input.searchButton {
+	font-size: 95%; margin-top: 1px;
+}
+#searchGoButton {
+	padding-right: 0.5em; padding-left: 0.5em; font-weight: bold;
+}
+#searchInput {
+	margin: 0px; width: 10.9em; font-size: 95%;
+}
+#p-search .pBody {
+	padding: 0.5em 0.4em 0.4em;
+}
+#p-personal {
+	margin: 0px; padding: 0px; border: currentColor; left: 0px; top: 0px; =
+width: 100%; line-height: 1.2em; overflow: visible; white-space: nowrap; =
+position: absolute; z-index: 0;
+}
+#p-personal h5 {
+	display: none;
+}
+#p-personal .portlet {
+	margin: 0px; padding: 0px; border: currentColor; overflow: visible; =
+z-index: 0;
+}
+#p-personal .pBody {
+	margin: 0px; padding: 0px; border: currentColor; overflow: visible; =
+z-index: 0;
+}
+#p-personal ul {
+	list-style: none; margin: 0px; padding: 0em 2em 0px 3em; border: =
+currentColor; text-align: right; color: rgb(47, 111, 171); =
+text-transform: lowercase; line-height: 1.4em; z-index: 0;
+}
+#p-personal li {
+	padding: 0px; border: currentColor; color: rgb(47, 111, 171); =
+line-height: 1.2em; margin-left: 1em; display: inline; z-index: 0;
+}
+#p-personal li a {
+	color: rgb(0, 88, 150); padding-bottom: 0.2em; text-decoration: none;
+}
+#p-personal li a:hover {
+	padding-bottom: 0.2em; text-decoration: none; background-color: white;
+}
+#p-cactions {
+	list-style: none; margin: 0px; left: 11.5em; top: 1.3em; width: 76%; =
+line-height: 1.1em; overflow: visible; padding-left: 1em; font-size: =
+95%; white-space: nowrap; border-collapse: collapse; position: absolute;
+}
+#p-cactions .hiddenStructure {
+	display: none;
+}
+#p-cactions ul {
+	list-style: none;
+}
+#p-cactions li {
+	background: white; border-width: 1px 1px medium; border-style: solid =
+solid none; border-color: rgb(170, 170, 170) rgb(170, 170, 170) =
+currentColor; margin: 0px 0.3em 0px 0px; padding: 0px 0px 0.1em; =
+overflow: visible; display: inline;
+}
+#p-cactions li.selected {
+	border-color: rgb(250, 189, 35); padding: 0px 0px 0.2em;
+}
+#p-cactions li a {
+	margin: 0px; padding: 0px 0.8em 0.3em; border: currentColor; color: =
+rgb(0, 43, 184); text-transform: lowercase; text-decoration: none; =
+position: relative; z-index: 0; background-color: white;
+}
+#p-cactions .selected a {
+	z-index: 3;
+}
+#p-cactions .new a {
+	color: rgb(186, 0, 0);
+}
+#p-cactions li a:hover {
+	text-decoration: none; z-index: 3;
+}
+#p-cactions h5 {
+	display: none;
+}
+#p-cactions li.istalk {
+	margin-right: 0px;
+}
+#p-cactions li.istalk a {
+	padding-right: 0.5em;
+}
+#p-cactions #ca-addsection a {
+	padding-right: 0.4em; padding-left: 0.4em;
+}
+li#ca-talk {
+	margin-right: 1.6em;
+}
+li#ca-watch {
+	margin-left: 1.6em;
+}
+li#ca-watch {
+	margin-left: 1.6em;
+}
+li#ca-varlang-0 {
+	margin-left: 1.6em;
+}
+#p-tbx {
+	position: relative; z-index: 3;
+}
+#p-lang {
+	position: relative; z-index: 3;
+}
+#preftoc {
+	margin: 1em; width: 13em; float: left;
+}
+#preftoc li {
+	border: 1px solid white;
+}
+#preftoc li.selected {
+	border: 1px dashed rgb(170, 170, 170); background-color: rgb(249, 249, =
+249);
+}
+#preftoc a {
+	color: rgb(0, 20, 166); display: block;
+}
+#preftoc a:active {
+	color: rgb(0, 20, 166); display: block;
+}
+#prefcontrol {
+	clear: both; margin-top: 1em; float: left;
+}
+div.prefsectiontip {
+	font-size: 95%; margin-top: 1em;
+}
+fieldset.operaprefsection {
+	margin-left: 15em;
+}
+* > html #p-cactions li {
+	border: currentColor;
+}
+* > html #p-cactions li a {
+	border-width: 1px 1px medium; border-style: solid solid none; =
+border-color: rgb(170, 170, 170) rgb(170, 170, 170) currentColor;
+}
+* > html #p-cactions li.selected a {
+	border-color: rgb(250, 189, 35);
+}
+* > html #f-poweredbyico {
+	width: 88px;
+}
+* > html #f-copyrightico {
+	width: 88px;
+}
+* > html #mBody {
+	width: 100%; padding-bottom: 25px; overflow-x: auto;
+}
+* > html #mBody pre {
+	width: 100%; padding-bottom: 25px; overflow-x: auto;
+}
+* html #footer {
+	margin-top: 0px;
+}
+* html #column-content {
+	margin-bottom: 0px; display: inline;
+}
+* html div.editsection {
+	font-size: smaller;
+}
+#pagehistory li.selected {
+	position: relative;
+}
+* > html #column-content {
+	float: none;
+}
+* > html #column-one {
+	left: 0px; top: 0px; position: absolute;
+}
+* > html #footer {
+	margin-left: 13.2em;
+}
+.redirectText {
+	margin: 5px; font-size: 150%;
+}
+.printfooter {
+	display: none;
+}
+.not_patrolled {
+	background-color: rgb(255, 255, 170);
+}
+div.patrollink {
+	text-align: right; font-size: 75%;
+}
+span.newpage {
+	font-weight: bold;
+}
+span.minor {
+	font-weight: bold;
+}
+span.searchmatch {
+	font-weight: bold;
+}
+span.unpatrolled {
+	color: red; font-weight: bold;
+}
+span.searchmatch {
+	color: red;
+}
+.sharedUploadNotice {
+	font-style: italic;
+}
+span.updatedmarker {
+	color: black; background-color: rgb(0, 255, 0);
+}
+span.newpageletter {
+	color: black; font-weight: bold; background-color: yellow;
+}
+span.minoreditletter {
+	color: black; background-color: rgb(197, 255, 230);
+}
+table.gallery {
+	margin: 2px; padding: 2px; border: 1px solid rgb(204, 204, 204); =
+background-color: rgb(255, 255, 255);
+}
+table.gallery tr {
+	vertical-align: top;
+}
+table.gallery td {
+	border: 2px solid white; vertical-align: top; background-color: =
+rgb(249, 249, 249);
+}
+div.gallerybox {
+	margin: 2px; width: 150px;
+}
+div.gallerybox div.thumb {
+	margin: 2px; border: 1px solid rgb(204, 204, 204); text-align: center;
+}
+div.gallerytext {
+	padding: 2px 4px; font-size: 94%;
+}
+#footer {
+	color: rgb(102, 102, 102);
+}
+hr {
+	border-width: 1px; border-style: solid; border-color: rgb(204, 204, =
+204) rgb(255, 255, 255) rgb(255, 255, 255);
+}
+.standard-table {
+	border: 1px solid black; border-collapse: collapse;
+}
+.standard-table td {
+	padding: 5px; border: 1px solid rgb(187, 187, 187); text-align: left; =
+vertical-align: top;
+}
+.standard-table td.header {
+	background: rgb(221, 221, 221); padding: 0px 5px; border: 1px solid =
+rgb(187, 187, 187); text-align: left; font-weight: bold;
+}
+.standard-table th {
+	background: rgb(221, 221, 221); padding: 0px 5px; border: 1px solid =
+rgb(187, 187, 187); text-align: left; font-weight: bold;
+}
+.fullwidth-table {
+	background: rgb(255, 255, 255); border: 1px solid rgb(102, 102, 102); =
+width: 100%; margin-bottom: 10px; border-collapse: collapse;
+}
+.fullwidth-table td {
+	padding: 5px 15px; border: 1px solid rgb(187, 187, 187); text-align: =
+left; vertical-align: top;
+}
+.fullwidth-table td.header {
+	background: rgb(221, 221, 221); padding: 0px 5px; border: 1px solid =
+rgb(187, 187, 187); text-align: left; font-size: 1.2em; font-weight: =
+bold;
+}
+.fullwidth-table th {
+	background: rgb(221, 221, 221); padding: 0px 5px; border: 1px solid =
+rgb(187, 187, 187); text-align: left; font-size: 1.2em; font-weight: =
+bold;
+}
+div.breadcrumbs {
+	background: rgb(221, 221, 221); margin: 5px 0px 10px; padding: 0px 5px; =
+border: 1px solid rgb(136, 136, 136); font-size: 0.9em;
+}
+div.breadcrumbs a.breadcrumbs {
+	text-decoration: none;
+}
+div.breadcrumbs span.breadcrumbs {
+	font-weight: bold;
+}
+pre {
+	background: rgb(238, 238, 238); padding: 15px 20px; border: 1px dashed =
+rgb(102, 102, 102);
+}
+.csharp {
+	overflow: auto;
+}
+div.tip {
+	background: rgb(221, 255, 221); margin: 10px 0px; padding: 0px 10px; =
+border: 2px solid green;
+}
+div.bug {
+	background: rgb(255, 221, 221); margin: 10px 0px; padding: 0px 10px; =
+border: 2px solid red;
+}
+div.warning {
+	background: rgb(255, 221, 221); margin: 10px 0px; padding: 0px 10px; =
+border: 2px solid red;
+}
+div.note {
+	background: rgb(255, 255, 221); margin: 10px 0px; padding: 0px 10px; =
+border: 2px solid goldenrod; color: rgb(0, 0, 0);
+}
+div.note::before {
+	content: "";
+}
+.float-left {
+	padding: 5px; float: left;
+}
+.float-right {
+	padding: 5px; float: right;
+}
+.figure {
+=09
+}
+.originaldocinfo {
+	background: rgb(255, 255, 221); margin: 15px 0px; padding: 0px 10px; =
+border: 1px solid rgb(204, 204, 238); width: auto; font-size: 0.8em;
+}
+.originaldocinfo p {
+	line-height: 0.8em;
+}
+.originaldocinfo h2 {
+	font-size: 1.3em; font-weight: bold;
+}
+.licenseblock {
+	background: rgb(221, 221, 221); padding: 0px 10px; border: 1px dashed =
+rgb(136, 136, 136); font-size: 0.8em;
+}
+code {
+	font-size: 1.2em;
+}
+.wrong-source-code {
+	color: rgb(221, 0, 0);
+}
+.right-source-code {
+	color: rgb(0, 170, 0);
+}
+.template-toc {
+	background: rgb(221, 221, 221); margin: 15px 0px; padding: 0px 10px; =
+border: 1px solid black; width: auto; font-size: 0.9em;
+}
+.prevnext {
+	margin: 10px 0px 20px; font-size: 0.9em;
+}
+div.highlight {
+	padding-left: 15px; border-left-color: blue; border-left-width: 3px; =
+border-left-style: solid;
+}
+span.highlightblue {
+	color: blue;
+}
+span.highlightred {
+	color: red;
+}
+.side-note {
+	background: rgb(238, 238, 238); margin: 10px 0px; padding: 0px 20px; =
+border: 1px solid rgb(102, 102, 102); width: auto;
+}
+.side-note-left {
+	background: rgb(238, 238, 238); margin: 10px 10px 10px 0px; padding: =
+0px 20px; border: 1px solid rgb(102, 102, 102); width: 40%; float: left;
+}
+.side-note-right {
+	background: rgb(238, 238, 238); margin: 10px 0px 10px 10px; padding: =
+0px 20px; border: 1px solid rgb(102, 102, 102); width: 40%; float: =
+right;
+}
+.callout-box {
+	background: rgb(238, 238, 238); margin: 0px 0px 15px 15px; padding: =
+10px; border: 1px solid black; width: 200px; text-align: center; float: =
+right;
+}
+.topicpage-table {
+	width: 100%;
+}
+.topicpage-table td {
+	padding: 10px; width: 50%; vertical-align: top;
+}
+.alllinks {
+	font-size: 10px; float: right;
+}
+.date {
+	color: rgb(102, 102, 136); font-style: italic;
+}
+.disambig {
+	font-size: 0.9em; border-top-color: rgb(170, 170, 170); =
+border-bottom-color: rgb(170, 170, 170); border-top-width: 1px; =
+border-bottom-width: 1px; border-top-style: solid; border-bottom-style: =
+solid;
+}
+.notice {
+	margin: 5px 0px; padding: 5px; border: 1px solid rgb(170, 170, 170); =
+font-size: 0.9em;
+}
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/skins/common/commonPrint.css
+
+a.stub {
+	color: rgb(186, 0, 0); text-decoration: none;
+}
+a.new {
+	color: rgb(186, 0, 0); text-decoration: none;
+}
+#toc {
+	padding: 5px; border: 1px solid rgb(170, 170, 170); background-color: =
+rgb(249, 249, 249);
+}
+.tocindent {
+	margin-left: 2em;
+}
+.tocline {
+	margin-bottom: 0px;
+}
+div.floatright {
+	border-width: 0.5em 0px 0.8em 1.4em; border-style: solid; border-color: =
+white; margin: 0px; clear: right; float: right; position: relative;
+}
+div.floatright p {
+	font-style: italic;
+}
+div.floatleft {
+	border-width: 0.5em 1.4em 0.8em 0px; border-style: solid; border-color: =
+white; margin: 0.3em 0.5em 0.5em 0px; float: left; position: relative;
+}
+div.floatleft p {
+	font-style: italic;
+}
+div.thumb {
+	border-style: solid; border-color: white; width: auto; overflow: =
+hidden; margin-bottom: 0.5em;
+}
+div.thumb div {
+	padding: 3px !important; border: 1px solid rgb(204, 204, 204); =
+text-align: center; font-size: 94%; background-color: rgb(249, 249, =
+249);
+}
+div.thumb div a img {
+	border: 1px solid rgb(204, 204, 204);
+}
+div.thumb div div.thumbcaption {
+	padding: 0.3em 0px 0.1em; border: currentColor;
+}
+div.magnify {
+	display: none;
+}
+div.tright {
+	border-width: 0.5em 0px 0.8em 1.4em; clear: right; float: right;
+}
+div.tleft {
+	border-width: 0.5em 1.4em 0.8em 0px; margin-right: 0.5em; float: left;
+}
+img.thumbborder {
+	border: 1px solid rgb(221, 221, 221);
+}
+table.rimage {
+	width: 1pt; text-align: center; margin-bottom: 1em; margin-left: 1em; =
+float: right; position: relative;
+}
+body {
+	background: white; margin: 0px; padding: 0px; color: black;
+}
+.noprint {
+	display: none;
+}
+div#jump-to-nav {
+	display: none;
+}
+div.top {
+	display: none;
+}
+div#column-one {
+	display: none;
+}
+#colophon {
+	display: none;
+}
+.editsection {
+	display: none;
+}
+.toctoggle {
+	display: none;
+}
+.tochidden {
+	display: none;
+}
+div#f-poweredbyico {
+	display: none;
+}
+div#f-copyrightico {
+	display: none;
+}
+li#viewcount {
+	display: none;
+}
+li#about {
+	display: none;
+}
+li#disclaimer {
+	display: none;
+}
+li#privacy {
+	display: none;
+}
+ul {
+	list-style-type: square;
+}
+#content {
+	margin: 0px !important; padding: 0px !important; border: currentColor =
+!important;
+}
+#footer {
+	background: white; color: black; border-top-color: black; =
+border-top-width: 1px; border-top-style: solid;
+}
+h1 {
+	font-weight: bold;
+}
+h2 {
+	font-weight: bold;
+}
+h3 {
+	font-weight: bold;
+}
+h4 {
+	font-weight: bold;
+}
+h5 {
+	font-weight: bold;
+}
+h6 {
+	font-weight: bold;
+}
+p {
+	margin: 1em 0px !important; line-height: 1.2em;
+}
+.documentDescription {
+	margin: 1em 0px !important; line-height: 1.2em;
+}
+.tocindent p {
+	margin: 0px !important;
+}
+pre {
+	background: white; padding: 1em 0px; border: 1pt dashed black; color: =
+black; overflow: auto; font-size: 8pt; white-space: pre;
+}
+table.listing {
+	border: 1pt solid black; border-collapse: collapse;
+}
+table.listing td {
+	border: 1pt solid black; border-collapse: collapse;
+}
+a {
+	padding: 0px !important; color: black !important;
+}
+a:link {
+	color: rgb(85, 34, 0); text-decoration: underline;
+}
+a:visited {
+	color: rgb(85, 34, 0); text-decoration: underline;
+}
+#content a.text.external::after {
+	content: " (" attr(href) ") ";
+}
+#content a.autonumber.external::after {
+	content: " (" attr(href) ") ";
+}
+#globalWrapper {
+	width: 100% !important; min-width: 0px !important;
+}
+#content {
+	background: white; color: black;
+}
+#column-content {
+	margin: 0px !important;
+}
+#column-content #content {
+	margin: 0px !important; padding: 1em;
+}
+a {
+	color: black !important; text-decoration: none !important;
+}
+a.external {
+	color: black !important; text-decoration: none !important;
+}
+a.new {
+	color: black !important; text-decoration: none !important;
+}
+a.stub {
+	color: black !important; text-decoration: none !important;
+}
+a {
+	color: inherit !important; text-decoration: inherit !important;
+}
+a.external {
+	color: inherit !important; text-decoration: inherit !important;
+}
+a.new {
+	color: inherit !important; text-decoration: inherit !important;
+}
+a.stub {
+	color: inherit !important; text-decoration: inherit !important;
+}
+img {
+	border: currentColor;
+}
+img.tex {
+	vertical-align: middle;
+}
+span.texhtml {
+	font-family: serif;
+}
+#siteNotice {
+	display: none;
+}
+table.gallery {
+	margin: 2px; padding: 2px; border: 1px solid rgb(204, 204, 204); =
+background-color: rgb(255, 255, 255);
+}
+table.gallery tr {
+	vertical-align: top;
+}
+div.gallerybox {
+	margin: 2px; border: 1px solid rgb(204, 204, 204); width: 150px; =
+background-color: rgb(249, 249, 249);
+}
+div.gallerybox div.thumb {
+	margin: 2px; border: 1px solid rgb(204, 204, 204); text-align: center;
+}
+div.gallerytext {
+	padding: 2px 4px; font-size: 94%;
+}
+table.diff {
+	background: white;
+}
+td.diff-otitle {
+	background: rgb(255, 255, 255);
+}
+td.diff-ntitle {
+	background: rgb(255, 255, 255);
+}
+td.diff-addedline {
+	background: rgb(204, 255, 204); border: 2px solid black; font-size: =
+smaller;
+}
+td.diff-deletedline {
+	background: rgb(255, 255, 170); border: 2px dotted black; font-size: =
+smaller;
+}
+td.diff-context {
+	background: rgb(238, 238, 238); font-size: smaller;
+}
+.diffchange {
+	color: silver; font-weight: bold; text-decoration: underline;
+}
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/index.php?title=-&action=raw&gen=js&useskin=cavendish
+
+/* generated javascript */=0A=
+var skin =3D 'cavendish';=0A=
+var stylepath =3D '/skins';=0A=
+=0A=
+/* MediaWiki:Common.js */=0A=
+/* Any JavaScript here will be loaded for all users on every page load. =
+*/=0A=
+=0A=
+/* MediaWiki:Cavendish.js */=0A=
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/skins/common/wikibits.js
+
+// MediaWiki JavaScript support functions=0A=
+=0A=
+var clientPC =3D navigator.userAgent.toLowerCase(); // Get client info=0A=
+var is_gecko =3D /gecko/.test( clientPC ) &&=0A=
+	!/khtml|spoofer|netscape\/7\.0/.test(clientPC);=0A=
+var webkit_match =3D clientPC.match(/applewebkit\/(\d+)/);=0A=
+if (webkit_match) {=0A=
+	var is_safari =3D clientPC.indexOf('applewebkit') !=3D -1 &&=0A=
+		clientPC.indexOf('spoofer') =3D=3D -1;=0A=
+	var is_safari_win =3D is_safari && clientPC.indexOf('windows') !=3D -1;=0A=
+	var webkit_version =3D parseInt(webkit_match[1]);=0A=
+}=0A=
+var is_khtml =3D navigator.vendor =3D=3D 'KDE' ||=0A=
+	( document.childNodes && !document.all && !navigator.taintEnabled );=0A=
+// For accesskeys; note that FF3+ is included here!=0A=
+var is_ff2 =3D /firefox\/[2-9]|minefield\/3/.test( clientPC );=0A=
+var is_ff2_ =3D /firefox\/2/.test( clientPC );=0A=
+// These aren't used here, but some custom scripts rely on them=0A=
+var is_ff2_win =3D is_ff2 && clientPC.indexOf('windows') !=3D -1;=0A=
+var is_ff2_x11 =3D is_ff2 && clientPC.indexOf('x11') !=3D -1;=0A=
+if (clientPC.indexOf('opera') !=3D -1) {=0A=
+	var is_opera =3D true;=0A=
+	var is_opera_preseven =3D window.opera && !document.childNodes;=0A=
+	var is_opera_seven =3D window.opera && document.childNodes;=0A=
+	var is_opera_95 =3D /opera\/(9.[5-9]|[1-9][0-9])/.test( clientPC );=0A=
+}=0A=
+var wgBreakFrames =3D true;=0A=
+var wgContentLanguage =3D 'en';=0A=
+=0A=
+// Global external objects used by this script.=0A=
+/*extern ta, stylepath, skin */=0A=
+=0A=
+// add any onload functions in this hook (please don't hard-code any =
+events in the xhtml source)=0A=
+var doneOnloadHook;=0A=
+=0A=
+if (!window.onloadFuncts) {=0A=
+	var onloadFuncts =3D [];=0A=
+}=0A=
+=0A=
+function addOnloadHook(hookFunct) {=0A=
+	// Allows add-on scripts to add onload functions=0A=
+	if(!doneOnloadHook) {=0A=
+		onloadFuncts[onloadFuncts.length] =3D hookFunct;=0A=
+	} else {=0A=
+		hookFunct();  // bug in MSIE script loading=0A=
+	}=0A=
+}=0A=
+=0A=
+function hookEvent(hookName, hookFunct) {=0A=
+	addHandler(window, hookName, hookFunct);=0A=
+}=0A=
+=0A=
+function importScript(page) {=0A=
+	var uri =3D wgScript + '?title=3D' +=0A=
+		encodeURIComponent(page.replace(/ =
+/g,'_')).replace('%2F','/').replace('%3A',':') +=0A=
+		'&action=3Draw&ctype=3Dtext/javascript';=0A=
+	return importScriptURI(uri);=0A=
+}=0A=
+ =0A=
+var loadedScripts =3D {}; // included-scripts tracker=0A=
+function importScriptURI(url) {=0A=
+	if (loadedScripts[url]) {=0A=
+		return null;=0A=
+	}=0A=
+	loadedScripts[url] =3D true;=0A=
+	var s =3D document.createElement('script');=0A=
+	s.setAttribute('src',url);=0A=
+	s.setAttribute('type','text/javascript');=0A=
+	document.getElementsByTagName('head')[0].appendChild(s);=0A=
+	return s;=0A=
+}=0A=
+ =0A=
+function importStylesheet(page) {=0A=
+	return importStylesheetURI(wgScript + =
+'?action=3Draw&ctype=3Dtext/css&title=3D' + =
+encodeURIComponent(page.replace(/ /g,'_')));=0A=
+}=0A=
+ =0A=
+function importStylesheetURI(url) {=0A=
+	return document.createStyleSheet ? document.createStyleSheet(url) : =
+appendCSS('@import "' + url + '";');=0A=
+}=0A=
+ =0A=
+function appendCSS(text) {=0A=
+	var s =3D document.createElement('style');=0A=
+	s.type =3D 'text/css';=0A=
+	s.rel =3D 'stylesheet';=0A=
+	if (s.styleSheet) s.styleSheet.cssText =3D text //IE=0A=
+	else s.appendChild(document.createTextNode(text + '')) //Safari =
+sometimes borks on null=0A=
+	document.getElementsByTagName('head')[0].appendChild(s);=0A=
+	return s;=0A=
+}=0A=
+=0A=
+// special stylesheet links=0A=
+if (typeof stylepath !=3D 'undefined' && typeof skin !=3D 'undefined') {=0A=
+	if (is_opera_preseven) {=0A=
+		importStylesheetURI(stylepath+'/'+skin+'/Opera6Fixes.css');=0A=
+	} else if (is_opera_seven && !is_opera_95) {=0A=
+		importStylesheetURI(stylepath+'/'+skin+'/Opera7Fixes.css');=0A=
+	} else if (is_opera_95) {=0A=
+		importStylesheetURI(stylepath+'/'+skin+'/Opera9Fixes.css');=0A=
+	} else if (is_khtml) {=0A=
+		importStylesheetURI(stylepath+'/'+skin+'/KHTMLFixes.css');=0A=
+	} else if (is_ff2_) {=0A=
+		importStylesheetURI(stylepath+'/'+skin+'/FF2Fixes.css');=0A=
+	}=0A=
+}=0A=
+=0A=
+if (wgBreakFrames) {=0A=
+	// Un-trap us from framesets=0A=
+	if (window.top !=3D window) {=0A=
+		window.top.location =3D window.location;=0A=
+	}=0A=
+}=0A=
+=0A=
+function showTocToggle() {=0A=
+	if (document.createTextNode) {=0A=
+		// Uses DOM calls to avoid document.write + XHTML issues=0A=
+=0A=
+		var linkHolder =3D document.getElementById('toctitle');=0A=
+		if (!linkHolder) {=0A=
+			return;=0A=
+		}=0A=
+=0A=
+		var outerSpan =3D document.createElement('span');=0A=
+		outerSpan.className =3D 'toctoggle';=0A=
+=0A=
+		var toggleLink =3D document.createElement('a');=0A=
+		toggleLink.id =3D 'togglelink';=0A=
+		toggleLink.className =3D 'internal';=0A=
+		toggleLink.href =3D 'javascript:toggleToc()';=0A=
+		toggleLink.appendChild(document.createTextNode(tocHideText));=0A=
+=0A=
+		outerSpan.appendChild(document.createTextNode('['));=0A=
+		outerSpan.appendChild(toggleLink);=0A=
+		outerSpan.appendChild(document.createTextNode(']'));=0A=
+=0A=
+		linkHolder.appendChild(document.createTextNode(' '));=0A=
+		linkHolder.appendChild(outerSpan);=0A=
+=0A=
+		var cookiePos =3D document.cookie.indexOf("hidetoc=3D");=0A=
+		if (cookiePos > -1 && document.cookie.charAt(cookiePos + 8) =3D=3D 1) {=0A=
+			toggleToc();=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+function changeText(el, newText) {=0A=
+	// Safari work around=0A=
+	if (el.innerText) {=0A=
+		el.innerText =3D newText;=0A=
+	} else if (el.firstChild && el.firstChild.nodeValue) {=0A=
+		el.firstChild.nodeValue =3D newText;=0A=
+	}=0A=
+}=0A=
+=0A=
+function toggleToc() {=0A=
+	var toc =3D =
+document.getElementById('toc').getElementsByTagName('ul')[0];=0A=
+	var toggleLink =3D document.getElementById('togglelink');=0A=
+=0A=
+	if (toc && toggleLink && toc.style.display =3D=3D 'none') {=0A=
+		changeText(toggleLink, tocHideText);=0A=
+		toc.style.display =3D 'block';=0A=
+		document.cookie =3D "hidetoc=3D0";=0A=
+	} else {=0A=
+		changeText(toggleLink, tocShowText);=0A=
+		toc.style.display =3D 'none';=0A=
+		document.cookie =3D "hidetoc=3D1";=0A=
+	}=0A=
+}=0A=
+=0A=
+var mwEditButtons =3D [];=0A=
+var mwCustomEditButtons =3D []; // eg to add in MediaWiki:Common.js=0A=
+=0A=
+function escapeQuotes(text) {=0A=
+	var re =3D new RegExp("'","g");=0A=
+	text =3D text.replace(re,"\\'");=0A=
+	re =3D new RegExp("\\n","g");=0A=
+	text =3D text.replace(re,"\\n");=0A=
+	return escapeQuotesHTML(text);=0A=
+}=0A=
+=0A=
+function escapeQuotesHTML(text) {=0A=
+	var re =3D new RegExp('&',"g");=0A=
+	text =3D text.replace(re,"&amp;");=0A=
+	re =3D new RegExp('"',"g");=0A=
+	text =3D text.replace(re,"&quot;");=0A=
+	re =3D new RegExp('<',"g");=0A=
+	text =3D text.replace(re,"&lt;");=0A=
+	re =3D new RegExp('>',"g");=0A=
+	text =3D text.replace(re,"&gt;");=0A=
+	return text;=0A=
+}=0A=
+=0A=
+=0A=
+/**=0A=
+ * Set the accesskey prefix based on browser detection.=0A=
+ */=0A=
+var tooltipAccessKeyPrefix =3D 'alt-';=0A=
+if (is_opera) {=0A=
+	tooltipAccessKeyPrefix =3D 'shift-esc-';=0A=
+} else if (!is_safari_win && is_safari && webkit_version > 526) {=0A=
+	tooltipAccessKeyPrefix =3D 'ctrl-alt-';=0A=
+} else if (!is_safari_win && (is_safari=0A=
+		|| clientPC.indexOf('mac') !=3D -1=0A=
+		|| clientPC.indexOf('konqueror') !=3D -1 )) {=0A=
+	tooltipAccessKeyPrefix =3D 'ctrl-';=0A=
+} else if (is_ff2) {=0A=
+	tooltipAccessKeyPrefix =3D 'alt-shift-';=0A=
+}=0A=
+var tooltipAccessKeyRegexp =3D /\[(ctrl-)?(alt-)?(shift-)?(esc-)?(.)\]$/;=0A=
+=0A=
+/**=0A=
+ * Add the appropriate prefix to the accesskey shown in the tooltip.=0A=
+ * If the nodeList parameter is given, only those nodes are updated;=0A=
+ * otherwise, all the nodes that will probably have accesskeys by=0A=
+ * default are updated.=0A=
+ *=0A=
+ * @param Array nodeList -- list of elements to update=0A=
+ */=0A=
+function updateTooltipAccessKeys( nodeList ) {=0A=
+	if ( !nodeList ) {=0A=
+		// skins without a "column-one" element don't seem to have links with =
+accesskeys either=0A=
+		var columnOne =3D document.getElementById("column-one");=0A=
+		if ( columnOne )=0A=
+			updateTooltipAccessKeys( columnOne.getElementsByTagName("a") );=0A=
+		// these are rare enough that no such optimization is needed=0A=
+		updateTooltipAccessKeys( document.getElementsByTagName("input") );=0A=
+		updateTooltipAccessKeys( document.getElementsByTagName("label") );=0A=
+		return;=0A=
+	}=0A=
+=0A=
+	for ( var i =3D 0; i < nodeList.length; i++ ) {=0A=
+		var element =3D nodeList[i];=0A=
+		var tip =3D element.getAttribute("title");=0A=
+		if ( tip && tooltipAccessKeyRegexp.exec(tip) ) {=0A=
+			tip =3D tip.replace(tooltipAccessKeyRegexp,=0A=
+					  "["+tooltipAccessKeyPrefix+"$5]");=0A=
+			element.setAttribute("title", tip );=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+/**=0A=
+ * Add a link to one of the portlet menus on the page, including:=0A=
+ *=0A=
+ * p-cactions: Content actions (shown as tabs above the main content in =
+Monobook)=0A=
+ * p-personal: Personal tools (shown at the top right of the page in =
+Monobook)=0A=
+ * p-navigation: Navigation=0A=
+ * p-tb: Toolbox=0A=
+ *=0A=
+ * This function exists for the convenience of custom JS authors.  All=0A=
+ * but the first three parameters are optional, though providing at=0A=
+ * least an id and a tooltip is recommended.=0A=
+ *=0A=
+ * By default the new link will be added to the end of the list.  To=0A=
+ * add the link before a given existing item, pass the DOM node of=0A=
+ * that item (easily obtained with document.getElementById()) as the=0A=
+ * nextnode parameter; to add the link _after_ an existing item, pass=0A=
+ * the node's nextSibling instead.=0A=
+ *=0A=
+ * @param String portlet -- id of the target portlet ("p-cactions", =
+"p-personal", "p-navigation" or "p-tb")=0A=
+ * @param String href -- link URL=0A=
+ * @param String text -- link text (will be automatically lowercased by =
+CSS for p-cactions in Monobook)=0A=
+ * @param String id -- id of the new item, should be unique and =
+preferably have the appropriate prefix ("ca-", "pt-", "n-" or "t-")=0A=
+ * @param String tooltip -- text to show when hovering over the link, =
+without accesskey suffix=0A=
+ * @param String accesskey -- accesskey to activate this link (one =
+character, try to avoid conflicts)=0A=
+ * @param Node nextnode -- the DOM node before which the new item should =
+be added, should be another item in the same list=0A=
+ *=0A=
+ * @return Node -- the DOM node of the new item (an LI element) or null=0A=
+ */=0A=
+function addPortletLink(portlet, href, text, id, tooltip, accesskey, =
+nextnode) {=0A=
+	var node =3D document.getElementById(portlet);=0A=
+	if ( !node ) return null;=0A=
+	node =3D node.getElementsByTagName( "ul" )[0];=0A=
+	if ( !node ) return null;=0A=
+=0A=
+	var link =3D document.createElement( "a" );=0A=
+	link.appendChild( document.createTextNode( text ) );=0A=
+	link.href =3D href;=0A=
+=0A=
+	var item =3D document.createElement( "li" );=0A=
+	item.appendChild( link );=0A=
+	if ( id ) item.id =3D id;=0A=
+=0A=
+	if ( accesskey ) {=0A=
+		link.setAttribute( "accesskey", accesskey );=0A=
+		tooltip +=3D " ["+accesskey+"]";=0A=
+	}=0A=
+	if ( tooltip ) {=0A=
+		link.setAttribute( "title", tooltip );=0A=
+	}=0A=
+	if ( accesskey && tooltip ) {=0A=
+		updateTooltipAccessKeys( new Array( link ) );=0A=
+	}=0A=
+=0A=
+	if ( nextnode && nextnode.parentNode =3D=3D node )=0A=
+		node.insertBefore( item, nextnode );=0A=
+	else=0A=
+		node.appendChild( item );  // IE compatibility (?)=0A=
+=0A=
+	return item;=0A=
+}=0A=
+=0A=
+function getInnerText(el) {=0A=
+	if (typeof el =3D=3D "string") return el;=0A=
+	if (typeof el =3D=3D "undefined") { return el };=0A=
+	if (el.textContent) return el.textContent; // not needed but it is =
+faster=0A=
+	if (el.innerText) return el.innerText;     // IE doesn't have =
+textContent=0A=
+	var str =3D "";=0A=
+=0A=
+	var cs =3D el.childNodes;=0A=
+	var l =3D cs.length;=0A=
+	for (var i =3D 0; i < l; i++) {=0A=
+		switch (cs[i].nodeType) {=0A=
+			case 1: //ELEMENT_NODE=0A=
+				str +=3D ts_getInnerText(cs[i]);=0A=
+				break;=0A=
+			case 3:	//TEXT_NODE=0A=
+				str +=3D cs[i].nodeValue;=0A=
+				break;=0A=
+		}=0A=
+	}=0A=
+	return str;=0A=
+}=0A=
+=0A=
+=0A=
+/**=0A=
+ * Set up accesskeys/tooltips from the deprecated ta array.  If doId=0A=
+ * is specified, only set up for that id.  Note that this function is=0A=
+ * deprecated and will not be supported indefinitely -- use=0A=
+ * updateTooltipAccessKey() instead.=0A=
+ *=0A=
+ * @param mixed doId string or null=0A=
+ */=0A=
+function akeytt( doId ) {=0A=
+	// A lot of user scripts (and some of the code below) break if=0A=
+	// ta isn't defined, so we make sure it is.  Explictly using=0A=
+	// window.ta avoids a "ta is not defined" error.=0A=
+	if (!window.ta) window.ta =3D new Array;=0A=
+=0A=
+	// Make a local, possibly restricted, copy to avoid clobbering=0A=
+	// the original.=0A=
+	var ta;=0A=
+	if ( doId ) {=0A=
+		ta =3D [doId];=0A=
+	} else {=0A=
+		ta =3D window.ta;=0A=
+	}=0A=
+=0A=
+	// Now deal with evil deprecated ta=0A=
+	var watchCheckboxExists =3D document.getElementById( 'wpWatchthis' ) ? =
+true : false;=0A=
+	for (var id in ta) {=0A=
+		var n =3D document.getElementById(id);=0A=
+		if (n) {=0A=
+			var a =3D null;=0A=
+			var ak =3D '';=0A=
+			// Are we putting accesskey in it=0A=
+			if (ta[id][0].length > 0) {=0A=
+				// Is this object a object? If not assume it's the next child.=0A=
+=0A=
+				if (n.nodeName.toLowerCase() =3D=3D "a") {=0A=
+					a =3D n;=0A=
+				} else {=0A=
+					a =3D n.childNodes[0];=0A=
+				}=0A=
+			 	// Don't add an accesskey for the watch tab if the watch=0A=
+			 	// checkbox is also available.=0A=
+				if (a && ((id !=3D 'ca-watch' && id !=3D 'ca-unwatch') || =
+!watchCheckboxExists)) {=0A=
+					a.accessKey =3D ta[id][0];=0A=
+					ak =3D ' ['+tooltipAccessKeyPrefix+ta[id][0]+']';=0A=
+				}=0A=
+			} else {=0A=
+				// We don't care what type the object is when assigning tooltip=0A=
+				a =3D n;=0A=
+				ak =3D '';=0A=
+			}=0A=
+=0A=
+			if (a) {=0A=
+				a.title =3D ta[id][1]+ak;=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+var checkboxes;=0A=
+var lastCheckbox;=0A=
+=0A=
+function setupCheckboxShiftClick() {=0A=
+	checkboxes =3D [];=0A=
+	lastCheckbox =3D null;=0A=
+	var inputs =3D document.getElementsByTagName('input');=0A=
+	addCheckboxClickHandlers(inputs);=0A=
+}=0A=
+=0A=
+function addCheckboxClickHandlers(inputs, start) {=0A=
+	if ( !start) start =3D 0;=0A=
+=0A=
+	var finish =3D start + 250;=0A=
+	if ( finish > inputs.length )=0A=
+		finish =3D inputs.length;=0A=
+=0A=
+	for ( var i =3D start; i < finish; i++ ) {=0A=
+		var cb =3D inputs[i];=0A=
+		if ( !cb.type || cb.type.toLowerCase() !=3D 'checkbox' )=0A=
+			continue;=0A=
+		var end =3D checkboxes.length;=0A=
+		checkboxes[end] =3D cb;=0A=
+		cb.index =3D end;=0A=
+		cb.onclick =3D checkboxClickHandler;=0A=
+	}=0A=
+=0A=
+	if ( finish < inputs.length ) {=0A=
+		setTimeout( function () {=0A=
+			addCheckboxClickHandlers(inputs, finish);=0A=
+		}, 200 );=0A=
+	}=0A=
+}=0A=
+=0A=
+function checkboxClickHandler(e) {=0A=
+	if (typeof e =3D=3D 'undefined') {=0A=
+		e =3D window.event;=0A=
+	}=0A=
+	if ( !e.shiftKey || lastCheckbox =3D=3D=3D null ) {=0A=
+		lastCheckbox =3D this.index;=0A=
+		return true;=0A=
+	}=0A=
+	var endState =3D this.checked;=0A=
+	var start, finish;=0A=
+	if ( this.index < lastCheckbox ) {=0A=
+		start =3D this.index + 1;=0A=
+		finish =3D lastCheckbox;=0A=
+	} else {=0A=
+		start =3D lastCheckbox;=0A=
+		finish =3D this.index - 1;=0A=
+	}=0A=
+	for (var i =3D start; i <=3D finish; ++i ) {=0A=
+		checkboxes[i].checked =3D endState;=0A=
+	}=0A=
+	lastCheckbox =3D this.index;=0A=
+	return true;=0A=
+}=0A=
+=0A=
+function toggle_element_activation(ida,idb) {=0A=
+	if (!document.getElementById) {=0A=
+		return;=0A=
+	}=0A=
+	document.getElementById(ida).disabled=3Dtrue;=0A=
+	document.getElementById(idb).disabled=3Dfalse;=0A=
+}=0A=
+=0A=
+function toggle_element_check(ida,idb) {=0A=
+	if (!document.getElementById) {=0A=
+		return;=0A=
+	}=0A=
+	document.getElementById(ida).checked=3Dtrue;=0A=
+	document.getElementById(idb).checked=3Dfalse;=0A=
+}=0A=
+=0A=
+/*=0A=
+	Written by Jonathan Snook, http://www.snook.ca/jonathan=0A=
+	Add-ons by Robert Nyman, http://www.robertnyman.com=0A=
+	Author says "The credit comment is all it takes, no license. Go crazy =
+with it!:-)"=0A=
+	From =
+http://www.robertnyman.com/2005/11/07/the-ultimate-getelementsbyclassname=
+/=0A=
+*/=0A=
+function getElementsByClassName(oElm, strTagName, oClassNames){=0A=
+	var arrReturnElements =3D new Array();=0A=
+	if ( typeof( oElm.getElementsByClassName ) =3D=3D "function" ) {=0A=
+		/* Use a native implementation where possible FF3, Saf3.2, Opera 9.5 */=0A=
+		var arrNativeReturn =3D oElm.getElementsByClassName( oClassNames );=0A=
+		if ( strTagName =3D=3D "*" )=0A=
+			return arrNativeReturn;=0A=
+		for ( var h=3D0; h < arrNativeReturn.length; h++ ) {=0A=
+			if( arrNativeReturn[h].tagName.toLowerCase() =3D=3D =
+strTagName.toLowerCase() )=0A=
+				arrReturnElements[arrReturnElements.length] =3D arrNativeReturn[h];=0A=
+		}=0A=
+		return arrReturnElements;=0A=
+	}=0A=
+	var arrElements =3D (strTagName =3D=3D "*" && oElm.all)? oElm.all : =
+oElm.getElementsByTagName(strTagName);=0A=
+	var arrRegExpClassNames =3D new Array();=0A=
+	if(typeof oClassNames =3D=3D "object"){=0A=
+		for(var i=3D0; i<oClassNames.length; i++){=0A=
+			arrRegExpClassNames[arrRegExpClassNames.length] =3D=0A=
+				new RegExp("(^|\\s)" + oClassNames[i].replace(/\-/g, "\\-") + =
+"(\\s|$)");=0A=
+		}=0A=
+	}=0A=
+	else{=0A=
+		arrRegExpClassNames[arrRegExpClassNames.length] =3D=0A=
+			new RegExp("(^|\\s)" + oClassNames.replace(/\-/g, "\\-") + "(\\s|$)");=0A=
+	}=0A=
+	var oElement;=0A=
+	var bMatchesAll;=0A=
+	for(var j=3D0; j<arrElements.length; j++){=0A=
+		oElement =3D arrElements[j];=0A=
+		bMatchesAll =3D true;=0A=
+		for(var k=3D0; k<arrRegExpClassNames.length; k++){=0A=
+			if(!arrRegExpClassNames[k].test(oElement.className)){=0A=
+				bMatchesAll =3D false;=0A=
+				break;=0A=
+			}=0A=
+		}=0A=
+		if(bMatchesAll){=0A=
+			arrReturnElements[arrReturnElements.length] =3D oElement;=0A=
+		}=0A=
+	}=0A=
+	return (arrReturnElements)=0A=
+}=0A=
+=0A=
+function redirectToFragment(fragment) {=0A=
+	var match =3D navigator.userAgent.match(/AppleWebKit\/(\d+)/);=0A=
+	if (match) {=0A=
+		var webKitVersion =3D parseInt(match[1]);=0A=
+		if (webKitVersion < 420) {=0A=
+			// Released Safari w/ WebKit 418.9.1 messes up horribly=0A=
+			// Nightlies of 420+ are ok=0A=
+			return;=0A=
+		}=0A=
+	}=0A=
+	if (is_gecko) {=0A=
+		// Mozilla needs to wait until after load, otherwise the window =
+doesn't scroll=0A=
+		addOnloadHook(function () {=0A=
+			if (window.location.hash =3D=3D "")=0A=
+				window.location.hash =3D fragment;=0A=
+		});=0A=
+	} else {=0A=
+		if (window.location.hash =3D=3D "")=0A=
+			window.location.hash =3D fragment;=0A=
+	}=0A=
+}=0A=
+=0A=
+/*=0A=
+ * Table sorting script based on one (c) 1997-2006 Stuart Langridge and =
+Joost=0A=
+ * de Valk:=0A=
+ * http://www.joostdevalk.nl/code/sortable-table/=0A=
+ * http://www.kryogenix.org/code/browser/sorttable/=0A=
+ *=0A=
+ * @todo don't break on colspans/rowspans (bug 8028)=0A=
+ * @todo language-specific digit grouping/decimals (bug 8063)=0A=
+ * @todo support all accepted date formats (bug 8226)=0A=
+ */=0A=
+=0A=
+var ts_image_path =3D stylepath+"/common/images/";=0A=
+var ts_image_up =3D "sort_up.gif";=0A=
+var ts_image_down =3D "sort_down.gif";=0A=
+var ts_image_none =3D "sort_none.gif";=0A=
+var ts_europeandate =3D wgContentLanguage !=3D "en"; // The =
+non-American-inclined can change to "true"=0A=
+var ts_alternate_row_colors =3D false;=0A=
+var ts_number_transform_table =3D null;=0A=
+var ts_number_regex =3D null;=0A=
+=0A=
+function sortables_init() {=0A=
+	var idnum =3D 0;=0A=
+	// Find all tables with class sortable and make them sortable=0A=
+	var tables =3D getElementsByClassName(document, "table", "sortable");=0A=
+	for (var ti =3D 0; ti < tables.length ; ti++) {=0A=
+		if (!tables[ti].id) {=0A=
+			tables[ti].setAttribute('id','sortable_table_id_'+idnum);=0A=
+			++idnum;=0A=
+		}=0A=
+		ts_makeSortable(tables[ti]);=0A=
+	}=0A=
+}=0A=
+=0A=
+function ts_makeSortable(table) {=0A=
+	var firstRow;=0A=
+	if (table.rows && table.rows.length > 0) {=0A=
+		if (table.tHead && table.tHead.rows.length > 0) {=0A=
+			firstRow =3D table.tHead.rows[table.tHead.rows.length-1];=0A=
+		} else {=0A=
+			firstRow =3D table.rows[0];=0A=
+		}=0A=
+	}=0A=
+	if (!firstRow) return;=0A=
+=0A=
+	// We have a first row: assume it's the header, and make its contents =
+clickable links=0A=
+	for (var i =3D 0; i < firstRow.cells.length; i++) {=0A=
+		var cell =3D firstRow.cells[i];=0A=
+		if ((" "+cell.className+" ").indexOf(" unsortable ") =3D=3D -1) {=0A=
+			cell.innerHTML +=3D '&nbsp;&nbsp;'=0A=
+				+ '<a href=3D"#" class=3D"sortheader" '=0A=
+				+ 'onclick=3D"ts_resortTable(this);return false;">'=0A=
+				+ '<span class=3D"sortarrow">'=0A=
+				+ '<img src=3D"'=0A=
+				+ ts_image_path=0A=
+				+ ts_image_none=0A=
+				+ '" alt=3D"&darr;"/></span></a>';=0A=
+		}=0A=
+	}=0A=
+	if (ts_alternate_row_colors) {=0A=
+		ts_alternate(table);=0A=
+	}=0A=
+}=0A=
+=0A=
+function ts_getInnerText(el) {=0A=
+	return getInnerText( el );=0A=
+}=0A=
+=0A=
+function ts_resortTable(lnk) {=0A=
+	// get the span=0A=
+	var span =3D lnk.getElementsByTagName('span')[0];=0A=
+=0A=
+	var td =3D lnk.parentNode;=0A=
+	var tr =3D td.parentNode;=0A=
+	var column =3D td.cellIndex;=0A=
+=0A=
+	var table =3D tr.parentNode;=0A=
+	while (table && !(table.tagName && table.tagName.toLowerCase() =3D=3D =
+'table'))=0A=
+		table =3D table.parentNode;=0A=
+	if (!table) return;=0A=
+=0A=
+	if (table.rows.length <=3D 1) return;=0A=
+=0A=
+	// Generate the number transform table if it's not done already=0A=
+	if (ts_number_transform_table =3D=3D null) {=0A=
+		ts_initTransformTable();=0A=
+	}=0A=
+=0A=
+	// Work out a type for the column=0A=
+	// Skip the first row if that's where the headings are=0A=
+	var rowStart =3D (table.tHead && table.tHead.rows.length > 0 ? 0 : 1);=0A=
+=0A=
+	var itm =3D "";=0A=
+	for (var i =3D rowStart; i < table.rows.length; i++) {=0A=
+		if (table.rows[i].cells.length > column) {=0A=
+			itm =3D ts_getInnerText(table.rows[i].cells[column]);=0A=
+			itm =3D itm.replace(/^[\s\xa0]+/, "").replace(/[\s\xa0]+$/, "");=0A=
+			if (itm !=3D "") break;=0A=
+		}=0A=
+	}=0A=
+=0A=
+	// TODO: bug 8226, localised date formats=0A=
+	var sortfn =3D ts_sort_generic;=0A=
+	var preprocessor =3D ts_toLowerCase;=0A=
+	if (/^\d\d[\/. -][a-zA-Z]{3}[\/. -]\d\d\d\d$/.test(itm)) {=0A=
+		preprocessor =3D ts_dateToSortKey;=0A=
+	} else if (/^\d\d[\/.-]\d\d[\/.-]\d\d\d\d$/.test(itm)) {=0A=
+		preprocessor =3D ts_dateToSortKey;=0A=
+	} else if (/^\d\d[\/.-]\d\d[\/.-]\d\d$/.test(itm)) {=0A=
+		preprocessor =3D ts_dateToSortKey;=0A=
+	// pound dollar euro yen currency cents=0A=
+	} else if (/(^[\u00a3$\u20ac\u00a4\u00a5]|\u00a2$)/.test(itm)) {=0A=
+		preprocessor =3D ts_currencyToSortKey;=0A=
+	} else if (ts_number_regex.test(itm)) {=0A=
+		preprocessor =3D ts_parseFloat;=0A=
+	}=0A=
+=0A=
+	var reverse =3D (span.getAttribute("sortdir") =3D=3D 'down');=0A=
+=0A=
+	var newRows =3D new Array();=0A=
+	var staticRows =3D new Array();=0A=
+	for (var j =3D rowStart; j < table.rows.length; j++) {=0A=
+		var row =3D table.rows[j];=0A=
+		if((" "+row.className+" ").indexOf(" unsortable ") < 0) {=0A=
+			var keyText =3D ts_getInnerText(row.cells[column]);=0A=
+			var oldIndex =3D (reverse ? -j : j);=0A=
+			var preprocessed =3D preprocessor( keyText );=0A=
+=0A=
+			newRows[newRows.length] =3D new Array(row, preprocessed, oldIndex);=0A=
+		} else staticRows[staticRows.length] =3D new Array(row, false, =
+j-rowStart);=0A=
+	}=0A=
+=0A=
+	newRows.sort(sortfn);=0A=
+=0A=
+	var arrowHTML;=0A=
+	if (reverse) {=0A=
+		arrowHTML =3D '<img src=3D"'+ ts_image_path + ts_image_down + '" =
+alt=3D"&darr;"/>';=0A=
+		newRows.reverse();=0A=
+		span.setAttribute('sortdir','up');=0A=
+	} else {=0A=
+		arrowHTML =3D '<img src=3D"'+ ts_image_path + ts_image_up + '" =
+alt=3D"&uarr;"/>';=0A=
+		span.setAttribute('sortdir','down');=0A=
+	}=0A=
+=0A=
+	for (var i =3D 0; i < staticRows.length; i++) {=0A=
+		var row =3D staticRows[i];=0A=
+		newRows.splice(row[2], 0, row);=0A=
+	}=0A=
+=0A=
+	// We appendChild rows that already exist to the tbody, so it moves =
+them rather than creating new ones=0A=
+	// don't do sortbottom rows=0A=
+	for (var i =3D 0; i < newRows.length; i++) {=0A=
+		if ((" "+newRows[i][0].className+" ").indexOf(" sortbottom ") =3D=3D =
+-1)=0A=
+			table.tBodies[0].appendChild(newRows[i][0]);=0A=
+	}=0A=
+	// do sortbottom rows only=0A=
+	for (var i =3D 0; i < newRows.length; i++) {=0A=
+		if ((" "+newRows[i][0].className+" ").indexOf(" sortbottom ") !=3D -1)=0A=
+			table.tBodies[0].appendChild(newRows[i][0]);=0A=
+	}=0A=
+=0A=
+	// Delete any other arrows there may be showing=0A=
+	var spans =3D getElementsByClassName(tr, "span", "sortarrow");=0A=
+	for (var i =3D 0; i < spans.length; i++) {=0A=
+		spans[i].innerHTML =3D '<img src=3D"'+ ts_image_path + ts_image_none + =
+'" alt=3D"&darr;"/>';=0A=
+	}=0A=
+	span.innerHTML =3D arrowHTML;=0A=
+=0A=
+	if (ts_alternate_row_colors) {=0A=
+		ts_alternate(table);=0A=
+	}=0A=
+}=0A=
+=0A=
+function ts_initTransformTable() {=0A=
+	if ( typeof wgSeparatorTransformTable =3D=3D "undefined"=0A=
+			|| ( wgSeparatorTransformTable[0] =3D=3D '' && =
+wgDigitTransformTable[2] =3D=3D '' ) )=0A=
+	{=0A=
+		digitClass =3D "[0-9,.]";=0A=
+		ts_number_transform_table =3D false;=0A=
+	} else {=0A=
+		ts_number_transform_table =3D {};=0A=
+		// Unpack the transform table=0A=
+		// Separators=0A=
+		ascii =3D wgSeparatorTransformTable[0].split("\t");=0A=
+		localised =3D wgSeparatorTransformTable[1].split("\t");=0A=
+		for ( var i =3D 0; i < ascii.length; i++ ) { =0A=
+			ts_number_transform_table[localised[i]] =3D ascii[i];=0A=
+		}=0A=
+		// Digits=0A=
+		ascii =3D wgDigitTransformTable[0].split("\t");=0A=
+		localised =3D wgDigitTransformTable[1].split("\t");=0A=
+		for ( var i =3D 0; i < ascii.length; i++ ) { =0A=
+			ts_number_transform_table[localised[i]] =3D ascii[i];=0A=
+		}=0A=
+=0A=
+		// Construct regex for number identification=0A=
+		digits =3D ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ',', =
+'\\.'];=0A=
+		maxDigitLength =3D 1;=0A=
+		for ( var digit in ts_number_transform_table ) {=0A=
+			// Escape regex metacharacters=0A=
+			digits.push( =0A=
+				digit.replace( /[\\\\$\*\+\?\.\(\)\|\{\}\[\]\-]/,=0A=
+					function( s ) { return '\\' + s; } )=0A=
+			);=0A=
+			if (digit.length > maxDigitLength) {=0A=
+				maxDigitLength =3D digit.length;=0A=
+			}=0A=
+		}=0A=
+		if ( maxDigitLength > 1 ) {=0A=
+			digitClass =3D '[' + digits.join( '', digits ) + ']';=0A=
+		} else {=0A=
+			digitClass =3D '(' + digits.join( '|', digits ) + ')';=0A=
+		}=0A=
+	}=0A=
+=0A=
+	// We allow a trailing percent sign, which we just strip.  This works =
+fine=0A=
+	// if percents and regular numbers aren't being mixed.=0A=
+	ts_number_regex =3D new RegExp(=0A=
+		"^(" +=0A=
+			"[+-]?[0-9][0-9,]*(\\.[0-9,]*)?(E[+-]?[0-9][0-9,]*)?" + // =
+Fortran-style scientific=0A=
+			"|" +=0A=
+			"[+-]?" + digitClass + "+%?" + // Generic localised=0A=
+		")$", "i"=0A=
+	);=0A=
+}=0A=
+=0A=
+function ts_toLowerCase( s ) {=0A=
+	return s.toLowerCase();=0A=
+}=0A=
+=0A=
+function ts_dateToSortKey(date) {	=0A=
+	// y2k notes: two digit years less than 50 are treated as 20XX, greater =
+than 50 are treated as 19XX=0A=
+	if (date.length =3D=3D 11) {=0A=
+		switch (date.substr(3,3).toLowerCase()) {=0A=
+			case "jan": var month =3D "01"; break;=0A=
+			case "feb": var month =3D "02"; break;=0A=
+			case "mar": var month =3D "03"; break;=0A=
+			case "apr": var month =3D "04"; break;=0A=
+			case "may": var month =3D "05"; break;=0A=
+			case "jun": var month =3D "06"; break;=0A=
+			case "jul": var month =3D "07"; break;=0A=
+			case "aug": var month =3D "08"; break;=0A=
+			case "sep": var month =3D "09"; break;=0A=
+			case "oct": var month =3D "10"; break;=0A=
+			case "nov": var month =3D "11"; break;=0A=
+			case "dec": var month =3D "12"; break;=0A=
+			// default: var month =3D "00";=0A=
+		}=0A=
+		return date.substr(7,4)+month+date.substr(0,2);=0A=
+	} else if (date.length =3D=3D 10) {=0A=
+		if (ts_europeandate =3D=3D false) {=0A=
+			return date.substr(6,4)+date.substr(0,2)+date.substr(3,2);=0A=
+		} else {=0A=
+			return date.substr(6,4)+date.substr(3,2)+date.substr(0,2);=0A=
+		}=0A=
+	} else if (date.length =3D=3D 8) {=0A=
+		yr =3D date.substr(6,2);=0A=
+		if (parseInt(yr) < 50) { =0A=
+			yr =3D '20'+yr; =0A=
+		} else { =0A=
+			yr =3D '19'+yr; =0A=
+		}=0A=
+		if (ts_europeandate =3D=3D true) {=0A=
+			return yr+date.substr(3,2)+date.substr(0,2);=0A=
+		} else {=0A=
+			return yr+date.substr(0,2)+date.substr(3,2);=0A=
+		}=0A=
+	}=0A=
+	return "00000000";=0A=
+}=0A=
+=0A=
+function ts_parseFloat( s ) {=0A=
+	if ( !s ) {=0A=
+		return 0;=0A=
+	}=0A=
+	if (ts_number_transform_table !=3D false) {=0A=
+		var newNum =3D '', c;=0A=
+		=0A=
+		for ( var p =3D 0; p < s.length; p++ ) {=0A=
+			c =3D s.charAt( p );=0A=
+			if (c in ts_number_transform_table) {=0A=
+				newNum +=3D ts_number_transform_table[c];=0A=
+			} else {=0A=
+				newNum +=3D c;=0A=
+			}=0A=
+		}=0A=
+		s =3D newNum;=0A=
+	}=0A=
+=0A=
+	num =3D parseFloat(s.replace(/,/g, ""));=0A=
+	return (isNaN(num) ? 0 : num);=0A=
+}=0A=
+=0A=
+function ts_currencyToSortKey( s ) {=0A=
+	return ts_parseFloat(s.replace(/[^0-9.,]/g,''));=0A=
+}=0A=
+=0A=
+function ts_sort_generic(a, b) {=0A=
+	return a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : a[2] - b[2];=0A=
+}=0A=
+=0A=
+function ts_alternate(table) {=0A=
+	// Take object table and get all it's tbodies.=0A=
+	var tableBodies =3D table.getElementsByTagName("tbody");=0A=
+	// Loop through these tbodies=0A=
+	for (var i =3D 0; i < tableBodies.length; i++) {=0A=
+		// Take the tbody, and get all it's rows=0A=
+		var tableRows =3D tableBodies[i].getElementsByTagName("tr");=0A=
+		// Loop through these rows=0A=
+		// Start at 1 because we want to leave the heading row untouched=0A=
+		for (var j =3D 0; j < tableRows.length; j++) {=0A=
+			// Check if j is even, and apply classes for both possible results=0A=
+			var oldClasses =3D tableRows[j].className.split(" ");=0A=
+			var newClassName =3D "";=0A=
+			for (var k =3D 0; k < oldClasses.length; k++) {=0A=
+				if (oldClasses[k] !=3D "" && oldClasses[k] !=3D "even" && =
+oldClasses[k] !=3D "odd")=0A=
+					newClassName +=3D oldClasses[k] + " ";=0A=
+			}=0A=
+			tableRows[j].className =3D newClassName + (j % 2 =3D=3D 0 ? "even" : =
+"odd");=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+/*=0A=
+ * End of table sorting code=0A=
+ */=0A=
+ =0A=
+ =0A=
+/**=0A=
+ * Add a cute little box at the top of the screen to inform the user of=0A=
+ * something, replacing any preexisting message.=0A=
+ *=0A=
+ * @param String -or- Dom Object message HTML to be put inside the right =
+div=0A=
+ * @param String className   Used in adding a class; should be different =
+for each=0A=
+ *   call to allow CSS/JS to hide different boxes.  null =3D no class =
+used.=0A=
+ * @return Boolean       True on success, false on failure=0A=
+ */=0A=
+function jsMsg( message, className ) {=0A=
+	if ( !document.getElementById ) {=0A=
+		return false;=0A=
+	}=0A=
+	// We special-case skin structures provided by the software.  Skins that=0A=
+	// choose to abandon or significantly modify our formatting can just =
+define=0A=
+	// an mw-js-message div to start with.=0A=
+	var messageDiv =3D document.getElementById( 'mw-js-message' );=0A=
+	if ( !messageDiv ) {=0A=
+		messageDiv =3D document.createElement( 'div' );=0A=
+		if ( document.getElementById( 'column-content' )=0A=
+		&& document.getElementById( 'content' ) ) {=0A=
+			// MonoBook, presumably=0A=
+			document.getElementById( 'content' ).insertBefore(=0A=
+				messageDiv,=0A=
+				document.getElementById( 'content' ).firstChild=0A=
+			);=0A=
+		} else if ( document.getElementById('content')=0A=
+		&& document.getElementById( 'article' ) ) {=0A=
+			// Non-Monobook but still recognizable (old-style)=0A=
+			document.getElementById( 'article').insertBefore(=0A=
+				messageDiv,=0A=
+				document.getElementById( 'article' ).firstChild=0A=
+			);=0A=
+		} else {=0A=
+			return false;=0A=
+		}=0A=
+	}=0A=
+=0A=
+	messageDiv.setAttribute( 'id', 'mw-js-message' );=0A=
+	messageDiv.style.display =3D 'block';=0A=
+	if( className ) {=0A=
+		messageDiv.setAttribute( 'class', 'mw-js-message-'+className );=0A=
+	}=0A=
+	=0A=
+	if (typeof message =3D=3D=3D 'object') {=0A=
+		while (messageDiv.hasChildNodes()) // Remove old content=0A=
+			messageDiv.removeChild(messageDiv.firstChild);=0A=
+		messageDiv.appendChild (message); // Append new content=0A=
+	}=0A=
+	else {=0A=
+		messageDiv.innerHTML =3D message;=0A=
+	}=0A=
+	return true;=0A=
+}=0A=
+=0A=
+/**=0A=
+ * Inject a cute little progress spinner after the specified element=0A=
+ *=0A=
+ * @param element Element to inject after=0A=
+ * @param id Identifier string (for use with removeSpinner(), below)=0A=
+ */=0A=
+function injectSpinner( element, id ) {=0A=
+	var spinner =3D document.createElement( "img" );=0A=
+	spinner.id =3D "mw-spinner-" + id;=0A=
+	spinner.src =3D stylepath + "/common/images/spinner.gif";=0A=
+	spinner.alt =3D spinner.title =3D "...";=0A=
+	if( element.nextSibling ) {=0A=
+		element.parentNode.insertBefore( spinner, element.nextSibling );=0A=
+	} else {=0A=
+		element.parentNode.appendChild( spinner );=0A=
+	}=0A=
+}=0A=
+=0A=
+/**=0A=
+ * Remove a progress spinner added with injectSpinner()=0A=
+ *=0A=
+ * @param id Identifier string=0A=
+ */=0A=
+function removeSpinner( id ) {=0A=
+	var spinner =3D document.getElementById( "mw-spinner-" + id );=0A=
+	if( spinner ) {=0A=
+		spinner.parentNode.removeChild( spinner );=0A=
+	}=0A=
+}=0A=
+=0A=
+function runOnloadHook() {=0A=
+	// don't run anything below this for non-dom browsers=0A=
+	if (doneOnloadHook || !(document.getElementById && =
+document.getElementsByTagName)) {=0A=
+		return;=0A=
+	}=0A=
+=0A=
+	// set this before running any hooks, since any errors below=0A=
+	// might cause the function to terminate prematurely=0A=
+	doneOnloadHook =3D true;=0A=
+=0A=
+	updateTooltipAccessKeys( null );=0A=
+	akeytt( null );=0A=
+	setupCheckboxShiftClick();=0A=
+	sortables_init();=0A=
+=0A=
+	// Run any added-on functions=0A=
+	for (var i =3D 0; i < onloadFuncts.length; i++) {=0A=
+		onloadFuncts[i]();=0A=
+	}=0A=
+}=0A=
+=0A=
+/**=0A=
+ * Add an event handler to an element=0A=
+ *=0A=
+ * @param Element element Element to add handler to=0A=
+ * @param String attach Event to attach to=0A=
+ * @param callable handler Event handler callback=0A=
+ */=0A=
+function addHandler( element, attach, handler ) {=0A=
+	if( window.addEventListener ) {=0A=
+		element.addEventListener( attach, handler, false );=0A=
+	} else if( window.attachEvent ) {=0A=
+		element.attachEvent( 'on' + attach, handler );=0A=
+	}=0A=
+}=0A=
+=0A=
+/**=0A=
+ * Add a click event handler to an element=0A=
+ *=0A=
+ * @param Element element Element to add handler to=0A=
+ * @param callable handler Event handler callback=0A=
+ */=0A=
+function addClickHandler( element, handler ) {=0A=
+	addHandler( element, 'click', handler );=0A=
+}=0A=
+=0A=
+/**=0A=
+ * Removes an event handler from an element=0A=
+ *=0A=
+ * @param Element element Element to remove handler from=0A=
+ * @param String remove Event to remove=0A=
+ * @param callable handler Event handler callback to remove=0A=
+ */=0A=
+function removeHandler( element, remove, handler ) {=0A=
+	if( window.removeEventListener ) {=0A=
+		element.removeEventListener( remove, handler, false );=0A=
+	} else if( window.detachEvent ) {=0A=
+		element.detachEvent( 'on' + remove, handler );=0A=
+	}=0A=
+}=0A=
+//note: all skins should call runOnloadHook() at the end of html output,=0A=
+//      so the below should be redundant. It's there just in case.=0A=
+hookEvent("load", runOnloadHook);=0A=
+
+------=_NextPart_000_0000_01CC81EB.D3072420
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.tinyclr.com/skins/common/ajax.js?207
+
+// remote scripting library=0A=
+// (c) copyright 2005 modernmethod, inc=0A=
+var sajax_debug_mode =3D false;=0A=
+var sajax_request_type =3D "GET";=0A=
+=0A=
+/**=0A=
+* if sajax_debug_mode is true, this function outputs given the message =
+into =0A=
+* the element with id =3D sajax_debug; if no such element exists in the =
+document, =0A=
+* it is injected.=0A=
+*/=0A=
+function sajax_debug(text) {=0A=
+	if (!sajax_debug_mode) return false;=0A=
+=0A=
+	var e=3D document.getElementById('sajax_debug');=0A=
+=0A=
+	if (!e) {=0A=
+		e=3D document.createElement("p");=0A=
+		e.className=3D 'sajax_debug';=0A=
+		e.id=3D 'sajax_debug';=0A=
+=0A=
+		var b=3D document.getElementsByTagName("body")[0];=0A=
+=0A=
+		if (b.firstChild) b.insertBefore(e, b.firstChild);=0A=
+		else b.appendChild(e);=0A=
+	}=0A=
+=0A=
+	var m=3D document.createElement("div");=0A=
+	m.appendChild( document.createTextNode( text ) );=0A=
+=0A=
+	e.appendChild( m );=0A=
+=0A=
+	return true;=0A=
+}=0A=
+=0A=
+/**=0A=
+* compatibility wrapper for creating a new XMLHttpRequest object.=0A=
+*/=0A=
+function sajax_init_object() {=0A=
+	sajax_debug("sajax_init_object() called..")=0A=
+	var A;=0A=
+	try {=0A=
+		// Try the new style before ActiveX so we don't=0A=
+		// unnecessarily trigger warnings in IE 7 when=0A=
+		// set to prompt about ActiveX usage=0A=
+		A =3D new XMLHttpRequest();=0A=
+	} catch (e) {=0A=
+		try {=0A=
+			A=3Dnew ActiveXObject("Msxml2.XMLHTTP");=0A=
+		} catch (e) {=0A=
+			try {=0A=
+				A=3Dnew ActiveXObject("Microsoft.XMLHTTP");=0A=
+			} catch (oc) {=0A=
+				A=3Dnull;=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+	if (!A)=0A=
+		sajax_debug("Could not create connection object.");=0A=
+=0A=
+	return A;=0A=
+}=0A=
+=0A=
+/**=0A=
+* Perform an ajax call to mediawiki. Calls are handeled by =
+AjaxDispatcher.php=0A=
+*   func_name - the name of the function to call. Must be registered in =
+$wgAjaxExportList=0A=
+*   args - an array of arguments to that function=0A=
+*   target - the target that will handle the result of the call. If this =
+is a function,=0A=
+*            if will be called with the XMLHttpRequest as a parameter; =
+if it's an input=0A=
+*            element, its value will be set to the resultText; if it's =
+another type of=0A=
+*            element, its innerHTML will be set to the resultText.=0A=
+*=0A=
+* Example:=0A=
+*    sajax_do_call('doFoo', [1, 2, 3], =
+document.getElementById("showFoo"));=0A=
+*=0A=
+* This will call the doFoo function via MediaWiki's AjaxDispatcher, with=0A=
+* (1, 2, 3) as the parameter list, and will show the result in the =
+element=0A=
+* with id =3D showFoo=0A=
+*/=0A=
+function sajax_do_call(func_name, args, target) {=0A=
+	var i, x, n;=0A=
+	var uri;=0A=
+	var post_data;=0A=
+	uri =3D wgServer +=0A=
+		((wgScript =3D=3D null) ? (wgScriptPath + "/index.php") : wgScript) +=0A=
+		"?action=3Dajax";=0A=
+	if (sajax_request_type =3D=3D "GET") {=0A=
+		if (uri.indexOf("?") =3D=3D -1)=0A=
+			uri =3D uri + "?rs=3D" + encodeURIComponent(func_name);=0A=
+		else=0A=
+			uri =3D uri + "&rs=3D" + encodeURIComponent(func_name);=0A=
+		for (i =3D 0; i < args.length; i++)=0A=
+			uri =3D uri + "&rsargs[]=3D" + encodeURIComponent(args[i]);=0A=
+		//uri =3D uri + "&rsrnd=3D" + new Date().getTime();=0A=
+		post_data =3D null;=0A=
+	} else {=0A=
+		post_data =3D "rs=3D" + encodeURIComponent(func_name);=0A=
+		for (i =3D 0; i < args.length; i++)=0A=
+			post_data =3D post_data + "&rsargs[]=3D" + =
+encodeURIComponent(args[i]);=0A=
+	}=0A=
+	x =3D sajax_init_object();=0A=
+	if (!x) {=0A=
+		alert("AJAX not supported");=0A=
+		return false;=0A=
+	}=0A=
+=0A=
+	try {=0A=
+		x.open(sajax_request_type, uri, true);=0A=
+	} catch (e) {=0A=
+		if (window.location.hostname =3D=3D "localhost") {=0A=
+			alert("Your browser blocks XMLHttpRequest to 'localhost', try using a =
+real hostname for development/testing.");=0A=
+		}=0A=
+		throw e;=0A=
+	}=0A=
+	if (sajax_request_type =3D=3D "POST") {=0A=
+		x.setRequestHeader("Method", "POST " + uri + " HTTP/1.1");=0A=
+		x.setRequestHeader("Content-Type", =
+"application/x-www-form-urlencoded");=0A=
+	}=0A=
+	x.setRequestHeader("Pragma", "cache=3Dyes");=0A=
+	x.setRequestHeader("Cache-Control", "no-transform");=0A=
+	x.onreadystatechange =3D function() {=0A=
+		if (x.readyState !=3D 4)=0A=
+			return;=0A=
+=0A=
+		sajax_debug("received (" + x.status + " " + x.statusText + ") " + =
+x.responseText);=0A=
+=0A=
+		//if (x.status !=3D 200)=0A=
+		//	alert("Error: " + x.status + " " + x.statusText + ": " + =
+x.responseText);=0A=
+		//else=0A=
+=0A=
+		if ( typeof( target ) =3D=3D 'function' ) {=0A=
+			target( x );=0A=
+		}=0A=
+		else if ( typeof( target ) =3D=3D 'object' ) {=0A=
+			if ( target.tagName =3D=3D 'INPUT' ) {=0A=
+				if (x.status =3D=3D 200) target.value=3D x.responseText;=0A=
+				//else alert("Error: " + x.status + " " + x.statusText + " (" + =
+x.responseText + ")");=0A=
+			}=0A=
+			else {=0A=
+				if (x.status =3D=3D 200) target.innerHTML =3D x.responseText;=0A=
+				else target.innerHTML=3D "<div class=3D'error'>Error: " + x.status + =
+" " + x.statusText + " (" + x.responseText + ")</div>";=0A=
+			}=0A=
+		}=0A=
+		else {=0A=
+			alert("bad target for sajax_do_call: not a function or object: " + =
+target);=0A=
+		}=0A=
+=0A=
+		return;=0A=
+	}=0A=
+=0A=
+	sajax_debug(func_name + " uri =3D " + uri + " / post =3D " + post_data);=0A=
+	x.send(post_data);=0A=
+	sajax_debug(func_name + " waiting..");=0A=
+	delete x;=0A=
+=0A=
+	return true;=0A=
+}=0A=
+=0A=
+/**=0A=
+ * @return boolean whether the browser supports XMLHttpRequest=0A=
+ */=0A=
+function wfSupportsAjax() {=0A=
+	var request =3D sajax_init_object();=0A=
+	var supportsAjax =3D request ? true : false;=0A=
+	delete request;=0A=
+	return supportsAjax;=0A=
+}=0A=
+=0A=
+
+------=_NextPart_000_0000_01CC81EB.D3072420--

@@ -1,0 +1,4298 @@
+From: "Saved by Windows Internet Explorer 9"
+Subject: PPP Class
+Date: Tue, 29 Nov 2011 15:57:20 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0052_01CCAEAF.93A9A460"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17514
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/html/4e8f146a-90e4-eda5-e130-170ae041562c.htm
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML XMLNS:MSHelp =3D "http://msdn.microsoft.com/mshelp" xmlns:ddue =3D =
+
+"http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink =3D=20
+"http://www.w3.org/1999/xlink" xmlns:msxsl =3D=20
+"urn:schemas-microsoft-com:xslt"><HEAD><TITLE>PPP Class</TITLE>
+<META content=3D"text/html; charset=3DUTF-8" http-equiv=3DContent-Type>
+<META name=3Dsave content=3Dhistory>
+<META name=3DLanguage content=3Den-us>
+<META name=3DSystem.Keywords content=3D"PPP class">
+<META name=3DSystem.Keywords content=3D"GHIElectronics.NETMF.Net.PPP =
+class">
+<META name=3DSystem.Keywords content=3D"PPP class, about PPP class">
+<META name=3DMicrosoft.Help.F1 content=3DGHIElectronics.NETMF.Net.PPP>
+<META name=3DMicrosoft.Help.Id content=3DT:GHIElectronics.NETMF.Net.PPP>
+<META name=3DDescription=20
+content=3D"This class provides setup features to control the PPP =
+connections.">
+<META name=3DMicrosoft.Help.ContentType content=3DReference><LINK =
+rel=3Dstylesheet=20
+type=3Dtext/css=20
+href=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documenta=
+tion/styles/Presentation.css"><LINK=20
+rel=3Dstylesheet type=3Dtext/css =
+href=3D"ms-help://Hx/HxRuntime/HxLink.css">
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/scripts/EventUtilities.js"> </SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/scripts/SplitScreen.js"> </SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/scripts/Dropdown.js"> </SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/scripts/script_manifold.js"> </SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/scripts/script_feedBack.js"> </SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/scripts/CheckboxMenu.js"> </SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/scripts/CommonUtilities.js"> </SCRIPT>
+
+<META name=3Dcontainer content=3DGHIElectronics.NETMF.Net>
+<META name=3Dfile content=3D4e8f146a-90e4-eda5-e130-170ae041562c>
+<META name=3Dguid =
+content=3D4e8f146a-90e4-eda5-e130-170ae041562c><xml><MSHelp:Attr =
+Name=3D"AssetID" Value=3D"T:GHIElectronics.NETMF.Net.PPP" =
+/><MSHelp:TOCTitle Title=3D"PPP Class" /><MSHelp:RLTitle Title=3D"PPP =
+Class (GHIElectronics.NETMF.Net)" /><MSHelp:Keyword Index=3D"A" =
+Term=3D"T:GHIElectronics.NETMF.Net.PPP" /><MSHelp:Keyword Index=3D"A" =
+Term=3D"frlrfGHIElectronicsNETMFNetPPPClassTopic" /><MSHelp:Keyword =
+Index=3D"K" Term=3D"PPP class" /><MSHelp:Keyword Index=3D"K" =
+Term=3D"GHIElectronics.NETMF.Net.PPP class" /><MSHelp:Keyword =
+Index=3D"K" Term=3D"PPP class, about PPP class" /><MSHelp:Keyword =
+Index=3D"F" Term=3D"GHIElectronics.NETMF.Net.PPP" /><MSHelp:Attr =
+Name=3D"HelpPriority" Value=3D"2" /><MSHelp:Attr Name=3D"APIType" =
+Value=3D"Managed" /><MSHelp:Attr Name=3D"APILocation" =
+Value=3D"GHIElectronics.NETMF.Net.dll" /><MSHelp:Attr Name=3D"APIName" =
+Value=3D"GHIElectronics.NETMF.Net.PPP" /><MSHelp:Attr Name=3D"DevLang" =
+Value=3D"CSharp" /><MSHelp:Attr Name=3D"Locale" Value=3D"en-us" =
+/><MSHelp:Attr Name=3D"TopicType" Value=3D"kbSyntax" /><MSHelp:Attr =
+Name=3D"TopicType" Value=3D"apiref" /><MSHelp:Attr Name=3D"Abstract" =
+Value=3D"This class provides setup features to control the PPP =
+connections." /><MSHelp:Attr Name=3D"AssemblyVersion" Value=3D"4.1.7.0" =
+/></xml><LINK=20
+rel=3Dstylesheet type=3Dtext/css=20
+href=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documenta=
+tion/styles/highlight.css">
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/scripts/highlight.js"> </SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 9.00.8112.16437"></HEAD>
+<BODY><INPUT id=3DuserDataCache class=3DuserDataStyle =
+type=3Dhidden><INPUT=20
+id=3DhiddenScrollOffset type=3Dhidden><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DcollapseImage=20
+title=3D"Collapse image" alt=3D"Collapse image"=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/collapse_all.gif"><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DexpandImage=20
+title=3D"Expand Image" alt=3D"Expand Image"=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/expand_all.gif"><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DcollapseAllImage=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/collapse_all.gif"><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DexpandAllImage=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/expand_all.gif"><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DdropDownImage=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/dropdown.gif"><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DdropDownHoverImage =
+
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/dropdownHover.gif"><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DcopyImage =
+title=3D"Copy image"=20
+alt=3D"Copy image" src=3D""><IMG style=3D"WIDTH: 0px; DISPLAY: none; =
+HEIGHT: 0px"=20
+id=3DcopyHoverImage title=3D"CopyHover image" alt=3D"CopyHover image"=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/copycodeHighlight.gif">
+<DIV id=3Dheader>
+<TABLE cellSpacing=3D0 cellPadding=3D0>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 1px; =
+PADDING-RIGHT: 0px; PADDING-TOP: 0px"=20
+    align=3Dcenter><IMG=20
+      =
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/ghi.png"></TD>
+    <TD>
+      <TABLE id=3DtopTable cellSpacing=3D0 cellPadding=3D0>
+        <TBODY>
+        <TR>
+          <TD><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+            onkeypress=3D"ExpandCollapseAll_CheckKey(toggleAllImage, =
+event)"=20
+            onclick=3DExpandCollapseAll(toggleAllImage)><IMG =
+id=3DtoggleAllImage=20
+            class=3DtoggleAll=20
+            =
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/collapse_all.gif">&nbsp;<LABEL=20
+            style=3D"DISPLAY: none" id=3DcollapseAllLabel=20
+            for=3DtoggleAllImage>Collapse All</LABEL><LABEL =
+style=3D"DISPLAY: none"=20
+            id=3DexpandAllLabel for=3DtoggleAllImage>Expand=20
+          All</LABEL>&nbsp;</SPAN></TD></TR></TBODY></TABLE>
+      <DIV id=3DdevlangsMenu><INPUT id=3DCSharpCheckbox =
+onclick=3DSetLanguage(this)=20
+      value=3Don type=3Dcheckbox data=3D"CSharp,cs,'persist'"><LABEL=20
+      class=3DcheckboxLabel for=3DCSharpCheckbox>C#</LABEL><BR></DIV>
+      <TABLE id=3DbottomTable cellSpacing=3D0 cellPadding=3D0>
+        <TBODY>
+        <TR id=3DheaderTableRow1>
+          <TD align=3Dleft><SPAN id=3DrunningHeaderText>GHI Electronics =
+NETMF=20
+            Library</SPAN></TD></TR>
+        <TR id=3DheaderTableRow2>
+          <TD align=3Dleft><SPAN id=3DnsrTitle>PPP =
+Class</SPAN></TD></TR>
+        <TR id=3DheaderTableRow3>
+          <TD align=3Dleft><A=20
+            =
+href=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documenta=
+tion/html/98b8a05f-8550-d88f-dba1-2ceeee3ee938.htm">Members</A>&nbsp;<A=20
+            onclick=3DOpenSection(exampleToggle)=20
+            =
+href=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documenta=
+tion/html/4e8f146a-90e4-eda5-e130-170ae041562c.htm#exampleToggle">Example=
+</A>&nbsp;<A=20
+            onclick=3DOpenSection(seeAlsoToggle)=20
+            =
+href=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documenta=
+tion/html/4e8f146a-90e4-eda5-e130-170ae041562c.htm#seeAlsoToggle">See&nbs=
+p;Also</A>&nbsp;<SPAN=20
+            id=3Dheadfeedbackarea class=3Dfeedbackhead><A=20
+            =
+href=3D"javascript:SubmitFeedback('ghielec@ghielectronics.com','GHI =
+Electronics NETMF =
+Library','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%2=
+0documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20=
+not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%=
+20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20workin=
+g%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20=
+contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarificat=
+ion%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20rep=
+ort%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20=
+let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0=
+\d','Customer%20Feedback');">Send=20
+            =
+Feedback</A></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE id=3DgradientTable>
+  <TBODY>
+  <TR>
+    <TD class=3DnsrBottom=20
+    =
+background=3Dhttp://www.ghielectronics.com/downloads/NETMF/Library%20Docu=
+mentation/icons/gradient.gif></TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DmainSection>
+<DIV id=3DmainBody>
+<DIV id=3DallHistory class=3DsaveHistory onload=3D"loadAll()" =
+onsave=3D"saveAll()"><SPAN=20
+style=3D"COLOR: darkgray"></SPAN>
+<DIV class=3Dsummary>This class provides setup features to control the =
+PPP=20
+connections. </DIV>
+<P><B>Namespace:</B>&nbsp;<A=20
+href=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documenta=
+tion/html/98f4a3fd-9ca8-ea75-ea81-84064371f605.htm">GHIElectronics.NETMF.=
+Net</A><BR><B>Assembly:</B>&nbsp;<SPAN=20
+sdata=3D"assembly">GHIElectronics.NETMF.Net</SPAN> (in=20
+GHIElectronics.NETMF.Net.dll) Version: 4.1.7.0 (4.1.7.0)
+<H1 class=3Dheading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3D"ExpandCollapse_CheckKey(syntaxToggle, event)"=20
+onclick=3DExpandCollapse(syntaxToggle)><IMG id=3DsyntaxToggle =
+class=3Dtoggle=20
+name=3DtoggleSwitch=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/collapse_all.gif">Syntax</SPAN></H1>
+<DIV id=3DsyntaxSection class=3Dsection name=3D"collapseableSection">
+<DIV id=3DsyntaxCodeBlocks class=3Dcode><SPAN codeLanguage=3D"CSharp">
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>C#</TH></TR>
+  <TR>
+    <TD><PRE xml:space=3D"preserve"><SPAN class=3Dkeyword>public</SPAN> =
+<SPAN class=3Dkeyword>static</SPAN> <SPAN class=3Dkeyword>class</SPAN> =
+<SPAN =
+class=3Didentifier>PPP</SPAN></PRE></TD></TR></TBODY></TABLE></SPAN></DIV=
+></DIV>
+<H1 class=3Dheading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3D"ExpandCollapse_CheckKey(remarksToggle, event)"=20
+onclick=3DExpandCollapse(remarksToggle)><IMG id=3DremarksToggle =
+class=3Dtoggle=20
+name=3DtoggleSwitch=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/collapse_all.gif">Remarks</SPAN></H1>
+<DIV id=3DremarksSection class=3Dsection=20
+name=3D"collapseableSection"><STRONG>Important note:</STRONG> Currently =
+TCP/IP=20
+stack can handle only one network interface at the same time. For =
+instance, if=20
+PPP is enabled, Ethernet and PPP will be unhooked with the TCP/IP=20
+stack.<BR><BR>With this class, the user can communicate with other =
+devices using=20
+PPP and Micro Framework TCP/IP stack.<BR>Only PPP client with PAP =
+authentication=20
+or non-authentication is supported.<BR>The user starts by enabling the =
+PPP=20
+communication interface. Then a connection is established using =
+Connect(). Once=20
+the connection is ready, the user can use network features. </DIV>
+<H1 class=3Dheading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3D"ExpandCollapse_CheckKey(exampleToggle, event)"=20
+onclick=3DExpandCollapse(exampleToggle)><IMG id=3DexampleToggle =
+class=3Dtoggle=20
+name=3DtoggleSwitch=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/collapse_all.gif">Examples</SPAN></H1>
+<DIV id=3DexampleSection class=3Dsection =
+name=3D"collapseableSection">This example=20
+enables Ethernet Interface and retrieves an IP address lease from DHCP =
+server.=20
+An example code about AT commands is also provided. <SPAN id=3Dcbc_1=20
+codeLanguage=3D"CSharp" x-lang=3D"CSharp">
+<DIV class=3Dhighlight-title><SPAN class=3Dhighlight-copycode=20
+onmouseover=3DCopyCodeChangeIcon(this) tabIndex=3D0=20
+onkeypress=3D"javascript:CopyColorizedCodeCheckKey(this.parentNode, =
+event);"=20
+onmouseout=3DCopyCodeChangeIcon(this)=20
+onclick=3Djavascript:CopyColorizedCode(this.parentNode);><IMG=20
+style=3D"MARGIN-RIGHT: 5px"=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/CopyCode.gif">Copy</SPAN>C#</DIV>
+<DIV class=3Dcode><PRE xml:space=3D"preserve"><SPAN =
+class=3Dhighlight-comment>/// Add these libraries to your project's =
+References</SPAN>
+<SPAN class=3Dhighlight-comment>/// System</SPAN>
+<SPAN class=3Dhighlight-comment>/// Microsoft.SPOT.Net</SPAN>
+<SPAN class=3Dhighlight-comment>/// =
+Microsoft.SPOT.Hardware.SerialPort</SPAN>
+<SPAN class=3Dhighlight-comment>/// System.IO</SPAN>
+<SPAN class=3Dhighlight-comment>/// GHIElectronics.NETMF.System</SPAN>
+<SPAN class=3Dhighlight-comment>/// GHIElectronics.NETMF.Net</SPAN>
+<SPAN class=3Dhighlight-keyword>using</SPAN> System;
+<SPAN class=3Dhighlight-keyword>using</SPAN> System.Threading;
+<SPAN class=3Dhighlight-keyword>using</SPAN> Microsoft.SPOT;
+<SPAN class=3Dhighlight-keyword>using</SPAN> =
+Microsoft.SPOT.Net.NetworkInformation;
+<SPAN class=3Dhighlight-keyword>using</SPAN> GHIElectronics.NETMF.Net;
+<SPAN class=3Dhighlight-keyword>using</SPAN> System.Net;
+<SPAN class=3Dhighlight-keyword>using</SPAN> System.IO.Ports;
+
+<SPAN class=3Dhighlight-keyword>namespace</SPAN> PPP_Example_4._0
+{
+    <SPAN class=3Dhighlight-keyword>public</SPAN> <SPAN =
+class=3Dhighlight-keyword>class</SPAN> Program
+    {
+        <SPAN class=3Dhighlight-keyword>static</SPAN> <SPAN =
+class=3Dhighlight-keyword>public</SPAN> SerialPort modem =3D <SPAN =
+class=3Dhighlight-keyword>new</SPAN> SerialPort(<SPAN =
+class=3Dhighlight-literal>"COM2"</SPAN>, <SPAN =
+class=3Dhighlight-number>115200</SPAN>);
+        <SPAN class=3Dhighlight-keyword>static</SPAN> <SPAN =
+class=3Dhighlight-keyword>public</SPAN> <SPAN =
+class=3Dhighlight-keyword>bool</SPAN> network_is_read =3D <SPAN =
+class=3Dhighlight-keyword>false</SPAN>;
+        <SPAN class=3Dhighlight-keyword>public</SPAN> <SPAN =
+class=3Dhighlight-keyword>static</SPAN> <SPAN =
+class=3Dhighlight-keyword>void</SPAN> Main()
+        {
+            NetworkChange.NetworkAvailabilityChanged +=3D <SPAN =
+class=3Dhighlight-keyword>new</SPAN> =
+NetworkAvailabilityChangedEventHandler(NetworkChange_NetworkAvailabilityC=
+hanged);
+            <SPAN class=3Dhighlight-comment>// Till this point TCP/IP =
+stack is hooked previously Enabled interface (Ethernet by =
+default)</SPAN>
+            PPP.Enable(modem);
+            modem.Handshake =3D Handshake.RequestToSend; <SPAN =
+class=3Dhighlight-comment>// This is to avoid data loss during PPP =
+communication.</SPAN>
+            modem.Open();
+            modem.ErrorReceived +=3D <SPAN =
+class=3Dhighlight-keyword>new</SPAN> =
+SerialErrorReceivedEventHandler(modem_ErrorReceived);
+            NetworkInterface[] netif =3D =
+NetworkInterface.GetAllNetworkInterfaces();
+
+
+            Debug.Print(<SPAN class=3Dhighlight-literal>"Dial-in using =
+AT commands"</SPAN>);
+            ATcommander at =3D <SPAN =
+class=3Dhighlight-keyword>new</SPAN> ATcommander(modem);
+            <SPAN class=3Dhighlight-keyword>if</SPAN> =
+(at.ClientConnectModem())
+            {
+                network_is_read =3D <SPAN =
+class=3Dhighlight-keyword>false</SPAN>;
+                Debug.Print(<SPAN class=3Dhighlight-literal>"Connect =
+PPP"</SPAN>);
+                <SPAN class=3Dhighlight-keyword>switch</SPAN> =
+(PPP.Connect(<SPAN class=3Dhighlight-literal>"username"</SPAN>, <SPAN =
+class=3Dhighlight-literal>"password"</SPAN>))
+                {
+                    <SPAN class=3Dhighlight-keyword>case</SPAN> =
+PPP.ConnectionStatus.Authentication_Faild:
+                        Debug.Print(<SPAN =
+class=3Dhighlight-literal>"Authentication_Faild"</SPAN>);
+                        <SPAN class=3Dhighlight-keyword>break</SPAN>;
+                    <SPAN class=3Dhighlight-keyword>case</SPAN> =
+PPP.ConnectionStatus.Connection_Faild:
+                        Debug.Print(<SPAN =
+class=3Dhighlight-literal>"Connection_Faild"</SPAN>);
+                        <SPAN class=3Dhighlight-keyword>break</SPAN>;
+                    <SPAN class=3Dhighlight-keyword>case</SPAN> =
+PPP.ConnectionStatus.Connected:
+                        <SPAN class=3Dhighlight-comment>// PPP setting =
+will overload the first interface settings since only one interface is =
+supported.</SPAN>
+                        netif =3D =
+NetworkInterface.GetAllNetworkInterfaces();
+                        Debug.Print(<SPAN class=3Dhighlight-literal>"PPP =
+Network settings:"</SPAN>);
+                        Debug.Print(<SPAN class=3Dhighlight-literal>"IP =
+Address: "</SPAN> + netif[<SPAN =
+class=3Dhighlight-number>0</SPAN>].IPAddress);
+                        Debug.Print(<SPAN =
+class=3Dhighlight-literal>"Subnet Mask: "</SPAN> + netif[<SPAN =
+class=3Dhighlight-number>0</SPAN>].SubnetMask);
+                        Debug.Print(<SPAN =
+class=3Dhighlight-literal>"Default Getway: "</SPAN> + netif[<SPAN =
+class=3Dhighlight-number>0</SPAN>].GatewayAddress);
+                        Debug.Print(<SPAN class=3Dhighlight-literal>"DNS =
+Server: "</SPAN> + netif[<SPAN =
+class=3Dhighlight-number>0</SPAN>].DnsAddresses[<SPAN =
+class=3Dhighlight-number>0</SPAN>]);
+                        network_is_read =3D <SPAN =
+class=3Dhighlight-keyword>true</SPAN>;
+                        <SPAN class=3Dhighlight-keyword>break</SPAN>;
+                    <SPAN class=3Dhighlight-keyword>case</SPAN> =
+PPP.ConnectionStatus.Disconnected:
+                        Debug.Print(<SPAN =
+class=3Dhighlight-literal>"Disconnected"</SPAN>);
+                        <SPAN class=3Dhighlight-keyword>break</SPAN>;
+
+                }
+            }
+            <SPAN class=3Dhighlight-keyword>else</SPAN>
+            {
+                Debug.Print(<SPAN class=3Dhighlight-literal>"Terminal =
+server is not responding"</SPAN>);
+            }
+            <SPAN class=3Dhighlight-keyword>if</SPAN> (network_is_read)
+            {
+                Debug.Print(<SPAN class=3Dhighlight-literal>"Test =
+DNS"</SPAN>);
+                <SPAN class=3Dhighlight-keyword>try</SPAN>
+                {
+                    IPHostEntry myIP =3D Dns.GetHostEntry(<SPAN =
+class=3Dhighlight-literal>"www.ghielectronics.com"</SPAN>);
+
+                    <SPAN class=3Dhighlight-keyword>if</SPAN> (myIP !=3D =
+<SPAN class=3Dhighlight-keyword>null</SPAN>)
+                    {
+                        Debug.Print(myIP.HostName + <SPAN =
+class=3Dhighlight-literal>": "</SPAN> + myIP.AddressList[<SPAN =
+class=3Dhighlight-number>0</SPAN>].ToString());
+                    }
+                }
+                <SPAN class=3Dhighlight-keyword>catch</SPAN>
+                {
+                    Debug.Print(<SPAN class=3Dhighlight-literal>"Faild =
+to Get the host entry of the FQN from DNS server!"</SPAN>);
+                }
+
+                Debug.Print(<SPAN class=3Dhighlight-literal>"Disconnect =
+PPP link."</SPAN>);
+                PPP.Disconnect();
+
+            }
+
+            Debug.Print(<SPAN class=3Dhighlight-literal>"Disable PPP =
+interface"</SPAN>);
+            PPP.Disable();
+            <SPAN class=3Dhighlight-comment>// At this point TCP/IP =
+stack will reinitialized be hooked back to Ethernet or WiFi</SPAN>
+
+            Thread.Sleep(Timeout.Infinite);
+
+        }
+
+        <SPAN class=3Dhighlight-keyword>static</SPAN> <SPAN =
+class=3Dhighlight-keyword>void</SPAN> =
+NetworkChange_NetworkAvailabilityChanged(<SPAN =
+class=3Dhighlight-keyword>object</SPAN> sender, =
+NetworkAvailabilityEventArgs e)
+        {
+
+            <SPAN class=3Dhighlight-keyword>if</SPAN> (e.IsAvailable)
+            {
+                <SPAN class=3Dhighlight-keyword>if</SPAN> =
+(PPP.IsLinkConnected)
+                {
+                    Debug.Print(<SPAN class=3Dhighlight-literal>"PPP =
+connection was established!"</SPAN>);
+                }
+            }
+            <SPAN class=3Dhighlight-keyword>else</SPAN>
+            {
+                <SPAN class=3Dhighlight-keyword>if</SPAN> =
+(!PPP.IsLinkConnected)
+                {
+                    Debug.Print(<SPAN class=3Dhighlight-literal>"PPP =
+connection was dropped or disconnected!"</SPAN>);
+                    network_is_read =3D <SPAN =
+class=3Dhighlight-keyword>false</SPAN>;
+                }
+            }
+        }
+
+        <SPAN class=3Dhighlight-keyword>static</SPAN> <SPAN =
+class=3Dhighlight-keyword>void</SPAN> modem_ErrorReceived(<SPAN =
+class=3Dhighlight-keyword>object</SPAN> sender, =
+SerialErrorReceivedEventArgs e)
+        {
+            <SPAN class=3Dhighlight-comment>// Serial communication is =
+loosing data</SPAN>
+        }
+
+    }
+}</PRE></DIV></SPAN></DIV>
+<H1 class=3Dheading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3D"ExpandCollapse_CheckKey(exampleToggle, event)"=20
+onclick=3DExpandCollapse(exampleToggle)><IMG id=3DexampleToggle =
+class=3Dtoggle=20
+name=3DtoggleSwitch=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/collapse_all.gif">Examples</SPAN></H1>
+<DIV id=3DexampleSection class=3Dsection =
+name=3D"collapseableSection">This example=20
+provide simple class code to handle AT command dial up process. This =
+code is use=20
+with Telit GM862. User must use this code as only an example and it is =
+provided=20
+as it is. <SPAN id=3Dcbc_2 codeLanguage=3D"CSharp" x-lang=3D"CSharp">
+<DIV class=3Dhighlight-title><SPAN class=3Dhighlight-copycode=20
+onmouseover=3DCopyCodeChangeIcon(this) tabIndex=3D0=20
+onkeypress=3D"javascript:CopyColorizedCodeCheckKey(this.parentNode, =
+event);"=20
+onmouseout=3DCopyCodeChangeIcon(this)=20
+onclick=3Djavascript:CopyColorizedCode(this.parentNode);><IMG=20
+style=3D"MARGIN-RIGHT: 5px"=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/CopyCode.gif">Copy</SPAN>C#</DIV>
+<DIV class=3Dcode><PRE xml:space=3D"preserve"><SPAN =
+class=3Dhighlight-comment>/// Add these libraries to your project's =
+References</SPAN>
+<SPAN class=3Dhighlight-comment>/// System</SPAN>
+<SPAN class=3Dhighlight-comment>/// Microsoft.SPOT.Net</SPAN>
+<SPAN class=3Dhighlight-comment>/// =
+Microsoft.SPOT.Hardware.SerialPort</SPAN>
+<SPAN class=3Dhighlight-comment>/// GHIElectronics.NETMF.System</SPAN>
+<SPAN class=3Dhighlight-comment>/// GHIElectronics.NETMF.Net</SPAN>
+<SPAN class=3Dhighlight-keyword>using</SPAN> System;
+<SPAN class=3Dhighlight-keyword>using</SPAN> Microsoft.SPOT;
+<SPAN class=3Dhighlight-keyword>using</SPAN> System.IO.Ports;
+<SPAN class=3Dhighlight-keyword>using</SPAN> System.Text;
+<SPAN class=3Dhighlight-keyword>using</SPAN> System.Threading;
+
+
+<SPAN class=3Dhighlight-keyword>enum</SPAN> ATSequence
+{
+    CR_Begin,
+    NL_Begin,
+    ResultCode,
+    CR_End,
+    NL_End
+};
+<SPAN class=3Dhighlight-keyword>enum</SPAN> ATstatus
+{
+    init,
+    APsetting,
+    Dial,
+    Connected,
+    Disconnect
+};
+
+<SPAN class=3Dhighlight-keyword>class</SPAN> ATcommander
+{
+    SerialPort modem;
+    ATstatus atstatus =3D ATstatus.init;
+    ATSequence atsequence =3D ATSequence.CR_Begin;
+    <SPAN class=3Dhighlight-keyword>bool</SPAN> clientReq =3D <SPAN =
+class=3Dhighlight-keyword>false</SPAN>;
+    <SPAN class=3Dhighlight-keyword>public</SPAN> ATcommander(SerialPort =
+serial)
+    {
+        modem =3D serial;
+    }
+
+    <SPAN class=3Dhighlight-keyword>public</SPAN> <SPAN =
+class=3Dhighlight-keyword>bool</SPAN> ClientConnectModem()
+    {
+        <SPAN class=3Dhighlight-keyword>bool</SPAN> con =3D <SPAN =
+class=3Dhighlight-keyword>false</SPAN>;
+        <SPAN class=3Dhighlight-keyword>int</SPAN> trial =3D <SPAN =
+class=3Dhighlight-number>0</SPAN>;
+        <SPAN class=3Dhighlight-keyword>int</SPAN> size =3D <SPAN =
+class=3Dhighlight-number>0</SPAN>;
+        String message;
+        <SPAN class=3Dhighlight-keyword>byte</SPAN>[] buffer =3D <SPAN =
+class=3Dhighlight-keyword>new</SPAN> <SPAN =
+class=3Dhighlight-keyword>byte</SPAN>[<SPAN =
+class=3Dhighlight-number>125</SPAN>];
+        <SPAN class=3Dhighlight-keyword>if</SPAN> (clientReq =3D=3D =
+<SPAN class=3Dhighlight-keyword>false</SPAN>)
+        {
+
+
+            clientReq =3D <SPAN class=3Dhighlight-keyword>true</SPAN>;
+            atstatus =3D ATstatus.init;
+            atsequence =3D ATSequence.CR_Begin;
+            modem.Write(<SPAN class=3Dhighlight-keyword>new</SPAN> <SPAN =
+class=3Dhighlight-keyword>byte</SPAN>[] { <SPAN =
+class=3Dhighlight-number>0x7E</SPAN>, <SPAN =
+class=3Dhighlight-number>0xFF</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x23</SPAN>, <SPAN =
+class=3Dhighlight-number>0xC0</SPAN>, <SPAN =
+class=3Dhighlight-number>0x21</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x25</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x2A</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x20</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x30</SPAN>, <SPAN =
+class=3Dhighlight-number>0x2B</SPAN>, <SPAN =
+class=3Dhighlight-number>0xD3</SPAN>, <SPAN =
+class=3Dhighlight-number>0x45</SPAN>, <SPAN =
+class=3Dhighlight-number>0xAF</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x20</SPAN>, <SPAN =
+class=3Dhighlight-number>0x3C</SPAN>, <SPAN =
+class=3Dhighlight-number>0xCD</SPAN>, <SPAN =
+class=3Dhighlight-number>0x74</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x20</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x20</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x20</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x20</SPAN>, <SPAN =
+class=3Dhighlight-number>0x2A</SPAN>, <SPAN =
+class=3Dhighlight-number>0x9D</SPAN>, <SPAN =
+class=3Dhighlight-number>0x7E</SPAN> }, <SPAN =
+class=3Dhighlight-number>0</SPAN>, <SPAN =
+class=3Dhighlight-number>34</SPAN>);<SPAN class=3Dhighlight-comment>// =
+Terminate request          </SPAN>
+            modem.Write(Encoding.UTF8.GetBytes(<SPAN =
+class=3Dhighlight-literal>"\r+++"</SPAN>), <SPAN =
+class=3Dhighlight-number>0</SPAN>, <SPAN =
+class=3Dhighlight-number>4</SPAN>);<SPAN class=3Dhighlight-comment>// =
+Escape Sequence</SPAN>
+            Thread.Sleep(<SPAN class=3Dhighlight-number>3000</SPAN>);
+            modem.Write(Encoding.UTF8.GetBytes(<SPAN =
+class=3Dhighlight-literal>"ATH\r"</SPAN>), <SPAN =
+class=3Dhighlight-number>0</SPAN>, <SPAN =
+class=3Dhighlight-number>4</SPAN>); <SPAN class=3Dhighlight-comment>// =
+Hook On</SPAN>
+            Thread.Sleep(<SPAN class=3Dhighlight-number>1000</SPAN>);
+            modem.Write(Encoding.UTF8.GetBytes(<SPAN =
+class=3Dhighlight-literal>"ATZ\r"</SPAN>), <SPAN =
+class=3Dhighlight-number>0</SPAN>, <SPAN =
+class=3Dhighlight-number>4</SPAN>); <SPAN class=3Dhighlight-comment>// =
+Soft Reset, basic default restore</SPAN>
+            Thread.Sleep(<SPAN class=3Dhighlight-number>100</SPAN>);
+            modem.Write(Encoding.UTF8.GetBytes(<SPAN =
+class=3Dhighlight-literal>"ATE\r"</SPAN>), <SPAN =
+class=3Dhighlight-number>0</SPAN>, <SPAN =
+class=3Dhighlight-number>4</SPAN>); <SPAN class=3Dhighlight-comment>// =
+Echo Disabled</SPAN>
+            Thread.Sleep(<SPAN class=3Dhighlight-number>100</SPAN>);
+            modem.DiscardInBuffer();
+            <SPAN class=3Dhighlight-comment>// modem.DataReceived +=3D =
+new SerialDataReceivedEventHandler(modem_DataReceived);</SPAN>
+            modem.Write(Encoding.UTF8.GetBytes(<SPAN =
+class=3Dhighlight-literal>"AT+FLO=3D2\r"</SPAN>), <SPAN =
+class=3Dhighlight-number>0</SPAN>, <SPAN =
+class=3Dhighlight-number>9</SPAN>);<SPAN class=3Dhighlight-comment>// =
+Enable handshaking</SPAN>
+            <SPAN class=3Dhighlight-comment>// =
+modem.Write(Encoding.UTF8.GetBytes("AT\r"), 0, 3);</SPAN>
+            Thread.Sleep(<SPAN class=3Dhighlight-number>100</SPAN>);
+
+
+            <SPAN class=3Dhighlight-keyword>while</SPAN> (!con)
+            {
+                size =3D modem.Read(buffer, <SPAN =
+class=3Dhighlight-number>0</SPAN>, modem.BytesToRead);
+                <SPAN class=3Dhighlight-keyword>for</SPAN> (<SPAN =
+class=3Dhighlight-keyword>int</SPAN> i =3D <SPAN =
+class=3Dhighlight-number>0</SPAN>; i &lt; size; i++)
+                {
+                    <SPAN =
+class=3Dhighlight-comment>//Debug.Print(((char)buffer[i]).ToString());</S=
+PAN>
+
+                    <SPAN class=3Dhighlight-comment>// AT =
+stuff//////////////////////</SPAN>
+                    message =3D GetATResultCode(buffer[i]);
+                    <SPAN class=3Dhighlight-keyword>if</SPAN> (message =
+!=3D <SPAN class=3Dhighlight-keyword>null</SPAN>)
+                    {
+                        Debug.Print(message);
+                        con =3D ProcessAT(message);
+                    }
+                    <SPAN =
+class=3Dhighlight-comment>/////////////////////////////////</SPAN>
+                }
+
+                trial++;
+                <SPAN class=3Dhighlight-keyword>if</SPAN> (trial &gt; =
+<SPAN class=3Dhighlight-number>20</SPAN>)<SPAN =
+class=3Dhighlight-comment>// trials</SPAN>
+                {
+
+                    clientReq =3D <SPAN =
+class=3Dhighlight-keyword>false</SPAN>;
+                    <SPAN class=3Dhighlight-keyword>return</SPAN> <SPAN =
+class=3Dhighlight-keyword>false</SPAN>;
+                }
+                Thread.Sleep(<SPAN class=3Dhighlight-number>100</SPAN>);
+            }
+            clientReq =3D <SPAN class=3Dhighlight-keyword>false</SPAN>;
+            <SPAN class=3Dhighlight-keyword>return</SPAN> <SPAN =
+class=3Dhighlight-keyword>true</SPAN>;
+        }
+        <SPAN class=3Dhighlight-keyword>return</SPAN> <SPAN =
+class=3Dhighlight-keyword>false</SPAN>;
+
+    }
+
+    <SPAN class=3Dhighlight-keyword>private</SPAN> <SPAN =
+class=3Dhighlight-keyword>bool</SPAN> ProcessAT(String message)
+    {
+        <SPAN class=3Dhighlight-keyword>switch</SPAN> (atstatus)
+        {
+            <SPAN class=3Dhighlight-keyword>case</SPAN> ATstatus.init:
+                <SPAN class=3Dhighlight-keyword>if</SPAN> (message =
+=3D=3D <SPAN class=3Dhighlight-literal>"OK"</SPAN>)
+                {
+                    atstatus =3D ATstatus.APsetting;
+                    modem.Write(Encoding.UTF8.GetBytes(<SPAN =
+class=3Dhighlight-literal>"AT+cgdcont=3D2,\"IP\",\"wap.cingular\"\r"</SPA=
+N>), <SPAN class=3Dhighlight-number>0</SPAN>, <SPAN =
+class=3Dhighlight-number>33</SPAN>);
+                }
+                <SPAN class=3Dhighlight-keyword>break</SPAN>;
+            <SPAN class=3Dhighlight-keyword>case</SPAN> =
+ATstatus.APsetting:
+                <SPAN class=3Dhighlight-keyword>if</SPAN> (message =
+=3D=3D <SPAN class=3Dhighlight-literal>"OK"</SPAN>)
+                {
+                    atstatus =3D ATstatus.Dial;
+                    modem.Write(Encoding.UTF8.GetBytes(<SPAN =
+class=3Dhighlight-literal>"ATDT*99***2#\r"</SPAN>), <SPAN =
+class=3Dhighlight-number>0</SPAN>, <SPAN =
+class=3Dhighlight-number>13</SPAN>);
+                }
+                <SPAN class=3Dhighlight-keyword>break</SPAN>;
+            <SPAN class=3Dhighlight-keyword>case</SPAN> ATstatus.Dial:
+                <SPAN class=3Dhighlight-keyword>if</SPAN> (message =
+=3D=3D <SPAN class=3Dhighlight-literal>"CONNECT"</SPAN>)
+                {
+                    atstatus =3D ATstatus.Connected;
+                    Debug.Print(<SPAN class=3Dhighlight-literal>"AT =
+connected, Ready for PPP connection Establishing!"</SPAN>);
+                    <SPAN class=3Dhighlight-keyword>return</SPAN> <SPAN =
+class=3Dhighlight-keyword>true</SPAN>;
+                }
+                <SPAN class=3Dhighlight-keyword>else</SPAN>
+                {
+                    modem.Write(Encoding.UTF8.GetBytes(<SPAN =
+class=3Dhighlight-literal>"ATDT*99***2#\r"</SPAN>), <SPAN =
+class=3Dhighlight-number>0</SPAN>, <SPAN =
+class=3Dhighlight-number>13</SPAN>);
+                }
+                <SPAN class=3Dhighlight-keyword>break</SPAN>;
+        }
+        <SPAN class=3Dhighlight-keyword>return</SPAN> <SPAN =
+class=3Dhighlight-keyword>false</SPAN>;
+
+    }
+
+
+    <SPAN class=3Dhighlight-keyword>static</SPAN> <SPAN =
+class=3Dhighlight-keyword>byte</SPAN>[] ResultCodeBuffer =3D <SPAN =
+class=3Dhighlight-keyword>new</SPAN> <SPAN =
+class=3Dhighlight-keyword>byte</SPAN>[<SPAN =
+class=3Dhighlight-number>32</SPAN>];
+    <SPAN class=3Dhighlight-keyword>int</SPAN> index =3D <SPAN =
+class=3Dhighlight-number>0</SPAN>;
+
+    <SPAN class=3Dhighlight-keyword>private</SPAN> String =
+GetATResultCode(<SPAN class=3Dhighlight-keyword>byte</SPAN> s)
+    {
+
+        <SPAN class=3Dhighlight-keyword>switch</SPAN> (atsequence)
+        {
+            <SPAN class=3Dhighlight-keyword>case</SPAN> =
+ATSequence.CR_Begin:
+                <SPAN class=3Dhighlight-keyword>if</SPAN> (s =3D=3D =
+<SPAN class=3Dhighlight-number>0x0D</SPAN>)
+                    atsequence =3D ATSequence.NL_Begin;
+                <SPAN class=3Dhighlight-keyword>break</SPAN>;
+            <SPAN class=3Dhighlight-keyword>case</SPAN> =
+ATSequence.NL_Begin:
+                <SPAN class=3Dhighlight-keyword>if</SPAN> (s =3D=3D =
+<SPAN class=3Dhighlight-number>0x0A</SPAN>)
+                {
+                    atsequence =3D ATSequence.ResultCode;
+                    index =3D <SPAN class=3Dhighlight-number>0</SPAN>;
+                }
+                <SPAN class=3Dhighlight-keyword>else</SPAN>
+                {
+                    atsequence =3D ATSequence.CR_Begin;
+                }
+                <SPAN class=3Dhighlight-keyword>break</SPAN>;
+            <SPAN class=3Dhighlight-keyword>case</SPAN> =
+ATSequence.ResultCode:
+                <SPAN class=3Dhighlight-keyword>if</SPAN> (s =3D=3D =
+<SPAN class=3Dhighlight-number>0x0D</SPAN>)
+                {
+                    <SPAN class=3Dhighlight-keyword>if</SPAN> (index =
+!=3D <SPAN class=3Dhighlight-number>0</SPAN>)
+                        atsequence =3D ATSequence.NL_End;
+                    <SPAN class=3Dhighlight-keyword>else</SPAN>
+                        atsequence =3D ATSequence.NL_Begin;
+                }
+                <SPAN class=3Dhighlight-keyword>else</SPAN> <SPAN =
+class=3Dhighlight-keyword>if</SPAN> (s =3D=3D <SPAN =
+class=3Dhighlight-number>0x0A</SPAN>)
+                    atsequence =3D ATSequence.CR_Begin;
+                <SPAN class=3Dhighlight-keyword>else</SPAN>
+                {
+                    ResultCodeBuffer[index++] =3D s;
+                }
+                <SPAN class=3Dhighlight-keyword>break</SPAN>;
+            <SPAN class=3Dhighlight-keyword>case</SPAN> =
+ATSequence.CR_End:
+                <SPAN class=3Dhighlight-keyword>if</SPAN> (s =3D=3D =
+<SPAN class=3Dhighlight-number>0x0D</SPAN>)
+                    atsequence =3D ATSequence.NL_End;
+                <SPAN class=3Dhighlight-keyword>else</SPAN>
+                {
+                    atsequence =3D ATSequence.CR_Begin;
+                }
+                <SPAN class=3Dhighlight-keyword>break</SPAN>;
+            <SPAN class=3Dhighlight-keyword>case</SPAN> =
+ATSequence.NL_End:
+                <SPAN class=3Dhighlight-keyword>if</SPAN> (s =3D=3D =
+<SPAN class=3Dhighlight-number>0x0A</SPAN>)
+                {
+                    atsequence =3D ATSequence.CR_Begin;
+
+                    <SPAN class=3Dhighlight-keyword>return</SPAN> <SPAN =
+class=3Dhighlight-keyword>new</SPAN> =
+String(Encoding.UTF8.GetChars(ResultCodeBuffer), <SPAN =
+class=3Dhighlight-number>0</SPAN>, index);
+                }
+                <SPAN class=3Dhighlight-keyword>break</SPAN>;
+        }
+        <SPAN class=3Dhighlight-keyword>return</SPAN> <SPAN =
+class=3Dhighlight-keyword>null</SPAN>;
+    }
+
+}</PRE></DIV></SPAN></DIV>
+<H1 class=3Dheading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3D"ExpandCollapse_CheckKey(familyToggle, event)"=20
+onclick=3DExpandCollapse(familyToggle)><IMG id=3DfamilyToggle =
+class=3Dtoggle=20
+name=3DtoggleSwitch=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/collapse_all.gif">Inheritance=20
+Hierarchy</SPAN></H1>
+<DIV id=3DfamilySection class=3Dsection name=3D"collapseableSection"><A=20
+href=3D"http://msdn2.microsoft.com/en-us/library/e5kfa45b"=20
+target=3D_blank>System<SPAN class=3DlanguageSpecificText><SPAN=20
+class=3Dcs>.</SPAN><SPAN class=3Dvb>.</SPAN><SPAN =
+class=3Dcpp>::</SPAN><SPAN=20
+class=3Dnu>.</SPAN><SPAN =
+class=3Dfs>.</SPAN></SPAN>Object</A><BR>&nbsp;&nbsp;<SPAN=20
+class=3Dselflink>GHIElectronics.NETMF.Net<SPAN =
+class=3DlanguageSpecificText><SPAN=20
+class=3Dcs>.</SPAN><SPAN class=3Dvb>.</SPAN><SPAN =
+class=3Dcpp>::</SPAN><SPAN=20
+class=3Dnu>.</SPAN><SPAN class=3Dfs>.</SPAN></SPAN>PPP</SPAN><BR></DIV>
+<H1 class=3Dheading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3D"ExpandCollapse_CheckKey(seeAlsoToggle, event)"=20
+onclick=3DExpandCollapse(seeAlsoToggle)><IMG id=3DseeAlsoToggle =
+class=3Dtoggle=20
+name=3DtoggleSwitch=20
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/collapse_all.gif">See=20
+Also</SPAN></H1>
+<DIV id=3DseeAlsoSection class=3Dsection name=3D"collapseableSection">
+<DIV class=3DseeAlsoStyle><A=20
+href=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documenta=
+tion/html/98b8a05f-8550-d88f-dba1-2ceeee3ee938.htm">PPP=20
+Members</A></DIV>
+<DIV class=3DseeAlsoStyle><A=20
+href=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documenta=
+tion/html/98f4a3fd-9ca8-ea75-ea81-84064371f605.htm">GHIElectronics.NETMF.=
+Net=20
+Namespace</A></DIV></DIV></DIV>
+<DIV id=3Dfooter>
+<DIV class=3DfooterLine><IMG title=3D"Footer image" alt=3D"Footer image" =
+
+src=3D"http://www.ghielectronics.com/downloads/NETMF/Library%20Documentat=
+ion/icons/footer.gif"=20
+width=3D"100%" height=3D3></DIV><A name=3Dfeedback></A><SPAN id=3Dfb=20
+class=3Dfeedbackcss></SPAN>
+<P>Send comments on this topic to <A id=3DHT_MailLink=20
+href=3D"mailto:ghielec%40ghielectronics.com?Subject=3DGHI Electronics =
+NETMF Library">mailto:ghielec%40ghielectronics.com?Subject=3DGHI=20
+Electronics NETMF Library</A>
+<SCRIPT type=3Dtext/javascript>
+        var HT_mailLink =3D document.getElementById("HT_MailLink");
+        var HT_mailLinkText =3D HT_mailLink.innerHTML;
+        HT_mailLink.href +=3D ": " + document.title;
+        HT_mailLink.innerHTML =3D HT_mailLinkText;
+        </SCRIPT>
+
+<P>Copyright (c), GHI Electronics, =
+LLC</P></DIV></DIV></DIV></BODY></HTML>
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/icons/collapse_all.gif
+
+R0lGODlhCQAJANUAAPP09Pb29/Dw8Pn5+c7Ozuvs7Pv7+/7+/uLi4/z8/efo6LW2tsjIybm6u6us
+rdzd3cTExM3Nzb2+vsrKyrCwsczMzLCxss/Pz8HBwTw8PNXX1z4/Pzs7O7e3tz09PT4+Pp2dnZmZ
+mpCRkQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAJAAkAAAY+wM6F
+QIhUJgzK5XBIGAYBAITQfEYFGIITChAUJBHQ5uPJcESNCterQCwm10L7YWF05YiHxkGBYCQNCxYO
+IUEAOw==
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/icons/expand_all.gif
+
+R0lGODlhCQAJANUAAPP09M7OzvDw8Pb29+vs7Pn5+fz8/eLi4/7+/jw8PKusrcHBwcjIybCxss3N
+zbm6u+fo6Pv7+72+vpCRkT4+Pp2dnc/Pz8TExMrKyj4/P7Cwsdzd3bW2tszMzDs7O7e3tw8PD5mZ
+mtXX1wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAJAAkAAAZEwI8l
+EHB0MAyNBYEwVAoDwCXQjGSigkXAEClQAAKCxFHJUEAJz+TRgQISBMiBg8F65JsGA0yYHDYiChoX
+CxIPHA0KIUEAOw==
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/icons/dropdown.gif
+
+R0lGODlhCQALALMAAKm2/+Hz/wAA/6Cq/42Y/1Rb/9Pk/8XV/2Jq/wAAAAAAAAAAAAAAAAAAAAAA
+AAAAACH5BAAAAAAALAAAAAAJAAsAAAQjcIBJgQzBYDx52V0ACAQHcAIpnmIqHOGoxgJieiCrgVI1
+DREAOw==
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/icons/dropdownHover.gif
+
+R0lGODlhCQALAKIAAPzs5PfJsehfF/KmfvbEqfW3l/CUZPjSviH5BAAAAAAALAAAAAAJAAsAAAMg
+SLEcCjCCJSOtM+A8uh9FUAgkaVCjmUGjAV3AYSnNQiQAOw==
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/icons/copycodeHighlight.gif
+
+R0lGODlhDwAPAOZjAMmzk+XMrPralfrAefrgqdm9lPq6aPq6Uvn599q/lbmGHeLJqdyZG/rYkNjT
+y/by6tfBoeLLq82QG/rSgsiQHcySHPrKjvn379y/le7du/XJdeHEl/j48/r28byHHayKX7WEHeWq
+OvjryeHZ0PivIfrmt/rewPn39PrrzPr05cy3l97Nt/bx5frIbPPDZfTq2frdrPrLcdzGptfBn/rb
+neSiHPrZk/ran9zAlfnSg9a7lPrShMOZZfr49ujZw8eQHPqyV+zdyvTlxe7h0u27VtaZHOmySNOV
+HPHl0frt1frov8y2lueiGufUutK8m+nauvrcpfrGYMONHd3FpffkyvTu4d6bG/rdtvq4Yb+JHfrh
+qPrXpfr16uDBlPrdpeDBloVmQfqxQfr6+v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAGMALAAAAAAPAA8AAAefgGOCg4SFhoeCAQELCzIQI4gBYpNiMzwOhxGUCEsrH5iFU2ImV1QA
+BFBeNA0NQoIQkycPVQSUYhMkGWNOYlsWAwY3tjEwNU8qCBcsL0g2YgICIlFMVkUAHMBYQDmUXElK
+XRIAD0NBPk0aYjstB2FhGBQAYPPzLmI9KSglWglShkRi2rkLU8CDISMdNnzBkaCADgWGQjBgcKTC
+jywKQAQCADs=
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/icons/ghi.png
+
+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
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/icons/CopyCode.gif
+
+R0lGODlhDwAPAOZmAJOit7LC2K7E8IGu5a6/1HOh3lyM2pirxilUqpmsx/z9/svP1JKw7Yqu/MXT
+8qm4zmSFydbe7Pb5/evv9itXsW6c2iJGj6a97CBBhqC572iX1ZywztLb8Zemu6OyyCNIlvn6/CJF
+jpyrwbLJ8K7Q/6++1DVlxSlUrKm5z4Kf2M/Z5tLW3Zqtym6X52CO58zX7Nff6puvzJCq4Lra/+rv
++yVMmydQopquypamu+bq8+Dm8SVNnSVKmL/L3dLe8MDK4MLO5PX2+7rF1Pv9/iNHkn+n8/D0+8fS
+4XOS0Uduup/F+iFDidvk9/f4+6/D7fDy+JepxKrB74648CFDipy156Kxx2aCpfDz+KOyx5quzKvC
+79Pe9VV5wSpXs3Ka6oWn6ydQpFtyj77O8DVJY1GD0f///////wAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAGYALAAAAAAPAA8AAAefgGaCg4SFhoeCAQEEBA8eK4gBZZNlVVYLhyWUCjhCYZiFKGUzJD4A
+AlpRGQwML4JYkyBPOQKUZV8mQGYiZUpSAwUXtl4jFD8dCkETOhFUZQ0NHC5dJ2AATcAVGjKURkwO
+WTsAVzAqRz0pZUUtBmRkNzwAY/PzSGVDNFtiTglEhhBl2rkjcyCEIS4SNsRgkeAAlCWGkiBAYKPG
+BwtTMAQCADs=
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/icons/footer.gif
+
+R0lGODlhAQADAPEAAO7u/9Tf/8jN3gAAACwAAAAAAQADAAACAkRUADs=
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/icons/gradient.gif
+
+R0lGODlhAQAKALMAAP////b29snJybu7u9/f3/Dw8P39/dXV1ejo6Pv7+wAAAAAAAAAAAAAAAAAA
+AAAAACH5BAAAAAAALAAAAAABAAoAAAQIEJgUCiJHjAgAOw==
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/styles/Presentation.css
+
+.userDataStyle {
+	BEHAVIOR: url(#default#userData)
+}
+DIV.saveHistory {
+	BEHAVIOR: url(#default#savehistory)
+}
+IMG.toggle {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; MARGIN-RIGHT: =
+5px; BORDER-RIGHT: 0px
+}
+IMG#toggleAllImage {
+	MARGIN-LEFT: 0px; VERTICAL-ALIGN: middle
+}
+MSHelp\:link {
+	COLOR: #0000ff; TEXT-DECORATION: underline; hoverColor: #3366ff; =
+filterString:=20
+}
+BODY {
+	FONT-STYLE: normal; MARGIN: 0px; WIDTH: 100%; FONT-FAMILY: Verdana; =
+BACKGROUND: #ffffff; COLOR: #000000; FONT-SIZE: medium; FONT-WEIGHT: =
+normal
+}
+DL {
+	MARGIN-TOP: 15px; PADDING-LEFT: 1px; MARGIN-BOTTOM: 5px
+}
+DL.authored DT {
+	MARGIN-TOP: 5px; FONT-WEIGHT: bold
+}
+DL.authored DD {
+	MARGIN-BOTTOM: 5px; MARGIN-LEFT: 20px
+}
+DD {
+	MARGIN-LEFT: 0px
+}
+UL {
+	MARGIN-TOP: 1em; MARGIN-BOTTOM: 1em
+}
+OL {
+	MARGIN-TOP: 1em; MARGIN-BOTTOM: 1em
+}
+LI {
+	MARGIN-TOP: 0.5em; MARGIN-BOTTOM: 0.5em
+}
+UL.nobullet {
+	LIST-STYLE-TYPE: none
+}
+P {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 5px
+}
+A:link {
+	COLOR: #0000ff
+}
+A:visited {
+	COLOR: #0000ff
+}
+A:hover {
+	COLOR: #dd7c3b
+}
+DIV#header A {
+	TEXT-DECORATION: underline
+}
+DIV#mainSectionMHS A {
+	TEXT-DECORATION: underline
+}
+CODE {
+	FONT-FAMILY: Consolas, "Courier New", Courier, monospace; COLOR: =
+#000066; FONT-SIZE: 105%
+}
+SPAN.parameter {
+	FONT-STYLE: italic
+}
+SPAN.italic {
+	FONT-STYLE: italic
+}
+SPAN.selflink {
+	FONT-WEIGHT: bold
+}
+SPAN.nolink {
+	FONT-WEIGHT: bold
+}
+DIV#mainSection {
+	WIDTH: 100%; FONT-SIZE: 62.5%
+}
+DIV#mainSectionMHS {
+	WIDTH: 100%; FONT-FAMILY: Verdana; FONT-SIZE: 81%
+}
+HTML > BODY #mainSection {
+	WIDTH: 100%; FONT-SIZE: 73%
+}
+HTML > BODY #mainSectionMHS {
+	WIDTH: 100%; FONT-SIZE: 73%
+}
+DIV#mainBody {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 15px; FONT-SIZE: 100%
+}
+HTML > BODY #mainBody {
+	PADDING-BOTTOM: 20px; MARGIN-TOP: 10px; MARGIN-LEFT: 15px; FONT-SIZE: =
+93%
+}
+DIV#mainBody P {
+	PADDING-RIGHT: 5px
+}
+DIV#mainBody OL {
+	PADDING-RIGHT: 5px
+}
+DIV#mainBody UL {
+	PADDING-RIGHT: 5px
+}
+DIV#mainBody DL {
+	PADDING-RIGHT: 5px
+}
+DIV#header {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 0px; =
+WIDTH: 100%; PADDING-RIGHT: 0px; FONT-FAMILY: Verdana; PADDING-TOP: 0px
+}
+DIV#header TABLE {
+	WIDTH: 100%
+}
+DIV#header TABLE TD {
+	MARGIN-TOP: 0px; PADDING-RIGHT: 20px; MARGIN-BOTTOM: 0px; COLOR: =
+#0000ff; FONT-SIZE: 70%
+}
+DIV#header TABLE#toptable TD {
+	PADDING-LEFT: 15px
+}
+DIV#header TABLE TR#headerTableRow2 TD {
+	PADDING-LEFT: 13px
+}
+DIV#header TABLE TR#headerTableRow3 TD {
+	PADDING-LEFT: 15px; PADDING-TOP: 2px
+}
+DIV#header TABLE#bottomTable {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 5px; PADDING-LEFT: 15px; BORDER-TOP: =
+#ffffff 1px solid; PADDING-TOP: 5px
+}
+DIV#mainSection TABLE TD.imageCell {
+	WHITE-SPACE: nowrap
+}
+DIV#mainSectionMHS TABLE TD.imageCell {
+	WHITE-SPACE: nowrap
+}
+DIV#mainBody DIV.alert {
+	WIDTH: 98.9%
+}
+DIV#mainBody DIV.code {
+	WIDTH: 98.9%
+}
+DIV#mainBody DIV.tableSection {
+	WIDTH: 98.9%
+}
+DIV#mainBody DIV.section DIV.alert {
+	WIDTH: 100%
+}
+DIV#mainBody DIV.section DIV.code {
+	WIDTH: 100%
+}
+DIV#mainBody DIV.section DIV.tableSection {
+	WIDTH: 100%
+}
+DIV#mainBody DIV.section UL DIV.alert {
+	WIDTH: 100%
+}
+DIV#mainBody DIV.section UL DIV.code {
+	WIDTH: 100%
+}
+DIV#mainBody DIV.section UL DIV.tableSection {
+	WIDTH: 100%
+}
+DIV#mainBody DIV.section OL DIV.alert {
+	WIDTH: 100%
+}
+DIV#mainBody DIV.section OL DIV.code {
+	WIDTH: 100%
+}
+DIV#mainBody DIV.section OL DIV.tableSection {
+	WIDTH: 100%
+}
+DIV.alert P {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 8px
+}
+DIV.code P {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 8px
+}
+DD P {
+	MARGIN-TOP: 2px; MARGIN-BOTTOM: 8px
+}
+DIV.tableSection P {
+	MARGIN-TOP: 1px; MARGIN-BOTTOM: 4px
+}
+LI P {
+	MARGIN-TOP: 2px; MARGIN-BOTTOM: 8px
+}
+DIV.seeAlsoNoToggleSection DL {
+	MARGIN-TOP: 8px; PADDING-LEFT: 1px; MARGIN-BOTTOM: 1px
+}
+DIV.seeAlsoNoToggleSection DD P {
+	MARGIN-TOP: 2px; MARGIN-BOTTOM: 8px
+}
+DIV.section DL {
+	MARGIN-TOP: 8px; PADDING-LEFT: 1px; MARGIN-BOTTOM: 1px
+}
+DIV.section DD P {
+	MARGIN-TOP: 2px; MARGIN-BOTTOM: 8px
+}
+DIV.code TABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN-TOP: -0.4em; WIDTH: 100%; =
+MARGIN-BOTTOM: 5px; FONT-SIZE: 95%; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV.code TABLE TH {
+	BORDER-BOTTOM: #c8cdde 1px solid; PADDING-LEFT: 5px; PADDING-RIGHT: =
+5px; BACKGROUND: #efeff7; COLOR: #000066; FONT-WEIGHT: bold
+}
+DIV.code TABLE TD {
+	PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #f7f7ff; BORDER-TOP: =
+#ffffff 1px solid; PADDING-TOP: 5px
+}
+SPAN#runningHeaderText {
+	COLOR: #8c8c8c; FONT-SIZE: 90%
+}
+SPAN#nsrTitle {
+	FONT-FAMILY: arial; COLOR: #000000; FONT-SIZE: 160%; FONT-WEIGHT: 400
+}
+DIV#footer {
+	PADDING-BOTTOM: 6px; MARGIN: 0px; PADDING-LEFT: 1px; WIDTH: 100%; =
+PADDING-RIGHT: 1px; FONT-SIZE: 80%; PADDING-TOP: 8px
+}
+HTML > BODY DIV#footer {
+	PADDING-BOTTOM: 6px; MARGIN: 0px; PADDING-LEFT: 1px; WIDTH: 98%; =
+PADDING-RIGHT: 1px; FONT-SIZE: 80%; PADDING-TOP: 2px
+}
+DIV.seeAlsoNoToggleSection {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: =
+15px; MARGIN-LEFT: 0px; PADDING-TOP: 2px
+}
+DIV.section {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 16px; WIDTH: 100%; PADDING-RIGHT: =
+15px; MARGIN-LEFT: 0px; PADDING-TOP: 0px
+}
+HTML > BODY DIV.section {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 16px; WIDTH: 97%; PADDING-RIGHT: =
+15px; MARGIN-LEFT: 0px; PADDING-TOP: 2px
+}
+DIV.seeSection {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 16px; WIDTH: 100%; PADDING-RIGHT: =
+15px; MARGIN-LEFT: 0px; PADDING-TOP: 0px
+}
+.heading {
+	MARGIN-TOP: 18px; MARGIN-BOTTOM: 8px; FONT-WEIGHT: bold
+}
+H1.heading {
+	FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 130%
+}
+.subHeading {
+	MARGIN-BOTTOM: 4px; FONT-WEIGHT: bold
+}
+.procedureSubHeading {
+	MARGIN-BOTTOM: 4px; FONT-WEIGHT: bold
+}
+H3.subHeading {
+	FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 120%; FONT-WEIGHT: 800
+}
+H3.procedureSubHeading {
+	FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 120%
+}
+H4.subHeading {
+	FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 110%; FONT-WEIGHT: 800
+}
+SPAN.labelheading {
+	COLOR: #003399; FONT-SIZE: 100%
+}
+DIV.labelheading {
+	COLOR: #003399; FONT-SIZE: 100%
+}
+IMG.copyCodeImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN: 1px 3px 1px 1px; =
+BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+IMG.downloadCodeImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; MARGIN-RIGHT: =
+3px; BORDER-RIGHT: 0px
+}
+IMG.viewCodeImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; MARGIN-RIGHT: =
+3px; BORDER-RIGHT: 0px
+}
+IMG.note {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; MARGIN-RIGHT: =
+3px; BORDER-RIGHT: 0px
+}
+DIV#mainSection TABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN-TOP: 5px; WIDTH: 98.9%; =
+MARGIN-BOTTOM: 5px; FONT-SIZE: 100%; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV#mainSectionMHS TABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN-TOP: 5px; WIDTH: 98.9%; =
+MARGIN-BOTTOM: 5px; FONT-SIZE: 100%; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV#mainSection TABLE TR {
+	VERTICAL-ALIGN: top
+}
+DIV#mainSectionMHS TABLE TR {
+	VERTICAL-ALIGN: top
+}
+DIV#mainSection TABLE TH {
+	BORDER-BOTTOM: #c8cdde 1px solid; TEXT-ALIGN: left; BORDER-LEFT: =
+#d5d5d3 1px; BACKGROUND-COLOR: #efeff7; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 5px; COLOR: #000066
+}
+DIV#mainSectionMHS TABLE TH {
+	BORDER-BOTTOM: #c8cdde 1px solid; TEXT-ALIGN: left; BORDER-LEFT: =
+#d5d5d3 1px; BACKGROUND-COLOR: #efeff7; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 5px; COLOR: #000066
+}
+DIV#mainSection TABLE TD {
+	BORDER-BOTTOM: #d5d5d3 1px solid; BORDER-LEFT: #d5d5d3 1px; =
+BACKGROUND-COLOR: #f7f7ff; PADDING-LEFT: 5px; PADDING-RIGHT: 5px
+}
+DIV#mainSectionMHS TABLE TD {
+	BORDER-BOTTOM: #d5d5d3 1px solid; BORDER-LEFT: #d5d5d3 1px; =
+BACKGROUND-COLOR: #f7f7ff; PADDING-LEFT: 5px; PADDING-RIGHT: 5px
+}
+DIV#mainSection TABLE TD.imageCell {
+	WHITE-SPACE: nowrap
+}
+DIV#mainSectionMHS TABLE TD.imageCell {
+	WHITE-SPACE: nowrap
+}
+DIV.code TABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; MARGIN-BOTTOM: 5px; =
+FONT-SIZE: 95%; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV.code TABLE TH {
+	BORDER-BOTTOM: #c8cdde 1px solid; PADDING-LEFT: 5px; PADDING-RIGHT: =
+5px; BACKGROUND: #efeff7; COLOR: #000066; FONT-WEIGHT: bold
+}
+DIV.code TABLE TD {
+	PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #f7f7ff; BORDER-TOP: =
+#ffffff 1px solid; PADDING-TOP: 5px
+}
+DIV.alert TABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN-TOP: 5px; WIDTH: 100%; =
+MARGIN-BOTTOM: 5px; FONT-SIZE: 100%; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV.alert TABLE TH {
+	TEXT-ALIGN: left; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: =
+#efeff7; BORDER-BOTTOM-WIDTH: 0px; COLOR: #000066
+}
+DIV.alert TABLE TD {
+	PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #f7f7ff; BORDER-TOP: =
+#ffffff 1px solid
+}
+SPAN.copyCode {
+	TEXT-ALIGN: right; DISPLAY: inline; FLOAT: right; COLOR: #0000ff; =
+FONT-SIZE: 90%; CURSOR: pointer; FONT-WEIGHT: normal; TEXT-DECORATION: =
+underline
+}
+SPAN.copyCodeOnHover {
+	TEXT-ALIGN: right; DISPLAY: inline; FLOAT: right; COLOR: #e85f17; =
+FONT-SIZE: xx-small; CURSOR: pointer; FONT-WEIGHT: normal; =
+TEXT-DECORATION: underline
+}
+.downloadCode {
+	COLOR: #0000ff; FONT-SIZE: 90%; CURSOR: pointer; FONT-WEIGHT: normal
+}
+.viewCode {
+	COLOR: #0000ff; FONT-SIZE: 90%; CURSOR: pointer; FONT-WEIGHT: normal
+}
+DIV.code PRE {
+	FONT-FAMILY: Consolas, "Courier New", Courier, monospace; BACKGROUND: =
+#f7f7ff; COLOR: #000066; FONT-SIZE: 105%
+}
+.tip {
+	FONT-STYLE: italic; COLOR: #0000ff; CURSOR: pointer; TEXT-DECORATION: =
+underline
+}
+.math {
+	FONT-FAMILY: Times New Roman; FONT-SIZE: 125%
+}
+#devlangsMenu {
+	BORDER-BOTTOM: #f3cbb5 1px solid; POSITION: absolute; BORDER-LEFT: =
+#f3cbb5 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; =
+PADDING-RIGHT: 8px; BACKGROUND: #fcece4; VISIBILITY: hidden; FONT-SIZE: =
+70%; BORDER-TOP: #f3cbb5 1px solid; BORDER-RIGHT: #f3cbb5 1px solid; =
+PADDING-TOP: 4px
+}
+DIV.OH_outerContent #devlangsMenu {
+	FONT-SIZE: 91%
+}
+#memberOptionsMenu {
+	BORDER-BOTTOM: #f3cbb5 1px solid; POSITION: absolute; BORDER-LEFT: =
+#f3cbb5 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; =
+PADDING-RIGHT: 8px; BACKGROUND: #fcece4; VISIBILITY: hidden; FONT-SIZE: =
+70%; BORDER-TOP: #f3cbb5 1px solid; BORDER-RIGHT: #f3cbb5 1px solid; =
+PADDING-TOP: 4px
+}
+DIV.OH_outerContent #memberOptionsMenu {
+	FONT-SIZE: 91%
+}
+#memberFrameworksMenu {
+	BORDER-BOTTOM: #f3cbb5 1px solid; POSITION: absolute; BORDER-LEFT: =
+#f3cbb5 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; =
+PADDING-RIGHT: 8px; BACKGROUND: #fcece4; VISIBILITY: hidden; FONT-SIZE: =
+70%; BORDER-TOP: #f3cbb5 1px solid; BORDER-RIGHT: #f3cbb5 1px solid; =
+PADDING-TOP: 4px
+}
+DIV.OH_outerContent #memberFrameworksMenu {
+	FONT-SIZE: 91%
+}
+.checkboxLabel {
+	PADDING-BOTTOM: 4px; COLOR: #0000ff; FONT-SIZE: 90%; CURSOR: pointer; =
+TEXT-DECORATION: underline
+}
+IMG#devlangsDropdownImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN-LEFT: 0px; VERTICAL-ALIGN: =
+middle; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+IMG#memberOptionsDropdownImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN-LEFT: 0px; VERTICAL-ALIGN: =
+middle; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+IMG#memberFrameworksDropdownImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN-LEFT: 0px; VERTICAL-ALIGN: =
+middle; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV.footerLine {
+	PADDING-BOTTOM: 6px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 8px
+}
+DIV.hr1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; =
+PADDING-RIGHT: 0px; BACKGROUND: #c8cdde; HEIGHT: 1px; FONT-SIZE: 1px; =
+PADDING-TOP: 0px
+}
+DIV.hr2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; =
+PADDING-RIGHT: 0px; BACKGROUND: #d4dfff; HEIGHT: 1px; FONT-SIZE: 1px; =
+PADDING-TOP: 0px
+}
+DIV.hr3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; =
+PADDING-RIGHT: 0px; BACKGROUND: #eeeeff; HEIGHT: 1px; FONT-SIZE: 1px; =
+PADDING-TOP: 0px
+}
+SPAN.cs {
+	DISPLAY: none
+}
+SPAN.vb {
+	DISPLAY: none
+}
+SPAN.cpp {
+	DISPLAY: none
+}
+SPAN.nu {
+	DISPLAY: inline
+}
+SPAN.fs {
+	DISPLAY: none
+}
+SPAN.code {
+	FONT-FAMILY: Consolas, "Courier New", Courier, monospace; COLOR: =
+#000066; FONT-SIZE: 105%
+}
+SPAN.command {
+	FONT-FAMILY: Consolas, "Courier New", Courier, monospace; COLOR: =
+#000066; FONT-SIZE: 105%
+}
+SPAN.literalValue {
+	COLOR: #8b0000
+}
+SPAN.ui {
+	FONT-WEIGHT: bold
+}
+SPAN.math {
+	FONT-STYLE: italic
+}
+SPAN.input {
+	FONT-WEIGHT: bold
+}
+SPAN.term {
+	FONT-STYLE: italic
+}
+SPAN.label {
+	FONT-WEIGHT: bold
+}
+Q {
+	FONT-STYLE: italic
+}
+SPAN.foreignPhrase {
+	FONT-STYLE: italic
+}
+SPAN.phrase {
+	FONT-STYLE: italic
+}
+SPAN.placeholder {
+	FONT-STYLE: italic
+}
+SPAN.keyword {
+=09
+}
+SPAN.typeparameter {
+	FONT-STYLE: italic
+}
+SPAN.media {
+	MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px
+}
+DIV.mediaNear {
+	TEXT-ALIGN: left; MARGIN: 1em
+}
+DIV.mediaFar {
+	TEXT-ALIGN: right; MARGIN: 1em
+}
+DIV.mediaCenter {
+	TEXT-ALIGN: center; MARGIN: 1em
+}
+DIV.caption {
+	MARGIN-TOP: 1em; MARGIN-BOTTOM: 1em; COLOR: #003399; FONT-SIZE: 100%
+}
+SPAN.captionLead {
+	FONT-WEIGHT: bold; MARGIN-RIGHT: 0.5em
+}
+DIV.code SPAN.identifier {
+=09
+}
+DIV.code SPAN.keyword {
+	COLOR: #871f78
+}
+DIV.code SPAN.parameter {
+	FONT-STYLE: italic
+}
+DIV.code SPAN.literal {
+	COLOR: #8b0000
+}
+DIV.code SPAN.comment {
+	COLOR: #006400
+}
+SPAN.syntaxLabel {
+	COLOR: #0481da; FONT-WEIGHT: bold
+}
+SPAN.introStyle {
+	COLOR: darkgray
+}
+DIV.seeAlsoStyle {
+	PADDING-TOP: 5px
+}
+TD.nsrBottom {
+	WIDTH: 100%; HEIGHT: 0.6em
+}
+SPAN.clsGlossary {
+	COLOR: #509950; CURSOR: default; FONT-WEIGHT: bold
+}
+DIV.clsTooltip {
+	BORDER-BOTTOM: black 1px solid; POSITION: absolute; BORDER-LEFT: black =
+1px solid; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #ffffaa; PADDING-LEFT: =
+2px; PADDING-RIGHT: 2px; DISPLAY: none; FONT-FAMILY: Arial; COLOR: =
+black; FONT-SIZE: 8pt; BORDER-TOP: black 1px solid; BORDER-RIGHT: black =
+1px solid; PADDING-TOP: 2px; TOP: 0px; LEFT: 0px
+}
+SPAN.feedbackcss {
+	WIDTH: 100%; MARGIN-LEFT: 15px; FONT-SIZE: 110%
+}
+DIV#feedbackarea TABLE {
+	BORDER-RIGHT-WIDTH: 0px; MARGIN-TOP: 0px; WIDTH: 300px; MARGIN-BOTTOM: =
+0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; MARGIN-LEFT: 0px; =
+BORDER-LEFT-WIDTH: 0px
+}
+DIV#feedbackarea TABLE TD {
+	BORDER-BOTTOM: 0px; TEXT-ALIGN: center; FONT-FAMILY: Verdana; =
+FONT-SIZE: 100%
+}
+DIV#feedbackarea P {
+	MARGIN: 0px 5px 0px 6px; WIDTH: 100%; FONT-SIZE: 100%
+}
+DIV#feedbackarea H5 {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0.7em; MARGIN-LEFT: 6px; FONT-SIZE: =
+10pt
+}
+P.feedbackarea {
+	BACKGROUND-COLOR: #d4dfff; ; WIDTH: =
+expression(document.body.clientWidth-27); FONT-SIZE: 100%
+}
+INPUT#submitFeedback {
+	TEXT-ALIGN: center; FONT-SIZE: 100%
+}
+SPAN#feedbackarea {
+	WIDTH: 100%
+}
+DIV#feedbackarea {
+	WIDTH: 100%
+}
+SPAN.filterOnHover {
+	COLOR: #e85f17
+}
+SPAN.filter {
+	COLOR: #0000ff
+}
+H1.glossaryTitle {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px; COLOR: #000000; FONT-SIZE: 140%
+}
+DIV.glossaryDiv {
+=09
+}
+H2.glossaryDivHeading {
+	MARGIN-TOP: 1em; MARGIN-BOTTOM: 0px; COLOR: black; FONT-SIZE: 115%
+}
+DIV.glossaryLetterBar {
+	FONT-SIZE: 90%
+}
+HR.glossaryRule {
+	TEXT-ALIGN: left; COLOR: black
+}
+H3.glossaryGroupHeading {
+	MARGIN: 5px 0px; COLOR: gray; FONT-SIZE: 120%
+}
+DIV.glossaryGroup {
+=09
+}
+DL.glossaryGroupList {
+	MARGIN: 0px; COLOR: black
+}
+DT.glossaryEntry {
+	MARGIN-LEFT: 2em; FONT-WEIGHT: bold
+}
+DD.glossaryEntry {
+	MARGIN-BOTTOM: 2em; MARGIN-LEFT: 2em
+}
+DIV.relatedEntry {
+	MARGIN-BOTTOM: 4px
+}
+DIV.bibliographStyle {
+	PADDING-TOP: 5px
+}
+SPAN.bibliographyNumber {
+=09
+}
+SPAN.bibliographyAuthor {
+	FONT-WEIGHT: bold
+}
+SPAN.bibliographyTitle {
+	FONT-STYLE: italic
+}
+SPAN.bibliographyPublisher {
+=09
+}
+SUP.citation A:link A:visited A:active {
+	TEXT-DECORATION: none
+}
+LI.outlineSectionEntry {
+=09
+}
+DIV.outlineSectionEntrySummary {
+=09
+}
+TABLE.members TH.iconColumn {
+	WIDTH: 60px
+}
+TABLE.members TH.nameColumn {
+	WIDTH: 33%
+}
+TABLE.members TH.valueColumn {
+	WIDTH: 10%
+}
+TABLE.members TH.descriptionColumn {
+=09
+}
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/styles/highlight.css
+
+.highlight-inline {
+	FONT-FAMILY: Consolas, "Courier New", Courier, monospace; COLOR: =
+#000066; FONT-SIZE: 9pt
+}
+.highlight-pre {
+	PADDING-BOTTOM: 0.4em; BACKGROUND-COLOR: #efeff7; MARGIN-TOP: 0px; =
+PADDING-LEFT: 0.4em; WIDTH: 99.5%; PADDING-RIGHT: 0.4em; FONT-FAMILY: =
+Consolas, "Courier New", Courier, monospace; MARGIN-BOTTOM: 1em; CLEAR: =
+both; FONT-SIZE: 9pt; PADDING-TOP: 0.4em
+}
+.highlight-comment {
+	COLOR: #006633
+}
+.highlight-literal {
+	COLOR: #cc0000
+}
+.highlight-number {
+	COLOR: #009966
+}
+.highlight-keyword {
+	COLOR: #0000ff
+}
+.highlight-preprocessor {
+	COLOR: #996666
+}
+.highlight-xml-tag {
+	COLOR: #aa4400
+}
+.highlight-xml-bracket {
+	COLOR: #0000ff
+}
+.highlight-xml-comment {
+	COLOR: #008800
+}
+.highlight-xml-cdata {
+	COLOR: #aa0088
+}
+.highlight-xml-attribute-name {
+	COLOR: #0000ff
+}
+.highlight-xml-attribute-equal {
+	COLOR: #000000
+}
+.highlight-xml-attribute-value {
+	COLOR: #cc0000
+}
+.highlight-title {
+	BORDER-BOTTOM: gray 1px solid; PADDING-BOTTOM: 3px; MARGIN-TOP: 1em; =
+MARGIN-BOTTOM: 2px; FONT-WEIGHT: bold
+}
+.highlight-copycode {
+	PADDING-RIGHT: 10px; FLOAT: right; CURSOR: pointer; FONT-WEIGHT: normal
+}
+.highlight-copycode_h {
+	PADDING-RIGHT: 10px; FLOAT: right; CURSOR: pointer; FONT-WEIGHT: =
+normal; TEXT-DECORATION: underline
+}
+.highlight-lineno {
+	COLOR: black; FONT-SIZE: 80%
+}
+.highlight-lnborder {
+	BORDER-BOTTOM-COLOR: gray; BORDER-TOP-COLOR: gray; WIDTH: 4px; =
+PADDING-RIGHT: 4px; BORDER-LEFT-COLOR: gray; MARGIN-RIGHT: 4px; =
+BORDER-RIGHT: gray 1px solid
+}
+.highlight-spacer {
+	PADDING-RIGHT: 20px
+}
+.highlight-spacerShort {
+	PADDING-RIGHT: 5px
+}
+.highlight-collapsebox {
+	BORDER-BOTTOM: gray 1px solid; TEXT-ALIGN: center; BORDER-LEFT: gray =
+1px solid; COLOR: black; MARGIN-LEFT: 2px; BORDER-TOP: gray 1px solid; =
+CURSOR: pointer; MARGIN-RIGHT: 5px; BORDER-RIGHT: gray 1px solid
+}
+.highlight-collapsed {
+	BORDER-BOTTOM: gray 1px solid; BORDER-LEFT: gray 1px solid; MARGIN: =
+2px; COLOR: gray; BORDER-TOP: gray 1px solid; BORDER-RIGHT: gray 1px =
+solid
+}
+.highlight-expanded {
+	BORDER-BOTTOM-COLOR: gray; BORDER-LEFT: gray 1px solid; =
+BORDER-TOP-COLOR: gray; BORDER-RIGHT-COLOR: gray; MARGIN-LEFT: 2px; =
+MARGIN-RIGHT: 10px
+}
+.highlight-endblock {
+	BORDER-BOTTOM: gray 1px solid; BORDER-LEFT: gray 1px solid; =
+BORDER-TOP-COLOR: gray; BORDER-RIGHT-COLOR: gray; MARGIN-LEFT: 2px; =
+MARGIN-RIGHT: 10px
+}
+.highlight-pshell-cmdlet {
+	COLOR: #5a9ea5; FONT-WEIGHT: bold
+}
+.highlight-namespace {
+	COLOR: #008284
+}
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: 7bit
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/scripts/EventUtilities.js
+
+
+	// attach a handler to a particular event on an element
+	// in a browser-independent way
+	function registerEventHandler (element, event, handler) {
+		if (element.attachEvent) {
+			// MS registration model
+			element.attachEvent('on' + event, handler);
+		} else if (element.addEventListener) {
+			// NN (W4C) regisration model
+			element.addEventListener(event, handler, false);
+		} else {
+			// old regisration model as fall-back
+			element[event] = handler;
+		}
+	}
+
+	// get a delegate that refers to an instance method
+	function getInstanceDelegate (obj, methodName) {
+		return( function(e) {
+			e = e || window.event;
+			return obj[methodName](e);
+		} );
+	}
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/scripts/SplitScreen.js
+
+
+	function SplitScreen (nonScrollingRegionId, scrollingRegionId) {
+
+		// store references to the two regions
+		this.nonScrollingRegion =3D =
+document.getElementById(nonScrollingRegionId);
+		this.scrollingRegion =3D document.getElementById(scrollingRegionId);
+
+		// set the scrolling settings
+		this.scrollingRegion.parentElement.style.margin =3D "0px";
+		this.scrollingRegion.parentElement.style.overflow =3D "hidden";
+		this.scrollingRegion.style.overflow =3D "auto";
+
+		// fix the size of the scrolling region
+		this.resize(null);
+
+		// add an event handler to resize the scrolling region when the window =
+is resized	=09
+		registerEventHandler(window, 'resize', getInstanceDelegate(this, =
+"resize"));
+
+	}
+
+	SplitScreen.prototype.resize =3D function(e) {
+		var height =3D document.body.clientHeight - =
+this.nonScrollingRegion.offsetHeight;
+		if (height > 0) {
+			this.scrollingRegion.style.height =3D height;
+		} else {
+			this.scrollingRegion.style.height =3D 0;
+		}
+		this.scrollingRegion.style.width =3D =
+this.scrollingRegion.parentElement.clientWidth;
+	}
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/scripts/Dropdown.js
+
+
+// Dropdown menu control
+
+function Dropdown(activatorId, dropdownId, containerId) {
+
+	// store activator and dropdown elements
+	this.activator =3D document.getElementById(activatorId);
+	this.dropdown =3D document.getElementById(dropdownId);
+	this.container =3D document.getElementById(containerId);
+	this.activatorImage =3D document.getElementById(activatorId + "Image");
+
+	// wire up show/hide events
+	registerEventHandler(this.activator,'mouseover', =
+getInstanceDelegate(this, "show"));
+	registerEventHandler(this.activator,'mouseout', =
+getInstanceDelegate(this, "requestHide"));
+	registerEventHandler(this.dropdown,'mouseover', =
+getInstanceDelegate(this, "show"));
+	registerEventHandler(this.dropdown,'mouseout', =
+getInstanceDelegate(this, "requestHide"));
+
+	// fix visibility and position
+	this.dropdown.style.visibility =3D 'hidden';
+	this.dropdown.style.position =3D 'absolute';
+	this.reposition(null);
+
+	// wire up repositioning event
+	registerEventHandler(window, 'resize', getInstanceDelegate(this, =
+"reposition"));
+
+
+}
+
+Dropdown.prototype.show =3D function(e) {
+	clearTimeout(this.timer);
+	this.dropdown.style.visibility =3D 'visible';
+	if (this.activatorImage !=3D null)
+	    this.activatorImage.src =3D dropDownHoverImage.src;
+	if (this.activator !=3D null)
+	    this.activator.className =3D "filterOnHover";
+}
+
+Dropdown.prototype.hide =3D function(e) {
+	this.dropdown.style.visibility =3D 'hidden';
+	if (this.activatorImage !=3D null)
+	    this.activatorImage.src =3D dropDownImage.src;
+	if (this.activator !=3D null)
+	    this.activator.className =3D "filter";
+}
+
+Dropdown.prototype.requestHide =3D function(e) {
+	this.timer =3D setTimeout( getInstanceDelegate(this, "hide"), 250);
+}
+
+Dropdown.prototype.reposition =3D function(e) {
+
+	// get position of activator
+	var offsetLeft =3D 0;
+	var offsetTop =3D 0;
+	var offsetElement =3D this.activator;
+=09
+	while (offsetElement && offsetElement !=3D this.container) {
+		offsetLeft +=3D offsetElement.offsetLeft;
+		offsetTop +=3D offsetElement.offsetTop;
+		offsetElement =3D offsetElement.offsetParent;
+	}
+
+	// set position of dropdown relative to it
+	this.dropdown.style.left =3D offsetLeft;
+	this.dropdown.style.top =3D offsetTop + this.activator.offsetHeight;
+}
+
+Dropdown.prototype.SetActivatorLabel =3D function(labelId)
+{
+    // get the children of the activator node, which includes the label =
+nodes
+    var labelNodes =3D this.activator.childNodes;
+
+
+    for(var labelCount=3D0; labelCount < labelNodes.length; =
+labelCount++)
+    {
+	    if(labelNodes[labelCount].tagName =3D=3D 'LABEL')
+	    {
+	        var labelNodeId =3D labelNodes[labelCount].getAttribute('id');
+		    if (labelNodeId =3D=3D labelId)
+		    {
+	            labelNodes[labelCount].style.display =3D "inline";
+		    }
+		    else
+		    {
+	            labelNodes[labelCount].style.display =3D "none";
+		    }
+	    }
+    }
+}
+ 
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/scripts/script_manifold.js
+
+registerEventHandler(window, 'load', getInstanceDelegate(this, =
+"LoadPage"));
+registerEventHandler(window, 'unload', getInstanceDelegate(this, =
+"Window_Unload"));
+registerEventHandler(window, 'beforeprint', getInstanceDelegate(this, =
+"set_to_print"));
+registerEventHandler(window, 'afterprint', getInstanceDelegate(this, =
+"reset_form"));
+
+var scrollPos =3D 0;
+
+var inheritedMembers;
+var protectedMembers;
+var netcfMembersOnly;
+var netXnaMembersOnly;
+
+// Initialize array of section states
+
+var sectionStates =3D new Array();
+var sectionStatesInitialized =3D false;
+
+//Hide sample source in select element
+function HideSelect()
+{
+	var selectTags =3D document.getElementsByTagName("SELECT");
+	var spanEles =3D document.getElementsByTagName("span");
+	var i =3D 10;
+	var m;
+=09
+	if (selectTags.length !=3D null || selectTags.length >0)
+	{
+		for (n=3D0; n<selectTags.length; n++)
+		{		=09
+			var lan =3D selectTags(n).getAttribute("id").substr("10");
+			//hide the first select that is on
+			switch (lan.toLowerCase())
+			{
+				case "visualbasic":
+					//alert(lan);
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D "VisualBasic" =
+&& spanEles[m].style.display !=3D "none" && n <i)
+							i =3D n;			=09
+					}
+					break;
+				case "visualbasicdeclaration":
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D =
+"VisualBasicDeclaration" && spanEles[m].style.display !=3D "none" && n < =
+i)
+							i =3D n;
+					}
+					break;
+				case "visualbasicusage":
+					//alert(lan);
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D =
+"VisualBasicUsage" && spanEles[m].style.display !=3D "none" && n <i)
+							i =3D n;			=09
+					}
+					break;
+				case "csharp":
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D "CSharp" && =
+spanEles[m].style.display !=3D "none" && n < i)
+							i =3D n;
+					}
+					break;
+				case "managedcplusplus":
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D =
+"ManagedCPlusPlus" && spanEles[m].style.display !=3D "none" && n < i)
+							i =3D n;
+					}
+					break;
+				case "jsharp":
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D "JSharp" && =
+spanEles[m].style.display !=3D "none" && n < i)
+							i =3D n;
+					}
+					break;
+				case "jscript":
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D "JScript" && =
+spanEles[m].style.display !=3D "none" && n < i)
+							i =3D n;
+					}
+					break;			=09
+				case "xaml":
+					//alert(lan);
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D "XAML" && =
+spanEles[m].style.display !=3D "none" && n <i)
+							i =3D n;			=09
+					}
+					break;
+				case "javascript":
+					//alert(lan);
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D "JavaScript" =
+&& spanEles[m].style.display !=3D "none" && n <i)
+							i =3D n;			=09
+					}
+					break;
+				case "fsharp":
+					for (m=3D0; m<spanEles.length; m++)
+					{				=09
+						if (spanEles[m].getAttribute("codeLanguage") =3D=3D "FSharp" && =
+spanEles[m].style.display !=3D "none" && n < i)
+							i =3D n;
+					}
+					break;
+			}						=09
+		}
+		if (i !=3D 10)	=09
+			selectTags(i).style.visibility =3D "hidden";
+	}
+	else{ alert("Not found!");}=09
+}
+
+function UnHideSelect()
+{	=09
+	var selectTags =3D document.getElementsByTagName("SELECT");
+	var n;
+=09
+	//un-hide all the select sections
+	if (selectTags.length !=3D null || selectTags.length >0)
+	{
+		for (n=3D0; n<selectTags.length; n++)
+			selectTags(n).style.visibility =3D "visible";
+	}=09
+}
+
+function InitSectionStates()
+{
+    sectionStatesInitialized =3D true;
+    if (globals =3D=3D null) globals =3D GetGlobals();
+    // SectionStates has the format:
+    //
+    //     =
+firstSectionId:state;secondSectionId:state;thirdSectionId:state; ... =
+;lastSectionId:state
+    //
+    // where state is either "e" (expanded) or "c" (collapsed)
+   =20
+    // get the SectionStates from the previous topics
+    var states =3D Load("SectionStates");
+
+    var start =3D 0;
+    var end;
+    var section;
+    var state;
+    var allCollapsed =3D false;
+    // copy the previous section states to the sectionStates array for =
+the current page
+	if (states !=3D null && states !=3D "")
+	{
+	    allCollapsed =3D true;
+        while (start < states.length)
+        {
+            end =3D states.indexOf(":", start);
+           =20
+            section =3D states.substring(start, end);
+           =20
+            start =3D end + 1;
+            end =3D states.indexOf(";", start);
+            if (end =3D=3D -1) end =3D states.length;
+            state =3D states.substring(start, end);
+            sectionStates[section] =3D state;
+    	    allCollapsed =3D allCollapsed && (state =3D=3D "c");
+    	    start =3D end + 1;
+        }
+	}
+   =20
+    // now set the state for any section ids in the current document =
+that weren't in previous
+	var imgElements =3D document.getElementsByName("toggleSwitch");
+	var i;
+	for (i =3D 0; i < imgElements.length; ++i)
+        sectionStates[imgElements[i].id] =3D =
+GetInitialSectionState(imgElements[i].id, allCollapsed);
+}
+
+function GetInitialSectionState(itemId, allCollapsed)
+{
+    // if the global state is "allCollapsed", set all section states to =
+collapsed
+    if (allCollapsed) return "c";
+   =20
+    // generic <section> node ids begin with "sectionToggle", so the =
+same id can refer to different sections in different topics
+    // we don't want to persist their state; set it to expanded=20
+    if (itemId.indexOf("sectionToggle", 0) =3D=3D 0) return "e";
+   =20
+    // the default state for new section ids is expanded=20
+    if (sectionStates[itemId] =3D=3D null) return "e";
+   =20
+    // otherwise, persist the passed in state=20
+    return sectionStates[itemId];
+}
+
+var noReentry =3D false;
+
+function OnLoadImage(eventObj)
+{
+    if (noReentry) return;
+   =20
+    if (!sectionStatesInitialized)=20
+	    InitSectionStates();=20
+  =20
+    var elem;
+    if(document.all) elem =3D eventObj.srcElement;
+    else elem =3D eventObj.target;
+       =20
+    if ((sectionStates[elem.id] =3D=3D "e"))
+		ExpandSection(elem);
+	else
+		CollapseSection(elem);
+}
+
+/*=09
+**********
+**********   Begin
+**********
+*/
+
+var docSettings;
+var mainSection;
+
+function LoadPage()
+{
+	// If not initialized, grab the DTE.Globals object
+    if (globals =3D=3D null)=20
+        globals =3D GetGlobals();
+
+	// docSettings has settings for the current document,=20
+	//     which include persistent and non-persistent keys for checkbox =
+filters and expand/collapse section states
+	// persistKeys is an array of the checkbox ids to persist
+	if (docSettings =3D=3D null)=20
+	{
+        docSettings =3D new Array();
+        persistKeys =3D new Array();
+	}
+=09
+    if (!sectionStatesInitialized)=20
+	    InitSectionStates();=20
+
+	var imgElements =3D document.getElementsByName("toggleSwitch");
+=09
+	for (i =3D 0; i < imgElements.length; i++)
+	{
+		if ((sectionStates[imgElements[i].id] =3D=3D "e"))
+			ExpandSection(imgElements[i]);
+		else
+			CollapseSection(imgElements[i]);
+	}
+=09
+	SetCollapseAll();
+
+	// split screen
+	mainSection =3D document.getElementById("mainSection");
+	if (!mainSection)
+	    mainSection =3D document.getElementById("mainSectionMHS");
+	   =20
+	var screen =3D new SplitScreen('header', mainSection.id);
+
+	// init devlang filter checkboxes
+	SetupDevlangsFilter();
+=09
+	// init memberlist filter checkboxes for protected, inherited, etc
+	SetupMemberOptionsFilter();
+=09
+	// init memberlist platforms filter checkboxes, e.g. .Net Framework, =
+CompactFramework, XNA, Silverlight, etc.
+	SetupMemberFrameworksFilter();
+
+	// removes blank target from in the self links for Microsoft Help =
+System
+	RemoveTargetBlank();
+
+    // set gardien image to the bottom of header or Microsoft Help =
+System
+	SetBackground('headerBottom');
+=09
+	// vs70.js did this to allow up/down arrow scrolling, I think
+	try { mainSection.setActive(); } catch(e) { }
+
+	//set the scroll position
+	try{mainSection.scrollTop =3D scrollPos;}
+	catch(e){}
+}
+
+function Window_Unload()
+{
+    // for each key in persistArray, write the key/value pair to globals
+    for (var i =3D 0; i < persistKeys.length; i++)
+        Save(persistKeys[i],docSettings[persistKeys[i]]);
+   =20
+    // save the expand/collapse section states
+    SaveSections();
+}
+
+// removes blank target from in the self links for Microsoft Help System
+function RemoveTargetBlank() {
+    var elems =3D document.getElementsByTagName("a");
+    for (var i =3D 0; i < elems.length; i++) {
+        if (elems[i].getAttribute("target") =3D=3D "_blank" &&
+        elems[i].getAttribute("href", 2).indexOf("#", 0) =3D=3D 0)
+            elems[i].removeAttribute("target");
+    }
+}
+
+function set_to_print()
+{
+	//breaks out of divs to print
+	var i;
+
+	if (window.text)document.all.text.style.height =3D "auto";
+		=09
+	for (i=3D0; i < document.all.length; i++)
+	{
+		if (document.all[i].tagName =3D=3D "body")
+		{
+			document.all[i].scroll =3D "yes";
+		}
+		if (document.all[i].id =3D=3D "header")
+		{
+			document.all[i].style.margin =3D "0px 0px 0px 0px";
+			document.all[i].style.width =3D "100%";
+		}
+		if (document.all[i].id =3D=3D mainSection.id)
+		{
+			document.all[i].style.overflow =3D "visible";
+			document.all[i].style.top =3D "5px";
+			document.all[i].style.width =3D "100%";
+			document.all[i].style.padding =3D "0px 10px 0px 30px";
+		}
+	}
+}
+
+function reset_form()
+{
+	//returns to the div nonscrolling region after print
+	 document.location.reload();
+}
+
+/*=09
+**********
+**********   End
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Language Filtering
+**********
+*/
+
+var devlangsMenu;
+var devlangsDropdown;
+var memberOptionsMenu;
+var memberOptionsDropdown;
+var memberFrameworksMenu;
+var memberFrameworksDropdown;
+var dropdowns =3D new Array();
+
+// initialize the devlang filter dropdown menu
+function SetupDevlangsFilter()
+{
+    var divNode =3D document.getElementById('devlangsMenu');
+	if (divNode =3D=3D null)
+	    return;
+
+	var checkboxNodes =3D divNode.getElementsByTagName("input");
+=09
+	if (checkboxNodes.length =3D=3D 1)
+	{
+	    // only one checkbox, so we don't need a menu
+	    // get the devlang and use it to display the correct devlang spans
+	    // a one-checkbox setting like this is NOT persisted, nor is it set =
+from the persisted globals
+	    var checkboxData =3D checkboxNodes[0].getAttribute('data');
+        var dataSplits =3D checkboxData.split(',');
+        var devlang =3D "";
+        if (dataSplits.length > 1)
+            devlang =3D dataSplits[1];
+	    styleSheetHandler(devlang);
+	}
+	else
+	{
+	    // setup the dropdown menu
+        devlangsMenu =3D new CheckboxMenu("devlangsMenu", docSettings, =
+persistKeys, globals);
+		devlangsDropdown =3D new Dropdown('devlangsDropdown', 'devlangsMenu', =
+'header');
+		dropdowns.push(devlangsDropdown);
+
+        // update the label of the dropdown menu
+        SetDropdownMenuLabel(devlangsMenu, devlangsDropdown);
+       =20
+        // toggle the document's display docSettings
+	    codeBlockHandler();
+	    styleSheetHandler("");
+	}
+}
+
+
+// called onclick in a devlang filter checkbox
+// tasks to perform at this event are:
+//   toggle the check state of the checkbox that was clicked
+//   update the user's devlang preference, based on devlang checkbox =
+states
+//   update stylesheet based on user's devlang preference
+//   show/hide snippets/syntax based on user's devlang preference
+//  =20
+function SetLanguage(checkbox)
+{
+    // toggle the check state of the checkbox that was clicked
+    devlangsMenu.ToggleCheckState(checkbox.id);
+   =20
+    // update the label of the dropdown menu
+    SetDropdownMenuLabel(devlangsMenu, devlangsDropdown);
+=09
+    // update the display of the document's items that are dependent on =
+the devlang setting
+	codeBlockHandler();
+	styleSheetHandler("");
+=09
+}
+/*=09
+**********
+**********   End Language Filtering
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Members Options Filtering
+**********
+*/
+
+// initialize the memberlist dropdown menu for protected, inherited, etc
+function SetupMemberOptionsFilter()
+{
+	if (document.getElementById('memberOptionsMenu') !=3D null) {
+        memberOptionsMenu =3D new CheckboxMenu("memberOptionsMenu", =
+docSettings, persistKeys, globals);
+		memberOptionsDropdown =3D new Dropdown('memberOptionsDropdown', =
+'memberOptionsMenu', 'header');
+		dropdowns.push(memberOptionsDropdown);
+
+        // update the label of the dropdown menu
+        SetDropdownMenuLabel(memberOptionsMenu, memberOptionsDropdown);
+       =20
+        // show/hide memberlist rows based on the current docSettings
+	    memberlistHandler();
+	}
+}
+
+// sets the background to an element for Microsoft Help 3 system
+function SetBackground(id) {
+    var elem =3D document.getElementById(id);
+    if (elem) {
+        var img =3D document.getElementById(id + "Image");
+        if (img) {
+            elem.setAttribute("background", img.getAttribute("src"));
+        }
+    }
+}
+
+function SetupMemberFrameworksFilter()
+{
+	if (document.getElementById('memberFrameworksMenu') !=3D null)=20
+	{
+        memberFrameworksMenu =3D new =
+CheckboxMenu("memberFrameworksMenu", docSettings, persistKeys, globals);
+		memberFrameworksDropdown =3D new Dropdown('memberFrameworksDropdown', =
+'memberFrameworksMenu', 'header');
+		dropdowns.push(memberFrameworksDropdown);
+
+        // update the label of the dropdown menu
+        SetDropdownMenuLabel(memberFrameworksMenu, =
+memberFrameworksDropdown);
+       =20
+        // show/hide memberlist rows based on the current docSettings
+	    memberlistHandler();
+	}
+}
+
+function SetMemberOptions(checkbox, groupName)
+{
+    var checkboxGroup =3D new Array();
+    if (groupName =3D=3D "vis")
+    {
+        if (document.getElementById('PublicCheckbox') !=3D null)
+            checkboxGroup.push('PublicCheckbox');
+        if (document.getElementById('ProtectedCheckbox') !=3D null)
+            checkboxGroup.push('ProtectedCheckbox');
+    }
+    else if (groupName =3D=3D "decl")
+    {
+        if (document.getElementById('DeclaredCheckbox') !=3D null)
+            checkboxGroup.push('DeclaredCheckbox');
+        if (document.getElementById('InheritedCheckbox') !=3D null)
+            checkboxGroup.push('InheritedCheckbox');
+    }
+   =20
+    // toggle the check state of the checkbox that was clicked
+    memberOptionsMenu.ToggleGroupCheckState(checkbox.id, checkboxGroup);
+   =20
+    // update the label of the dropdown menu
+    SetDropdownMenuLabel(memberOptionsMenu, memberOptionsDropdown);
+=09
+    // update the display of the document's items that are dependent on =
+the member options settings
+    memberlistHandler();
+}
+
+function SetMemberFrameworks(checkbox)
+{
+    // toggle the check state of the checkbox that was clicked
+    memberFrameworksMenu.ToggleCheckState(checkbox.id);
+   =20
+    // update the label of the dropdown menu
+    SetDropdownMenuLabel(memberFrameworksMenu, =
+memberFrameworksDropdown);
+=09
+    // update the display of the document's items that are dependent on =
+the member platforms settings
+    memberlistHandler();
+}
+
+function DisplayFilteredMembers()
+{
+	var iAllMembers =3D document.getElementsByTagName("tr");
+	var i;
+=09
+	for(i =3D 0; i < iAllMembers.length; ++i)
+	{
+		if (((iAllMembers[i].notSupportedOnXna =3D=3D "true") && =
+(netXnaMembersOnly =3D=3D "on")) ||
+			((iAllMembers[i].getAttribute("name") =3D=3D "inheritedMember") && =
+(inheritedMembers =3D=3D "off")) ||
+			((iAllMembers[i].getAttribute("notSupportedOn") =3D=3D "netcf") && =
+(netcfMembersOnly =3D=3D "on")))
+			iAllMembers[i].style.display =3D "none";
+		else
+			iAllMembers[i].style.display =3D "";
+	}
+=09
+	// protected members are in separate collapseable sections in vs2005, =
+so expand or collapse the sections
+	ExpandCollapseProtectedMemberSections();
+}
+
+function ExpandCollapseProtectedMemberSections()
+{
+	var imgElements =3D document.getElementsByName("toggleSwitch");
+	var i;
+	// Family
+	for(i =3D 0; i < imgElements.length; ++i)
+	{
+		if(imgElements[i].id.indexOf("protected", 0) =3D=3D 0)
+		{
+	        if ((sectionStates[imgElements[i].id] =3D=3D "e" && =
+protectedMembers =3D=3D "off") ||=20
+	            (sectionStates[imgElements[i].id] =3D=3D "c" && =
+protectedMembers =3D=3D "on"))
+			{
+				ExpandCollapse(imgElements[i]);
+			}
+		}
+	}
+}
+
+/*=09
+**********
+**********   End Members Options Filtering
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Expand/Collapse
+**********
+*/
+
+// expand or collapse a section
+function ExpandCollapse(imageItem)
+{
+	if (sectionStates[imageItem.id] =3D=3D "e")
+		CollapseSection(imageItem);
+	else
+		ExpandSection(imageItem);
+=09
+	SetCollapseAll();
+}
+
+// expand or collapse all sections
+function ExpandCollapseAll(imageItem)
+{
+    var collapseAllImage =3D =
+document.getElementById("collapseAllImage");
+    var expandAllImage =3D document.getElementById("expandAllImage");
+    if (imageItem =3D=3D null || collapseAllImage =3D=3D null || =
+expandAllImage =3D=3D null) return;
+    noReentry =3D true; // Prevent entry to OnLoadImage
+   =20
+	var imgElements =3D document.getElementsByName("toggleSwitch");
+	var i;
+	var collapseAll =3D (imageItem.src =3D=3D collapseAllImage.src);
+	if (collapseAll)
+	{
+		imageItem.src =3D expandAllImage.src;
+		imageItem.alt =3D expandAllImage.alt;
+
+		for (i =3D 0; i < imgElements.length; ++i)
+		{
+			CollapseSection(imgElements[i]);
+		}
+	}
+	else
+	{
+		imageItem.src =3D collapseAllImage.src;
+		imageItem.alt =3D collapseAllImage.alt;
+
+		for (i =3D 0; i < imgElements.length; ++i)
+		{
+			ExpandSection(imgElements[i]);
+		}
+	}
+	SetAllSectionStates(collapseAll);
+	SetToggleAllLabel(collapseAll);
+=09
+	noReentry =3D false;
+}
+
+function ExpandCollapse_CheckKey(imageItem, eventObj)
+{
+	if(eventObj.keyCode =3D=3D 13)
+		ExpandCollapse(imageItem);
+}
+
+function ExpandCollapseAll_CheckKey(imageItem, eventObj)
+{
+	if(eventObj.keyCode =3D=3D 13)
+		ExpandCollapseAll(imageItem);
+}
+
+function SetAllSectionStates(collapsed)
+{
+    for (var sectionId in sectionStates)=20
+        sectionStates[sectionId] =3D (collapsed) ? "c" : "e";
+}
+
+function ExpandSection(imageItem)
+{
+    noReentry =3D true; // Prevent re-entry to OnLoadImage
+    try
+    {
+        var collapseImage =3D document.getElementById("collapseImage");
+		imageItem.src =3D collapseImage.src;
+		imageItem.alt =3D collapseImage.alt;
+	=09
+	    imageItem.parentNode.parentNode.nextSibling.style.display =3D "";
+	    sectionStates[imageItem.id] =3D "e";
+    }
+    catch (e)
+    {
+    }
+    noReentry =3D false;
+}
+
+function CollapseSection(imageItem)
+{
+    noReentry =3D true; // Prevent re-entry to OnLoadImage
+    var expandImage =3D document.getElementById("expandImage");
+	imageItem.src =3D expandImage.src;
+	imageItem.alt =3D expandImage.alt;
+	imageItem.parentNode.parentNode.nextSibling.style.display =3D "none";
+	sectionStates[imageItem.id] =3D "c";
+    noReentry =3D false;
+}
+
+function AllCollapsed()
+{
+	var imgElements =3D document.getElementsByName("toggleSwitch");
+	var allCollapsed =3D true;
+	var i;
+	=09
+	for (i =3D 0; i < imgElements.length; i++) allCollapsed =3D =
+allCollapsed && (sectionStates[imgElements[i].id] =3D=3D "c");
+=09
+	return allCollapsed;
+}
+
+function SetCollapseAll()
+{
+	var imageElement =3D document.getElementById("toggleAllImage");
+	if (imageElement =3D=3D null) return;
+=09
+	var allCollapsed =3D AllCollapsed();
+	if (allCollapsed)
+	{
+        var expandAllImage =3D =
+document.getElementById("expandAllImage");
+	    if (expandAllImage =3D=3D null) return;
+		imageElement.src =3D expandAllImage.src;
+		imageElement.alt =3D expandAllImage.alt;
+	}
+	else
+	{
+        var collapseAllImage =3D =
+document.getElementById("collapseAllImage");
+	    if (collapseAllImage =3D=3D null) return;
+		imageElement.src =3D collapseAllImage.src;
+		imageElement.alt =3D collapseAllImage.alt;
+	}
+=09
+	SetToggleAllLabel(allCollapsed);
+}
+
+function SetToggleAllLabel(allCollapsed)
+{
+	var collapseLabelElement =3D =
+document.getElementById("collapseAllLabel");
+	var expandLabelElement =3D document.getElementById("expandAllLabel");
+=09
+	if (collapseLabelElement =3D=3D null || expandLabelElement =3D=3D null) =
+return;
+	=09
+	if (allCollapsed)
+	{
+		collapseLabelElement.style.display =3D "none";
+		expandLabelElement.style.display =3D "inline";
+	}
+	else
+	{
+		collapseLabelElement.style.display =3D "inline";
+		expandLabelElement.style.display =3D "none";
+	}
+}
+
+function SaveSections()
+{
+    try
+    {
+        var states =3D "";
+   =20
+        for (var sectionId in sectionStates) states +=3D sectionId + ":" =
++ sectionStates[sectionId] + ";";
+
+        Save("SectionStates", states.substring(0, states.length - 1));
+    }
+    catch (e)
+    {
+    }
+   =20
+}
+
+function OpenSection(imageItem)
+{
+	if (sectionStates[imageItem.id] =3D=3D "c") ExpandCollapse(imageItem);
+}
+
+/*=09
+**********
+**********   End Expand/Collapse
+**********
+*/
+
+
+
+/*=09
+**********
+**********   Begin Copy Code
+**********
+*/
+
+function CopyCode(key)
+{
+	var trElements =3D document.getElementsByTagName("tr");
+	var i;
+	for(i =3D 0; i < trElements.length; ++i)
+	{
+		if(key.parentNode.parentNode.parentNode =3D=3D =
+trElements[i].parentNode)
+		{
+		    if (window.clipboardData)=20
+            {
+                // the IE-manner
+                window.clipboardData.setData("Text", =
+trElements[i].innerText);
+            }
+            else if (window.netscape)=20
+            {=20
+                // Gives unrestricted access to browser APIs using =
+XPConnect
+		try
+		{
+			=
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");=
+
+		}
+	        catch(e)
+		{
+			alert("Universal Connect was refused, cannot copy to " +
+				"clipboard.  Go to about:config and set " +
+				"signed.applets.codebase_principal_support to true to " +
+				"enable clipboard support.");
+			return;
+		}
+               =20
+                // Creates an instance of nsIClipboard
+                var clip =3D =
+Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Comp=
+onents.interfaces.nsIClipboard);
+                if (!clip) return;
+  =20
+                // Creates an instance of nsITransferable
+                var trans =3D =
+Components.classes['@mozilla.org/widget/transferable;1'].createInstance(C=
+omponents.interfaces.nsITransferable);
+                if (!trans) return;
+  =20
+                // register the data flavor
+                trans.addDataFlavor('text/unicode');
+  =20
+                // Create object to hold the data
+                var str =3D new Object();
+                               =20
+                // Creates an instance of nsISupportsString
+                var str =3D =
+Components.classes["@mozilla.org/supports-string;1"].createInstance(Compo=
+nents.interfaces.nsISupportsString);
+               =20
+                //Assigns the data to be copied
+                var copytext =3D trElements[i].textContent;
+                str.data =3D copytext;
+               =20
+                // Add data objects to transferable
+                =
+trans.setTransferData("text/unicode",str,copytext.length*2);
+                var clipid =3D Components.interfaces.nsIClipboard;
+                if (!clip) return false;
+       =20
+                // Transfer the data to clipboard
+                clip.setData(trans,null,clipid.kGlobalClipboard);
+            }
+        }
+	}
+}
+
+function ChangeCopyCodeIcon(key)
+{
+	var i;
+	var imageElements =3D document.getElementsByName("ccImage")
+	for(i=3D0; i<imageElements.length; ++i)
+	{
+		if(imageElements[i].parentNode =3D=3D key)
+		{
+			if(imageElements[i].src =3D=3D copyImage.src)
+			{
+				imageElements[i].src =3D copyHoverImage.src;
+				imageElements[i].alt =3D copyHoverImage.alt;
+				key.className =3D 'copyCodeOnHover';
+			}
+			else
+			{
+				imageElements[i].src =3D copyImage.src;
+				imageElements[i].alt =3D copyImage.alt;
+				key.className =3D 'copyCode';
+			}
+		}
+	}
+}
+
+function CopyCode_CheckKey(key, eventObj)
+{
+	if(eventObj.keyCode =3D=3D 13)
+		CopyCode(key);
+}
+
+/*=09
+**********
+**********   End Copy Code
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Maintain Scroll Position
+**********
+*/
+
+function loadAll(){
+	try=20
+	{
+		scrollPos =3D allHistory.getAttribute("Scroll");
+	}
+	catch(e){}
+}
+
+function saveAll(){
+	try
+	{
+		allHistory.setAttribute("Scroll", mainSection.scrollTop);
+	}
+	catch(e){}
+}
+
+/*=09
+**********
+**********   End Maintain Scroll Position
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Send Mail
+**********
+*/
+
+function formatMailToLink(anchor)
+{
+	var release =3D "Release: " + anchor.doc_Release;
+	var topicId =3D "Topic ID: " + anchor.doc_TopicID;
+	var topicTitle =3D "Topic Title: " + anchor.doc_TopicTitle;
+	var url =3D "URL: " + document.URL;
+	var browser =3D "Browser: " + window.navigator.userAgent;
+
+	var crlf =3D "%0d%0a";=20
+	var body =3D release + crlf + topicId + crlf + topicTitle + crlf + url =
++ crlf + browser + crlf + crlf + "Comments:" + crlf + crlf;
+=09
+	anchor.href =3D anchor.href + "&body=3D" + body;
+}
+
+/*=09
+**********
+**********   End Send Mail
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Persistence
+**********
+*/
+
+var globals;
+
+// get global vars from persistent store		=09
+function GetGlobals()
+{
+	var tmp;
+=09
+	// Try to get VS implementation
+	try { tmp =3D window.external.Globals; }
+	catch (e) { tmp =3D null; }
+=09
+	// Try to get DExplore implementation
+	try { if (tmp =3D=3D null) tmp =3D window.external.GetObject("DTE", =
+"").Globals; }
+	catch (e) { tmp =3D null; }
+=09
+	return tmp;
+}
+
+function Load(key)
+{
+	try=20
+	{
+		return globals.VariableExists(key) ? globals.VariableValue(key) : =
+null;
+	}
+	catch (e)
+	{
+		return null;
+	}
+}
+
+function Save(key, value)
+{
+	try
+	{
+		globals.VariableValue(key) =3D value;
+		globals.VariablePersists(key) =3D true;
+	}
+	catch (e)
+	{
+	}
+}
+
+/*=09
+**********
+**********   End Persistence
+**********
+*/
+
+/* This is the part for Glossary popups */
+// The method is called when the user positions the mouse cursor over a =
+glossary term in a document.
+// Current implementation assumes the existence of an associative array =
+(g_glossary).=20
+// The keys of the array correspond to the argument passed to this =
+function.
+
+var bGlossary=3Dtrue;
+var oDialog;
+var oTimeout=3D"";
+var oTimein=3D"";
+var iTimein=3D.5;
+var iTimeout=3D30;
+var oLastNode;
+var oNode;
+var bInit=3Dfalse;
+var aTerms=3Dnew Array();
+
+// Called from mouseover and when the contextmenu behavior fires =
+oncontextopen.
+function clearDef(eventObj){
+    if(eventObj){
+        var elem;
+        if(document.all) elem =3D eventObj.toElement;
+        else elem =3D eventObj.relatedTarget;
+	    if(elem!=3Dnull || elem!=3D"undefined"){
+		    if(typeof(oTimein)=3D=3D"number"){
+			    window.clearTimeout(oTimein);
+		    }
+		    if(oDialog.dlg_status=3D=3Dtrue){
+			    hideDef();
+		    }
+		}
+	}
+}
+function hideDef(eventObj){
+	window.clearTimeout(oTimeout);
+	oTimeout=3D"";
+	oDialog.style.display=3D"none";
+	oDialog.dlg_status=3Dfalse;=09
+}
+function showDef(oSource){
+	if(bInit=3D=3Dfalse){
+		glossaryInit();
+		bInit=3Dtrue;
+	}
+	if(bGlossary=3D=3Dtrue){
+		if(typeof(arguments[0])=3D=3D"object"){
+			oNode=3DoSource;
+		}
+		else{
+		    if(document.all) oNode =3D eventObj.srcElement;
+		    else oNode =3D eventObj.target;
+		}
+		var bStatus=3DoDialog.dlg_status; // BUGBUG: oDialog is null.
+		if((oLastNode!=3DoNode)||(bStatus=3D=3Dfalse)){
+			if((typeof(oTimein)=3D=3D"number")&& eventObj){
+			   =20
+			    var elem;
+			    if(document.all) elem =3D eventObj.fromElement;
+			    else elem =3D eventObj.relatedTarget;
+			   =20
+			    if( elem !=3D null || elem !=3D "undefined")
+				    window.clearTimeout(oTimein);
+			}
+			oTimein=3Dwindow.setTimeout("openDialog(oNode)",iTimein*1000);
+		}=09
+	}
+}
+
+
+
+function glossaryInit(){
+		oDialog=3DfnCreateDialog(150,50);
+}
+
+function navigateTerm(eventObj){
+    var oNode;
+    if(document.all) oNode =3D eventObj.srcElement;
+    else oNode =3D eventObj.target;
+=09
+	var iTermID=3DoNode.termID;
+	if(oNode!=3DaTerms[iTermID]){
+		var iAbsTop=3DgetAbsoluteTop(aTerms[iTermID]);
+		if(iAbsTop<document.body.scrollTop){
+			=
+window.scrollTo(document.body.scrollLeft,getAbsoluteTop(aTerms[iTermID]))=
+;
+		}
+		openDialog(aTerms[iTermID]);
+	}
+}
+function disableGlossary(eventObj){
+	if(bGlossary=3D=3Dtrue){
+	    if(document.all) eventObj.srcElement.innerText=3D"Enable Automatic =
+Glossary";
+		else eventObj.target.innerText=3D"Enable Automatic Glossary";
+		bGlossary=3Dfalse;
+		hideDef();	=09
+	}
+	else{
+	    if(document.all) eventObj.srcElement.innerText=3D"Disable Automatic =
+Glossary";
+		else eventObj.target.innerText=3D"Disable Automatic Glossary";
+		bGlossary=3Dtrue;
+	}
+}
+function openGlossary(){
+
+}
+function fnSetMenus(eventObj){
+    var oNode;
+    if(document.all) oNode =3D eventObj.srcElement;
+    else oNode =3D eventObj.target;
+=09
+	var oMenu=3DoNode.createMenu("SPAN","G_RID");
+	var oSubItem1=3DoNode.createMenuItem("Glossary",fnStub,oMenu,true);
+	document.body.createMenuItem("Open External =
+Glossary",openGlossary,oSubItem1.subMenu);
+	document.body.createMenuItem("Disable Automatic =
+Glossary",disableGlossary,oSubItem1.subMenu);=09
+	for(var i=3D0;i<aTerms.length;i++){
+		var =
+oItem=3Ddocument.body.createMenuItem(aTerms[i].innerText,navigateTerm,oMe=
+nu);
+		oItem.termID=3Di;
+	}
+}
+// This is a bogus stub.  It should be sniffed out rather than added in.
+function fnStub(){
+
+}
+function fnAttachMenus(aTips){
+	// This walk is only necessary for the context menu.
+	var aTips=3Ddocument.getElementsByTagName("SPAN");
+	for(var i=3D0;i<aTips.length;i++){
+		var oNode=3DaTips[i];
+		if(oNode.getAttribute("G_RID")){
+			var sTerm=3DoNode.getAttribute("G_RID");
+			if(typeof(g_glossary[sTerm])=3D=3D"string"){
+				// Removed client-side scripting to add events.  This entire process =
+should be singled out for IE 5 and later .. and, its only for the =
+context menu.
+				aTerms[aTerms.length]=3DoNode;
+			}
+		}
+	}
+	if(oBD.majorVer>=3D5){
+		document.body.addBehavior(gsContextMenuPath);
+		document.body.onbehaviorready=3D"fnSetMenus()";
+		document.body.oncontextopen=3D"clearDef()";
+	}
+
+}
+// Called by showDef.  The showDef function sniffs for initialization.
+function openDialog(oNode,x,y){
+ 	var bStatus=3DoDialog.dlg_status; // BUGBUG: This code assumes that =
+oDialog has been initialized
+	if(bStatus=3D=3Dfalse){
+		oDialog.dlg_status=3Dtrue;
+		oDialog.style.display=3D"block";
+	}
+	else{
+		if(typeof(oTimeout)=3D=3D"number"){
+			window.clearTimeout(oTimeout);
+		}
+	}
+=09
+	var sTerm=3DoNode.getAttribute("G_RID");=09
+	var oDef=3DoNode.children(0);
+	var sDef=3DoDef.text;
+	sDef=3DsDef.substr(4,sDef.length-7);	//Strips the html comment markers =
+from the definition.
+	oDialog.innerHTML=3DsDef
+=09
+=09
+	//oDialog.innerHTML=3Dg_glossary[sTerm];
+	=09
+	var iScrollLeft=3Ddocument.body.scrollLeft;
+	var iScrollTop=3Ddocument.body.scrollTop;
+	var iOffsetLeft=3DgetAbsoluteLeft(oNode)// - iScrollLeft;
+	var iOffsetWidth=3DoNode.offsetWidth;
+	var oParent=3DoNode.parentNode;
+	var iOffsetParentLeft=3DgetAbsoluteLeft(oParent);
+	var iOffsetTop=3DgetAbsoluteTop(oNode); //- iScrollTop;
+	var iOffsetDialogWidth=3DoDialog.offsetWidth;
+=09
+=09
+	if((iOffsetLeft + iOffsetWidth) > (iOffsetParentLeft + =
+oParent.offsetWidth)){
+		iOffsetLeft=3DiOffsetParentLeft;
+		if(iOffsetLeft - iOffsetDialogWidth>0){
+			iOffsetTop+=3DoNode.offsetHeight;
+		}
+	}
+	var iLeft=3D0;
+	var iTop=3D0;
+	if((iOffsetLeft + iOffsetWidth - iScrollLeft + iOffsetDialogWidth) < =
+document.body.offsetWidth ){
+		iLeft=3DiOffsetLeft + iOffsetWidth;
+	}
+	else{
+		if(iOffsetLeft - iOffsetDialogWidth>0){
+			iLeft=3DiOffsetLeft - iOffsetDialogWidth;
+		}
+		else{
+			iLeft=3DiOffsetParentLeft;
+		}
+	}
+	if(iOffsetTop - iScrollTop<oDialog.offsetHeight){
+		iTop=3DiOffsetTop + oNode.offsetHeight;
+	}
+	else{
+		iTop=3DiOffsetTop - oDialog.offsetHeight;
+	}
+	oDialog.style.top=3DiTop;
+	oDialog.style.left=3DiLeft;
+	oTimeout=3Dwindow.setTimeout("hideDef()",iTimeout*1000);=09
+}
+function getAbsoluteTop(oNode){
+	var oCurrentNode=3DoNode;
+	var iTop=3D0;
+	while(oCurrentNode.tagName!=3D"BODY"){
+		iTop+=3DoCurrentNode.offsetTop;
+		oCurrentNode=3DoCurrentNode.offsetParent;
+	}
+	return iTop;
+}
+function getAbsoluteLeft(oNode){
+	var oCurrentNode=3DoNode;
+	var iLeft=3D0;
+	while(oCurrentNode.tagName!=3D"BODY"){
+		iLeft+=3DoCurrentNode.offsetLeft;
+		oCurrentNode=3DoCurrentNode.offsetParent;
+	}
+	return iLeft;
+}
+function fnCreateDialog(iWidth,iHeight){
+	document.body.insertAdjacentHTML("BeforeEnd","<DIV></DIV>");
+	oNewDialog=3Ddocument.body.children(document.body.children.length-1);
+	oNewDialog.className=3D"clsTooltip";
+	oNewDialog.style.width=3DiWidth;
+	oNewDialog.dlg_status=3Dfalse;
+	return oNewDialog;
+}
+
+function sendfeedback(subject, id,alias){
+	var rExp =3D /\"/gi;
+	var url =3D location.href;
+	// Need to replace the double quotes with single quotes for the mailto =
+to work.
+	var rExpSingleQuotes =3D /\'\'"/gi;
+	var title =3D =
+document.getElementsByTagName("TITLE")[0].innerText.replace(rExp, "''");
+	location.href =3D "mailto:" + alias + "?subject=3D" + subject + title + =
+"&body=3DTopic%20ID:%20" + id + "%0d%0aURL:%20" + url + =
+"%0d%0a%0d%0aComments:%20";
+}
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/scripts/script_feedBack.js
+
+//Default FeedBack Values
+var ratings =3D 3;
+var title =3D document.title;
+var URL =3D location.href.replace(location.hash,"");
+var version =3D 2007;
+
+/************************************************************************=
+*
+ * Methods ********************************************************
+ =
+*************************************************************************=
+/
+
+function DeliveryType()
+{
+ 	if (URL.indexOf("ms-help://")!=3D-1) {return("h");}
+	else if (URL.indexOf(".chm::/")!=3D-1) {return("c");}
+	else if (URL.indexOf("http://")!=3D-1) {return("w");}
+	else if (URL.indexOf("file:")!=3D-1) {return("f");}
+	else return("0");
+}
+
+function DeliverableValue(deliverable)
+{
+ 	if (URL.indexOf("ms-help://")!=3D-1)=20
+	{
+		delvalue  =3D =
+location.href.slice(0,location.href.lastIndexOf("/html/"));
+		delvalue  =3D delvalue.slice(delvalue.lastIndexOf("/")+1);
+		return delvalue;
+	}
+	else return(deliverable);
+}
+
+function URLValue()
+{
+	if (URL.indexOf(".chm::")!=3D-1)=20
+	{
+		a =3D URL;
+		while (a.indexOf("\\") < a.indexOf(".chm::") || a.indexOf("//") > =
+a.indexOf(".chm::"))=20
+		{
+			if (a.indexOf("\\")=3D=3D-1)
+			{
+				break;
+			}
+			a =3D a.substring(a.indexOf("\\")+1,a.length);
+		}
+		return("ms-its:"+a)
+	}
+	else if (URL.indexOf("file:///")!=3D-1)=20
+	{
+		a =3D URL;
+
+		b =3D a.substring(a.lastIndexOf("html")+5,a.length);
+		return("file:///"+b);
+	}
+	else return(URL);
+}
+
+function GetLanguage()
+{
+	var langauge;
+  	if(navigator.userAgent.indexOf("Firefox")!=3D-1)
+  	{
+  		var index =3D navigator.userAgent.indexOf('(');
+   		var string =3D =
+navigator.userAgent.substring(navigator.userAgent.indexOf('('), =
+navigator.userAgent.length);
+   		var splitString =3D string.split(';');
+	   	language =3D splitString[3].substring(1, splitString[3].length);
+  	}
+  	else language =3D navigator.systemLanguage;
+	return(language);
+}
+
+
+//---Gets topic rating.---
+function GetRating()
+{
+
+	sRating =3D "0";
+	for(var x =3D 0;x < 5;x++)
+  	{
+		if(document.formRating) {
+		if(document.formRating.fbRating[x].checked) {sRating =3D x + 1;}}
+		else return sRating;
+  	}
+	return sRating;
+}
+
+function SubmitFeedback(alias, product, deliverable, productVersion, =
+documentationVersion, defaultBody, defaultSubject)
+{
+	var subject =3D defaultSubject
+  		+ " ("
+		+ "/1:"
+  		+ product
+  		+ "/2:"
+  		+ productVersion
+  		+ "/3:"
+  		+ documentationVersion
+  		+ "/4:"
+  		+ DeliverableValue(deliverable)
+  		+ "/5:"
+  		+ URLValue()
+  		+ "/6:"
+  		+ GetRating()=20
+  		+ "/7:"
+  		+ DeliveryType()
+  		+ "/8:"
+  		+ GetLanguage()
+		+ "/9:"
+  		+ version
+		+ ")";=20
+ =20
+	location.href =3D "mailto:" + alias + "?subject=3D" + subject
+	+ "&body=3D" + defaultBody;
+}
+
+function AltFeedback(src, title) {
+	src.title=3Dtitle;
+	return;
+	}
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/scripts/CheckboxMenu.js
+
+
+function CheckboxMenu(id, data, persistkeys, globals)
+{
+    this.id =3D id;
+    this.menuCheckboxIds =3D new Array();
+    this.data =3D data;
+    this.count =3D 0;
+   =20
+    var element =3D document.getElementById(id);
+	var checkboxNodes =3D element.getElementsByTagName("input");
+
+	for(var checkboxCount=3D0; checkboxCount < checkboxNodes.length; =
+checkboxCount++)
+	{
+	    var checkboxId =3D checkboxNodes[checkboxCount].getAttribute('id');
+	    var checkboxData =3D =
+checkboxNodes[checkboxCount].getAttribute('data');
+	    var dataSplits =3D checkboxData.split(',');
+	    var defaultValue =3D =
+checkboxNodes[checkboxCount].getAttribute('value');
+	    if (checkboxData !=3D null && checkboxData.indexOf("persist") !=3D =
+-1)
+	        persistkeys.push(checkboxId);
+	   =20
+	    this.menuCheckboxIds[dataSplits[0]] =3D checkboxId;
+	   =20
+	    // try to get the value for this checkbox id from globals
+	    var persistedValue =3D (globals =3D=3D null) ? null : =
+globals.VariableExists(checkboxId) ? globals.VariableValue(checkboxId) : =
+null;
+	    var currentValue =3D (persistedValue !=3D null) ? persistedValue : =
+(defaultValue =3D=3D null) ? "on" : defaultValue;
+	   =20
+	    // set the checkbox's check state
+	    this.SetCheckState(checkboxId, currentValue);
+	   =20
+	    this.count++;
+	}
+}
+
+CheckboxMenu.prototype.SetCheckState=3Dfunction(id, value)
+{
+	var checkbox =3D document.getElementById(id);
+	if(checkbox !=3D null)
+	{
+	    checkbox.checked =3D (value =3D=3D "on") ? true : false;
+	}
+=09
+    // set the value for the checkbox id in the data array
+    this.data[id] =3D value;
+}
+
+CheckboxMenu.prototype.GetCheckState=3Dfunction(id)
+{
+	var checkbox =3D document.getElementById(id);
+	if(checkbox !=3D null)
+	    return checkbox.checked;
+	return false;
+}
+
+CheckboxMenu.prototype.ToggleCheckState=3Dfunction(id)
+{
+    // at least one checkbox must always be checked
+    var checkedCount =3D this.GetCheckedCount();
+       =20
+	if(this.data[id] =3D=3D "on" && checkedCount > 1)
+		this.SetCheckState(id, "off");
+	else
+		this.SetCheckState(id, "on");
+}
+
+// returns the checkbox id associated with a key
+CheckboxMenu.prototype.GetCheckboxId=3Dfunction(key)
+{
+    return this.menuCheckboxIds[key];
+}
+
+// returns the array of checkbox ids
+CheckboxMenu.prototype.GetCheckboxIds=3Dfunction()
+{
+    return this.menuCheckboxIds;
+}
+
+// returns the @data attribute of the checkbox element
+CheckboxMenu.prototype.GetCheckboxData=3Dfunction(checkboxId)
+{
+    var checkbox =3D document.getElementById(checkboxId);
+    if (checkbox =3D=3D null) return "";
+    return checkbox.getAttribute('data');
+}
+
+CheckboxMenu.prototype.GetDropdownLabelId=3Dfunction()
+{
+    var checkboxCount =3D this.count;
+    var checkedCount =3D this.GetCheckedCount();
+    var idPrefix =3D this.id;
+   =20
+    // if all boxes checked, use showall label
+    if (checkedCount =3D=3D checkboxCount)
+        return idPrefix.concat("AllLabel");
+   =20
+    // if only one is checked, use label appropriate for that one =
+checkbox
+    if (checkedCount =3D=3D 1)
+    {
+        for(var key in this.menuCheckboxIds)
+        {
+            if (this.data[this.menuCheckboxIds[key]] =3D=3D "on")
+            {
+                return idPrefix.concat(key,'Label');
+            }
+        }
+    }
+   =20
+    // if multiple or zero checked, use multiple label
+    return idPrefix.concat("MultipleLabel");
+}
+
+CheckboxMenu.prototype.GetCheckedCount=3Dfunction()
+{
+    var count =3D 0;
+    for(var key in this.menuCheckboxIds)
+    {
+        if (this.data[this.menuCheckboxIds[key]] =3D=3D "on")
+            count++;
+    }
+    return (count);
+}
+
+// returns an array containing the ids of the checkboxes that are =
+checked
+CheckboxMenu.prototype.GetCheckedIds=3Dfunction()
+{
+    var idArray =3D new Array();
+    for(var key in this.menuCheckboxIds)
+    {
+        if (this.data[this.menuCheckboxIds[key]] =3D=3D "on")
+            idArray.push(this.menuCheckboxIds[key]);
+    }
+    return idArray;
+}
+
+CheckboxMenu.prototype.GetGroupCheckedCount=3Dfunction(checkboxGroup)
+{
+    var count =3D 0;
+    for(var i =3D 0; i < checkboxGroup.length; i++)
+    {
+        if (this.data[checkboxGroup[i]] =3D=3D "on")
+            count++;
+    }
+    return (count);
+}
+
+CheckboxMenu.prototype.ToggleGroupCheckState=3Dfunction(id, =
+checkboxGroup)
+{
+    // at least one checkbox must always be checked
+    var checkedCount =3D this.GetGroupCheckedCount(checkboxGroup);
+   =20
+    // if the group has multiple checkboxes, one must always be checked; =
+so toggle to "off" only if more than one currently checked
+    // if the group has only one checkbox, it's okay to toggle it on/off
+	if(this.data[id] =3D=3D "on" && (checkedCount > 1 || =
+checkboxGroup.length =3D=3D 1))
+		this.SetCheckState(id, "off");
+	else
+		this.SetCheckState(id, "on");
+}
+
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/scripts/CommonUtilities.js
+
+//function codeBlockHandler(id, data, value)
+function codeBlockHandler()
+{
+    // handle groups of snippets to make sure at least one from the =
+group is always shown
+    HandleSnippetGroups();
+   =20
+    // handle any remaining snippets that aren't in groups
+	var spanElements =3D document.getElementsByTagName("span");
+	for(var i =3D 0; i < spanElements.length; ++i)
+	{
+	    var devlang =3D spanElements[i].getAttribute("codeLanguage");
+	    if (devlang =3D=3D null) continue;
+	   =20
+	    if (HasSnippetGroupAncestor(spanElements[i])) continue;
+	   =20
+        var checkboxId =3D GetDevlangCheckboxId(devlang);
+	    if (checkboxId !=3D null && checkboxId !=3D "")
+	    {
+            if (docSettings[checkboxId] =3D=3D "on")
+		        spanElements[i].style.display =3D "";
+            else
+		        spanElements[i].style.display =3D "none";
+	    }
+	}
+}
+
+function HasSnippetGroupAncestor(object)
+{
+    var parent =3D object.parentElement;
+    if (parent =3D=3D null) return false;
+   =20
+    var className =3D parent.className;
+    if (className !=3D null && className =3D=3D "snippetgroup")
+        return true
+
+    return HasSnippetGroupAncestor(parent);
+}
+
+function HandleSnippetGroups()
+{
+    var divs =3D document.getElementsByTagName("DIV");
+    var divclass;
+    for (var i =3D 0; i < divs.length; i++)
+    {
+        divclass =3D divs[i].className;
+        if (divclass =3D=3D null || divclass !=3D "snippetgroup") =
+continue;
+       =20
+        // if all snippets in this group would be hidden by filtering =
+display them all anyhow
+        var unfilteredCount =3D GetUnfilteredSnippetCount(divs[i]);
+       =20
+	    var spanElements =3D divs[i].getElementsByTagName("span");
+	    for(var j =3D 0; j < spanElements.length; ++j)
+	    {
+	        var devlang =3D spanElements[j].getAttribute("codeLanguage");
+	        if (devlang =3D=3D null) continue;
+
+            var checkboxId =3D GetDevlangCheckboxId(devlang);
+	       =20
+	        // for filtered devlangs, determine whether they should be =
+shown/hidden
+	        if (checkboxId !=3D null && checkboxId !=3D "")
+	        {
+	            if (unfilteredCount =3D=3D 0 || docSettings[checkboxId] =
+=3D=3D "on")
+		            spanElements[j].style.display =3D "";
+                else
+		            spanElements[j].style.display =3D "none";
+	        }
+	    }
+    }
+}
+
+function GetUnfilteredSnippetCount(group)
+{
+    var count =3D 0;
+    var spanElements =3D group.getElementsByTagName("span");
+    for(var i =3D 0; i < spanElements.length; ++i)
+    {
+        var devlang =3D spanElements[i].getAttribute("codeLanguage");
+        var checkboxId =3D GetDevlangCheckboxId(devlang);
+        if (checkboxId !=3D null && checkboxId !=3D "")
+        {
+            if (docSettings[checkboxId] =3D=3D "on")
+	            count++;
+        }
+    }
+    return count;
+}
+
+function GetDevlangCheckboxId(devlang)
+{
+    switch (devlang)
+    {
+        case "VisualBasic":
+        case "VisualBasicDeclaration":
+        case "VisualBasicUsage":
+            return devlangsMenu.GetCheckboxId("VisualBasic");
+        case "CSharp":
+            return devlangsMenu.GetCheckboxId("CSharp");
+        case "ManagedCPlusPlus":
+            return devlangsMenu.GetCheckboxId("ManagedCPlusPlus");
+        case "JScript":
+            return devlangsMenu.GetCheckboxId("JScript");
+        case "JSharp":
+            return devlangsMenu.GetCheckboxId("JSharp");
+        case "JavaScript":
+            return devlangsMenu.GetCheckboxId("JavaScript");
+        case "XAML":
+            return devlangsMenu.GetCheckboxId("XAML");
+        case "FSharp":
+            return devlangsMenu.GetCheckboxId("FSharp");
+        default:
+            return "";
+    }
+}
+
+// update stylesheet display settings for spans to show according to =
+user's devlang preference
+function styleSheetHandler(oneDevlang)
+{
+    var devlang =3D (oneDevlang !=3D "") ? oneDevlang : =
+GetDevlangPreference();
+
+    var sd =3D getStyleDictionary();
+
+    if (devlang =3D=3D 'cs') {
+        sd['span.cs'].display =3D 'inline';
+        sd['span.vb'].display =3D 'none';
+        sd['span.cpp'].display =3D 'none';
+        sd['span.nu'].display =3D 'none';
+        sd['span.fs'].display =3D 'none';
+    } else if (devlang =3D=3D 'vb') {
+        sd['span.cs'].display =3D 'none';
+        sd['span.vb'].display =3D 'inline';
+        sd['span.cpp'].display =3D 'none';
+        sd['span.nu'].display =3D 'none';
+        sd['span.fs'].display =3D 'none';
+    } else if (devlang =3D=3D 'cpp') {
+        sd['span.cs'].display =3D 'none';
+        sd['span.vb'].display =3D 'none';
+        sd['span.cpp'].display =3D 'inline';
+        sd['span.nu'].display =3D 'none';
+        sd['span.fs'].display =3D 'none';
+    } else if (devlang =3D=3D 'nu') {
+        sd['span.cs'].display =3D 'none';
+        sd['span.vb'].display =3D 'none';
+        sd['span.cpp'].display =3D 'none';
+        sd['span.nu'].display =3D 'inline';
+        sd['span.fs'].display =3D 'none';
+    } else if (devlang =3D=3D 'fs') {
+        sd['span.cs'].display =3D 'none';
+        sd['span.vb'].display =3D 'none';
+        sd['span.cpp'].display =3D 'none';
+        sd['span.nu'].display =3D 'none';
+        sd['span.fs'].display =3D 'inline';
+    }
+}
+
+function getStyleDictionary() {
+		var styleDictionary =3D new Array();
+
+		// iterate through stylesheets
+		var sheets =3D document.styleSheets;
+	=09
+		for(var i=3D0; i<sheets.length;i++) {
+			var sheet =3D sheets[i];
+
+			// Ignore sheets at ms-help Urls
+        		if (sheet.href.substr(0,8) =3D=3D 'ms-help:') continue;
+
+			// get sheet rules
+			var rules =3D sheet.cssRules;
+		=09
+			if (rules =3D=3D null) rules =3D sheet.rules;
+
+			// iterate through rules
+			for(j=3D0; j<rules.length; j++) {
+				var rule =3D rules[j];
+
+				// Ignore ones that aren't defined
+            			if(rule.selectorText =3D=3D null)
+                			continue;
+
+				// add rule to dictionary
+				styleDictionary[rule.selectorText.toLowerCase()] =3D rule.style;
+            }
+		}
+
+		return(styleDictionary);
+}
+
+function GetDevlangPreference()
+{
+    var devlangCheckboxIds =3D devlangsMenu.GetCheckboxIds();
+    var checkedCount =3D 0;
+    var devlang;
+    for (var key in devlangCheckboxIds)
+    {
+        if (docSettings[devlangCheckboxIds[key]] =3D=3D "on")
+        {
+            checkedCount++;
+            checkboxData =3D =
+devlangsMenu.GetCheckboxData(devlangCheckboxIds[key]);
+            var dataSplits =3D checkboxData.split(',');
+            if (dataSplits.length > 1)
+                devlang =3D dataSplits[1];
+        }
+    }
+    return (checkedCount =3D=3D 1 ? devlang : "nu");
+}
+
+
+
+function memberlistHandler()
+{
+   // get all the <tr> nodes in the document
+	var allRows =3D document.getElementsByTagName("tr");
+	var i;
+
+	for(i =3D 0; i < allRows.length; ++i)
+	{
+	    var memberdata =3D allRows[i].getAttribute("data");
+	    if (memberdata !=3D null)
+        {
+	        if ((ShowBasedOnInheritance(memberdata) =3D=3D false) ||=20
+	            (ShowBasedOnVisibility(memberdata) =3D=3D false) ||=20
+	            (ShowBasedOnFramework(memberdata) =3D=3D false) )
+			        allRows[i].style.display =3D "none";
+		    else
+			    allRows[i].style.display =3D "";
+        }
+	}
+
+	ShowHideFrameworkImages();
+	ShowHideFrameworkSpans();
+}
+
+function ShowHideFrameworkImages()
+{
+    // show/hide img nodes for filtered framework icons
+    // get all the <img> nodes in the document
+	var allImgs =3D document.getElementsByTagName("img");
+
+	for(var i =3D 0; i < allImgs.length; i++)
+	{
+	    var imgdata =3D allImgs[i].getAttribute("data");
+	    if (imgdata !=3D null)
+        {
+	        var checkboxId =3D imgdata + "Checkbox";           =20
+            if (docSettings[checkboxId] !=3D "on")
+	        {
+		        allImgs[i].style.display =3D "none";
+	        }
+		    else
+			    allImgs[i].style.display =3D "";
+        }
+	}
+}
+
+function ShowHideFrameworkSpans()
+{
+    // show/hide img nodes for filtered framework icons
+    // get all the <img> nodes in the document
+	var allImgs =3D document.getElementsByTagName("span");
+
+	for(var i =3D 0; i < allImgs.length; i++)
+	{
+	    var imgdata =3D allImgs[i].getAttribute("data");
+	    if (imgdata !=3D null)
+        {
+	        var checkboxId =3D imgdata + "Checkbox";           =20
+            if (docSettings[checkboxId] !=3D "on")
+	        {
+		        allImgs[i].style.display =3D "none";
+	        }
+		    else
+			    allImgs[i].style.display =3D "";
+        }
+	}
+}
+
+function ShowBasedOnVisibility(memberdata)
+{
+    var isPublic =3D (memberdata.indexOf("public") !=3D -1);
+    var isProtected =3D (memberdata.indexOf("protected") !=3D -1);
+    var isPrivate =3D (memberdata.indexOf("private") !=3D -1);
+    var isExplicitII =3D (memberdata.indexOf("explicit") !=3D -1);
+   =20
+    // if the public checkbox doesn't exist, default to showPublic =
+=3D=3D true
+    var publicCheck =3D docSettings["PublicCheckbox"];
+    var showPublic =3D (publicCheck =3D=3D null) ? true : (publicCheck =
+=3D=3D "on");
+   =20
+    // if the protected checkbox doesn't exist, default to showProtected =
+=3D=3D true
+    var protectedCheck =3D docSettings["ProtectedCheckbox"];
+    var showProtected =3D (protectedCheck =3D=3D null) ? true : =
+(protectedCheck =3D=3D "on");
+ =20
+    if ( (showProtected && isProtected) || (showPublic && isPublic) || =
+isExplicitII || isPrivate)
+        return true;
+
+    return false;
+}
+
+function ShowBasedOnInheritance(memberdata)
+{
+    var isInherited =3D (memberdata.indexOf("inherited") !=3D -1);
+    var isDeclared =3D (memberdata.indexOf("declared") !=3D -1);
+   =20
+    // if the inherited checkbox doesn't exist, default to showInherited =
+=3D=3D true
+    var inheritedCheck =3D docSettings["InheritedCheckbox"];
+    var showInherited =3D (inheritedCheck =3D=3D null) ? true : =
+(inheritedCheck =3D=3D "on");
+   =20
+    // if the declared checkbox doesn't exist, default to showDeclared =
+=3D=3D true
+    var declaredCheck =3D docSettings["DeclaredCheckbox"];
+    var showDeclared =3D (declaredCheck =3D=3D null) ? true : =
+(declaredCheck =3D=3D "on");
+   =20
+    if ( (showInherited && isInherited) || (showDeclared && isDeclared) =
+)
+        return true;
+
+    return false;
+}
+
+function ShowBasedOnFramework(memberdata) {
+
+    var splitData =3D memberdata.split(";");
+    var foundNotNetfw =3D false;
+    var frameworkFilter =3D =
+document.getElementById('memberFrameworksMenu') !=3D null;
+
+    for (var i =3D 0; i < splitData.length; i++) {
+
+        if (splitData[i] =3D=3D "notNetfw") {
+            foundNotNetfw =3D true;
+            continue;
+        }
+        if (docSettings[splitData[i] + "Checkbox"] =3D=3D "on")
+            return true;
+    }
+    if (!foundNotNetfw && docSettings["netfwCheckbox"] =3D=3D "on")
+        return true;
+    if (foundNotNetfw && docSettings["netfwCheckbox"] =3D=3D null && =
+!frameworkFilter)
+        return true;
+
+    return false;
+}
+
+
+function SetDropdownMenuLabel(menu, dropdown)
+{=09
+    var dropdownLabelId =3D menu.GetDropdownLabelId();
+	dropdown.SetActivatorLabel(dropdownLabelId);
+	for (var i =3D 0; i < dropdowns.length; i++)
+	{
+	    dropdowns[i].reposition();
+	}
+}
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ghielectronics.com/downloads/NETMF/Library%20Documentation/scripts/highlight.js
+
+//=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D
+// System  : Color Syntax Highlighter
+// File    : Highlight.js
+// Author  : Eric Woodruff  (Eric@EWoodruff.us)
+// Updated : 11/13/2007
+// Note    : Copyright 2006, Eric Woodruff, All rights reserved
+//
+// This contains the script to expand and collapse the regions in the
+// syntax highlighted code.
+//
+//=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D
+
+// Expand/collapse a region
+function HighlightExpandCollapse(showId, hideId)
+{
+    var showSpan =3D document.getElementById(showId),
+        hideSpan =3D document.getElementById(hideId);
+
+    showSpan.style.display =3D "inline";
+    hideSpan.style.display =3D "none";
+}
+
+// Copy the code if Enter or Space is hit with the image focused
+function CopyColorizedCodeCheckKey(titleDiv, eventObj)
+{
+    if(eventObj !=3D undefined && (eventObj.keyCode =3D=3D 13 ||
+      eventObj.keyCode =3D=3D 32))
+        CopyColorizedCode(titleDiv);
+}
+
+// Change the icon as the mouse moves in and out of the Copy Code link
+// There should be an image with the same name but an "_h" suffix just
+// before the extension.
+function CopyCodeChangeIcon(linkSpan)
+{
+    var image =3D linkSpan.firstChild.src;
+    var pos =3D image.lastIndexOf(".");
+
+    if(linkSpan.className =3D=3D "highlight-copycode")
+    {
+        linkSpan.className =3D "highlight-copycode_h";
+        linkSpan.firstChild.src =3D image.substr(0, pos) + "_h" +
+            image.substr(pos);
+    }
+    else
+    {
+        linkSpan.className =3D "highlight-copycode";
+        linkSpan.firstChild.src =3D image.substr(0, pos - 2) + =
+image.substr(pos);
+    }
+}
+
+// Copy the code from a colorized code block to the clipboard.
+function CopyColorizedCode(titleDiv)
+{
+    var preTag, idx, line, block, htmlLines, lines, codeText, =
+hasLineNos,
+        hasRegions, clip, trans, copyObject, clipID;
+    var reLineNo =3D /^\s*\d{1,4}/;
+    var reRegion =3D /^\s*\d{1,4}\+.*?\d{1,4}-/;
+    var reRegionText =3D /^\+.*?\-/;
+
+    // Find the <pre> tag containing the code.  It should be in the next
+    // element or one of its children.
+    block =3D titleDiv.nextSibling;
+
+    while(block.nodeName =3D=3D "#text")
+        block =3D block.nextSibling;
+
+    while(block.tagName !=3D "PRE")
+    {
+        block =3D block.firstChild;
+
+        while(block.nodeName =3D=3D "#text")
+            block =3D block.nextSibling;
+    }
+
+    if(block.innerText !=3D undefined)
+        codeText =3D block.innerText;
+    else
+        codeText =3D block.textContent;
+
+    hasLineNos =3D block.innerHTML.indexOf("highlight-lineno");
+    hasRegions =3D block.innerHTML.indexOf("highlight-collapsebox");
+    htmlLines =3D block.innerHTML.split("\n");
+    lines =3D codeText.split("\n");
+
+    // Remove the line numbering and collapsible regions if present
+    if(hasLineNos !=3D -1 || hasRegions !=3D -1)
+    {
+        codeText =3D "";
+
+        for(idx =3D 0; idx < lines.length; idx++)
+        {
+            line =3D lines[idx];
+
+            if(hasRegions && reRegion.test(line))
+                line =3D line.replace(reRegion, "");
+            else
+            {
+                line =3D line.replace(reLineNo, "");
+
+                // Lines in expanded blocks have an extra space
+                if(htmlLines[idx].indexOf("highlight-expanded") !=3D -1 =
+||
+                  htmlLines[idx].indexOf("highlight-endblock") !=3D -1)
+                    line =3D line.substr(1);
+            }
+
+            if(hasRegions && reRegionText.test(line))
+                line =3D line.replace(reRegionText, "");
+
+            codeText +=3D line;
+
+            // Not all browsers keep the line feed when split
+            if(line[line.length - 1] !=3D "\n")
+                codeText +=3D "\n";
+        }
+    }
+
+    // IE or FireFox/Netscape?
+    if(window.clipboardData)
+        window.clipboardData.setData("Text", codeText);
+    else
+        if(window.netscape)
+        {
+            // Give unrestricted access to browser APIs using XPConnect
+            try
+            {
+                netscape.security.PrivilegeManager.enablePrivilege(
+                    "UniversalXPConnect");
+            }
+            catch(e)
+            {
+                alert("Universal Connect was refused, cannot copy to " +
+                    "clipboard.  Go to about:config and set " +
+                    "signed.applets.codebase_principal_support to true =
+to " +
+                    "enable clipboard support.");
+                return;
+            }
+
+            // Creates an instance of nsIClipboard
+            clip =3D Components.classes[
+                "@mozilla.org/widget/clipboard;1"].createInstance(
+                Components.interfaces.nsIClipboard);
+
+            // Creates an instance of nsITransferable
+            if(clip)
+                trans =3D Components.classes[
+                    =
+"@mozilla.org/widget/transferable;1"].createInstance(
+                    Components.interfaces.nsITransferable);
+
+            if(!trans)
+            {
+                alert("Copy to Clipboard is not supported by this =
+browser");
+                return;
+            }
+
+            // Register the data flavor
+            trans.addDataFlavor("text/unicode");
+
+            // Create object to hold the data
+            copyObject =3D new Object();
+
+            // Creates an instance of nsISupportsString
+            copyObject =3D Components.classes[
+                "@mozilla.org/supports-string;1"].createInstance(
+                Components.interfaces.nsISupportsString);
+
+            // Assign the data to be copied
+            copyObject.data =3D codeText;
+
+            // Add data objects to transferable
+            trans.setTransferData("text/unicode", copyObject,
+                codeText.length * 2);
+
+            clipID =3D Components.interfaces.nsIClipboard;
+
+            if(!clipID)
+            {
+                alert("Copy to Clipboard is not supported by this =
+browser");
+                return;
+            }
+
+            // Transfer the data to the clipboard
+            clip.setData(trans, null, clipID.kGlobalClipboard);
+        }
+        else
+            alert("Copy to Clipboard is not supported by this browser");
+}
+
+------=_NextPart_000_0052_01CCAEAF.93A9A460--

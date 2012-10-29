@@ -1,0 +1,1491 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: NMRA Function Mapping
+Date: Mon, 4 Apr 2011 18:18:16 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CBF2F4.AAE53080"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16543
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://atw.huebsch.at/dcc/functiommapping.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>NMRA Function Mapping</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META content=3Dde-at http-equiv=3DContent-Language>
+<META content=3DblendTrans(Duration=3D1) http-equiv=3DPage-Enter>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16722">
+<META name=3DProgId content=3DFrontPage.Editor.Document><LINK =
+rel=3Dstylesheet=20
+type=3Dtext/css href=3D"http://atw.huebsch.at/ATW.css">
+<META name=3D"Microsoft Border" content=3Dtlb></HEAD>
+<BODY><!--msnavigation-->
+<TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P>
+      <SCRIPT language=3DJavaScript>
+<!--
+function hopen_w(){
+        win =3D window.open("/Software/WireCalc.htm", "WireCalc", =
+"toolbar=3Dno,location=3Dno,directories=3Dno,status=3Dno, =
+menubar=3Dno,scrollbars=3Dno,resizable=3Dno,copyhistory=3Dyes,width=3D470=
+,height=3D350")
+}
+
+function hopen_s(){
+        win =3D window.open("/Software/scale.htm", "scale", =
+"toolbar=3Dno,location=3Dno,directories=3Dno,status=3Dno, =
+menubar=3Dno,scrollbars=3Dno,resizable=3Dno,copyhistory=3Dyes,width=3D470=
+,height=3D450")
+}
+
+function hopen_a(){
+        win =3D window.open("/Software/LongAdr.htm", "LongAddr", =
+"toolbar=3Dno,location=3Dno,directories=3Dno,status=3Dno, =
+menubar=3Dno,scrollbars=3Dno,resizable=3Dno,copyhistory=3Dyes,width=3D470=
+,height=3D250")
+}
+
+function hopen_b(){
+        win =3D window.open("/Software/bincalc.htm", "bincalc", =
+"toolbar=3Dno,location=3Dno,directories=3Dno,status=3Dno, =
+menubar=3Dno,scrollbars=3Dno,resizable=3Dno,copyhistory=3Dyes,width=3D470=
+,height=3D500")
+}
+
+function hopen_f(){
+        win =3D window.open("/Software/function.htm", "function", =
+"toolbar=3Dno,location=3Dno,directories=3Dno,status=3Dno, =
+menubar=3Dno,scrollbars=3Dno,resizable=3Dno,copyhistory=3Dyes,width=3D500=
+,height=3D550")
+}
+
+function hopen_f46(){
+        win =3D window.open("/Software/function_46.htm", "function_46", =
+"toolbar=3Dno,location=3Dno,directories=3Dno,status=3Dno, =
+menubar=3Dno,scrollbars=3Dno,resizable=3Dno,copyhistory=3Dyes,width=3D600=
+,height=3D560")
+}
+function hopen_weiche(){
+        win =3D window.open("/Software/weiche.htm", "Weiche", =
+"toolbar=3Dno,location=3Dno,directories=3Dno,status=3Dno, =
+menubar=3Dno,scrollbars=3Dno,resizable=3Dno,copyhistory=3Dyes,width=3D450=
+,height=3D300")
+}
+// -->
+</SCRIPT>
+      </P>
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+        <TBODY>
+        <TR>
+          <TD bgColor=3D#6699cc vAlign=3Dtop rowSpan=3D2 noWrap><A =
+name=3Dtop><IMG=20
+            border=3D0 hspace=3D0 alt=3D"" align=3Dtop=20
+            src=3D"http://atw.huebsch.at/images/ATW.gif" width=3D107=20
+          height=3D101></A></TD>
+          <TD bgColor=3D#6699cc width=3D"100%" colSpan=3D3 =
+align=3Dmiddle><IMG=20
+            border=3D0 hspace=3D0 align=3Dleft=20
+            src=3D"http://atw.huebsch.at/images/leer.gif" width=3D1 =
+height=3D79><IMG=20
+            border=3D0 hspace=3D0 =
+src=3D"http://atw.huebsch.at/images/leer.gif"=20
+            width=3D468 height=3D8><BR>
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0>
+              <TBODY>
+              <TR>
+                <TD class=3Dnormal>
+                  <H1 class=3Dtitelbar><ILAYER id=3Dlayer1 height=3D"60" =
+width=3D"468"=20
+                  visibility=3D"hidden"></ILAYER>NMRA Function=20
+              Mapping</H1></TD></TR></TBODY></TABLE></TD>
+          <TD vAlign=3Dtop rowSpan=3D3><IMG border=3D0 hspace=3D0 =
+align=3Dtop=20
+            src=3D"http://atw.huebsch.at/images/o_rechts_blau.gif" =
+width=3D37=20
+            height=3D101></TD></TR>
+        <TR>
+          <TD vAlign=3Dtop=20
+          background=3Dhttp://atw.huebsch.at/images/innen_rund_blau.gif =
+width=3D57=20
+          align=3Dleft><IMG border=3D0 hspace=3D0 align=3Dtop=20
+            src=3D"http://atw.huebsch.at/images/leer.gif" width=3D57 =
+height=3D20> <!-- <img src=3D"../images/innen_rund_blau.gif" =
+hspace=3D"0" border=3D"0" align=3D"top" width=3D"57" height=3D"22"> =
+--></TD>
+          <TD class=3Dnormal bgColor=3D#ffffff vAlign=3Dtop =
+align=3Dleft><IMG border=3D0=20
+            hspace=3D0 align=3Dtop =
+src=3D"http://atw.huebsch.at/images/leer.gif"=20
+            width=3D1 height=3D20> <FONT size=3D-1><A =
+href=3D"http://www.huebsch.at/"=20
+            target=3D_top>H=DCBSCH Web</A> <A =
+href=3D"http://amw.huebsch.at/"=20
+            target=3D_top>AMW</A> <A href=3D"http://www.zimo.at/"=20
+            target=3D_top>ZIMO</A> <A=20
+            href=3D"http://www.stp-software.at/">STP</A>&nbsp;<A=20
+            href=3D"http://www.estwgj.com/">ESTWGJ</A> <A=20
+            href=3D"http://www.tran.at/" target=3D_top>Tran</A>&nbsp; <A =
+
+            href=3D"http://www.zoffi.net/MOBAZI">MOBAZI</A> <A=20
+            href=3D"http://zimoforum.huebsch.at/" =
+target=3D_top>Forum</A> <A=20
+            href=3D"http://www.g-spur.at/">G-Spur</A></FONT><A=20
+            href=3D"http://www.g-spurl.at/"></A> <A=20
+            href=3D"http://www.waschzettel.at/">Waschzettel</A> <A=20
+            href=3D"http://mbahn.familierogler.at/">Rogler</A></TD>
+          <TD bgColor=3D#ffffff vAlign=3Dtop align=3Dright><A=20
+            onclick=3D"hopen_a();return false;"=20
+            href=3D"http://atw.huebsch.at/Software/LongAdr.htm"=20
+            target=3D_blank>CV17/18</A> <A onclick=3D"hopen_b();return =
+false;"=20
+            href=3D"http://atw.huebsch.at/Software/bincalc.htm"=20
+            target=3D_blank>CV29</A>, <A onclick=3D"hopen_s();return =
+false;"=20
+            href=3D"http://atw.huebsch.at/Software/scale.htm"=20
+            target=3D_blank>Scale</A>, <A onclick=3D"hopen_f();return =
+false;"=20
+            href=3D"http://atw.huebsch.at/Software/function.htm"=20
+            target=3D_blank>CV33-40</A>, <A =
+onclick=3D"hopen_f46();return false;"=20
+            href=3D"http://atw.huebsch.at/Software/function_46.htm"=20
+            target=3D_blank>CV33-46</A> <A =
+onclick=3D"hopen_weiche();return false;"=20
+            href=3D"http://atw.huebsch.at/Software/weiche.htm"=20
+            target=3D_blank>Weiche</A> <A onclick=3D"hopen_w();return =
+false;"=20
+            href=3D"http://atw.huebsch.at/Software/WireCalc.htm"=20
+            target=3D_blank>WireCalc</A>&nbsp; &nbsp; </TD></TR>
+        <TR>
+          <TD style=3D"BACKGROUND-COLOR: #6699cc" class=3Dstyle1 =
+vAlign=3Dtop width=3D57=20
+          align=3Dleft>&nbsp;</TD>
+          <TD style=3D"BACKGROUND-IMAGE: url(../images/innen_blau.gif)"=20
+          class=3Dstyle2 bgColor=3D#ffffff vAlign=3Dtop =
+align=3Dleft>&nbsp;</TD>
+          <TD style=3D"TEXT-ALIGN: center" class=3Dstyle3 =
+bgColor=3D#ffffff vAlign=3Dtop=20
+          =
+colSpan=3D2></TD></TR></TBODY></TABLE></TD></TR><!--msnavigation--></TBOD=
+Y></TABLE><!--msnavigation-->
+<TABLE dir=3Dltr border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"1%">
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D147 =
+height=3D"100%">
+        <TBODY>
+        <TR>
+          <TD bgColor=3D#6699cc>
+            <TABLE border=3D0 width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD width=3D10></TD>
+                <TD><NOBR><A href=3D"http://atw.huebsch.at/dcc/DCC.htm"=20
+                  target=3D"">Up</A></NOBR>
+                  <P><FONT size=3D-1><A=20
+                  href=3D"http://drmb.huebsch.at/Uebersicht.asp" =
+target=3D_top>drmb=20
+                  Liste</A></FONT></P>
+                  <P>&nbsp;</P></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD><IMG border=3D0 =
+src=3D"http://atw.huebsch.at/images/verlauf.gif"=20
+            width=3D147 height=3D68></TD></TR>
+        <TR>
+          <TD width=3D"100%">
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0>
+              <TBODY>
+              <TR>
+                <TD colSpan=3D2><IMG border=3D0=20
+                  src=3D"http://atw.huebsch.at/images/News.png" =
+width=3D136=20
+                  height=3D29></TD></TR>
+              <TR>
+                <TD height=3D10><IMG border=3D0=20
+                  src=3D"http://atw.huebsch.at/images/whatsnewln.gif" =
+width=3D14=20
+                  height=3D"100%"></TD>
+                <TD vAlign=3Dtop align=3Djustify>
+                  <P class=3Dnews><A=20
+                  =
+href=3D"http://atw.huebsch.at/Tipps_Tricks/KabelFarben.htm">Kabelfarben</=
+A></P>
+                  <P class=3Dnews>&nbsp;</P>
+                  <P class=3Dnews><A=20
+                  =
+href=3D"http://atw.huebsch.at/Tipps_Tricks/DCC_Weiche.htm#loeten">L=F6tst=
+ellen</A>&nbsp;</P>
+                  <P class=3Dnews><A=20
+                  href=3D"http://atw.huebsch.at/STP/STR_Editor.htm">STP=20
+                  Color</A>&nbsp;</P>
+                  <P class=3Dnews><A=20
+                  =
+href=3D"http://atw.huebsch.at/Modell/H0/KB_5046.htm">5046</A></P>
+                  <P class=3Dnews><A=20
+                  =
+href=3D"http://atw.huebsch.at/ZIMO/MX32.htm">MX32</A></P>
+                  <P class=3Dnews><A=20
+                  =
+href=3D"http://atw.huebsch.at/Modell/H0/Breuer_Traktor.htm">Breuer=20
+                  Traktor</A></P></TD></TR></TBODY></TABLE>
+            <P align=3Dcenter><STRONG>Besucher / Visitors:<BR><!--#exec =
+cgi=3D"/ATW_Script/counter.pl"--><BR>Seit /=20
+            Since 2000-12-01</P></STRONG></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=3Dtop width=3D24></TD><!--msnavigation-->
+    <TD vAlign=3Dtop>
+      <TABLE border=3D0 cellSpacing=3D4 cellPadding=3D0 width=3D"100%">
+        <TBODY>
+        <TR>
+          <TH vAlign=3Dtop width=3D"48%" align=3Dmiddle>&nbsp;</TH>
+          <TH vAlign=3Dtop width=3D"4%" align=3Dmiddle></TH>
+          <TH vAlign=3Dtop width=3D"48%" align=3Dmiddle></TH></TR>
+        <TR>
+          <TH vAlign=3Dtop width=3D"48%" align=3Dmiddle><IMG border=3D0=20
+            src=3D"http://atw.huebsch.at/images/flags/F_at.gif" =
+width=3D28=20
+            height=3D19> / <IMG border=3D0=20
+            src=3D"http://atw.huebsch.at/images/flags/F_de.gif" =
+width=3D31=20
+            height=3D19>&nbsp;</TH>
+          <TH vAlign=3Dtop width=3D"4%" align=3Dmiddle></TH>
+          <TH vAlign=3Dtop width=3D"48%" align=3Dmiddle><IMG border=3D0=20
+            src=3D"http://atw.huebsch.at/images/flags/F_us.gif" =
+width=3D35=20
+            height=3D19> / <IMG border=3D0=20
+            src=3D"http://atw.huebsch.at/images/flags/F_gb.gif" =
+width=3D37=20
+          height=3D19></TH></TR>
+        <TR>
+          <TD vAlign=3Dtop width=3D"48%">
+            <H4>Function Mapping - Funktions Zuordnung</H4></TD>
+          <TD vAlign=3Dtop width=3D"4%"></TD>
+          <TD vAlign=3Dtop width=3D"48%">
+            <H4><SPAN lang=3Den-us>Function =
+Mapping</SPAN></H4></TD></TR>
+        <TR>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%">Schon in der =
+Fr=FChzeit der=20
+            DCC Definition wurde die M=F6glichkeit vorgesehen Ausg=E4nge =
+beliebigen=20
+            Funktionstasten einer Steuereinheit zuzuordnen. Die =
+Versendung=20
+            dieser Einrichtung ist noch immer nicht sehr verbreitet. =
+Vermutlich=20
+            gibt es nirgendwo leicht verst=E4ndliche Erkl=E4rungen. Sehr =
+oft wird in=20
+            den Bedienungsanleitungen einfach auf die NMRA Norm =
+verwiesen. Ich=20
+            will ich das Geheimnis ein wenig l=FCften.</TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"4%"></TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%"><SPAN =
+lang=3Den-us>Already in=20
+            the early days of DCC the standards group designed a feature =
+which=20
+            allows users to remap output ports of a decoder to a =
+controller=20
+            function key freely. Although this functionality exists for =
+some=20
+            time the usage is till limited. I guess the mechanism was =
+too often=20
+            explained to technically, or handbooks just point to the =
+NMRA pages.=20
+            I want to demystify the issue here.</SPAN></TD></TR>
+        <TR>
+          <TD vAlign=3Dtop width=3D"48%" colSpan=3D3 align=3Dmiddle><IMG =
+border=3D0=20
+            align=3Dcenter =
+src=3D"http://atw.huebsch.at/images/hor_bar.gif"=20
+            width=3D"90%" height=3D1></TD></TR>
+        <TR>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%">Die Idee hinter =
+dem Function=20
+            Mapping ist es dem Anwender die Bedeutung eines Befehls =
+einen=20
+            Ausgang zu schalten frei w=E4hlen zu lassen. Dazu gibt es =
+eine Tabelle=20
+            in der jeweils die Verbindung "Funktionstaste x" ist =
+gedr=FCckt worden=20
+            zu "Ausgang x" wird eingeschaltet definiert wird.=20
+            <P>Diese Funktionalit=E4t ist noch relativ banal. Man =
+k=F6nnte die=20
+            Bedeutung dass F4 den Rauchgenerator einschaltet auch anders =
+
+            erreichen indem man die Decoderanschl=FCsse eben uml=F6tet. =
+Abgesehen=20
+            davon dass das mit gewissem Aufwand verbunden ist und ein=20
+            umprogrammieren eben einfacher ist, gibt es =FCber das=20
+            FunctionRemapping noch mehr M=F6glichkeiten. </P>
+            <P>Man kann z.B..: definieren, dass der Ausgang 3 sowohl mit =
+F3 und=20
+            / oder mit F4 eingeschaltet werden kann. Ohne Function =
+Mapping=20
+            m=FCsste man da bereits am Decoder zus=E4tzliche Elektronik=20
+            anbringen.</P>
+            <P>Ein weiteres Anwendungsbeispiel: Der Decoder hat 4 =
+Ausg=E4nge. Um=20
+            die Bedienung zu Standardisieren will man dass F6 immer der=20
+            Rauchgenerator ist. Das ist mittels Remapping kein Problem. =
+Man muss=20
+            also nicht mehr nachdenken in der Lok x ist ein bestimmter =
+Decoder=20
+            drinnen der hat nur 3 Ausg=E4nge daher ist da der =
+Rauchgenerator auf=20
+            F3. Durch das Remapping ist auch bei so einem Decoder der=20
+            Rauchgenerator =FCber F6 zu schalten obwohl der Decoder gar =
+keinen 6.=20
+            Ausgang hat.</P>
+            <P>Weitere Anwendung Rangier-Beleuchtung. Beim Rangieren =
+soll das=20
+            Licht vorne und hinten an der Lok leuchten. Die L=F6sung ist =
+ganz=20
+            einfach =FCber CV36=3D3 wird der Taste F2 diese Funktion=20
+          zugeordnet.</P></TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"4%">&nbsp;</TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%"><SPAN =
+lang=3Den-us>The basic=20
+            concept behind function remapping is to assign any output to =
+a given=20
+            function key. This is defined via a table which connects =
+output to=20
+            function key.</SPAN>
+            <P><SPAN lang=3Den-us>This functionality is quite basic, it =
+could be=20
+            replaced by resoldering the corresponding output wires to =
+the=20
+            desired location. But reprogramming a finished loco is much =
+easier=20
+            than reopening and soldering. But there is more..</SPAN></P>
+            <P><SPAN lang=3Den-us>It is possible to assign one output to =
+several=20
+            function keys. Or to switch 3 output lines by pressing one =
+key. This=20
+            could also be realized in HW with some logic behind the =
+decoder. Due=20
+            to the limited space in models the remapping brings a big=20
+            advantage.</SPAN></P>
+            <P><SPAN lang=3Den-us>You can use it to assign a specific=20
+            functionality to always the same controller key. For example =
+F6 is=20
+            always the smoke generator. Even if your decoder does not =
+come with=20
+            6 output lines, via remapping F6 can be assigned to any =
+output=20
+            port.</SPAN></P>
+            <P><SPAN lang=3Den-us>Another case might be to engage a =
+special light=20
+            combination during a switching job. Easy example turn on =
+front and=20
+            tail light and assign that spatiality to F2. Just program=20
+            CV36=3D3.</SPAN></P></TD></TR>
+        <TR>
+          <TD vAlign=3Dtop width=3D"48%">
+            <H4>Die Tabelle</H4></TD>
+          <TD vAlign=3Dtop width=3D"4%"></TD>
+          <TD vAlign=3Dtop width=3D"48%">
+            <H4><SPAN lang=3Den-us>The Table</SPAN></H4></TD></TR>
+        <TR>
+          <TD vAlign=3Dtop width=3D"48%" colSpan=3D3 align=3Dmiddle>
+            <TABLE border=3D3>
+              <TBODY>
+              <TR>
+                <TD width=3D"100%">
+                  <DIV align=3Dcenter>
+                  <FORM name=3DBin>
+                  <CENTER>
+                  <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom=20
+                        align=3Dmiddle>NMRA<BR>function</TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom =
+align=3Dmiddle>ZIMO=20
+                        <P>key</P></TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom =
+align=3Dmiddle>CV</TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom =
+align=3Dmiddle>&nbsp;</TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom =
+align=3Dmiddle>dec=20
+                        <P>value</P></TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom=20
+                        align=3Dmiddle>Out&nbsp;<BR>8</TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom=20
+                        align=3Dmiddle>Out&nbsp;<BR>7</TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom=20
+                        align=3Dmiddle>Out&nbsp;<BR>6</TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom=20
+                        align=3Dmiddle>Out&nbsp;<BR>5</TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom =
+align=3Dmiddle>Out&nbsp;=20
+
+                        <P>4</P></TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom =
+align=3Dmiddle>Out&nbsp;=20
+
+                        <P>3</P></TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom =
+align=3Dmiddle>rear=20
+                        <P>Out&nbsp;</P>
+                        <P>2</P></TD>
+                      <TD bgColor=3D#bad1e9 vAlign=3Dbottom =
+align=3Dmiddle>front=20
+                        <P>Out</P>
+                        <P>1</P></TD></TR>
+                    <TR>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>f0</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>1</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>#33</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>L front</TD>
+                      <TD align=3Dmiddle><INPUT value=3D0 size=3D3 =
+name=3DCV33></TD>
+                      <TD align=3Dmiddle>7<INPUT onclick=3Dmapping(this) =
+value=3D128=20
+                        type=3Dcheckbox name=3DBit733></TD>
+                      <TD align=3Dmiddle>6<INPUT onclick=3Dmapping(this) =
+value=3D64=20
+                        type=3Dcheckbox name=3DBit633></TD>
+                      <TD align=3Dmiddle>5<INPUT onclick=3Dmapping(this) =
+value=3D32=20
+                        type=3Dcheckbox name=3DBit533></TD>
+                      <TD align=3Dmiddle>4<INPUT onclick=3Dmapping(this) =
+value=3D16=20
+                        type=3Dcheckbox name=3DBit433></TD>
+                      <TD align=3Dmiddle>3<INPUT onclick=3Dmapping(this) =
+value=3D8=20
+                        type=3Dcheckbox name=3DBit333></TD>
+                      <TD align=3Dmiddle>2<INPUT onclick=3Dmapping(this) =
+value=3D4=20
+                        type=3Dcheckbox name=3DBit233></TD>
+                      <TD align=3Dmiddle>1<INPUT onclick=3Dmapping(this) =
+value=3D2=20
+                        type=3Dcheckbox name=3DBit133></TD>
+                      <TD bgColor=3D#cccccc align=3Dmiddle>0<INPUT=20
+                        onclick=3Dmapping(this) value=3D1 =
+type=3Dcheckbox=20
+                      name=3DBit033></TD></TR>
+                    <TR>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>f0</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>1</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>#34</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>L rear</TD>
+                      <TD align=3Dmiddle><INPUT value=3D0 size=3D3 =
+name=3DCV34></TD>
+                      <TD align=3Dmiddle>7<INPUT onclick=3Dmapping(this) =
+value=3D128=20
+                        type=3Dcheckbox name=3DBit734></TD>
+                      <TD align=3Dmiddle>6<INPUT onclick=3Dmapping(this) =
+value=3D64=20
+                        type=3Dcheckbox name=3DBit634></TD>
+                      <TD align=3Dmiddle>5<INPUT onclick=3Dmapping(this) =
+value=3D32=20
+                        type=3Dcheckbox name=3DBit534></TD>
+                      <TD align=3Dmiddle>4<INPUT onclick=3Dmapping(this) =
+value=3D16=20
+                        type=3Dcheckbox name=3DBit434></TD>
+                      <TD align=3Dmiddle>3<INPUT onclick=3Dmapping(this) =
+value=3D8=20
+                        type=3Dcheckbox name=3DBit334></TD>
+                      <TD align=3Dmiddle>2<INPUT onclick=3Dmapping(this) =
+value=3D4=20
+                        type=3Dcheckbox name=3DBit234></TD>
+                      <TD bgColor=3D#cccccc align=3Dmiddle>1<INPUT=20
+                        onclick=3Dmapping(this) value=3D2 =
+type=3Dcheckbox=20
+                      name=3DBit134></TD>
+                      <TD align=3Dmiddle>0<INPUT onclick=3Dmapping(this) =
+value=3D1=20
+                        type=3Dcheckbox name=3DBit034></TD></TR>
+                    <TR>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>f1</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>2</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>#35</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>LL</TD>
+                      <TD align=3Dmiddle><INPUT value=3D0 size=3D3 =
+name=3DCV35></TD>
+                      <TD align=3Dmiddle>7<INPUT onclick=3Dmapping(this) =
+value=3D128=20
+                        type=3Dcheckbox name=3DBit735></TD>
+                      <TD align=3Dmiddle>6<INPUT onclick=3Dmapping(this) =
+value=3D64=20
+                        type=3Dcheckbox name=3DBit635></TD>
+                      <TD align=3Dmiddle>5<INPUT onclick=3Dmapping(this) =
+value=3D32=20
+                        type=3Dcheckbox name=3DBit535></TD>
+                      <TD align=3Dmiddle>4<INPUT onclick=3Dmapping(this) =
+value=3D16=20
+                        type=3Dcheckbox name=3DBit435></TD>
+                      <TD align=3Dmiddle>3<INPUT onclick=3Dmapping(this) =
+value=3D8=20
+                        type=3Dcheckbox name=3DBit335></TD>
+                      <TD bgColor=3D#cccccc align=3Dmiddle>2<INPUT=20
+                        onclick=3Dmapping(this) value=3D4 =
+type=3Dcheckbox=20
+                      name=3DBit235></TD>
+                      <TD align=3Dmiddle>1<INPUT onclick=3Dmapping(this) =
+value=3D2=20
+                        type=3Dcheckbox name=3DBit135></TD>
+                      <TD align=3Dmiddle>0<INPUT onclick=3Dmapping(this) =
+value=3D1=20
+                        type=3Dcheckbox name=3DBit035></TD></TR>
+                    <TR>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>f2</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>3</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>#36</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>Z</TD>
+                      <TD align=3Dmiddle><INPUT value=3D0 size=3D3 =
+name=3DCV36></TD>
+                      <TD align=3Dmiddle>7<INPUT onclick=3Dmapping(this) =
+value=3D128=20
+                        type=3Dcheckbox name=3DBit736></TD>
+                      <TD align=3Dmiddle>6<INPUT onclick=3Dmapping(this) =
+value=3D64=20
+                        type=3Dcheckbox name=3DBit636></TD>
+                      <TD align=3Dmiddle>5<INPUT onclick=3Dmapping(this) =
+value=3D32=20
+                        type=3Dcheckbox name=3DBit536></TD>
+                      <TD align=3Dmiddle>4<INPUT onclick=3Dmapping(this) =
+value=3D16=20
+                        type=3Dcheckbox name=3DBit436></TD>
+                      <TD bgColor=3D#cccccc align=3Dmiddle>3<INPUT=20
+                        onclick=3Dmapping(this) value=3D8 =
+type=3Dcheckbox=20
+                      name=3DBit336></TD>
+                      <TD align=3Dmiddle>2<INPUT onclick=3Dmapping(this) =
+value=3D4=20
+                        type=3Dcheckbox name=3DBit236></TD>
+                      <TD align=3Dmiddle>1<INPUT onclick=3Dmapping(this) =
+value=3D2=20
+                        type=3Dcheckbox name=3DBit136></TD>
+                      <TD align=3Dmiddle>0<INPUT onclick=3Dmapping(this) =
+value=3D1=20
+                        type=3Dcheckbox name=3DBit036></TD></TR>
+                    <TR>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>f3</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>4</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>#37</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>Z1</TD>
+                      <TD align=3Dmiddle><INPUT value=3D0 size=3D3 =
+name=3DCV37></TD>
+                      <TD align=3Dmiddle>5<INPUT onclick=3Dmapping(this) =
+value=3D32=20
+                        type=3Dcheckbox name=3DBit537></TD>
+                      <TD align=3Dmiddle>4<INPUT onclick=3Dmapping(this) =
+value=3D16=20
+                        type=3Dcheckbox name=3DBit437></TD>
+                      <TD align=3Dmiddle>3<INPUT onclick=3Dmapping(this) =
+value=3D8=20
+                        type=3Dcheckbox name=3DBit337></TD>
+                      <TD bgColor=3D#cccccc align=3Dmiddle>2<INPUT=20
+                        onclick=3Dmapping(this) value=3D4 =
+type=3Dcheckbox=20
+                      name=3DBit237></TD>
+                      <TD align=3Dmiddle>1<INPUT onclick=3Dmapping(this) =
+value=3D2=20
+                        type=3Dcheckbox name=3DBit137></TD>
+                      <TD align=3Dmiddle>0<INPUT onclick=3Dmapping(this) =
+value=3D1=20
+                        type=3Dcheckbox name=3DBit037></TD>
+                      <TD align=3Dmiddle>x</TD>
+                      <TD align=3Dmiddle>x</TD></TR>
+                    <TR>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>f4</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>5</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>#38</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>Z2</TD>
+                      <TD align=3Dmiddle><INPUT value=3D0 size=3D3 =
+name=3DCV38></TD>
+                      <TD align=3Dmiddle>5<INPUT onclick=3Dmapping(this) =
+value=3D32=20
+                        type=3Dcheckbox name=3DBit538></TD>
+                      <TD align=3Dmiddle>4<INPUT onclick=3Dmapping(this) =
+value=3D16=20
+                        type=3Dcheckbox name=3DBit438></TD>
+                      <TD bgColor=3D#cccccc align=3Dmiddle>3<INPUT=20
+                        onclick=3Dmapping(this) value=3D8 =
+type=3Dcheckbox=20
+                      name=3DBit338></TD>
+                      <TD align=3Dmiddle>2<INPUT onclick=3Dmapping(this) =
+value=3D4=20
+                        type=3Dcheckbox name=3DBit238></TD>
+                      <TD align=3Dmiddle>1<INPUT onclick=3Dmapping(this) =
+value=3D2=20
+                        type=3Dcheckbox name=3DBit138></TD>
+                      <TD align=3Dmiddle>0<INPUT onclick=3Dmapping(this) =
+value=3D1=20
+                        type=3Dcheckbox name=3DBit038></TD>
+                      <TD align=3Dmiddle>x</TD>
+                      <TD align=3Dmiddle>x</TD></TR>
+                    <TR>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>f5</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>6</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>#39</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>Z3</TD>
+                      <TD align=3Dmiddle><INPUT value=3D0 size=3D3 =
+name=3DCV39></TD>
+                      <TD align=3Dmiddle>5<INPUT onclick=3Dmapping(this) =
+value=3D32=20
+                        type=3Dcheckbox name=3DBit539></TD>
+                      <TD bgColor=3D#cccccc align=3Dmiddle>4<INPUT=20
+                        onclick=3Dmapping(this) value=3D16 =
+type=3Dcheckbox=20
+                      name=3DBit439></TD>
+                      <TD align=3Dmiddle>3<INPUT onclick=3Dmapping(this) =
+value=3D8=20
+                        type=3Dcheckbox name=3DBit339></TD>
+                      <TD align=3Dmiddle>2<INPUT onclick=3Dmapping(this) =
+value=3D4=20
+                        type=3Dcheckbox name=3DBit239></TD>
+                      <TD align=3Dmiddle>1<INPUT onclick=3Dmapping(this) =
+value=3D2=20
+                        type=3Dcheckbox name=3DBit139></TD>
+                      <TD align=3Dmiddle>0<INPUT onclick=3Dmapping(this) =
+value=3D1=20
+                        type=3Dcheckbox name=3DBit039></TD>
+                      <TD align=3Dmiddle>x</TD>
+                      <TD align=3Dmiddle>x</TD></TR>
+                    <TR>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>f6</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>7</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>#40</TD>
+                      <TD bgColor=3D#bad1e9 align=3Dmiddle>&nbsp;</TD>
+                      <TD align=3Dmiddle><INPUT value=3D0 size=3D3 =
+name=3DCV40></TD>
+                      <TD bgColor=3D#cccccc align=3Dmiddle>5<INPUT=20
+                        onclick=3Dmapping(this) value=3D32 =
+type=3Dcheckbox=20
+                      name=3DBit540></TD>
+                      <TD align=3Dmiddle>4<INPUT onclick=3Dmapping(this) =
+value=3D16=20
+                        type=3Dcheckbox name=3DBit440></TD>
+                      <TD align=3Dmiddle>3<INPUT onclick=3Dmapping(this) =
+value=3D8=20
+                        type=3Dcheckbox name=3DBit340></TD>
+                      <TD align=3Dmiddle>2<INPUT onclick=3Dmapping(this) =
+value=3D4=20
+                        type=3Dcheckbox name=3DBit240></TD>
+                      <TD align=3Dmiddle>1<INPUT onclick=3Dmapping(this) =
+value=3D2=20
+                        type=3Dcheckbox name=3DBit140></TD>
+                      <TD align=3Dmiddle>0<INPUT onclick=3Dmapping(this) =
+value=3D1=20
+                        type=3Dcheckbox name=3DBit040></TD>
+                      <TD align=3Dmiddle>x</TD>
+                      <TD=20
+              =
+align=3Dmiddle>x</TD></TR></TBODY></TABLE></CENTER></DIV></TD></TR></TBOD=
+Y></TABLE>
+            <CENTER><INPUT value=3DReset type=3Dreset =
+name=3DReset></CENTER></FORM>
+            <P class=3Dcaption>remapping table</P></TD></TR>
+        <TR>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%">Oben sind die =
+Ausg=E4nge=20
+            angef=FChrt, links die jeweiligen Funktionstasten am =
+Steuerger=E4t. Die=20
+            jeweils gew=FCnschte Verbindung wird in der Tabelle =
+hergestellt. Die=20
+            technische Realisierung erfolgt =FCber ein Bitmuster in =
+einer CV des=20
+            Decoders. =DCblicherweise werden in CV's Dezimalwerte =
+programmiert. Zu=20
+            diesen Dezimalwert kommt man wenn man die Summe aller&nbsp; =
+2er=20
+            Potenz der jeweiligen Spaltenwerte addiert, das ist die Zahl =
+links=20
+            von der Checkbox.. Das kling kompliziert und klingt nach =
+technisch=20
+            schwierigem Zeug. Die obige Tabelle rechnet diese Aufgabe=20
+            automatisch aus. Weiters gibt es in der Kopfzeile dieses =
+WEBs rechts=20
+            oben einen direkten link zu den Kalkulatoren. Damit hoffe =
+ich das=20
+            Berechnen der CV Werte allen zug=E4nglich gemacht zu =
+haben.</TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"4%"></TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%"><SPAN =
+lang=3Den-us>In the=20
+            table you can see the outputs in the top row, the function =
+keys are=20
+            on your left. Just mark the required function in the table. =
+The=20
+            decoder does this by setting the corresponding bit in a CV. =
+8 bits=20
+            get an byte, that byte in decimal format is programmed into =
+the CV.=20
+            The decimal value of the CV is calculated by adding the =
+power of 2=20
+            of the required row(s) together. This is the number left of =
+the=20
+            checkboxes. The calculating table above does the math behind =
+it. It=20
+            sounds a bit like rocket science, don't worry just use my =
+calculator=20
+            which can be easily accessed from the headline on all pages =
+of this=20
+            WEB.</SPAN></TD></TR>
+        <TR>
+          <TD vAlign=3Dtop width=3D"48%">
+            <H4>Anwendungen</H4></TD>
+          <TD vAlign=3Dtop width=3D"4%"></TD>
+          <TD vAlign=3Dtop width=3D"48%">
+            <H4><SPAN lang=3Den-us>Usage</SPAN></H4></TD></TR>
+        <TR>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%">Neben dem =
+zuordnen der=20
+            Ausg=E4nge die bereits besprochen wurden gibt es noch =
+weitere=20
+            Anwendungen.</TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"4%">&nbsp;</TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%"><SPAN =
+lang=3Den-us>Apart of=20
+            the assignment we already discussed there is =
+more</SPAN></TD></TR>
+        <TR>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%">Die immer =
+popul=E4rer=20
+            werdenden&nbsp; Sound Decoder bieten neben den =
+Fahrger=E4uschen eine=20
+            Reihe weiterer T=F6ne und Ger=E4usche die man abrufen kann. =
+Die=20
+            Zuordnung erfolgt aus praktischen Gr=FCnden ebenso =FCber =
+das=20
+            FunctionMapping.=20
+            <P>Ein weiterer Anwendungsfall ist die Beeinflussung des=20
+            Beschleunigungsverhaltens. Diese Funktion hei=DFt bei =
+manchen=20
+            Herstellern auch "Rangiertaste". Damit kann man die=20
+            Beschleunigungszeiten abschalten. Die Lok reagier dann =
+unmittelbar=20
+            auf die Befehle vom Bediener, die Massensimulation ist ganz =
+oder=20
+            teilweise abgeschaltet. Beispiel ZIMO CV124 wirkt auf F4. =
+Wenn man=20
+            eine andere Taste als F4 daf=FCr heranziehen will kann man =
+das via=20
+            FunctionMapping erreichen. Zum Beispiel Rangiertaste auf F6 =
+muss man=20
+            CV40=3D8. CV 38 kann man auf 0 setzen um Fehlbedienungen zu=20
+            verhindern. Wenn man CV38=3D8 bel=E4sst kann man die=20
+            Rangiertastenfunktion mit F4 und/oder F6 aktivieren. =
+Aufpassen der=20
+            Decoder ORt die Tasten eine Taste reicht zum aktivieren, um =
+die=20
+            Rangiertaste auszuschalten m=FCssen beide Tasten auf AUS =
+sein.</P></TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"4%">&nbsp;</TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%"><SPAN =
+lang=3Den-us>The=20
+            recently popular sound decoders offer a bunch of sounds you =
+can=20
+            play. The assignment of the individual file is again mapped =
+via=20
+            function mapping.</SPAN>
+            <P><SPAN lang=3Den-us>Another usage is remapping the =
+switching key.=20
+            That key disables acceleration and deceleration timing. This =
+is=20
+            quite handy if you have a switching job, as the model is =
+back=20
+            directly under your control, without the mass simulation. =
+For=20
+            example a ZIMO decoder: with CV124 you define how the =
+switching key=20
+            should work. Default key is F4. to assign the function to F6 =
+just=20
+            program CV40=3D8. You should set CV38=3D0 to avoid operator =
+errors. It=20
+            is also possible to leave CV38=3D8 which gibes F4 and F6 the =
+same=20
+            functionality. Be aware that the decoder ORs the keys. To =
+turn it on=20
+            one key is enough. To turn it off both keys need to be =
+switched=20
+            off!</SPAN></P></TD></TR>
+        <TR>
+          <TD vAlign=3Dtop width=3D"48%">
+            <H4>Beschr=E4nkung</H4></TD>
+          <TD vAlign=3Dtop width=3D"4%"></TD>
+          <TD vAlign=3Dtop width=3D"48%">
+            <H4><SPAN lang=3Den-us>Limits</SPAN></H4></TD></TR>
+        <TR>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%">Es gibt mehrere =
+Versionen=20
+            der FunctionMapping Tabelle. Die NMRA hat zumindest 2 =
+Versionen,=20
+            einige Hersteller m=F6gen Varianten davon gemacht haben. =
+Deshalb biete=20
+            ich 2 Versionen des Kalkulators an, siehe Kopfzeile dieser =
+Seite.
+            <P>Da eine CV nur 8 Bits enth=E4lt kann man nur 8 =
+Zuordnungen treffen.=20
+            Um bis zu 14 Ausg=E4nge versorgen zu k=F6nnen gibt es 2 bzw. =
+3 Gruppen.=20
+            Die Kalkulatoren zeigen an den nicht m=F6glichen =
+Kombinationen ein=20
+            "x"</P>
+            <P>Bei den h=F6heren Ausg=E4ngen (gr=F6=DFer gleich F3) muss =
+man aufpassen,=20
+            diese sind entweder 2 Bit oder 3 Bit zur vorhergehenden =
+Gruppe=20
+            verschoben! Der Decoderhersteller sollte das dokumentiert =
+haben, und=20
+            dann den korrekten Rechner verwenden!</P></TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"4%">&nbsp;</TD>
+          <TD class=3Dintend vAlign=3Dtop width=3D"48%"><SPAN =
+lang=3Den-us>There are=20
+            multiple versions of that Table. NMRA has 2 versions, some =
+vendors=20
+            might have even more variants. This is the reason why I =
+offer 2=20
+            versions - see headline of this page.</SPAN>
+            <P><SPAN lang=3Den-us>As one CV can only hold 8 bits and we =
+have now=20
+            14 outputs it is not possible to assign any output to any =
+function=20
+            key. There are 2 / 3 groups where you can switch the =
+assignments.=20
+            The calculator shows "x" for the impossible =
+combinations.</SPAN></P>
+            <P><SPAN lang=3Den-us>Caution! The higher outputs (&gt;=3D =
+F3) are=20
+            shifted 2 or 3 bits to the left! This varies between =
+decoders, so=20
+            check the manuals and use the corresponding=20
+        calculator.</SPAN></P></TD></TR></TBODY></TABLE>
+      <P> </P>
+      <SCRIPT language=3DJavaScript>
+
+
+var decvalue =3D "";
+
+function calculateit(form) {
+	calcvalue =3D Math.abs(form.D.value);
+	if (calcvalue > 255) {
+		alert("DEC > 0 & DEC < 256");
+		form.D.value =3D "";
+	} else {
+		for ( i =3D 7 ; i >=3D 0 ; i-- ) {
+			code =3D "form.B"+i+".value =3D Math.round(calcvalue/Math.pow(2,i)- =
+0.5)";
+			eval(code);
+			//alert (calcvalue + " " +i);
+			code =3D "calcvalue =3D calcvalue - (Math.pow(2,i) * =
+form.B"+i+".value)";
+			eval(code);
+		}
+	}
+}
+
+function calculateback(form) {
+decvalue=3D0;
+	for ( var i =3D 0 ; i < 8 ; i++ ) {
+		code =3D "decvalue =3D decvalue + Math.pow(2,i) * form.B"+i+".value";
+		eval(code);
+	}
+	form.D.value =3D decvalue;
+}
+
+
+function clearbin(form)=20
+{
+    for (var i =3D 0; i < 8; i++) {
+    	code =3D "form.B"+i+".value =3D ''";
+    	eval(code);
+    }
+}
+
+function cleardec(form) {
+	form.D.value =3D "";
+}
+
+function transfer(chkbox) {
+	bit =3D chkbox.name.substr(2,1);
+	//alert (chkbox.checked);
+	if (chkbox.checked =3D=3D true) {
+		code =3D "document.Bin.B" + bit + ".value =3D 1";
+		if (bit =3D=3D 3 || bit =3D=3D 6 || bit =3D=3D 7) {
+			alert("This value should stay '0'\nIt is officially not used!");
+		}
+	} else {
+		code =3D "document.Bin.B" + bit + ".value =3D 0";
+	}
+	eval(code);
+	calculateback(document.Bin);
+}
+
+function mapping(chkbox) {
+	cv =3D chkbox.name.substr(4,2);
+	//alert(cv);
+	if (chkbox.checked=3D=3Dtrue) {
+		code =3D "document.Bin.CV" + cv + ".value =3D document.Bin.CV" + cv + =
+".value * 1.0 + " + chkbox.value;
+	} else {
+		code =3D "document.Bin.CV" + cv + ".value =3D document.Bin.CV" + cv + =
+".value * 1.0 - " + chkbox.value;
+	}
+	eval(code);
+}
+
+
+// -->
+</SCRIPT>
+      =
+</FORM><!--msnavigation--></TD></TR><!--msnavigation--></TBODY></TABLE><!=
+--msnavigation-->
+<TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+        <TBODY>
+        <TR>
+          <TD vAlign=3Dbottom rowSpan=3D4><IMG border=3D0 hspace=3D0 =
+alt=3D""=20
+            align=3Dbottom =
+src=3D"http://atw.huebsch.at/images/u_links.gif" width=3D20=20
+            height=3D140></TD>
+          <TD><IMG border=3D0 hspace=3D0 alt=3D"" align=3Dtop=20
+            src=3D"http://atw.huebsch.at/images/bl.gif" width=3D1 =
+height=3D100></TD>
+          <TD vAlign=3Dbottom width=3D"100%" align=3Dmiddle>&nbsp;
+            <P>&nbsp;</P></TD>
+          <TD vAlign=3Dbottom rowSpan=3D4><IMG border=3D0 hspace=3D0 =
+alt=3DATW=20
+            align=3Dbottom =
+src=3D"http://atw.huebsch.at/images/u_rechts_ATW.gif"=20
+            width=3D111 height=3D140></TD></TR>
+        <TR>
+          <TD bgColor=3D#6699cc height=3D2 width=3D1><IMG border=3D0 =
+hspace=3D0 alt=3D""=20
+            align=3Dtop src=3D"http://atw.huebsch.at/images/bl.gif" =
+width=3D1=20
+          height=3D2></TD>
+          <TD bgColor=3D#6699cc height=3D2 width=3D"100%"><IMG =
+border=3D0 hspace=3D0=20
+            alt=3D"" align=3Dtop =
+src=3D"http://atw.huebsch.at/images/bl.gif" width=3D483=20
+            height=3D2></TD></TR>
+        <TR>
+          <TD><IMG border=3D0 hspace=3D0 alt=3D"" align=3Dleft=20
+            src=3D"http://atw.huebsch.at/images/bl.gif" width=3D1 =
+height=3D36></TD>
+          <TD vAlign=3Dcenter align=3Dmiddle><A=20
+            =
+href=3D"http://atw.huebsch.at/dcc/functiommapping.htm#top"></A><A=20
+            href=3D"http://atw.huebsch.at/dcc/functiommapping.htm#top"=20
+            target=3D_top><IMG border=3D0 align=3Dleft=20
+            src=3D"http://atw.huebsch.at/images/art/top.gif" width=3D15=20
+            height=3D15></A>=A9 2000ff - <A =
+href=3D"mailto:Arnold@Huebsch.at">Arnold=20
+            H=FCbsch</A></TD></TR>
+        <TR>
+          <TD bgColor=3D#6699cc height=3D2 width=3D1><IMG border=3D0 =
+hspace=3D0 alt=3D""=20
+            align=3Dtop src=3D"http://atw.huebsch.at/images/bl.gif" =
+width=3D1=20
+          height=3D2></TD>
+          <TD bgColor=3D#6699cc height=3D2 width=3D"100%"><IMG =
+border=3D0 hspace=3D0=20
+            alt=3D"" align=3Dtop =
+src=3D"http://atw.huebsch.at/images/bl.gif" width=3D483=20
+            =
+height=3D2></TD></TR></TBODY></TABLE></TD></TR><!--msnavigation--></TBODY=
+></TABLE></BODY></HTML>
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/ATW.gif
+
+R0lGODlhawBlAPcAAAAAADMAAGYAAJkAAMwAAP8AAAAzADMzAGYzAJkzAMwzAP8zAABmADNmAGZm
+AJlmAMxmAP9mAACZADOZAGaZAJmZAMyZAP+ZAADMADPMAGbMAJnMAMzMAP/MAAD/ADP/AGb/AJn/
+AMz/AP//AAAAMzMAM2YAM5kAM8wAM/8AMwAzMzMzM2YzM5kzM8wzM/8zMwBmMzNmM2ZmM5lmM8xm
+M/9mMwCZMzOZM2aZM5mZM8yZM/+ZMwDMMzPMM2bMM5nMM8zMM//MMwD/MzP/M2b/M5n/M8z/M///
+MwAAZjMAZmYAZpkAZswAZv8AZgAzZjMzZmYzZpkzZswzZv8zZgBmZjNmZmZmZplmZsxmZv9mZgCZ
+ZjOZZmaZZpmZZsyZZv+ZZgDMZjPMZmbMZpnMZszMZv/MZgD/ZjP/Zmb/Zpn/Zsz/Zv//ZgAAmTMA
+mWYAmZkAmcwAmf8AmQAzmTMzmWYzmZkzmcwzmf8zmQBmmTNmmWZmmZlmmcxmmf9mmQCZmTOZmWaZ
+mZmZmcyZmf+ZmQDMmTPMmWbMmZnMmczMmf/MmQD/mTP/mWb/mZn/mcz/mf//mQAAzDMAzGYAzJkA
+zMwAzP8AzAAzzDMzzGYzzJkzzMwzzP8zzABmzDNmzGZmzJlmzMxmzP9mzACZzDOZzGaZzJmZzMyZ
+zP+ZzADMzDPMzGbMzJnMzMzMzP/MzAD/zDP/zGb/zJn/zMz/zP//zAAA/zMA/2YA/5kA/8wA//8A
+/wAz/zMz/2Yz/5kz/8wz//8z/wBm/zNm/2Zm/5lm/8xm//9m/wCZ/zOZ/2aZ/5mZ/8yZ//+Z/wDM
+/zPM/2bM/5nM/8zM///M/wD//zP//2b//5n//8z//////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAKwALAAAAABrAGUA
+QAj/AK8JHEiwoMGDBaGxWrWqFClWECNKnEixosWLGDNCRHjQ2qqM1wJZGcgqECuDgQIJZLUiZUgr
+JleqvKaxpk2KCD9WJBnTCsSR12AeVMiwqFFo0AqWFBiToE+CN6NuXLlzpVCZAqGR2nqSo1eoO1lt
+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
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/leer.gif
+
+R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOzs=
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/o_rechts_blau.gif
+
+R0lGODlhJQBlAPcAAAAAAGeazGiazW2dzm2ezm6ez26fz2+fz3Cfz3Gg0HKh0Haj0Xek0nil0nmm
+0n6p1IGr1YKr1YSt1oWu1omw2Iyy2ZG12pO325q73Zu83p6+35+/36LB4KXD4ajF4q/J5K/K5LLM
+5bTN5rbP57jP57nQ6LrR6L3T6b/V6sDV6sTY68bZ7MfZ7Mfa7M3d7s7f78/f79Dg79Hg8NXj8d3p
+9OHr9ePt9uXu9unx+Ozy+ezz+e70+fH2+vL2+/T3+/f5/Pj7/fv8/v///wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///yH5BAEAAP8ALAAAAAAlAGUA
+AAj+ACeYmLFDiMGDCBMqXJgwgMMACz7E8MGwokWDDzMi8CAjyMWPBzOKDCDhhA6QF0eOdEAiB0qG
+KlVCSAHkZcOYKjHMsBkSp8oEJH7w9IlzQw2bRHFWkPEyKc4GK1A6xXkgBcipOAeg+IgVpwEVKbvG
+XPDColicFGhUPIszQw+YbGOGgBtXJYyFdWNe4KEwb8wSff2OfGDjpmCRIAwffsigcM/FGUUghCxy
+Al+MlDO2eJw5gAbOmRXgwNzZIQvSpTug7jxhdecbQkpndBFbtsMRtW1zyC3bAu/SEX53XiA8M4Hi
+lAUgh6zctkPizgMEj+47+u7ouKPTjg7beevlh1WXgxd8enxe0a4hf06/eDN7wZZBQ5Ys/3DjyZ0T
+46dMWPFiwP4JtldgixVwF4GHzYXXYm7R5VdaawlGlll+fRVWXVpxVVdVV8UFlVRsLdXUWUYh1RVQ
+Qpk4lU48vSfSTDW1aB5LLsnoYkkn2VjfRh3pqFhEE/m4kEAECWnkkUgmqeSSTDbp5JNQRinllFRW
+aeWVWGappZQBAQA7
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/verlauf.gif
+
+R0lGODlhkwBEAOYAAGaZzGibzWuczm2dzm+fz3Gh0HSi0Xak0Xil0nqn032o1H+q1IKr1YOt1oau
+14iw14ux2I2z2Y+02pG22pS325a53Ji73Zu83p293p+/36HB4KTC4abE4ajF4qrH463I5K/K5LLL
+5bPN5rbO57jQ57vR6L3T6b/U6sHW6sTX68bZ7Mjb7crc7c3d7s/f79Hh8NTi8dbj8djl8trn893o
+9N/q9OHr9ePt9ubu9+jw9+vx+Ozz+e/0+vH2+vT3+/b5/Pj7/fr8/f39/v///wAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAkwBEAAAH/4AAgoOEhYaHiImKi4yNjo+QiwGTlJWWl5iZmpucnZ6foKGcAqSlpqeoqaqrrK2u
+r7Cxsq0Dtba3uLm6u7y9vr/AwcLDvgTGx8jJysvMzc7P0NHS09TPBdfY2drb3N3e3+Dh4uPk5eAG
+6Onq6+zt7u/w8fLz9PX28Qf5+vv8/f7/AAMKHEiwoMGDAhEoXMiwocOHECNKnEixosWLGCcm2Mix
+o8ePIEOKHEmypMmTKFOSVMCypcuXMGPKnEmzps2bOHPqrLmgp8+fQIMKHUq0qNGjSJMqXWqUgdOn
+UKNKnUq1qtWrWLNq3cr1aoOvYMOKHUu2rNmzaNOqXcu2LVoHcP/jyp1Lt67du3jz6t3Lt6/fvA8C
+Cx5MuLDhw4gTK17MuLHjx4ohSJ5MubLly5gza97MubPnz6A3RxhNurTp06hTq17NurXr17Bjs5ZA
+u7bt27hz697Nu7fv38CDC+89objx48iTK1/OvLnz59CjS5/unIL169iza9/Ovbv37+DDix9P/nuF
+8+jTq1/Pvr379/Djy59Pvz58C/jz69/Pv7///wAGKOCABBZoYIAXJKjgggw26OCDEEYo4YQUVmjh
+hRJioOGGHHbo4YcghijiiCSWaOKJKI6YwYostujiizDGKOOMNNZo44045kijBjz26OOPQAYp5JBE
+FmnkkUgmqWT/kRs06eSTUEYp5ZRUVmnllVhmqeWWVnLg5ZdghinmmGSWaeaZaKap5ppsntnBm3DG
+KeecdNZp55145qnnnnz2iacHgAYq6KCEFmrooYgmquiijDbqaKIfRCrppJRWaumlmGaq6aacdurp
+p5qCIOqopJZq6qmopqrqqqy26uqrsK4awqy01mrrrbjmquuuvPbq66/ABsurCMQWa+yxyCar7LLM
+Nuvss9BGK22zI1Rr7bXYZqvtttx26+234IYr7rjekmDuueimq+667Lbr7rvwxivvvPS+W8K9+Oar
+77789uvvvwAHLPDABBcMsAkIJ6zwwgw37PDDEEcs8cQUV2xx/8QnZKzxxhx37PHHIIcs8sgkl2zy
+ySKjoPLKLLfs8sswxyzzzDTXbPPNOM+cws489+zzz0AHLfTQRBdt9NFIJ020Ckw37fTTUEct9dRU
+V2311VhnrXXVK3Tt9ddghy322GSXbfbZaKet9tpms+D223DHLffcdNdt991456333nzf3cLfgAcu
++OCEF2744YgnrvjijDeOuAuQRy755JRXbvnlmGeu+eacd+555i+ELvropJdu+umop6766qy37vrr
+qsMg++y012777bjnrvvuvPfu++/A7x7D8MQXb/zxyCev/PLMN+/889BHz7wM1Fdv/fXYZ6/99tx3
+7/334Icvfv/3M5Rv/vnop6/++uy37/778Mcv//zu02D//fjnr//+/Pfv//8ADKAAB0jA/9XggAhM
+oAIXyMAGOvCBEIygBCdIwQpC0AYYzKAGN8jBDnrwgyAMoQhHSMISmjCEN0ihClfIwha68IUwjKEM
+Z0jDGtrwhjLEgQ53yMMe+vCHQAyiEIdIxCIa8YhIHGIOlsjEJjrxiVCMohSnSMUqWvGKWMwiFXXA
+xS568YtgDKMYx0jGMprxjGhMoxrLuIM2uvGNcIyjHOdIxzra8Y54zKMe92hHHvjxj4AMpCAHSchC
+GvKQiEykIhfJyEP24JGQjKQkJ0nJSlrykpjMpCY3yclOYtKOB6AMpShHScpSmvKUqEylKlfJyla6
+MpU/iKUsZ0nLWtrylrjMpS53ycte+vKXugSCMIdJzGIa85jITKYyl8nMZjrzmdBcZhCmSc1qWvOa
+2MymNrfJzW5685vgDCc3hUDOcprznOhMpzrXyc52uvOd8IynPNs5hHra8574zKc+98nPfvrznwAN
+qEAH6s9AAAA7
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/News.png
+
+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
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/whatsnewln.gif
+
+R0lGODlhDgBtANUAAAAAAJycnJ+enqGhoaSkpKempqmpqausrK+urrGxsbS0tLa3t7m6ury8vL+/
+vsHBwcTExMbHxsnJyczMzM/Pz9HS0dTU1NfW1tra2tzc3N7f3uHh4eTk5Ofn5+rq6ezs7O/v7/Hx
+8vT09Pf39////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAADgBtAAAGo0CScBgYGo+kIhKp
+XBqbTiE0OnVWl1dm9LkldqXfZDh7JHO/Zi96zF67u2nwexsXz6lteJ6+x9+tfYB/WIGEg1qHZYWI
+eolnjZB8jmqRfpWCl4aZjJKbipNyno+dWwJhA2EEYQVhBmEHYQhhCWEKYQthDGENYQ5hD2EQYRFh
+EmETYRRhFWEWYRdhGGEZYRphG2EcYR1hHmEfYSBhIWEiYSNhTkEAOw==
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/flags/F_at.gif
+
+R0lGODdhOQAmAIAAAP8AAP///ywAAAAAOQAmAAACRoSPqcvtD6OctNqLs968+w+G4kiW5ommasC2
+7gvH8kzX9o3n+s73/g8MCofEovGITCqXzKaTp4pKp9Sq9YrNarfcrvcbKQAAOw==
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/flags/F_de.gif
+
+R0lGODdhPAAkAKEAAAAAAP8AAP//AAAAACwAAAAAPAAkAAACWYSPqcvtD6OctNqLs968+w+G4kiW
+5ommVcC27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzuRNIp9Sq9YrNarfcrvcLDovH5LL5jE6r
+1+y2+w2Py+f0ergAADs=
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/flags/F_us.gif
+
+R0lGODdhQAAiAKEAABgY//8AAP///wAAACwAAAAAQAAiAAACl4SPqRntD6OcbdlrqN7TCOGBwBeW
+o8ilqUmerNh+8kzX9i0jMcybIQ4M1l5El1GIRBZ3RZWTousdpZmn9RFdUk/Jrk0L5nrHrTDzQE6L
+zNurO8Buvq3x6U/dzdr3d7xyfxbolwcodTZHh6GIgPi0+AjQ6DRIWWl5KSOpucnZ6fnpgCk6SgoE
+eoqaqspZ2uoquhorO0vbUAAAOw==
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/flags/F_gb.gif
+
+R0lGODdhQQAhAKEAABgY//8AAP///wAAACwAAAAAQQAhAAAC4UyEKcDt35CZE8H7JBVVWYxplPGB
+GbeJnWKeY9c6aOqNXgmqaawfHtO7LXIz2zCku0GCykuPdDwVfSyisSmbwqTXRAw4FUafvmz49812
+veAXFHyuppdxFrlGkyPF/L6b2hcoOCj2R3iIKGiY6Pfn+AgZKTlJWWl5iZmpucnZ6fkJGio6askY
+uGiaioiqqmdy08WqYDT3ircCcLcgRFtrlnAVofWWy7tTC0vj4oZTeNyS/KzGHAV3S+x0jU23uDfb
+K6yNk91NpF1mXJGm+xUNJV5tW94Of+bLjpxs71s8P8dbAAA7
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/hor_bar.gif
+
+R0lGODlhaAEFAPcAAAAAAAEBAQICAgMDAwQEBAUFBQcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8P
+DxAQEBERERISEhQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyEhISIiIiMjIyQk
+JCUlJSYmJicnJygoKCkpKSoqKisrKywsLC4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4
+ODo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUdHR0hISElJSUpKSktLS0xMTE1N
+TU5OTk9PT1BQUFFRUVJSUlRUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2FhYWJi
+YmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra21tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2
+dnd3d3h4eHp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYeHh4iIiImJiYqKiouL
+i4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpSUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enqCg
+oKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq62tra6urq+vr7CwsLGxsbKysrOzs7S0
+tLW1tba2tre3t7i4uLq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcfHx8jIyMnJ
+ycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d
+3d7e3uDg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+3t7e7u7u/v7/Dw8PHx8fLy
+8vPz8/T09PX19fb29vf39/j4+Pr6+vv7+/z8/P39/f7+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAOsALAAAAABoAQUA
+QAiOANcJHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmyJMZw3FKqrNasGcuW
+zXz5KjZLZrFTvnCe2snz1KefnyBhgkS0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWKMOBfqpJ8+cOYvJ
+nCXWF0yXLaupVBnOpNu3cOPKnUu3rt27ePPq3bs3IAA7
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/u_links.gif
+
+R0lGODlhFACMAPcAAGaZzGmbzWqbzWqczW2ezm6ez3Oi0HWj0Xek0nel0nmm0n+q1ICr1YKs1Yav
+14uy2I2z2ZG12pW53Je53Jq73Zu83p2+3p+/36C/36LB4KnF4q3I5K7J5K/J5K/K5LTN5rbO57bP
+57fP57jQ57zT6cPX68XZ7MbZ7Mja7crc7cvd7s7f79Df79Tj8djl8trm89/p9OPs9uXt9ubu9+zy
++e7z+e70+fD1+vf6/Pj6/fv8/vv9/vz9/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///yH5BAEAAP8ALAAAAAAUAIwA
+AAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3Mmzp8+eNFR4mNDAwMIcKS4gAMCUacIdJiI0VUABxIoYCF9YYEqgwgkbC0sw
+ACAAQ4uGIQoAeIDC4QemGWQ4JBEAQAccDlkkAKCBh8MaUiXUeAgCQIKzDmcsAOABoggAC2Y81PEA
+AAeILgAMeAFxBAAIEbduiOgAQFuIBwDAiCgAwA3WriOmXg2x9OmHoiN6Bo1ZM+fJlS87hiz5oWLG
+EQsfhggYgGCIevn6fUjXLt6HbwHEhZh27e2GYsmaGn2olatXsAyhSmVK1SpWhUiVNnXaMOjQogEB
+ADs=
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/bl.gif
+
+R0lGODlhAQABAOYAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///yH5
+BAEAAH8ALAAAAAABAAEAAAcDgH+BADs=
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/u_rechts_ATW.gif
+
+R0lGODlhbwCMAPcAAAAAADMAAGYAAJkAAMwAAP8AAAAzADMzAGYzAJkzAMwzAP8zAABmADNmAGZm
+AJlmAMxmAP9mAACZADOZAGaZAJmZAMyZAP+ZAADMADPMAGbMAJnMAMzMAP/MAAD/ADP/AGb/AJn/
+AMz/AP//AAAAMzMAM2YAM5kAM8wAM/8AMwAzMzMzM2YzM5kzM8wzM/8zMwBmMzNmM2ZmM5lmM8xm
+M/9mMwCZMzOZM2aZM5mZM8yZM/+ZMwDMMzPMM2bMM5nMM8zMM//MMwD/MzP/M2b/M5n/M8z/M///
+MwAAZjMAZmYAZpkAZswAZv8AZgAzZjMzZmYzZpkzZswzZv8zZgBmZjNmZmZmZplmZsxmZv9mZgCZ
+ZjOZZmaZZpmZZsyZZv+ZZgDMZjPMZmbMZpnMZszMZv/MZgD/ZjP/Zmb/Zpn/Zsz/Zv//ZgAAmTMA
+mWYAmZkAmcwAmf8AmQAzmTMzmWYzmZkzmcwzmf8zmQBmmTNmmWZmmZlmmcxmmf9mmQCZmTOZmWaZ
+mZmZmcyZmf+ZmQDMmTPMmWbMmZnMmczMmf/MmQD/mTP/mWb/mZn/mcz/mf//mQAAzDMAzGYAzJkA
+zMwAzP8AzAAzzDMzzGYzzJkzzMwzzP8zzABmzDNmzGZmzJlmzMxmzP9mzACZzDOZzGaZzJmZzMyZ
+zP+ZzADMzDPMzGbMzJnMzMzMzP/MzAD/zDP/zGb/zJn/zMz/zP//zAAA/zMA/2YA/5kA/8wA//8A
+/wAz/zMz/2Yz/5kz/8wz//8z/wBm/zNm/2Zm/5lm/8xm//9m/wCZ/zOZ/2aZ/5mZ/8yZ//+Z/wDM
+/zPM/2bM/5nM/8zM///M/wD//zP//2b//5n//8z//////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAKwALAAAAABvAIwA
+QAj/AFkJHEiwoMGDCBMWvGYNGqtVq0qRmkiRVCmIrKBZu6awo8ePIDtaW0VxlbWQKEGOLHkypcuD
+K00qDMTqmk0rgaxYsWlTYE6ePQPZpMlR6DWiO1lZYRXIKM+EMVu+PHiN5KqEQIc63ckTWsVV0LKK
+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
+ZKGPL74/vwtQ99Dz+tjPvvYv8vmPBAQAOw==
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/art/top.gif
+
+R0lGODlhHgAeAIcAAAAAAAAAMwAAZgAAmQAAzAAA/wAzAAAzMwAzZgAzmQAzzAAz/wBmAABmMwBm
+ZgBmmQBmzABm/wCZAACZMwCZZgCZmQCZzACZ/wDMAADMMwDMZgDMmQDMzADM/wD/AAD/MwD/ZgD/
+mQD/zAD//zMAADMAMzMAZjMAmTMAzDMA/zMzADMzMzMzZjMzmTMzzDMz/zNmADNmMzNmZjNmmTNm
+zDNm/zOZADOZMzOZZjOZmTOZzDOZ/zPMADPMMzPMZjPMmTPMzDPM/zP/ADP/MzP/ZjP/mTP/zDP/
+/2YAAGYAM2YAZmYAmWYAzGYA/2YzAGYzM2YzZmYzmWYzzGYz/2ZmAGZmM2ZmZmZmmWZmzGZm/2aZ
+AGaZM2aZZmaZmWaZzGaZ/2bMAGbMM2bMZmbMmWbMzGbM/2b/AGb/M2b/Zmb/mWb/zGb//5kAAJkA
+M5kAZpkAmZkAzJkA/5kzAJkzM5kzZpkzmZkzzJkz/5lmAJlmM5lmZplmmZlmzJlm/5mZAJmZM5mZ
+ZpmZmZmZzJmZ/5nMAJnMM5nMZpnMmZnMzJnM/5n/AJn/M5n/Zpn/mZn/zJn//8wAAMwAM8wAZswA
+mcwAzMwA/8wzAMwzM8wzZswzmcwzzMwz/8xmAMxmM8xmZsxmmcxmzMxm/8yZAMyZM8yZZsyZmcyZ
+zMyZ/8zMAMzMM8zMZszMmczMzMzM/8z/AMz/M8z/Zsz/mcz/zMz///8AAP8AM/8AZv8Amf8AzP8A
+//8zAP8zM/8zZv8zmf8zzP8z//9mAP9mM/9mZv9mmf9mzP9m//+ZAP+ZM/+ZZv+Zmf+ZzP+Z///M
+AP/MM//MZv/Mmf/MzP/M////AP//M///Zv//mf//zP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAP8ALAAAAAAeAB4A
+AAjKAK8JHEiQYKtWswoqXFiwFSIvECMKQtSKocWHETNmFFTR4sBWGiFyDOkFkcdrIEkKTKlRkEWW
+GglibLlwFkkvHQfOzGiyoCCSOWUCNTiU4U6RBH9qDLrwKM6VIZkyVCpR4FFECU+iDCmQqsaeC28+
+FQtWIVmbN8sWJAvzq0WxI9O+vemS7FySJu0yFFvRK8+7Ua85haiWoNiBcvfi1blYMVfDIQsjjtyQ
+suOMTd1ehii169/NnQWiJQxYckGMLhVz1CoakelrqxcGBAA7
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://atw.huebsch.at/images/innen_rund_blau.gif
+
+R0lGODlhyABCAPcAAGOczqW9563G57XO78bW787e997v9+fv9+/v//f3//f/////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////ywAAAAAyABCAAAI/gABCBxI
+sKDBgwgTIgxAwACCBRAjSpxIsaLFixgzatzIsaPHigpDihxZcICBBB9TqlzJsqVLiiRjyiQowICC
+lzhz6tyZcqZPkQEKoORJtKhRnT+THgxg4KjTp1A5Kp0qMMCBqFizZqWq1KrWr2CLck3aNKzZsy3H
++iyAtq3bjmplChj6tq5diXFjlr3Lt27ekQNu9h3c9q/IvYQTgzUckq7ix1gZJyQAuXJkyQcRW95M
+FPPBh5xD8/Rs0LHo02lJE0TN2qXq1a1j93wtULZtuLQB3N6dMbdu3sBh5g5OPKLv4sWPIw+ufDnv
+5s5vQ48uezr11tavo86uXTT37py/eYO3LH485PLmFaNPT3g9+77u39+NL9/v8Pqb6eMvfH//+f7+
+qQdggO0NSCB8Bh44X4IK2kdbgwU+CCGCEk64YIUWOvhahhduyKGGqn0IImkivqVfiWIxiOJWKq4Y
+1YkuItVijE7BSONLNt6YGoY6vjhjj6P9CKROAQEAOw==
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://atw.huebsch.at/ATW.css
+
+BODY {
+	BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Trebuchet MS, Arial, SansSerif, =
+Helvetica; COLOR: #444444; FONT-SIZE: 9pt
+}
+BODY.sylvester {
+	FONT-FAMILY: Trebuchet MS, Arial, SansSerif, Helvetica; BACKGROUND: =
+url(images/art/BG_Sylvester.png) #ffffff fixed repeat-y 50% 50%; COLOR: =
+#444444; FONT-SIZE: 9pt
+}
+BODY.xmas {
+	FONT-FAMILY: Trebuchet MS, Arial, SansSerif, Helvetica; BACKGROUND: =
+url(images/art/BG_Weihnachten.png) #ffffff fixed repeat-y 50% 50%; =
+COLOR: #444444; FONT-SIZE: 9pt
+}
+P.caption {
+	FONT-STYLE: italic; FONT-FAMILY: Times New Roman, Times, Serif
+}
+.scalefield {
+	TEXT-ALIGN: right
+}
+.fixed {
+	FONT-FAMILY: Lucida Console, Courier, Courier New
+}
+TR.kopf {
+	BACKGROUND-COLOR: #aac1d9
+}
+TR.hell {
+	BACKGROUND-COLOR: #fafafa
+}
+TR.dunkel {
+	BACKGROUND-COLOR: #e0e0e0
+}
+.menuleft {
+	COLOR: #ff0000; FONT-SIZE: 12pt
+}
+.titelbar {
+	FONT-FAMILY: Palatino Linotype, Rockwell, Currency, TimesRoman, Serif, =
+Times; LETTER-SPACING: -1pt; COLOR: #d2d200; FONT-SIZE: 24pt; =
+FONT-WEIGHT: bold
+}
+TD {
+	FONT-SIZE: 9pt
+}
+TD.yel {
+	COLOR: #ffff00
+}
+TD.fix {
+	FONT-FAMILY: Lucida Console, Courier new, Courier, fixed
+}
+TD.yel {
+	COLOR: #ffff00
+}
+TD.intend {
+	TEXT-INDENT: 15px
+}
+TD.nointend {
+	TEXT-INDENT: 0px
+}
+TH {
+	FONT-SIZE: 12pt
+}
+A:link {
+	COLOR: #990000
+}
+A:visited {
+	COLOR: #000066
+}
+A:active {
+	COLOR: #000066
+}
+H1 {
+	MARGIN-TOP: 20px; MARGIN-BOTTOM: 0px; COLOR: #808080; FONT-SIZE: 18pt
+}
+H2 {
+	MARGIN-TOP: 18px; MARGIN-BOTTOM: 0px; COLOR: #808080; FONT-SIZE: 16pt
+}
+H3 {
+	MARGIN-TOP: 16px; MARGIN-BOTTOM: 0px; COLOR: #808080; FONT-SIZE: 14pt
+}
+H4 {
+	MARGIN-TOP: 14px; MARGIN-BOTTOM: 0px; COLOR: #808080; FONT-SIZE: 12pt
+}
+H5 {
+	MARGIN-TOP: 12px; MARGIN-BOTTOM: 0px; COLOR: #808080; FONT-SIZE: 10pt
+}
+P {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+P.news {
+	FONT-FAMILY: Trebuchet MS, Arial, SansSerif, Helvetica; COLOR: #2b5b88; =
+FONT-SIZE: 9pt
+}
+
+------=_NextPart_000_0000_01CBF2F4.AAE53080--

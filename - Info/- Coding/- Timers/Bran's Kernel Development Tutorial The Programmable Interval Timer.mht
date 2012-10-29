@@ -1,0 +1,307 @@
+From: =?windows-1251?B?0e718ODt5e3uIFdpbmRvd3MgSW50ZXJuZXQgRXhwbG9yZXIgOA==?=
+Subject: Bran's Kernel Development Tutorial: The Programmable Interval Timer
+Date: Fri, 1 Oct 2010 11:13:30 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0009_01CB6159.AD79DEE0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16543
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0009_01CB6159.AD79DEE0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.osdever.net/bkerndev/Docs/pit.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Bran's Kernel Development Tutorial: The Programmable =
+Interval Timer</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type><LINK=20
+rel=3Dstylesheet type=3Dtext/css=20
+href=3D"http://www.osdever.net/bkerndev/Docs/layout.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16625"></HEAD>
+<BODY>
+<H2>The PIT: A System Clock</H2>
+<P>The Programmable Interval Timer (PIT, model 8253 or 8254), also =
+called the=20
+System Clock, is a very useful chip for accurately generating interrupts =
+at=20
+regular time intervals. The chip itself has 3 channels: Channel 0 is =
+tied to is=20
+tied to IRQ0, to interrupt the CPU at predictable and regular times, =
+Channel 1=20
+is system specific, and Channel 2 is connected to the system speaker. As =
+you can=20
+see, this single chip offers several very important services to the =
+system. </P>
+<P>The only channels that you should every be concerned with are =
+Channels 0 and=20
+2. You may use Channel 2 in order to make the computer beep. In this =
+section of=20
+the tutorial, we are only concerned with Channel 0 - mapped to IRQ0. =
+This single=20
+channel of the timer will allow you to accurately schedule new processes =
+later=20
+on, as well as allow the current task to wait for a certain period of =
+time (as=20
+will be demonstrated shortly). By default, this channel of the timer is =
+set to=20
+generate an IRQ0 18.222 times per second. It is the IBM PC/AT BIOS that =
+defaults=20
+it to this. A reader of this tutorial has informed me that this 18.222Hz =
+tick=20
+rate was used in order for the tick count to cycle at 0.055 seconds. =
+Using a=20
+16-bit timer tick counter, the counter will overflow and wrap around to =
+0 once=20
+every hour. </P>
+<P>To set the rate at which channel 0 of the timer fires off an IRQ0, we =
+must=20
+use our outportb function to write to I/O ports. There is a Data =
+register for=20
+each of the timer's 3 channels at 0x40, 0x41, and 0x42 respectively, and =
+a=20
+Command register at 0x43. The data rate is actually a 'divisor' register =
+for=20
+this device. The timer will divide it's input clock of 1.19MHz =
+(1193180Hz) by=20
+the number you give it in the data register to figure out how many times =
+per=20
+second to fire the signal for that channel. You must first select the =
+channel=20
+that we want to update using the command register before writing to the=20
+data/divisor register. What is shown in the following two tables is the =
+bit=20
+definitions for the command register, as well as some timer modes. </P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D300>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE cols=3D25>
+              <TBODY>
+              <TR>
+                <TD width=3D25 align=3Dleft>7</TD>
+                <TD width=3D25 align=3Dright>6</TD>
+                <TD width=3D25 align=3Dleft>5</TD>
+                <TD width=3D25 align=3Dright>4</TD>
+                <TD width=3D50 align=3Dleft>3</TD>
+                <TD width=3D25 align=3Dright>1</TD>
+                <TD width=3D25 =
+align=3Dmiddle>0</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD>
+            <TABLE border=3D1 borderColor=3D#808080 cols=3D50>
+              <TBODY>
+              <TR>
+                <TD width=3D50>CNTR</TD>
+                <TD width=3D50>RW</TD>
+                <TD width=3D75>Mode</TD>
+                <TD width=3D25>BCD</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD>CNTR - Counter # (0-2)<BR>RW - Read Write mode<BR>(1 =3D =
+LSB, 2 =3D=20
+            MSB, 3 =3D LSB then MSB)<BR>Mode - See right table<BR>BCD - =
+(0 =3D=20
+            16-bit counter,<BR>1 =3D 4x BCD decade counters)=20
+    </TD></TR></TBODY></TABLE></TD>
+    <TD>
+      <TABLE border=3D1 borderColor=3D#808080>
+        <TBODY>
+        <TR>
+          <TH>Mode</TH>
+          <TH>Description</TH></TR>
+        <TR>
+          <TD>0</TD>
+          <TD>Interrupt on terminal count</TD></TR>
+        <TR>
+          <TD>1</TD>
+          <TD>Hardware Retriggerable one shot</TD></TR>
+        <TR>
+          <TD>2</TD>
+          <TD>Rate Generator</TD></TR>
+        <TR>
+          <TD>3</TD>
+          <TD>Square Wave Mode</TD></TR>
+        <TR>
+          <TD>4</TD>
+          <TD>Software Strobe</TD></TR>
+        <TR>
+          <TD>5</TD>
+          <TD>Hardware =
+Strobe</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><B>Bit=20
+definitions for 8253 and 8254 chip's Command Register located at =
+0x43</B>=20
+<P>To set channel 0's Data register, we need to select counter 0 and =
+some modes=20
+in the Command register first. The divisor value we want to write to the =
+Data=20
+register is a 16-bit value, so we will need to transfer both the MSB =
+(Most=20
+Significant Byte) and LSB (Least Significant Byte) to the data register. =
+This is=20
+a 16-bit value, we aren't sending data in BCD (Binary Coded Decimal), so =
+the BCD=20
+field should be set to 0. Finally, we want to generate a Square Wave: =
+Mode 3.=20
+The resultant byte that we should set in the Command register is 0x36. =
+The above=20
+2 paragraphs and tables can be summed up into this function. Use it if =
+you wish,=20
+we won't use it in this tutorial to keep things simple. For accurate and =
+easy=20
+timekeeping, I recommend setting to 100Hz in a real kernel. </P><PRE =
+class=3Dcode>void timer_phase(int hz)
+{
+    int divisor =3D 1193180 / hz;       /* Calculate our divisor */
+    outportb(0x43, 0x36);             /* Set our command byte 0x36 */
+    outportb(0x40, divisor &amp; 0xFF);   /* Set low byte of divisor */
+    outportb(0x40, divisor &gt;&gt; 8);     /* Set high byte of divisor =
+*/
+}
+		</PRE><PRE class=3Dcodecaption>Not bad, eh?</PRE>
+<P>Create a file called 'timer.c', and add it to your 'build.bat' as =
+you've been=20
+shown in the previous sections of this tutorial. As you analyse the =
+following=20
+code, you will see that we keep track of the amount of ticks that the =
+timer has=20
+fired. This can be used as a 'system uptime counter' as your kernel gets =
+more=20
+complicated. The timer interrupt here simply uses the default 18.222Hz =
+to figure=20
+out when it should display a simple "One second has passed" message =
+every=20
+second. If you decide to use the 'timer_phase' function in your code, =
+you should=20
+change the 'timer_ticks % 18 =3D=3D 0' line in 'timer_handler' to =
+'timer_ticks % 100=20
+=3D=3D 0' instead. You could set the timer phase from any function in =
+the kernel,=20
+however I recommend setting it in 'timer_install' if anything, to keep =
+things=20
+organized. </P><PRE class=3Dcode>#include &lt; system.h &gt;
+
+/* This will keep track of how many ticks that the system
+*  has been running for */
+int timer_ticks =3D 0;
+
+/* Handles the timer. In this case, it's very simple: We
+*  increment the 'timer_ticks' variable every time the
+*  timer fires. By default, the timer fires 18.222 times
+*  per second. Why 18.222Hz? Some engineer at IBM must've
+*  been smoking something funky */
+void timer_handler(struct regs *r)
+{
+    /* Increment our 'tick count' */
+    timer_ticks++;
+
+    /* Every 18 clocks (approximately 1 second), we will
+    *  display a message on the screen */
+    if (timer_ticks % 18 =3D=3D 0)
+    {
+        puts("One second has passed\n");
+    }
+}
+
+/* Sets up the system clock by installing the timer handler
+*  into IRQ0 */
+void timer_install()
+{
+    /* Installs 'timer_handler' to IRQ0 */
+    irq_install_handler(0, timer_handler);
+}
+		</PRE><PRE class=3Dcodecaption>Example of using the system timer: =
+'timer.c'</PRE>
+<P>Remember to add a call to 'timer_install' in the 'main' function in =
+'main.c'.=20
+Having trouble? Remember to add a function prototype of 'timer_install' =
+to=20
+'system.h'! The next bit of code is more of a demonstration of what you =
+can do=20
+with the system timer. If you look carefully, this simple function waits =
+in a=20
+loop until the given time in 'ticks' or timer phases has gone by. This =
+is almost=20
+the same as the standard C library's function 'delay', depending on your =
+timer=20
+phase that you set: </P><PRE class=3Dcode>/* This will continuously loop =
+until the given time has
+*  been reached */
+void timer_wait(int ticks)
+{
+    unsigned long eticks;
+
+    eticks =3D timer_ticks + ticks;
+    while(timer_ticks &lt; eticks);
+}
+</PRE><PRE class=3Dcodecaption>If you wish, add this to 'timer.c' and a =
+prototype to 'system.h'</PRE>
+<P>Next, we will discuss how to use the keyboard. This involves =
+installing a=20
+custom IRQ handler just like this tutorial, with hardware I/O on each =
+interrupt.=20
+</P>
+<TABLE width=3D"100%" cols=3D150>
+  <TBODY>
+  <TR>
+    <TD width=3D150 align=3Dleft><A=20
+      href=3D"http://www.osdever.net/bkerndev/Docs/irqs.htm">&lt;&lt; =
+IRQs and the=20
+      PICs</A> </TD>
+    <TD width=3D* align=3Dmiddle><A =
+href=3D"mailto:friesenb@gmail.com">Contact=20
+      Brandon F.</A> </TD>
+    <TD width=3D150 align=3Dright><A=20
+      href=3D"http://www.osdever.net/bkerndev/Docs/keyboard.htm">The =
+Keyboard=20
+      &gt;&gt;</A> </TD></TR></TBODY></TABLE></BODY></HTML>
+
+------=_NextPart_000_0009_01CB6159.AD79DEE0
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.osdever.net/bkerndev/Docs/layout.css
+
+BODY {
+	BACKGROUND-COLOR: #f0f0f0
+}
+PRE.code {
+	BORDER-BOTTOM: #d0d0d0 1px solid; POSITION: relative; TEXT-ALIGN: left; =
+BORDER-LEFT: #d0d0d0 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 4px; =
+PADDING-RIGHT: 4px; DISPLAY: block; FONT-FAMILY: monospace; BACKGROUND: =
+#f0f0f0 repeat-x; LETTER-SPACING: -1pt; COLOR: #000000; MARGIN-LEFT: =
+8px; BORDER-TOP: #d0d0d0 1px solid; MARGIN-RIGHT: 8px; BORDER-RIGHT: =
+#d0d0d0 1px solid; PADDING-TOP: 1px
+}
+PRE.codecaption {
+	BORDER-BOTTOM: #d0d0d0 1px solid; POSITION: relative; TEXT-ALIGN: =
+center; BORDER-LEFT: #d0d0d0 1px solid; FONT-STYLE: italic; =
+PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; FONT-FAMILY: =
+monospace; BACKGROUND: #f0f0f0; COLOR: #000000; MARGIN-LEFT: 8px; =
+FONT-SIZE: 8pt; BORDER-TOP: #d0d0d0 1px solid; FONT-WEIGHT: bold; =
+MARGIN-RIGHT: 8px; BORDER-RIGHT: #d0d0d0 1px solid; PADDING-TOP: 0px
+}
+A:active {
+	COLOR: #202020
+}
+A:hover {
+	COLOR: #202020
+}
+A:link {
+	COLOR: #808080
+}
+A:visited {
+	COLOR: #808080
+}
+A {
+	COLOR: #808080
+}
+
+------=_NextPart_000_0009_01CB6159.AD79DEE0--

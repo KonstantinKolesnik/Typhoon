@@ -1,0 +1,875 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Implementing Service Mode for DCC
+Date: Tue, 4 Jan 2011 11:43:55 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CBAC04.AAAF8F70"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16543
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70
+Content-Type: text/html;
+	charset="windows-1251"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.maestroconsult.ro/trenulete/service.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Implementing Service Mode for DCC</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1251" =
+http-equiv=3DContent-Type>
+<META name=3DAUTHOR content=3D"Prashant Bhandary">
+<META name=3Dkeywords=20
+content=3D"service mode, DCC, digital command control,model railroad">
+<META name=3Ddescription=20
+content=3D"Implementing service mode capabilities on a roll-your-own DCC =
+command station"><LINK=20
+title=3DStyle rel=3Dstylesheet type=3Dtext/css=20
+href=3D"http://www.maestroconsult.ro/trenulete/sj.css"=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/sj.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16671"></HEAD>
+<BODY background=3Dhttp://www.maestroconsult.ro/trenulete/bg.gif=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/bg.gif">
+<H1>Implementing Service Mode for DCC</H1>
+<P>The service mode in DCC is used for controlling configuration =
+variables on=20
+mobile and accessory decoders. The NMRA document specifying this feature =
+is <A=20
+href=3D"javascript:if(confirm('http://www.tttrains.com/nmradcc/rp923.html=
+  \n\nThis file was not retrieved by Teleport Pro, because it is =
+addressed on a domain or path outside the boundaries set for its =
+Starting Address.  \n\nDo you want to open it from the =
+server?'))window.location=3D'http://www.tttrains.com/nmradcc/rp923.html'"=
+=20
+tppabs=3D"http://www.tttrains.com/nmradcc/rp923.html">RP 9.2.3 DCC =
+Service=20
+Mode</A>.</P>
+<P id=3Dprebullet>The RP 9.2.3 describes service mode packets and the =
+sequence in=20
+which they are sent. Four addressing modes are described.</P>
+<UL>
+  <LI>Address only=20
+  <LI>Physical Register=20
+  <LI>Paged CV=20
+  <LI>Direct CV </LI></UL>
+<P>The two characteristics to study in the packets for service mode are =
+packet=20
+bit patterns for individual packets and packet sequences for an =
+operation.</P>
+<H2>Packet Bit Patterns</H2>
+<P>Here are the bit patterns for the various addressing modes. The error =
+byte is=20
+not shown for brevity. Note that some packets specified completely in =
+the RP=20
+such as the page preset instruction contain the error byte but is not =
+shown=20
+here.</P>
+<TABLE id=3Dbullet border=3D1 cellSpacing=3D0 cellPadding=3D4>
+  <TBODY>
+  <TR>
+    <TH>Instruction</TH>
+    <TH>Bit Pattern</TH></TR>
+  <TR>
+    <TD>Direct CV addressing</TD>
+    <TD><CODE>0111 CCAA&nbsp;&nbsp;AAAA AAAA&nbsp;&nbsp;DDDD =
+DDDD</CODE></TD></TR>
+  <TR>
+    <TD>Direct CV addressing(bit)</TD>
+    <TD><CODE>0111 10AA&nbsp;&nbsp;AAAA AAAA&nbsp;&nbsp;111K =
+DBBB</CODE></TD></TR>
+  <TR>
+    <TD>Page preset instruction</TD>
+    <TD><CODE>0111 1101&nbsp;&nbsp;0000 0001</CODE></TD></TR>
+  <TR>
+    <TD>Address Only</TD>
+    <TD><CODE>0111 C000&nbsp;&nbsp;0DDD DDDD</CODE></TD></TR>
+  <TR>
+    <TD>Physical register addressing</TD>
+    <TD><CODE>0111 CRRR&nbsp;&nbsp;DDDD DDDD</CODE></TD></TR>
+  <TR>
+    <TD>Paged CV addressing</TD>
+    <TD><CODE>0111 CRRR&nbsp;&nbsp;DDDD =
+DDDD</CODE></TD></TR></TBODY></TABLE>
+<P>We can see that the instruction for <I>Paged CV</I> and <I>Physical=20
+Register</I> are the same. The <CODE>RRR</CODE> in these instructions =
+refers to=20
+the register address. The value for the register address bits in =
+<I>Address=20
+Only</I> is 000. This refers to CV#1 if the Paging Register is set to 1. =
+CV#1 is=20
+the address. Therefore, <I>Address Only</I> is a special case of Paged =
+CV.</P>
+<P>The bit pattern for the address of the Paging Register is 101. The =
+bit=20
+pattern 0000 0001 sets it to Page 1. Therefore, the page preset =
+instruction is a=20
+special case of <I>Paged CV</I>.=20
+<P>So the addressing systems boil down to two main addressing methods -=20
+<I>Direct CV</I> and <I>Paged CV</I>. Let us look at the two again.</P>
+<TABLE id=3Dbullet border=3D1 cellSpacing=3D0 cellPadding=3D4>
+  <TBODY>
+  <TR>
+    <TH>Instruction</TH>
+    <TH>Bit Pattern</TH></TR>
+  <TR>
+    <TD>Direct CV addressing</TD>
+    <TD><CODE>0111 CCAA&nbsp;&nbsp;AAAA AAAA&nbsp;&nbsp;DDDD =
+DDDD</CODE></TD></TR>
+  <TR>
+    <TD>Paged CV addressing</TD>
+    <TD><CODE>0111 CRRR&nbsp;&nbsp;DDDD =
+DDDD</CODE></TD></TR></TBODY></TABLE>
+<P>There are some exceptions to this generalised view. For mobile =
+decoders, in=20
+the physical register addressing mode, registers 7 and 8 refer to CV#7 =
+and CV#8.=20
+In the Paged CV addressing mode, these registers are undefined. For =
+accessory=20
+decoders, registers addressed in the physical register mode and paged CV =
+mode=20
+are completely different.</P>
+<P>Now let us look at packet sequences.</P>
+<H2>Packet Sequences</H2>
+<P id=3Dprebullet>A glance at the packet sequences for various service =
+mode=20
+commands reveals a pattern. All packet sequences contain the same three=20
+elements.</P>
+<UL>
+  <LI>A few reset packets are sent=20
+  <LI>The service mode command to accomplish a task is sent a few times. =
+Let us=20
+  call this command, to coin a term, the <I>exec command</I>.=20
+  <LI>Optionally, the same <I>exec command</I> or reset packets are sent =
+a few=20
+  times. </LI></UL>
+<P>The number of times each packet has to be repeated is specified for =
+each=20
+command. The repetition count for each command is listed below.</P>
+<TABLE id=3Dbullet border=3D1 cellSpacing=3D0 cellPadding=3D4>
+  <TBODY>
+  <TR>
+    <TH>Addressing Mode</TH>
+    <TH>Command Type</TH>
+    <TH>Reset Commands<BR>(min)</TH>
+    <TH>Exec Commands<BR>(min)</TH>
+    <TH>Reset or Exec<BR>Commands (min)</TH></TR>
+  <TR>
+    <TD>Direct Mode</TD>
+    <TD>Verify</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>-</TD></TR>
+  <TR>
+    <TD>Direct Mode</TD>
+    <TD>Write</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>6</TD></TR>
+  <TR>
+    <TD>Address Only</TD>
+    <TD>Page Write</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>6</TD></TR>
+  <TR>
+    <TD>Address Only</TD>
+    <TD>Register Verify</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>-</TD></TR>
+  <TR>
+    <TD><SUP>*</SUP>Address Only</TD>
+    <TD>Register Write</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>10</TD></TR>
+  <TR>
+    <TD>Physical Register</TD>
+    <TD>Page Write</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>6</TD></TR>
+  <TR>
+    <TD><SUP>*</SUP>Physical Register</TD>
+    <TD>Register Verify</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>7</TD>
+    <TD align=3Dmiddle>-</TD></TR>
+  <TR>
+    <TD>Physical Register</TD>
+    <TD>Register Write</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>6</TD></TR>
+  <TR>
+    <TD>Paged CV</TD>
+    <TD>Page Write</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>6</TD></TR>
+  <TR>
+    <TD>Paged CV</TD>
+    <TD>Register Verify</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>-</TD></TR>
+  <TR>
+    <TD>Paged CV</TD>
+    <TD>Register Write</TD>
+    <TD align=3Dmiddle>3</TD>
+    <TD align=3Dmiddle>5</TD>
+    <TD align=3Dmiddle>6</TD></TR></TBODY></TABLE><SUP>*</SUP> =
+exceptions to the=20
+pattern<BR>
+<P>Both writes and verifys have the same pattern. The verify consists of =
+3 or=20
+more reset packets followed by 5 or more exec commands. The write =
+consists of 3=20
+or more reset packets, 5 or more exec commands and 6 exec or reset =
+packets.=20
+There are two exceptions that make life difficult - writing to a =
+register in=20
+address only and verify register in physical register addressing.</P>
+<H2>Register Addresses - The 0 - 1 Issue</H2>
+<P id=3Dprebullet>Address calculations are complicated by the fact that =
+binary=20
+values start from 0 but the designation numbers start from 1. Here are =
+the=20
+instances where it happens.</P>
+<UL>
+  <LI>CV addresses in binary values in Direct CV addressing range from 0 =
+to 1023=20
+  but actual CV number designations range from 1 to 1024.=20
+  <LI>Physical register addresses range from 0 to 7 but register =
+designations=20
+  range from 1 to 8. </LI></UL>
+<P>There are two exceptions to this rule. One exception is Data =
+Registers in=20
+Paged CV mode. The binary values range from 0 to 3 and so do the Data =
+Register=20
+designations. Therefore, a value of 0 really means Data Register 0. The =
+other=20
+exception is the contents of the Paging Register. This is where it gets=20
+confusing. The binary values range from 0 to 255. The page number =
+designations=20
+range from 1 to 256. But the binary value 1 refers to Page 1. I assume =
+the=20
+binary value 0 refers to Page 256 but I can't find any mention of it=20
+anywhere.</P>
+<H2>Direct Addressing</H2>
+<P>Direct Addressing allows access to any of the 1024 configuration =
+variables.=20
+</P>
+<CENTER><IMG border=3D1 =
+src=3D"http://www.maestroconsult.ro/trenulete/direct_cv.gif"=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/dcc/direct_cv.gif"></CEN=
+TER>
+<P>The <CODE>CC</CODE> bits define the type of operation. A value of=20
+<CODE>01</CODE> is used for verify and a value of <CODE>11</CODE> is =
+used for=20
+write operations. A value of <CODE>10</CODE> uses the bit mode of Direct =
+
+Addressing described further on.</P>
+<P>The <CODE>AA AAAA AAAA</CODE> bits define one of the 1024 =
+configuration=20
+variables. The <CODE>DDDD DDDD</CODE> bits define the data to be used in =
+the=20
+operation. In the write operation, this value will be written into the =
+CV=20
+specified. In the verify operation, the decoder would send an =
+acknowledge if the=20
+data matches the current contents of the specified CV. In bit mode, =
+these bits=20
+are further interpreted. </P>
+<H2>Direct Addressing - Bit Mode</H2>
+<P>The bit mode of Direct Addressing allows access to any single bit in =
+any of=20
+the 1024 configuration variables. </P>
+<CENTER><IMG border=3D1=20
+src=3D"http://www.maestroconsult.ro/trenulete/directbit_cv.gif"=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/dcc/directbit_cv.gif"></=
+CENTER>
+<P>The <CODE>AA AAAA AAAA</CODE> bits define one of the 1024 =
+configuration=20
+variables. The <CODE>BBB</CODE> specify an individual bit within the =
+specified=20
+CV. The <CODE>D</CODE> bit defines the data to be used in the operation. =
+The=20
+<CODE>K</CODE> bit defines the operation - a <CODE>0</CODE> is used for =
+a verify=20
+operation and <CODE>1</CODE> is used for a write operation. </P>
+<P>The bit mode for Direct Addressing is very powerful. It allows a =
+single bit=20
+write and verify. It simplifies reading the contents of a CV. A CV is =
+read by=20
+making repeated guesses at its contents and an acknowledge indicates a =
+correct=20
+guess. Using the byte verify mode in any addressing mode, a worst case =
+of 255=20
+guesses are required. With the bit verify mode, a worst case of 8 =
+guesses are=20
+required. In practice, for reliability, 16 guesses may be used which is =
+still a=20
+lot faster than using byte mode verifys.=20
+<H2>Paged Addressing</H2>
+<P>Paged Addressing allows access to all CVs using a two step =
+process.</P>
+<CENTER><IMG border=3D1 =
+src=3D"http://www.maestroconsult.ro/trenulete/paged_cv.gif"=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/dcc/paged_cv.gif"></CENT=
+ER>
+<P>In Paged Addressing mode, the entire gamut of 1024 CVs is broken up =
+into 256=20
+pages of 4 CVs each. At any time, 1 of 8 registers can be accessed. Of =
+these,=20
+the 6th register is used to specify 1 of 256 pages. The 1st to the 4th =
+registers=20
+are then used to write into 1 of 4 CVs in that page. The configuration =
+register=20
+is available as the 5th register. </P>
+<P>The <CODE>RRR</CODE> bits define 1 of 8 registers. The <CODE>DDDD =
+DDDD</CODE>=20
+bits define the data used in this operation. The <CODE>C</CODE> bit =
+defines the=20
+operation - a <CODE>0</CODE> is used for a verify operation and =
+<CODE>1</CODE>=20
+is used for a write operation. </P>
+<P>To access a register, as a first step, the address of 1 of the 256 =
+pages are=20
+placed in the Page Register. As a second step, 1 of the 4 registers are =
+used to=20
+interact with a particular CV. Both steps are similar - they both write =
+to a=20
+register and use the same basic command. </P>
+<H2>Other Addressing Modes</H2>
+<P>Both Address Only and Physical Register Addressing are similar to =
+Paged CV.=20
+Both use Page 1 only. In Address Only mode, only CV1 in Page 1 is used. =
+Both=20
+addressing modes involve setting the Page Register to Page 1. This is =
+done using=20
+the Page Preset command. Therefore, the packet sequence is identical to =
+Paged CV=20
+- a first step setting the Page Register to Page 1 and a second step =
+writing to=20
+a particular register in that page. </P>
+<HR>
+<A href=3D"http://www.maestroconsult.ro/trenulete/index-3.html" =
+target=3D_top=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/index.html"><IMG =
+alt=3DHome=20
+align=3Dbottom src=3D"http://www.maestroconsult.ro/trenulete/home.gif"=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/home.gif"></A> <A=20
+href=3D"http://www.maestroconsult.ro/trenulete/DccHome.html" =
+target=3D_top=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/dcc/DccHome.html"><IMG=20
+alt=3D"DCC Home" align=3Dbottom=20
+src=3D"http://www.maestroconsult.ro/trenulete/dcc_home.gif"=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/dcc/dcc_home.gif"></A> =
+<A=20
+href=3D"http://www.maestroconsult.ro/trenulete/CmdStation.html"=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/dcc/CmdStation.html"><IM=
+G=20
+alt=3DBack align=3Dbottom =
+src=3D"http://www.maestroconsult.ro/trenulete/up.gif"=20
+tppabs=3D"http://www.users.bigpond.com/pbhandary/up.gif"></A>=20
+<HR>
+
+<DIV id=3Dupd>Updated on 5 Dec 2000. Feedback to <A=20
+href=3D"mailto:pbhandary@bigpond.com">Prashant =
+Bhandary</A></DIV></BODY></HTML>
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maestroconsult.ro/trenulete/direct_cv.gif
+
+R0lGODlhTgLIALMAAOjYrTZkNJSad9ZdU7PAkmaFWMwzM+aagAAAAP//zAAAAAAAAAAAAAAAAAAA
+AAAAACwAAAAATgLIAAAE/zDJSau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AoHBILBqP
+yKRyyWw6n9CodEqtWq/YrHbL7Xq/4LB4TC6bz+i0es1uu9/wuHxOr9vv+Lx+z+/7/4CBgoOEhYaH
+iImKi4yNjo+QkZKTlJWWlQiZmROamhKbnJ+doqAJnQicqKKknhWlp6ijrKClppe3uF+1saqrrbam
+vanDocHEr8Kyq8TGw7/CudHSUrvNvs2qtcvWwMjbu7/c3s7Y0+bnTdriseXc39Dv8cvj8te06Pj5
+ROrg3ezBz3rRGnjsFAWC26z1y/ZPn8OHOfgla9hKIjOE2Hi5YshM4URgAP8hihwpo9rCVBw3XkyZ
+8R2shPSMCVRHsqbNESY/fnTnsaDPeTv7wWzI86bRoxsMzsrmKiHAmcqUrpvqEZksaPCQat3KtavX
+r2DDih1LtqzZs2jTql3LVtfMg1ADarNaEatUqW3zaqV39a3Tvs7sWqimt7BRvnVXbsS4aS48woYj
+k2zsl7Jin94cD84qufNDy0CfCg390l1p0Z5TOwTdkvVQX281a6CpujYuubBYVs0dWGXTjraD3woI
+F3HHqBrhDlYuvPkl4ih1Jo7ed9RpvM6za9/Ovbv37+DDix9Pvrz58+jTq1/Pvr2k3PDjy59PH7v7
++2jq69/PXxn+/2bQJoT/gAAWyAWBQCBo4IJWKOiDgwxGCAWEPFAo4YVKWKiDhhh2uA9nA9o1nTif
+bObhiS5wiMNotsTEVHQoxqiCijewmFxG2NEo445OFcFib0sJxuOQIehYw4+wHVSiiUQ22YGRNCAp
+E0P2QekkhlaWtNOSIQXJZE0AECDmmAQAEGaZRhBQQAFhApDAmG6e6eaVSYEYhI0oKQmSb2AGgEAB
+BPjJpgAIBDAnBQWIkGgKBSAgQAIA+ClBo4a+WeihdGKQZQyOheMpl9TZiU+jEkiaQAEBXBDpnAI8
+usGqGqTKgZ+HCiArAQgQMKmsmc4m6g+bgkUqrqgAoEqYkEpgpgSE6iqB/5iqzrksspAGwGubFuDq
+qrKu4qqrsb1yEOwL43olqScBPEpooX9SmsC6iUZKKK+TFnpqoY3mGmmhuqJK6KLAUUDoJ86Gm0G5
+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
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maestroconsult.ro/trenulete/directbit_cv.gif
+
+R0lGODlhTgLIALMAAO/WrDRiM4ihcdZdU8wzM+aZgGd5VrHAkQAAAP//zAAAAAAAAAAAAAAAAAAA
+AAAAACwAAAAATgLIAAAE/zDJSau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AoHBILBqP
+yKRyyWw6n9CodEqtWq/YrHbL7Xq/4LB4TC6bz+i0es1uu9/wuHxOr9vv+Lx+z+/7/4CBgoOEhYaH
+iImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrNgiurhOvrxKwsbSyt7UJsgixvbe5
+sxW6vL24wbW6u6zMzSDKxr/Awsu70r7YttbZxNfHwNnb2NTXzubn4cvQxuK/yuDitPDJ0uvrFN34
+7Mno/ejv8bZFkxdwXjmDCMHlC3dvYDV/EFkBbDgNGUN39Ljx0pewo8CKEf9DpprojV0ueBc1qnyX
+EeVCkNYOipwJClpAWPVacky4UGcxnfEonqRJNJRNoQoPvvSJUaVTjzh3Fp3aaSMyd8NQxsz5zepN
+h0l9dTtWTibVs2jTql3Ltq3bt3Djyp1Lt67du/1eBvX6zSDZsnz74h1caakww8MO5yxIEh/hx5QM
+M023FSFLpd4ga46Ec7FAz1+nLb5sAeDm04w6r/Qa+vPfxF0Fo55dSHVY2+ky5iOtwTTt33/I/QQ6
+9uc4wKWlAl8eXG/slGJHI89Kmbn1PML1NVSs3WqxrcXNXh9Pvrz58+jTq1/Pvr379/Djy59Pv779
+KsPz69/Pv7/s+wAq4d//gAQWyFqACCLh2xELJujgDw0WEeGDFOYw4RAXVqjhDBkG0eGGILbwIYTi
+hWjiCyP6cBl3LhGk3IkhptjDPbY452JlMJ4oIw80ytPTdy/mqOGOO/TIUXi8CQkikToYeZxjDwWp
+5INMWljSBbYZl9iUS5Yo4ZXaxBQdNdWFAsABaKZ5AABnrmnEAQYYcCYACaRJZ5t0cimlgmC6SCZW
+WHrJCQABIGDAAYXKKYCheVJggAiPpmAAAgIkQOgvkwZA5wEIaKrnngwC9qdNUV5lyqQSFCqBAQFc
+QGieAlS6wasatMrBpI0KYCunB6xq66dl8jkXqpz2AsAvZ1oqAZsSLNqr/wRoupons8laGsCvc1rA
+qazLysqrpYLmWCUO4/aj6iwBVLqooYZmmsC6jxK66K+rdppAppMisGamvbK6aKTBvuvOs8AGbES5
+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
+lEzZlE75lFAZBJV0EQEAOw==
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maestroconsult.ro/trenulete/paged_cv.gif
+
+R0lGODlhTgLMAbMAAOzZrjVnNP1pZ6O6h/mljm2PXfHwvso2NQAAAP//zAAAAAAAAAAAAAAAAAAA
+AAAAACH5BAAAAAAALAAAAABOAswBAAT/MMlJq7046827/2AojmRpnmiqrmzrvnAsz3Rt33iu73zv
+/8CgcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zW673/C4fE6v2+/4vH7P7/v/
+gIGCg4SFhoeIiYqLjI2Oj5CRkpOUlZaXmJmam5ydnp+goaKjpKWmp6ipqqs2CK6uE6+vErCxtLK3
+tQmyCLG9t7mzFbq8vbjBtbq7rMzNIMrGv8DCy7vSvti21tnE18fA2dvY1NfO5ufhy9DG4r/K4OK0
+8MnS6+sU3fjsyej96O/xtkWTF3BeOYMIweULd29gNX8QWQFsOA0ZQ3f0uPHSl7CjwIoR/0OmmuiN
+XS54FzWqfJcR5UKQ1g6KnAkKWkBY9VpyTLhQZzGd8SiepEk0lE2hCg++9IlRpVOPOHcWndppIzJ3
+w1DGzPnN6k2HSX11O1ZOJtWzaNOqXcu2rdu3cOPKnUu3rt27/V4G9frNINmyfPviHVxpqTDDww7n
+LEgSH+HHlAwzTbcVIUul3iBrjoRzsUDPX6ctvmwB4ObTjDqv9Br689/EXQWjnl1IdVjb6TLmI63B
+NO3ff8j9BDr25zjApaUCXx5cb+yUYkcjz0qZufU8wvU1VKzdarGtxc1eH0++vPnz6NOrX8++vfv3
+8OPLn0+/vv0qw/Pr38+f//3/+PUn4P+ABFID4IFO+CaEggg2SASDQEDo4IQ+SFiheBRmyIOFPXCo
+4YczeLiDiC4UiCGI55GYw2XcuUSQcheYiCJ8KuJwjy3OvViZCjXOSFuPrZTkWE/fwWgCkD6ehiQN
+Nya2F2sFHXliktctGaKQpYFVjUxWVkeleV3G0CRH9EAZZQlhfnlXmi+MyVV0BmolpZrqsVkili8a
+iFWMU35gJ51y/ckCi/Y49hCcfXIgKKBvLcpjohFCyuhmjqZQ6aCSTgrZpSdw+qim5XmKZqYdkgoq
+XqKSkGqnpp5ql4mwxmomEqu6KlKtIeCqaqu2zqWrn7yuGGyvcP3qgbG5DkusW8gqqmz/kMsC1+wG
+0x77bLRqVZsBoU25eOisI2iLLSri8qkcWDY9hOec46JWbpbn7nUVl8++2+4o9p5L75OynSlCvvfW
+dC0MYx5nqFlhAhywJwq35mSZsqXZ8MKbNOymWIhO9ynFj1m87pvaYNbCxBxj4jFshYaMcpy7lkzY
+yU2IWCS0LkMCMxMygyZDvzUncvMSOUtl5sw8e9kzIj8rEbSXTbbEIMlHS5F0Ev45ybTOuD09cNRy
+yOo1rAnuB69LgZE5s7lcLzI1rZKejZjB1qat9tZ3hv0MwqBtB6zciqx9xNJjt9ai1nz7TPfIhxPc
+tnhnx8TvtuAW7offRuAKteReJO0d/9Y6Rp6ssJhXnPgKF+eorpHhjr5y6KIr/bG84JnW5eWsG/Kz
+7Og2Lmfqta91+77pYpaw6r0bRTwKBYs2LwazH188w86z663jy6PN6vNo/W4o9QSVhfq/0WOvieZ9
+6amjRZaGL77J6vMec/vrFwb/5+/HXxTlRdBuPx/4Pzj//jb7397qB8Bbfe2AArJbAUPSvyHob4F3
+aOCCBAjBvlGwA5d7YAXpIMEgaHCDXbugsxQIwnOQr0U3Od/u3FdCc2gPR5w71FCQJ8IWCuKF8iAS
+a7QkPRsyA4dmy1jIrvVBH7IBiHDr3vaGZ8RmIFF5seNK0e7WxB/WsDevm6FxAne9Kv+uAoggUyLz
+iHhFL+rhhCkTo/W6aEZylXGMFyJQG0fyxjXqQEZzPEUH8zibPfJRSXXk4h/Hg8BCim2QoTKkInWH
+yOX4sZEvC6TVIGmdR1JyTZL8XpDkeEnouS6OA+qkJ6kGGBQGrzvNE2VVMpmbzJhuXelTJSfACLst
++mtUsmwdKVGXNaJNkYq5zMQTP3MwyMUymOz75NXawchbAhOZlqClFpuZSmhGk5VkW+Ipt+fMAVoz
+MthkTPm2icqNfXMSltxQOM+phXSOaJ3sxII77wjPeFphnqCzZwCVibN66nMKiwwoy9j2z0fg00b+
+LCgUDnqDIip0lxDt50NTE84MJnT/ohKNKNAuilF+/q2Uk1FZd8zZUdtV9HWv5CZJS0oIWurwNYhj
+6SGG2cvN/dKbMh0ETbW0J4/gMqctPSkvHWJLvfwUqDcUam4wVj3YsRGpgJAm97Y0yWpCNapKhZN2
+irm6Y1rrpo8C61V3ltWNPpNTyRtrQ8vq0RFehGW+9E1a1VoDhtIsbsuEDlCMSVd6tpWU+uEi7lrp
+VL72NZ8EfV9gq1qS5xzHc908rOIEukgSYnCHeROShxz6TbvWdXFwhAoPDStZxH7Usm4N3I0Gh7fS
+qvOvicUrnwQzi+KMsZmurZtGYXul3GY0tmZF6NGKpDd+YQRiGots5ti6uaWqC7fP/yTrQCm2G812
+K3jdylN20uDSGLaWhoisbhCZebDsPteoZeiuRoZGxvBKZyeOtdpgycvdsg42PI3xKh+rS1w9OXa+
+e02vfYGXGRmukIX7bS500BZg+nK2ZRq973EjNrAHUym/UIGveaPxHQuDz6Pp4p4tD4zgPGK4sFgi
+Tmg8TD/ghth8BlYuTk0ssgWj7y8odM10l9tWzBZ4X6TjqG/veloCDpmDbN3tkeHgWSYJeclk5W3l
+ngxlxUk5f1ROUlwVI5zwxO4qX9aqGCgbUNRWkUiTfK5zC4ZmbYChyb2dY5udi+JsCm3DY04ycL04
+5xWi12E8yfKHlbznMwcGF2Vq5f92wew2sQboyv6jMaCdKtcNI0dBLA5toTdtxJAumBgahpFPNJkF
+NGaXnOBZqaGf0hFQs5o37SC1PAc8JO/a+Khm3A6OuSxFrG1ktY6mgnqTomAZU0vQVcYUiAksxMLi
+Otlt2GkKZQjZGUN7DdJG7tueem1s09rNXY6vVbvt7WVr88eM1S+569vjcaK7q7cN5brLTei1cvKP
+ZK4sGeCs1nwrUsCQ7ja/OT3BeWu6yGMY+FUVPmV/I9DgdsSygB1+QIgLUuL71rPBbwZd5Xb8soMm
++Lo5rrOLWw9IwSZxpCye5ikTdig2Va0UERXx1CKc5cZ+58uvWw+ttLmXNT92wK//TXJRm9fnZSPm
+7lTEcKQWfb1MiRNuvvxnpmt83k+HotOO7mmfqjzoBcf51y+kV56H5c7zYCaQo+tysefcr2AWs+Og
+BOyxiDPYTQdq3nvIbYyLfe/J2nGJ/Y5zwHvw6iNH/BYMX1LG/8DxGKX4wzM+dGhDvlSVT/blX1tv
+rCu+nZ8neuhnLXmvuf3tpg3D5hVK8l9a6ONYFDzYD3/6rBMutT2CpdA7n3h+Ng25M/x0uDENWt6T
+O+uxpu+WNLZ1Z8u65YRnOfJ5c+Iwk/fPb4f1yt0+/QmfmrY8/XXJx57mnjL1/G5OvwobW/usFrf5
+4vQpelEuUnDbH0dDyj/+Yyx9//d7Bv57NWdEpX3h8i3qZxIi1XOnY4AIeHqoJ1xxhz5zB34aZnf2
+kHLqpw7J4T2n40pcxX90gWi1RYBYlD4YCDmyB31SM3pwZ2Uq9IIN6D3vBoIh+H8nt3vbglcSM1qk
+RR2/dXORkoLRZX7BJ2LrlycKsVWYlHbUgjwgR35ulTBmFmkZp4AcuIAMqH85pH88GBdOUxEjmGgY
+M4LBUISWMXzHxWAgkx9lKIKjEXYit3j7sERZwYE9dYedo4EPOBWdYRIKxg/U94dyohsDSFRnkjWu
+cX17EhXAR3vGB3pHqBTUhoQeWH/jFyjqgIA/dz6JBoAgRYi3AYNd0T1NIYYf8f8tdVR6XyMFBhBy
+McI8r1hg+6dGl1gspghsOxJqikgZgSga4GIbz0GGfuFf0VeMTEAAAkAABNCKT8gjimJye0gUzpFi
+XeiJyseL4Td18BJgMEVsNeZALDgEyCgA5JiMy1iCj+g7CphNYdg5HOaL1EOCqtGAyYd2/EBtA6h0
+R+eIcXgE41iOAKmMzPh8ZPcq3FQoYVhKahePJMEtE1aGKNNUOLYjRSVJ82QAAJCRGrmRHNmRHvmR
+H/mPADmS5siMqxcfHEZEuQiJ6YgBJPmSMBmTMjmTNEkABxCOgFKL/2I0jxZRHecKNCkAxRCUMckL
+REmSBxAAqlggC3OCKIhsazT/kD9gkpmFRUEJlOSIlUdZjggAkFpJlAdwk0vJlNz3CwZQAFLZAwYQ
+AAUAANPIVEYplF+ZlV1Jl1z5CncpC0VZlzOpjG6Jk0sGCwBQAAUgBAMQAIiplDuXFFyJdE4BdBdA
+AHMZkAQAAASJeWV5mAFgmUCwlomJmAUwAJNGD+VIAEj3X7mTJZPplwfXdn+XmIUZBGf5mZ9Zd6RJ
+l1KXjcLoL5LZlayJg0AoLPeWR56JmKI5BINJm0qJAANAlQ5WlwH4fekWmYATnAg1nG0EALR5BMWJ
+mK5gnJ5Il455dpkYfLqHjv0Ih22kmYl5nFOmmcXQnBKIl3RHjRb4iS1mnfrp/0PsmZhpCY4JYAD9
++Zlo6ZKlqVvqZoz7WUKzSZuxeXMDCpucSQEBGVZscpKuODcskRwc2oQ+CJEZSAjaqZybqWQDUAAk
+2pYUeqCZp3NGlhraxX5KiIIzSouZ5gMRmpi8daIpypkV2qItGFwwmn6S2KG9YaSySIM5CGpM2nMQ
+gi5BEaWrkqPeeWXJqZyh+aMtyXk/2DcHaaQhCqYGSKTuc11JWI8Mdqb3eI8z0KAkupxjSZYacKXK
+eQDkaJpAmnpbGhxf+qFh6qdjmoc7SYtIiIWvSKgLuI4SgJEtMKJvupyVR6e0eQB4uqdBmqf806cq
+9YJimqRJ6ieWWKiK2qF4mP+o6WcAYTmhKECltRmObkqb8pmemNmlXjqJgKqkR/iBnOqhVIWoo+qD
+pWqFbgYAYZmqKuCobzoAliSgyfqf/LigVNgIscFrvfaU3hcdcvdVMweirhdu2AqiCUCsxXoAqmoC
+r0qbf4mpAYqiKeqsBSmr2+dInSqmsAioRWoBNjmu7joC7Oqg0fhZJUCO/eqg5fqu0AqgzHGvGZgo
+CpurkTmuB7CvIEClltl6sqeVA0ugsGdzzXiw6uky+RqWAiCxHUClsWl7GKKVpsmjtOkKnLkkQohK
+cZpAL1ozAjCuAmCutMmsAXCc3QeXetmbzDmw3xmathWBMJSfrimkR3OzxZr/syQwsJypnc7pkynG
+mFkJDFf6nd5pdka1j8C5tOraK04rsvz6me6pggg7mhjBorowmMUAnqUYQ9kHmFzKNWVrpyHQnw8K
+jXBom22Lm5exnK0qgoqGd3brommDquNaqRyArH3rt/z4foEbnWfJtYQbq9hHIhiqtFHDuMXquBnw
+qhKLsmeHldG5qFyLuQhgAKaotj2ooGLLNaAblqJ7AQObtrMXr43WZXKZm/rQtVxbALsJu60pu8hb
+M+IauhrQn7q7u4/HK/94uxvAs1hasRWWuJcqN8trrBcAuR07ux8wvSQwoNXGdsm7tpLTveRqAd0Z
+ACQLhYorAuRbAizroM8L/2HwGr21w77lKrWy5bEYUL8mcL8Emr+eG61Mizkh670J4LzWpsAhQMAn
+IKloy3fp+7EMDLGtCL7AMrPYCQIUjAIW3J7xC70GO7YL08DkurN3A8LyNgIjnAIlbJz/qaLHK8F7
+urGakrfomsDqO8Es6gLWC6sDqZkI3Lnoi543ehdOC6sZmsEDPMQvUMQEapkEisKzusDA6WUrs62q
+6ZTLcbNZHMU6PL5UDANWDJsOmpZKHMGkNV+BtnTtuFF9+I6X+a8jlZLoBwbIGgBQC8QajMZ3egOs
++sM8+ayus1j6cnLWdTVhZLWi+Kcq1yd9hqtZMLC2a8ZBLMJpTAMGnKyJHP+vdsyG0xmButYvXZZR
+rnaknWJzdCsGmsy8S9zJhJyMOxDKyumzMBzDXBx7xChakbXKwbWm+3DH5tmHapeGatvKYsC3EEu9
+sXvGHjDDNvDH7frGAcyxwjdesdfHp1VbN2amgQhTlsZXUNkB4Mu+0qzFdyvEhbwDGfumxKu9eoqe
+p7yQ1wi09XTMana6nJiG1siTUUEGpCsB/rvNUvy9n1wD2PyoimmpW8zNNLdVRxvGMRu9zCw4fCxf
+XutrNFoGuUsBCT0B7jpPANDQoAzRJIrAiizR4PVVUfCWqxFazZe6RJrOJXvBFVDSxFqwehxnI5DS
+8bwDAqrLKbq/KexkLzz/04qqa/FoNnOLx/mVXGHgwfgKsRlZrO48vyFA1LgsmwOA1KB5wvcswKyS
+0WYINAfJfgkJGwvJZSG9qV/wvvvKwo0ruaT81So9lWM9z7wGkTyza4K9aL+cNgCsAXhdrG6svWDd
+zhP018aph5StiYda2R04RFPINRDMAYtNqca71yDw2ELaus1p2U4aoqm9hay9fJt9NFi9AZ8dsXns
+1aPd1387i6it2rqd2aT42jVj1x2QtxCrt6PMvyRA2r7X26sdY829279ds1yT2BtA3MXdvvK7vR+g
+3D7J3L1Nqr6N2UFNZJzN0xxgANYNsYGM0rg9uYFNkdNF2PCNfeJbM3w7/8HXPa4v28s0O9TtLdrU
+XN8l052R6wHond/Gzd5FrdRnLeAcQ930i+CmqeBhDdNrBdwLM9Lmmt4HMN5iwivczeAQSKsl09kk
+fN29ObYhjta2LeKuEtsoYAB4TeGQ/dIBvtDEctCNWtz+d1Mr/sXvxN9VQ+IZ/plArQIN7H+j/ONo
+1+A2zuLNsaG3askRqVKIe9HTeiJZ/q0rKQEmDgMpzdU5hBWASOYIE2tlPua+oJGSgSgTDrzDWNEx
+7eLajTQxWqNTNVvUEcm9eiyhaqq7Cuh9XqoT0K8FDgP5ut9qXp6MDmSGmObLANZ2OenQ2ZVa6Qop
+7jA3rZOC/OQO3lKayv/bz0impB7oHxqDWfinldjalC1DmmnWlpLg3t3aXDLrmC3pcnmXIwmUl44A
+mX6BaEbfnQ7gUN4HnkqvVF7qgYrJebjqrc44Wvjsy47QR644lRne0O3ctm7ZuD6UgmvpfInpjfYV
+hpvd02zLxZ6pyg6DGBTqx+7nsyjtn/qlzo7qyD3fD9nl3yrfxyCuur7rlZ7rdJnpY/O1nF7Lg5zu
+e/DudJ3sgvrwzJ7qrG7vly3v0V5DzmyrlKzxnChzBR8NGfkKrvvU/+ekG913N57yoM7x7D7q9dfx
+ES/owUrJwuqrG39XVwjzOWjl9nqJMQcx5ZfvE6hqKp/wMzV881k0h1b/reDqLFjurcDM5Vvu6VQf
+vkFG9Oj+6Z1mt+f7wjuowiOeYGCP4fd+2Hxmz0+gzVbfRmov1Apf52cv5IeUcGif1r4saRbu1GMv
+JSHM9nUv3UVveX9P5Ebfe3m/UIPfV20fZYfvWov/4XLPyIWX+Isc+cPRfntP+FUvcJTf+G7ff5lv
+9psveqFf+gg6+aZP5wBblqkPhOLSxDb0+C6oRn0MV/N66rDfQrIvJi+PhU8t8RYf84Lf+lQTqDK4
+56L68nPogOYe9um1gdD/gag+gzotZ50vbPVahzxP/cx/3EttBvTHq94/+ZZ/+ZTX+3lu+/aKpLlf
+Qrt/JzV/f4Y6/RdP/1XtD0LvH1MUf/xcBQEoTZmqpTPLiq4GQ3EkS/NEU3VlW/eFY3mma/vWPHy3
+Pv6H6TAhjqgI6uSGG2TG2QNGpVNq1XrFZllCrYrbvX6NJB9T2fwkn2Jw2/2Gx+Vv9hxqB9Zj5TGR
+f8cLFBwkLHTTk0M0bFGEa1yEjJScXHw8/KNEsWzbzPT8BA296ewiBTXNQhVdZW1lVQ3DdAUUhJ29
+xc2ds63ilfQADhYeJi42Pi7WVV5mrpV1fG5Fnqaunm7GztaOLfSN9JYC3x4nHxfPi35N51wvd38v
+P/+RJ6TfsYfP18/EH20P7Wcj4DxrA/cdBPhPi8FEClM5vFQQ4cSJDP9lWITWzYcwChe+qEGSJlhH
+YH4uQqSY8hbGICgpsXzxMQ2gj096cMEpk6RLWip9boPpIiiYoVtEovHYYZjJjjk2Ht3D8+dUfgWt
+Xj2GregKnUY4JOUY0ulYsWRbUkXbDOtatlsfaixrsuaSuDnjNo2aVu9evncDdZWrNGzdpGYNC5Xa
+V/FiZW5TAF5ScqdkwmTr8HLMWPPmOJlPQAbbhG7lpnowJ+acWvU31FHEDL4puszSmzqITUbpefVu
+3vdao9Olu/dw4jF/Ewx+vPhy5sjrKd8Fvfl06mefJ6+eXfvb67mEbwevuu14q9jDn0df4/uI9Tja
+p4eP9r1fV/Pj30//aR8vLv34/evrr7+T/iOQwACl6wzBAhfs60A/JLPrjNlEgnCkyfJiMMPzHDTs
+qw5tspAmnaBCTEMTt+NwPwwivI20ntiARcATZ5RGQfVIFCsn2EQ8DMbcbKQxyHxS7Km0mUbbL0IV
+lzRKSCd7I/IyD2ujzCwlfRzwSS1Ti/LI2HCb0EqlvJpBxi3P7G4Q0Jw68o8rp6SvRK52dA22FtkE
+Es0giaQypDa9spCj2+5k5B8l63TxQT0XdS/PLPkzlEQ6aauNDEnddJRRGvmsL9I4ARMi1HR0HNFM
+TZnjtMYmD0vyqEMthZUkJk+l9bNMrYM0K6ZoobRUOndlb0xWayWW/8w0V0IG0CrfzLGdRkSNs1hp
+qSSv2mS88zRYMZv1IkzLcJw23FTVWdVYXgXDyzQ+DoU2XHdnjc68bkugVFZSLe01RDzf5XfcVYYy
+ld89bzVOXisCFnhTguWEtBd9E4YY0WP75FFCcyke7Nd5I+ZY1WNrYhdEynTMMVpNFu44ZR66ROrb
+HZmlL0aUVab5RriGtQ2sh2FmVeaaf/5l5jk/hXOIdQtTUSZbEAZaZZbJFHVSpCu+uNymr/5L6I2T
+ZhPPKlv9lt4fsSYbj6fXmAvTbV8z2day307wZq/9lE3ZqHMOS+PHtIa7b39FYbrvd/9OSHDDuVOT
+73AUP/xqwk9hvP9xoB//JHDJibU2c2MMvrxzf+RG1nPRP5+409FPLzNysTlHvfWtnWHdddlXL93j
+2W+nPfEH2+XVpqQDfbjIoXEnvmqzcYQzbT+nXpZCDIuHXvh4P2SxXqpf80j6vaOP/mxuwdz11VDh
+3Z774r0fS3lz2QVpadXNPxV9I8EPn3mdvx4e/tu9D41+F3kHVqH0hzv+dc1i2gIbItw3wP29D4Fz
+M6ATJgS8khDqReVhoOwoFx2JZNB1G/RgCKenOxGWsBIONJ4JVThC2K3QhXbQXAz19kIaYkGGN0Rh
+DXW4Qx720Ic/BGIQhThEIhbRiEdEYhKVuEQmNtGJT4RiFKU4RSoTVtGKV8RiFrW4RS520YtfbEEE
+AAA7
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maestroconsult.ro/trenulete/home.gif
+
+R0lGODlhIAAgAPcAAAAAAIAAAACAAICAAAAAgIAAgACAgMDAwMDcwKTI8L8AAAC/AL+/AAAAv78A
+vwC/v/D7/0CAgID/AEBAAPDIpP+AAKSgoIBAAIAA/4AAQABAgAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAP/78KCgpICAgP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAP8ALAAAAAAgACAA
+AAitAP8JHEiwoMGDCBMqXMiwocOHEA8GCBCR4cSJFRNevJjR4MV9+zh2FPgRZEiMHUuaPEmxYkl8
+MPGBFPlQJT4BAmTORNlQ5b6bOVfSVOjzZ8yVLBcWRcp0aMGLAJhKNQnAKUGKUadKBfCvpcKsVAGI
+FYuUa0OwIAHgxIl2n1mGbdWujesw7loBdM+WvZsX7t65Zev+ZRtY70q5hA/XHcu4ceORkCNLnky5
+suWBAQEAOw==
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maestroconsult.ro/trenulete/dcc_home.gif
+
+R0lGODlhIAAgAPcAAAAAAL8AAAC/AL+/AAAAv78AvwC/v8DAwMDcwKTI8IAAAACAAICAAAAAgIAA
+gACAgPD7/0CAgID/AEBAAPDIpP+AAKSgoIBAAIAA/4AAQABAgAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAP/78KCgpICAgP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAP8ALAAAAAAgACAA
+AAjTAP8JHEiwoMGDCBMqXMiwocOHEA8qUBCR4cSJFRNevJjR4MV9+zh2FPgRZEiMHUuaPEmxYkl8
+MPGBFPlQJb4FC2TORBnRJD6C+/6dXMivqFF+QkH+O7pU6FKjTQ0WFTg16FSqSJ8OvEpwKgCrWas2
+BfuPYtaCXslWVUq2bMK0Wr0C+NpWIdypU3ECcMr1LdK9V/MuiNr37NazUJ+G5RtY6tGrSpmaVGxY
+4cq9A+kqfagZJACcelfuw8yw82jQC0yTXji3tevXrkfKnk27tu3buAcGBAA7
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maestroconsult.ro/trenulete/up.gif
+
+R0lGODlhIAAgAPcAAAAAAIAAAACAAICAAAAAgIAAgACAgMDAwMDcwKTI8L8AAAC/AL+/AAAAv78A
+vwC/v/D7/0CAgID/AEBAAPDIpP+AAKSgoIBAAIAA/4AAQABAgAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAP/78KCgpICAgP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAP8ALAAAAAAgACAA
+AAhsAP8JHEiwoMGDCBMqXMiwocOHECNKJJhv4sJ8GC0ixMhRY0GOID0KBEnSI8mTFk+qlKiyJcSW
+MB3CnMlwpk2FNnO+bBmgp8+eD2EGMMmTqMqhGoUaPYk0ZdGkT50eXUqyqcWfWEVq3cq1q8OAADs=
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maestroconsult.ro/trenulete/bg.gif
+
+R0lGODdhlgCWAPcAAP/////z8/r68PPz//Pz81lZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ
+WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWSwAAAAAlgCWAAAI/wAFCBxI
+sKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsqTJkyhTqlzJsqXLlzBjypxJ0yWB
+mjhTEgBwM6dPkTsB8PxJtGNQoUOLKrV4FGnSpVAfNnX6NKpVhFOpVr3KVUBWrVu7Qv0KNqxYomTL
+mj2LM63atWxlun0LN65Nunh72pWLt6/evXf7+gUcWPBgwirnGqb6FzFJxYsZOy4JObLkySErW76M
+2ejmz407X9T8WWto0RNJlzaNmunq16dbM1T9Gmxs2Vhr676NmyBt3WV59/4NPHjv3MWLCxdNPLna
+5ZObO39+3GvtANiza8e+e3jp7eDDB/+ALfu3+PPnQaNWjb59e8vQu7J3T188/OiL6+tPvzj+2Pz7
+BQheZP4VpZmACIbXn10HJuigdgue1eCDFI5nWIE0TVghhRFapeGGHF7ooWEglmihYBi2RJqJIBKo
+1IoPvhWiiD/BiCCAN3ZY03wBfpajjnzhuN9qP9IYJIk96ibgfTHRliRwTwK5knn6TTfkZilyRGV9
+0wl1JZOJ+Vhll1+CeVJzY3YJQJpYooQml2oixaaZQBEJZ5xr3qneSNLh6edqWUrV1wCEFmrooYgm
+quiijDbqKKMoglTZo5RWaumljxq5kWaOOlWoUAOAeqiohHpqqKmhAnCqqoqCyiqrkGr/ihFpjWpV
+qqqkfgqrrbeaipSui7qKa6dSUqRara8mmyqiov66bKrJ4kpqrqMOS22idKZmGbKw3vrsqt4y262w
+oYaL7bDlclusoNuqC+y1zXYL7LvSfituuvKem61DxFHqLLnVmgsuvaXaG7ClpQX6G7LhAjzwv9H2
++q2z87pasLrr8ttusFR5y+u0HfcKsa7yxntpm6NFRizI0I5McskU5wovxZXuq61hmOas886xypqy
+YDwHLXTOGVfU559IJyzpdfQlrafSmb02J5lPo1znd1VbmXXRWtrZdJxTu3gm1lszXfZhbop5ttdf
+W62T2m0XV6bYLG25dmRRck2ZZUsq/5l3pE3y3TfcYeeVoeB/C1akzzDxOHhfDtrcON4xqjUj4zM5
+zmLkdNco5OYJdo7W56DPbXhUNpZeOHVXpa76e3r75PrrCsbuOZK01475iKTTLrqElOcuuXyIg+42
+YE4aPzxbxLW4Z2fShQ5oeX6jB1ygXB2NNPbEJ/38cdqryT3z3tsOffloV1dQ+N2pjxz6rLmfEPvf
+y38Q/b/bbxD+gOu/EP90GR9uAGgc/7HLTwKsDgGRkkD1LbCB7gMgBOWHvwnaj30W1J/2Mui/PnHQ
+gM35oAGts7wR/mx3JtSIZkSYwoFAhoUtdGEAY2iStMCQhr6xDQ7T5pQb7nB9DPxhmBl8KMT9FfGI
+SEyiEpfIxCY68YlQjKIUpxgQADs=
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.maestroconsult.ro/trenulete/sj.css
+
+H1 {
+	FONT-STYLE: normal; MARGIN-TOP: 12pt; FONT-FAMILY: helvetica; =
+MARGIN-BOTTOM: 12pt; COLOR: #400000; FONT-SIZE: 16pt; FONT-WEIGHT: bold
+}
+H2 {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; MARGIN-BOTTOM: 2pt; COLOR: =
+#400000; FONT-SIZE: 12pt; FONT-WEIGHT: bold
+}
+H3 {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; MARGIN-BOTTOM: 2pt; COLOR: =
+#400000; FONT-SIZE: 11pt; FONT-WEIGHT: bold
+}
+#ttl {
+	FONT-STYLE: normal; MARGIN-TOP: 12pt; FONT-FAMILY: helvetica; COLOR: =
+#400000; FONT-SIZE: 16pt; FONT-WEIGHT: bold
+}
+#hlink {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; COLOR: #400000; FONT-SIZE: =
+8pt; FONT-WEIGHT: bold
+}
+.hover#hlink {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; COLOR: red; FONT-SIZE: 8pt; =
+FONT-WEIGHT: bold
+}
+P {
+	FONT-STYLE: normal; MARGIN-TOP: 3pt; FONT-FAMILY: verdana, helvetica; =
+MARGIN-BOTTOM: 3pt; COLOR: #400000; FONT-SIZE: 9pt; FONT-WEIGHT: normal
+}
+PRE {
+	MARGIN: 2pt 6pt
+}
+#term {
+	FONT-STYLE: italic; FONT-FAMILY: helvetica; COLOR: #400000; FONT-SIZE: =
+9pt; FONT-WEIGHT: bold
+}
+#code {
+	FONT-FAMILY: courier; FONT-SIZE: 9pt
+}
+#coderef {
+	FONT-FAMILY: courier; FONT-SIZE: 8pt
+}
+#hilite {
+	COLOR: #cc0000; FONT-WEIGHT: bold
+}
+#para {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; COLOR: #400000; FONT-SIZE: =
+9pt; FONT-WEIGHT: normal
+}
+UL {
+	FONT-STYLE: normal; MARGIN-TOP: 0pt; FONT-FAMILY: helvetica; COLOR: =
+#400000; FONT-SIZE: 9pt; FONT-WEIGHT: normal
+}
+#bullet {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; COLOR: #400000; FONT-SIZE: =
+9pt; FONT-WEIGHT: normal
+}
+#newdate {
+	FONT-STYLE: normal; MARGIN-TOP: 12pt; FONT-FAMILY: helvetica; COLOR: =
+#400000; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+#newtext {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; COLOR: #400000; FONT-SIZE: =
+10pt; FONT-WEIGHT: normal
+}
+#cmdname {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; MARGIN-BOTTOM: 4pt; COLOR: =
+#400000; MARGIN-LEFT: 10pt; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+#cmdpack {
+	FONT-STYLE: normal; FONT-FAMILY: courier; COLOR: #400000; MARGIN-LEFT: =
+20pt; FONT-SIZE: 11pt; FONT-WEIGHT: bold
+}
+#cmdelem {
+	MARGIN-LEFT: 30pt
+}
+#cmdelem1 {
+	FONT-STYLE: normal; FONT-FAMILY: courier; COLOR: #400000; FONT-SIZE: =
+11pt; FONT-WEIGHT: normal
+}
+#cmdelem2 {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; COLOR: #400000; FONT-SIZE: =
+9pt; FONT-WEIGHT: normal
+}
+#cmddesc {
+	FONT-STYLE: normal; MARGIN-TOP: 4pt; FONT-FAMILY: helvetica; =
+MARGIN-BOTTOM: 12pt; COLOR: #400000; MARGIN-LEFT: 20pt; FONT-SIZE: 9pt; =
+FONT-WEIGHT: normal
+}
+#prebullet {
+	FONT-STYLE: normal; FONT-FAMILY: helvetica; MARGIN-BOTTOM: 0pt; COLOR: =
+#400000; FONT-SIZE: 9pt; FONT-WEIGHT: normal
+}
+#var {
+	FONT-STYLE: italic; FONT-WEIGHT: bold
+}
+#upd {
+	FONT-STYLE: normal; FONT-FAMILY: times roman; COLOR: #400000; =
+FONT-SIZE: 8pt; FONT-WEIGHT: normal
+}
+.tb_ttl {
+	FONT-FAMILY: helvetica; COLOR: #ffffff; FONT-SIZE: 9pt; FONT-WEIGHT: =
+bold
+}
+.tb_txt {
+	FONT-FAMILY: helvetica; COLOR: #400000; FONT-SIZE: 9pt
+}
+.tb_txtb {
+	FONT-FAMILY: helvetica; COLOR: #400000; FONT-SIZE: 9pt; FONT-WEIGHT: =
+bold
+}
+.amenu:hover {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #ffcc99; FONT-SIZE: =
+12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.amenu {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #602408; FONT-SIZE: =
+12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.asubmenu:hover {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #ffcc99; FONT-SIZE: =
+12px; TEXT-DECORATION: none
+}
+.asubmenu {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #602408; FONT-SIZE: =
+12px; TEXT-DECORATION: none
+}
+
+------=_NextPart_000_0000_01CBAC04.AAAF8F70--

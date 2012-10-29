@@ -1,0 +1,2911 @@
+From: "Saved by Windows Internet Explorer 9"
+Subject: WPF Dispatcher Frames | SzymonRozga/Blog
+Date: Fri, 23 Sep 2011 12:16:03 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0027_01CC79EA.9063CEB0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17514
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/?p=164
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" =
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><HTML=20
+lang=3D"en" xml:lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD =
+profile=3D"http://gmpg.org/xfn/11"><TITLE>=20
+ WPF Dispatcher Frames | SzymonRozga/Blog</TITLE>
+<META name=3D"author" content=3D"Ardamis.com | http://www.ardamis.com/">
+<META content=3D"text/html; charset=3DUTF-8" =
+http-equiv=3D"Content-Type">
+<META name=3D"GENERATOR" content=3D"MSHTML 9.00.8112.16434"> <!-- leave =
+this for stats --><LINK=20
+rel=3D"stylesheet" type=3D"text/css" =
+href=3D"http://szymonrozga.net/blog/wp-content/themes/apricot/style.css" =
+
+media=3D"screen"><!--[if lte IE 6]>
+<link rel=3D"stylesheet" =
+href=3D"http://szymonrozga.net/blog/wp-content/themes/apricot/ie6.css" =
+type=3D"text/css" media=3D"screen" />
+<![endif]--><LINK title=3D"SzymonRozga/Blog RSS Feed" rel=3D"alternate" =
+type=3D"application/rss+xml"=20
+href=3D"http://szymonrozga.net/blog/?feed=3Drss2"><LINK =
+title=3D"SzymonRozga/Blog Atom Feed"=20
+rel=3D"alternate" type=3D"application/atom+xml" =
+href=3D"http://szymonrozga.net/blog/?feed=3Datom">
+<LINK rel=3D"pingback" =
+href=3D"http://szymonrozga.net/blog/xmlrpc.php"><LINK =
+title=3D"SzymonRozga/Blog =C2=BB WPF Dispatcher Frames Comments Feed"=20
+rel=3D"alternate" type=3D"application/rss+xml" =
+href=3D"http://szymonrozga.net/blog/?feed=3Drss2&amp;p=3D164">
+<LINK title=3D"RSD" rel=3D"EditURI" type=3D"application/rsd+xml" =
+href=3D"http://szymonrozga.net/blog/xmlrpc.php?rsd">
+<LINK rel=3D"wlwmanifest" type=3D"application/wlwmanifest+xml" =
+href=3D"http://szymonrozga.net/blog/wp-includes/wlwmanifest.xml"><LINK=20
+title=3D"SzymonRozga/Blog" rel=3D"index" =
+href=3D"http://szymonrozga.net/blog"><LINK=20
+title=3D"First post" rel=3D"start" =
+href=3D"http://szymonrozga.net/blog/?p=3D3"><LINK=20
+title=3D"Controlling UI using power shell (part 1)" rel=3D"prev" =
+href=3D"http://szymonrozga.net/blog/?p=3D60">
+<LINK title=3D"WPFying DataRow" rel=3D"next" =
+href=3D"http://szymonrozga.net/blog/?p=3D228">
+<META name=3D"generator" content=3D"WordPress 2.8.4"><LINK =
+rel=3D"stylesheet" type=3D"text/css"=20
+href=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-high=
+lighter/Styles/SyntaxHighlighter.css"></HEAD>
+<BODY><!--   WPF Dispatcher Frames -->
+<DIV id=3D"page">
+<DIV id=3D"header">
+<P class=3D"blogtitle"><A class=3D"hidelink"=20
+href=3D"http://szymonrozga.net/blog/">SzymonRozga/Blog</A></P>
+<P class=3D"description">Musings of a growing developer</P></DIV>
+<DIV id=3D"content" class=3D"narrowcolumn">
+<DIV id=3D"post-164" class=3D"post"><!-- google_ad_section_start -->
+<H1>WPF Dispatcher Frames</H1>
+<P class=3D"postdate">Sunday, 7 February 2010 <!-- by Szymon --></P>
+<DIV class=3D"entry">
+<P>A few months ago, I read into some advanced WPF threading topics. One =
+that=20
+had been particularly confusing to me is the idea of a DispatcherFrame. =
+I hope=20
+that this article can shed some light on what it is, how they can be =
+used and=20
+why we should care.</P>
+<P><STRONG>Message Loops</STRONG></P>
+<P>Win32 applications revolve around the concept of a message loop. Any=20
+interaction that occurs with it, be it a a mouse over, a keyboard event =
+or a=20
+paint message, is queued up and the application needs to process it. The =
+UI=20
+thread is responsible for retrieving the operation from a queue and =
+correctly=20
+executing it. HIstorically speaking, the concept of an event loop has =
+been=20
+around for a long time. For more background on the Win32 message loop, =
+see <A=20
+href=3D"http://www.winprog.org/tutorial/message_loop.html">here</A>.</P>
+<P>A sample message loop in Win32 looks like this:</P><PRE class=3D"c" =
+name=3D"code">int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE =
+hPrevInstance,=0A=
+                    LPSTR lpCmdLine, int nCmdShow)=0A=
+{=0A=
+    MSG msg;=0A=
+    while (GetMessage(&amp;msg, NULL, 0, 0) &gt; 0) {=0A=
+        TranslateMessage(&amp;msg);=0A=
+        DispatchMessage(&amp;msg);=0A=
+    }=0A=
+=0A=
+    return msg.wParam;=0A=
+}=0A=
+</PRE>
+<P>The message loop is a central concept in the Win32 API. Frameworks =
+like=20
+Windows Forms and WPF attempt to abstract these concepts as much as =
+possible:=20
+WinForms is just a managed wrapper around this. Although WPF is a step =
+into the=20
+managed world, it still revolves around the concept of a message loop. =
+</P>
+<P><STRONG>The Dispatcher</STRONG></P>
+<P>Any WPF application has a Dispatcher object associated with it. A =
+Dispatcher=20
+object is a wrapper around the application=E2=80=99s message loop. In =
+fact, with a=20
+little bit of exploration, you can find this little gem:</P><PRE =
+class=3D"csharp" name=3D"code">while (/* intentionally left out for =
+now*/)=0A=
+{=0A=
+   if (!this.GetMessage(ref msg, IntPtr.Zero, 0, 0))=0A=
+   {=0A=
+       break;=0A=
+   }=0A=
+   this.TranslateAndDispatchMessage(ref msg);=0A=
+}=0A=
+</PRE>
+<P>The queue of DispatcherOperations is processed from this queue. A =
+method like=20
+<A=20
+href=3D"http://msdn.microsoft.com/en-us/library/ms591206.aspx">Dispatcher=
+.BeginInvoke</A>=20
+simply inserts a DispatcherOperaton into the loop.</P>
+<P><STRONG>So what are these frames?</STRONG></P>
+<P>A <A =
+href=3D"http://msdn.microsoft.com/en-us/library/system.windows.threading.=
+dispatcherframe.aspx">DispatcherFrame</A>=20
+is a message loop inside the Dispatcher. The Dispatcher essentially has =
+a stack=20
+of DispatcherFrames that it uses the execute the queue of =
+DispatcherOperations.=20
+The topmost frame is the frame responsible for the current queue =
+processing. The=20
+only way for a frame to terminate is if its <A =
+href=3D"http://msdn.microsoft.com/en-us/library/system.windows.threading.=
+dispatcherframe.continue.aspx">Continue</A>=20
+property is set to false. </P>
+<P>The main functionality a DispatcherFrame provides is the ability to =
+block a=20
+UI operation, while the system can continue to process UI events. The =
+blocking=20
+call is the call to <A =
+href=3D"http://msdn.microsoft.com/en-us/library/system.windows.threading.=
+dispatcher.pushframe.aspx">Dispatcher.PushFrame(DispatcherFrame)</A>.</P>=
+
+<P>Let=E2=80=99s reveal another part of the gem mentioned above:</P><PRE =
+class=3D"csharp" name=3D"code">public static void =
+PushFrame(DispatcherFrame frame)=0A=
+{=0A=
+    ...=0A=
+=0A=
+    while (frame.Continue)=0A=
+    {=0A=
+        if (!this.GetMessage(ref msg, IntPtr.Zero, 0, 0))=0A=
+        {=0A=
+            break;=0A=
+        }=0A=
+        this.TranslateAndDispatchMessage(ref msg);=0A=
+    }=0A=
+=0A=
+    ...=0A=
+}=0A=
+</PRE>
+<P>Pushing a frame starts a new message loop inside the current message =
+loop. So=20
+we aren=E2=80=99t looking really at some internal =
+Stack&lt;DispatcherFrame&gt;, but=20
+rather at a stack of PushFrame method calls. To reiterate, PushFrame =
+blocks the=20
+current call but keeps on processing other GUI events. </P>
+<P>The implementation of Dispatcher.Run is pretty clear:</P><PRE =
+class=3D"csharp" name=3D"code">PushFrame(new DispatcherFrame());=0A=
+</PRE>
+<P><STRONG>So what?</STRONG></P>
+<P>Why do we need nested loops to execute our UI? There are few examples =
+out=20
+there. A while go, Kent Boogaart <A =
+href=3D"http://kentb.blogspot.com/2008/04/dispatcher-frames.html">wrote=20
+an interesting post</A> in which he illustrates one such case.</P>
+<P>I=E2=80=99m not entirely sold on whether this is the only approach to =
+this problem.=20
+One certainly has the ability to use Window.ShowDialog() though the =
+blocking of=20
+the Main Window might be an issue. If you are executing a method on the =
+UI=20
+thread and this method requires message pumping, then PushFrame is what =
+you are=20
+looking for.</P>
+<P>There are other things that can be done with PushFrame, like =
+something=20
+similar to <A =
+href=3D"http://msdn.microsoft.com/en-us/library/system.windows.threading.=
+dispatcher.pushframe.aspx">Application.DoEvents=20
+as described in the MSDN docs</A>.</P>
+<P>I hope that this article has provided some clarity on this rarely =
+used part=20
+of the WPF Threading model.</P></DIV>
+<P class=3D"postmetadata alt"></P>
+<P class=3D"postmetadata alt">						The entry '<A title=3D"Permanent =
+Link: WPF Dispatcher Frames"=20
+href=3D"http://szymonrozga.net/blog/?p=3D164" rel=3D"bookmark">WPF =
+Dispatcher=20
+Frames</A>' was posted						 						on February 7th, 2010 at 2:10 pm						=
+
+						and last modified on February 8th, 2010 at 9:33 pm, 						and is =
+filed=20
+under <A title=3D"View all posts in .net" =
+href=3D"http://szymonrozga.net/blog/?cat=3D4"=20
+rel=3D"category">.net</A>,  <A title=3D"View all posts in wpf" =
+href=3D"http://szymonrozga.net/blog/?cat=3D3"=20
+rel=3D"category">wpf</A>.						You can follow any responses to this =
+entry through=20
+the <A href=3D"http://szymonrozga.net/blog/?feed=3Drss2&amp;p=3D164">RSS =
+2.0</A> feed.=20
+													You can <A =
+href=3D"http://szymonrozga.net/blog/?p=3D164#respond">leave=20
+a response</A>, or <A =
+href=3D"http://szymonrozga.net/blog/wp-trackback.php?p=3D164"=20
+rel=3D"trackback">trackback</A> from your own site.										=
+</P></DIV><!-- If comments are open, but there are no comments. -->
+<H3 id=3D"respond">Leave a Reply</H3>
+<FORM id=3D"commentform" class=3D"clearfix" method=3D"post" =
+action=3D"http://szymonrozga.net/blog/wp-comments-post.php">
+<P><INPUT id=3D"author" tabIndex=3D"1" name=3D"author" size=3D"22" =
+type=3D"text"><LABEL=20
+for=3D"author"><SMALL>Name </SMALL></LABEL></P>
+<P><INPUT id=3D"email" tabIndex=3D"2" name=3D"email" size=3D"22" =
+type=3D"text"><LABEL for=3D"email"><SMALL>Mail=20
+(will not be published) </SMALL></LABEL></P>
+<P><INPUT id=3D"url" tabIndex=3D"3" name=3D"url" size=3D"22" =
+type=3D"text"><LABEL =
+for=3D"url"><SMALL>Website</SMALL></LABEL></P><!--<p><small><strong>XHTML=
+:</strong> You can use these tags: &lt;a href=3D&quot;&quot; =
+title=3D&quot;&quot;&gt; &lt;abbr title=3D&quot;&quot;&gt; &lt;acronym =
+title=3D&quot;&quot;&gt; &lt;b&gt; &lt;blockquote =
+cite=3D&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del =
+datetime=3D&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q =
+cite=3D&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<P><TEXTAREA id=3D"comment" tabIndex=3D"4" cols=3D"100" rows=3D"5" =
+name=3D"comment"></TEXTAREA></P>
+<P><INPUT id=3D"submit" tabIndex=3D"5" name=3D"submit" value=3D"Submit =
+Comment" type=3D"submit">
+<INPUT name=3D"comment_post_ID" value=3D"164" =
+type=3D"hidden"></P></FORM><!-- google_ad_section_end -->
+<DIV class=3D"entry other-posts"></DIV>
+<DIV class=3D"navigation">
+<DIV class=3D"alignleft">=C2=AB <A =
+href=3D"http://szymonrozga.net/blog/?p=3D60">Controlling=20
+UI using power shell (part 1)</A></DIV>
+<DIV class=3D"alignright"><A =
+href=3D"http://szymonrozga.net/blog/?p=3D228">WPFying=20
+DataRow</A> =C2=BB</DIV></DIV></DIV>
+<UL id=3D"sidebar">
+  <LI id=3D"text-3" class=3D"widget widget_text">
+  <DIV class=3D"textwidget"><IMG =
+src=3D"http://szymonrozga.net/me2.jpg"><BR><BR><A=20
+  href=3D"http://szymonrozga.net/">SzymonRozga.Net</A></DIV></LI>
+  <LI id=3D"categories-3" class=3D"widget widget_categories">
+  <H2 class=3D"widgettitle">Categories</H2>
+  <UL>
+    <LI class=3D"cat-item cat-item-4"><A title=3D"View all posts filed =
+under .net"=20
+    href=3D"http://szymonrozga.net/blog/?cat=3D4">.net</A> (10)</LI>
+    <LI class=3D"cat-item cat-item-6"><A title=3D"View all posts filed =
+under general"=20
+    href=3D"http://szymonrozga.net/blog/?cat=3D6">general</A> (1)</LI>
+    <LI class=3D"cat-item cat-item-5"><A title=3D"View all posts filed =
+under powershell"=20
+    href=3D"http://szymonrozga.net/blog/?cat=3D5">powershell</A> =
+(1)</LI>
+    <LI class=3D"cat-item cat-item-7"><A title=3D"View all posts filed =
+under running"=20
+    href=3D"http://szymonrozga.net/blog/?cat=3D7">running</A> (3)</LI>
+    <LI class=3D"cat-item cat-item-3"><A title=3D"View all posts filed =
+under wpf"=20
+    href=3D"http://szymonrozga.net/blog/?cat=3D3">wpf</A> =
+(7)</LI></UL></LI>
+  <LI id=3D"archives-3" class=3D"widget widget_archive">
+  <H2 class=3D"widgettitle">Archives</H2>
+  <UL>
+    <LI><A title=3D"August 2011"=20
+    href=3D"http://szymonrozga.net/blog/?m=3D201108">August =
+2011</A>&nbsp;(2)</LI>
+    <LI><A title=3D"June 2011" =
+href=3D"http://szymonrozga.net/blog/?m=3D201106">June=20
+    2011</A>&nbsp;(1)</LI>
+    <LI><A title=3D"October 2010"=20
+    href=3D"http://szymonrozga.net/blog/?m=3D201010">October =
+2010</A>&nbsp;(1)</LI>
+    <LI><A title=3D"March 2010" =
+href=3D"http://szymonrozga.net/blog/?m=3D201003">March=20
+    2010</A>&nbsp;(1)</LI>
+    <LI><A title=3D"February 2010"=20
+    href=3D"http://szymonrozga.net/blog/?m=3D201002">February =
+2010</A>&nbsp;(3)</LI>
+    <LI><A title=3D"November 2009"=20
+    href=3D"http://szymonrozga.net/blog/?m=3D200911">November =
+2009</A>&nbsp;(4)</LI>
+    <LI><A title=3D"October 2009"=20
+    href=3D"http://szymonrozga.net/blog/?m=3D200910">October=20
+  2009</A>&nbsp;(2)</LI></UL></LI>
+  <LI id=3D"meta-4" class=3D"widget widget_meta">
+  <H2 class=3D"widgettitle">Meta</H2>
+  <UL>
+    <LI><A href=3D"http://szymonrozga.net/blog/wp-login.php">Log =
+in</A></LI>
+    <LI><A title=3D"Syndicate this site using RSS 2.0" =
+href=3D"http://szymonrozga.net/blog/?feed=3Drss2">Entries=20
+    <ABBR title=3D"Really Simple Syndication">RSS</ABBR></A></LI>
+    <LI><A title=3D"The latest comments to all posts in RSS" =
+href=3D"http://szymonrozga.net/blog/?feed=3Dcomments-rss2">Comments=20
+    <ABBR title=3D"Really Simple Syndication">RSS</ABBR></A></LI>
+    <LI><A title=3D"Powered by WordPress, state-of-the-art semantic =
+personal publishing platform."=20
+    href=3D"http://wordpress.org/">WordPress.org</A></LI></UL></LI></UL>
+<DIV id=3D"footer">
+<P class=3D"inline">Location :   WPF Dispatcher Frames | =
+SzymonRozga/Blog</P>
+<P>=C2=A9 2011 <A =
+href=3D"http://szymonrozga.net/blog/">SzymonRozga/Blog</A>. All=20
+rights reserved. <BR>Disclaimer: The opinions expressed herein are my =
+own=20
+personal opinions and do not represent my employer's view in any way. =
+<BR><A=20
+href=3D"http://www.ardamis.com/2007/06/03/apricot/">Apricot</A> theme =
+designed by=20
+<A href=3D"http://www.ardamis.com/">Ardamis.com</A>. 	<A =
+title=3D"Validate the XHTML of this page."=20
+href=3D"http://validator.w3.org/check?uri=3Dreferer">XHTML</A>, 	<A =
+title=3D"Validate the CSS of this page."=20
+href=3D"http://jigsaw.w3.org/css-validator/check/referer">CSS</A>.</P>
+<P>SzymonRozga/Blog is powered by <A =
+href=3D"http://wordpress.org/">WordPress</A>=20
+2.8.4</P>
+<P><A href=3D"http://szymonrozga.net/blog/?feed=3Drss2">Entries =
+(RSS)</A> and <A=20
+href=3D"http://szymonrozga.net/blog/?feed=3Dcomments-rss2">Comments =
+(RSS)</A>.</P><!-- 15 queries. 0.132 seconds. --></DIV>
+</DIV>
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shCore.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushCSharp.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushPhp.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushJScript.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushJava.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushVb.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushSql.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushXml.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushDelphi.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushPython.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushRuby.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushCss.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript" =
+src=3D"http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highl=
+ighter/Scripts/shBrushCpp.js"></SCRIPT>
+
+<SCRIPT class=3D"javascript">=0A=
+dp.SyntaxHighlighter.ClipboardSwf =3D =
+'http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter=
+/Scripts/clipboard.swf';=0A=
+dp.SyntaxHighlighter.HighlightAll('code');=0A=
+</SCRIPT>
+</BODY></HTML>
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://szymonrozga.net/me2.jpg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAASUkqAAgAAAAEABoBBQABAAAAPgAAABsBBQAB
+AAAARgAAACgBAwABAAAAAgAAgDEBAgAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABAAAAUGFpbnQu
+TkVUIHYzLjM2AP/bAEMAAgEBAQEBAgEBAQICAgICBAMCAgICBQQEAwQGBQYGBgUGBgYHCQgGBwkH
+BgYICwgJCgoKCgoGCAsMCwoMCQoKCv/bAEMBAgICAgICBQMDBQoHBgcKCgoKCgoKCgoKCgoKCgoK
+CgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCv/AABEIAS0AuAMBIgACEQEDEQH/xAAf
+AAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEF
+EiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJ
+SlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEB
+AAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIy
+gQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNk
+ZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfI
+ycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/ALC25/u/jThbY554q1HG
+rruBBGOvoaesOB0r+mYtH4GVlhyuNvNP8g/earKwgrgrTxbjH3arRAVFgLN04+lL9mwT8ufrVxYc
+HOP0p3lZ4IxnvTegmUvs5xkL+VPW2btyO4o1bV9G0O1a61jU4LWONdzNLIBgepzXn/jL4+6I9vJY
++Cb5bi7BURFFB8xieig9eOSScD8a8DOeJcoyOk5Yqqk/5VrJ+i/zsvM9fKsizPN6ihhqba7vSK9W
+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
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/themes/apricot/style.css
+
+* {
+	margin: 0px; padding: 0px;
+}
+body {
+	background: rgb(255, 255, 255); font: 62.5%/normal "Lucida Grande", =
+Verdana, Arial, sans-serif; margin: 0px; padding: 0px; color: rgb(32, =
+32, 32); font-size-adjust: none; font-stretch: normal;
+}
+#page {
+	margin: 0px auto; padding: 0px; width: 90%;
+}
+#header {
+	margin: 40px 0px 0px;
+}
+#header p.blogtitle {
+	font: 3em/normal Georgia, "Times New Roman", Times, serif; text-indent: =
+180px; font-size-adjust: none; font-stretch: normal;
+}
+#header p.description {
+	text-indent: 180px; font-size: 1.4em;
+}
+#content {
+=09
+}
+.narrowcolumn {
+	margin: 0px; padding: 0px; width: 75%; float: right;
+}
+.post {
+=09
+}
+.multipost {
+	padding: 0px 0px 80px;
+}
+.entry {
+	font: 1.3em/1.6 "Lucida Grande", Verdana, Arial, sans-serif; margin: =
+0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.navigation {
+	padding: 10px 0px 60px; line-height: 1.5em;
+}
+img.centered {
+	margin: 0px auto; display: block;
+}
+.aligncenter {
+	margin-right: auto; margin-left: auto; display: block;
+}
+.alignleft {
+	margin: 0px 10px 0px 0px; padding: 4px 0px 0px; float: left; display: =
+inline;
+}
+.alignright {
+	margin: 0px 0px 0px 10px; padding: 4px 0px 0px; float: right; display: =
+inline;
+}
+#footer {
+	margin: 0px auto; padding: 20px 0px 25px 9px; width: 800px; clear: =
+both;
+}
+.center {
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
+.inline {
+	display: inline;
+}
+.hidden {
+	display: none;
+}
+#sidebar {
+	padding: 60px 0px 40px; width: 220px; text-align: right; =
+list-style-type: none;
+}
+#sidebar a {
+	padding: 0.3em 0px 0.3em 0.3em; border: currentColor; color: rgb(32, =
+32, 32); text-decoration: none;
+}
+#sidebar a:hover {
+	border: currentColor; color: rgb(32, 32, 32); text-decoration: none;
+}
+#sidebar h2 {
+	font: 1.2em/normal "Lucida Grande", Verdana, Arial, sans-serif; margin: =
+30px 0px 10px; padding: 2px 0px 2px 50px; text-align: left; =
+border-bottom-color: rgb(202, 202, 202); border-bottom-width: 1px; =
+border-bottom-style: solid; font-size-adjust: none; font-stretch: =
+normal;
+}
+#sidebar li {
+	margin: 0px 0px 15px;
+}
+#sidebar ol li {
+	list-style: decimal;
+}
+#sidebar p {
+	margin: 5px 0px 8px;
+}
+#sidebar select {
+	margin: 5px 0px 8px;
+}
+#sidebar ul {
+	margin: 8px 0px 0px; text-transform: uppercase; letter-spacing: 0.3em;
+}
+#sidebar ol {
+	margin: 8px 0px 0px; text-transform: uppercase; letter-spacing: 0.3em;
+}
+#sidebar ul li {
+	margin: 3px 0px; padding: 0.2em 0px; list-style-type: none;
+}
+#sidebar ol li {
+	margin: 3px 0px; padding: 0.2em 0px; list-style-type: none;
+}
+#sidebar ul li:hover {
+=09
+}
+#sidebar ul ul {
+	margin: 0px 0px 0px 10px;
+}
+#sidebar ol {
+	margin: 0px 0px 0px 10px;
+}
+#sidebar form {
+	margin: 0px;
+}
+#searchform {
+	padding: 40px 0px 0px;
+}
+#sidebar #searchform #s {
+	background: url("images/bg_search_full.png") no-repeat rgb(255, 255, =
+255); font: 1.2em/normal "Lucida Grande", Verdana, Arial, sans-serif; =
+padding: 3px 0px 3px 30px; border: currentColor; width: 220px; height: =
+22px; color: rgb(64, 64, 64); font-size-adjust: none; font-stretch: =
+normal;
+}
+#sidebar #searchsubmit {
+	padding: 1px;
+}
+acronym {
+	border-bottom-color: rgb(202, 202, 202); border-bottom-width: 1px; =
+border-bottom-style: dashed;
+}
+abbr {
+	border-bottom-color: rgb(202, 202, 202); border-bottom-width: 1px; =
+border-bottom-style: dashed;
+}
+acronym {
+	letter-spacing: 0.07em; font-size: 0.9em; cursor: help;
+}
+abbr {
+	letter-spacing: 0.07em; font-size: 0.9em; cursor: help;
+}
+span.caps {
+	letter-spacing: 0.07em; font-size: 0.9em; cursor: help;
+}
+h1 {
+	font: 2em/normal Georgia, "Times New Roman", Times, serif; margin: 30px =
+0px 14px; color: rgb(32, 32, 32); text-decoration: none; =
+font-size-adjust: none; font-stretch: normal;
+}
+h2 {
+	font: 2em/normal Georgia, "Times New Roman", Times, serif; margin: 30px =
+0px 14px; color: rgb(32, 32, 32); text-decoration: none; =
+font-size-adjust: none; font-stretch: normal;
+}
+h3 {
+	font: 2em/normal Georgia, "Times New Roman", Times, serif; margin: 30px =
+0px 14px; color: rgb(32, 32, 32); text-decoration: none; =
+font-size-adjust: none; font-stretch: normal;
+}
+#footer h1 {
+	font: 1em/normal "Lucida Grande", Verdana, Arial, sans-serif; margin: =
+0px; display: inline; font-size-adjust: none; font-stretch: normal;
+}
+h3 {
+	font: 1.6em/normal Georgia, "Times New Roman", Times, serif; =
+font-size-adjust: none; font-stretch: normal;
+}
+.entry h2 {
+	font: 1.6em/normal Georgia, "Times New Roman", Times, serif; =
+font-size-adjust: none; font-stretch: normal;
+}
+h4 {
+	margin: 0px; font-size: 1em; font-weight: normal; display: inline;
+}
+h6 {
+	font: 0.9em/normal "Lucida Grande", Verdana, Arial, sans-serif; margin: =
+9px 0px 14px; font-size-adjust: none; font-stretch: normal;
+}
+p.postdate {
+	font: 1.1em/normal "Lucida Grande", Verdana, Arial, sans-serif; margin: =
+0px 0px 14px; color: rgb(96, 96, 96); font-size-adjust: none; =
+font-stretch: normal;
+}
+.entry p {
+	margin: 0px 0px 10px;
+}
+.bookmarks {
+	font: 1.2em/normal Arial, Helvetica, sans-serif; margin: 40px 0px 0px; =
+padding: 4px 0px; text-align: center; font-size-adjust: none; =
+font-stretch: normal;
+}
+.bookmarks a {
+	border: currentColor;
+}
+.postmetadata {
+	font: 1.1em/1.4 Arial, Helvetica, sans-serif; margin: 40px 0px 30px; =
+padding: 10px 10px 12px; text-align: center; font-size-adjust: none; =
+font-stretch: normal;
+}
+small {
+	font: 1em/1.4 Arial, Helvetica, sans-serif; font-size-adjust: none; =
+font-stretch: normal;
+}
+.alt {
+	border-top-color: rgb(202, 202, 202); border-bottom-color: rgb(202, =
+202, 202); border-top-width: 1px; border-bottom-width: 1px; =
+border-top-style: solid; border-bottom-style: solid;
+}
+.entry blockquote {
+	margin: 15px 40px 15px 20px; padding: 0px 0px 0px 20px; text-align: =
+justify; border-left-color: rgb(255, 137, 0); border-left-width: 1px; =
+border-left-style: dotted;
+}
+.entry blockquote p {
+	line-height: 1.2em;
+}
+blockquote cite {
+	margin: 4px 0px 0px; display: block;
+}
+pre {
+	font: 1.1em/normal "Courier New", Courier, monospace; margin: 1em 0px; =
+padding: 1em 3em 1em 1em; border: 1px solid rgb(202, 202, 202); width: =
+95%; overflow: scroll; font-size-adjust: none; font-stretch: normal;
+}
+code {
+	font: 110%/normal "Courier New", Courier, monospace; color: rgb(102, =
+136, 0); font-size-adjust: none; font-stretch: normal;
+}
+#commentform p {
+	margin: 5px 0px; font-family: "Lucida Grande", Verdana, Arial, =
+sans-serif;
+}
+.isolate {
+	margin: 6px auto 12px; padding: 0px; text-align: center;
+}
+.recentdate {
+	padding: 0px 20px 0px 10px;
+}
+#footer p {
+	margin: 0px; padding: 4px 0px 0px;
+}
+.commentlist {
+	font: 1.1em/1.3 "Lucida Grande", Verdana, Arial, sans-serif; padding: =
+0px; border-bottom-color: rgb(202, 202, 202); border-bottom-width: 1px; =
+border-bottom-style: solid; font-size-adjust: none; font-stretch: =
+normal;
+}
+.commentlist li {
+	list-style: none; margin: 0px; padding: 10px 18px; border-top-color: =
+rgb(202, 202, 202); border-top-width: 1px; border-top-style: solid;
+}
+.commentlist li .avatar {
+	background: rgb(255, 255, 255); padding: 2px; border: 1px solid =
+rgb(238, 238, 238); float: right;
+}
+.commentlist a {
+=09
+}
+.commentlist p {
+	margin: 10px 5px 10px 0px;
+}
+.commentmetadata {
+	margin: 0px; display: block;
+}
+.commentlist cite {
+	font-weight: bold;
+}
+.commentlist li pre {
+	width: 90%;
+}
+.commentlist p {
+	text-transform: none; line-height: 1.5em; font-weight: normal;
+}
+.commentlist cite a {
+	border: currentColor; text-decoration: none;
+}
+.commentlist cite a:hover {
+	border: currentColor; text-decoration: underline;
+}
+.commentmetadata {
+	font-weight: normal;
+}
+.comment {
+	background: url("images/com_bubble_white.png") no-repeat 0px 12px =
+rgb(255, 255, 255);
+}
+.oddcomment {
+	background: url("images/com_bubble_white.png") no-repeat 0px 12px =
+rgb(255, 255, 255);
+}
+.authority {
+	background: url("images/com_bubble_auth_white.png") no-repeat 0px 12px =
+rgb(255, 255, 255);
+}
+.commentnumber {
+=09
+}
+a {
+	color: rgb(32, 32, 32); text-decoration: none; border-bottom-color: =
+rgb(108, 104, 130); border-bottom-width: 1px; border-bottom-style: =
+solid;
+}
+h2 a {
+	margin: 0px 0px 0px -1px; padding: 0px 1px; color: rgb(32, 32, 32); =
+font-weight: normal; text-decoration: none; border-bottom-color: =
+rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: =
+solid;
+}
+h2 a:visited {
+	margin: 0px 0px 0px -1px; padding: 0px 1px; color: rgb(32, 32, 32); =
+font-weight: normal; text-decoration: none; border-bottom-color: =
+rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: =
+solid;
+}
+h3 a {
+	margin: 0px 0px 0px -1px; padding: 0px 1px; color: rgb(32, 32, 32); =
+font-weight: normal; text-decoration: none; border-bottom-color: =
+rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: =
+solid;
+}
+h3 a:visited {
+	margin: 0px 0px 0px -1px; padding: 0px 1px; color: rgb(32, 32, 32); =
+font-weight: normal; text-decoration: none; border-bottom-color: =
+rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: =
+solid;
+}
+a:hover {
+	color: rgb(32, 32, 32); text-decoration: none; border-bottom-color: =
+rgb(255, 137, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+h2 a:hover {
+	color: rgb(32, 32, 32); text-decoration: none; border-bottom-color: =
+rgb(255, 137, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+h3 a:hover {
+	color: rgb(32, 32, 32); text-decoration: none; border-bottom-color: =
+rgb(255, 137, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.entry a:hover {
+=09
+}
+.postmetadata a {
+	border: currentColor; text-decoration: underline;
+}
+.postmetadata a:hover {
+	border: currentColor; text-decoration: none;
+}
+small a {
+	border: currentColor;
+}
+.download {
+	background: url("images/down_white.png") no-repeat 0px 50% rgb(255, =
+255, 255); padding: 0px 0px 0px 18px;
+}
+.download a {
+	padding: 0px 2px; border-bottom-color: rgb(119, 153, 0); =
+border-bottom-width: 1px; border-bottom-style: solid;
+}
+.download a:hover {
+	background: rgb(119, 153, 0); color: rgb(255, 255, 255); =
+border-bottom-color: rgb(119, 153, 0); border-bottom-width: 1px; =
+border-bottom-style: solid;
+}
+.hidelink {
+	border: currentColor;
+}
+a.hidelink:hover {
+	border: currentColor;
+}
+a img {
+	border: currentColor;
+}
+li.tagcloudtags a {
+	text-transform: none; letter-spacing: 0px;
+}
+.more-link a {
+	border: currentColor; color: rgb(202, 202, 202);
+}
+.more-link a:hover {
+	border: currentColor; color: rgb(64, 64, 64);
+}
+.entry ol {
+	margin: 0px 0px 0px 4px; padding: 0px 0px 8px;
+}
+.entry ul {
+	margin: 0px 0px 0px 4px; padding: 0px 0px 8px;
+}
+.entry ol {
+	list-style: decimal;
+}
+.entry ul {
+	list-style: circle;
+}
+.entry ol li {
+	margin: 0px 0px 0px 1.5em; padding: 2px 0px 4px;
+}
+.entry ul li {
+	margin: 0px 0px 0px 1.5em; padding: 2px 0px 4px;
+}
+.nocomments {
+	margin: 0px 0px 20px; padding: 0px; text-align: center;
+}
+.postmetadata ul {
+	clear: both; display: inline; list-style-type: none;
+}
+.postmetadata li {
+	clear: both; display: inline; list-style-type: none;
+}
+.entry form {
+=09
+}
+#commentform {
+=09
+}
+select {
+	width: 130px;
+}
+#commentform input {
+	margin: 5px 5px 1px 0px; padding: 2px; width: 170px;
+}
+#contact input {
+	margin: 5px 5px 1px 0px; padding: 2px; width: 170px;
+}
+#commentform textarea {
+	padding: 2px; width: 99%;
+}
+#commentform #submit {
+	margin: 0px; float: right;
+}
+#contact input {
+	font: 0.9em/normal "Lucida Grande", Verdana, Arial, sans-serif; =
+font-size-adjust: none; font-stretch: normal;
+}
+#contact textarea {
+	font: 0.9em/normal "Lucida Grande", Verdana, Arial, sans-serif; =
+font-size-adjust: none; font-stretch: normal;
+}
+#contact p {
+	margin: 5px 0px;
+}
+#contact textarea {
+	margin: 6px 0px 0px; padding: 2px; width: 100%; overflow: hidden;
+}
+#contact #submit {
+	margin: 0px; width: 100px; float: right;
+}
+#wp-calendar {
+	margin: 10px auto 0px; width: 140px; empty-cells: show;
+}
+#wp-calendar a {
+	text-decoration: underline; display: block;
+}
+#wp-calendar #next a {
+	text-align: right; font-size: 9pt;
+}
+#wp-calendar #prev a {
+	text-align: left; font-size: 9pt;
+}
+#wp-calendar caption {
+	font: bold 1.3em/normal "Lucida Grande", Verdana, Arial, sans-serif; =
+width: 100%; text-align: center; text-decoration: none; =
+font-size-adjust: none; font-stretch: normal;
+}
+#wp-calendar th {
+	text-align: center; text-transform: capitalize; font-style: normal;
+}
+#wp-calendar td {
+	padding: 3px 0px; width: 20px; text-align: center;
+}
+#wp-calendar td.pad:hover {
+	background: rgb(255, 255, 255);
+}
+.wp-caption {
+	margin: 10px; border-radius: 3px; border: 1px solid rgb(221, 221, 221); =
+text-align: center; padding-top: 4px; background-color: rgb(243, 243, =
+243); -moz-border-radius: 3px; -khtml-border-radius: 3px; =
+-webkit-border-radius: 3px;
+}
+.wp-caption img {
+	margin: 0px; padding: 0px; border: 0px currentColor;
+}
+.wp-caption p.wp-caption-text {
+	margin: 0px; padding: 0px 4px 5px; line-height: 17px; font-size: 11px;
+}
+.wp-caption-dd {
+	margin: 0px; padding: 0px 4px 5px; line-height: 17px; font-size: 11px;
+}
+.clearfix::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: =
+".";
+}
+.clearfix {
+	display: inline-block;
+}
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Styles/SyntaxHighlighter.css
+
+.dp-highlighter {
+	margin: 18px 0px; width: 99%; overflow: auto; padding-top: 1px; =
+font-family: "Consolas", "Courier New", Courier, mono; font-size: 12px; =
+background-color: rgb(231, 229, 220);
+}
+.dp-highlighter .bar {
+	padding-left: 45px;
+}
+.collapsed.dp-highlighter .bar {
+	padding-left: 0px;
+}
+.nogutter.dp-highlighter .bar {
+	padding-left: 0px;
+}
+.dp-highlighter ol {
+	list-style: decimal-leading-zero; margin: 0px 0px 1px 45px; padding: =
+0px; color: rgb(92, 92, 92); background-color: rgb(255, 255, 255);
+}
+.nogutter.dp-highlighter ol {
+	margin-left: 0px; list-style-type: none !important;
+}
+.dp-highlighter ol li {
+	line-height: 14px; padding-left: 10px; border-left-color: rgb(108, 226, =
+108); border-left-width: 3px; border-left-style: solid; =
+background-color: rgb(248, 248, 248);
+}
+.dp-highlighter .columns div {
+	line-height: 14px; padding-left: 10px; border-left-color: rgb(108, 226, =
+108); border-left-width: 3px; border-left-style: solid; =
+background-color: rgb(248, 248, 248);
+}
+.nogutter.dp-highlighter ol li {
+	border: 0px currentColor;
+}
+.nogutter.dp-highlighter .columns div {
+	border: 0px currentColor;
+}
+.dp-highlighter .columns {
+	width: 100%; color: gray; overflow: hidden;
+}
+.dp-highlighter .columns div {
+	padding-bottom: 5px;
+}
+.dp-highlighter ol li.alt {
+	background-color: rgb(255, 255, 255);
+}
+.dp-highlighter ol li span {
+	color: black;
+}
+.collapsed.dp-highlighter ol {
+	margin: 0px;
+}
+.collapsed.dp-highlighter ol li {
+	display: none;
+}
+.printing.dp-highlighter {
+	border: currentColor;
+}
+.printing.dp-highlighter .tools {
+	display: none !important;
+}
+.printing.dp-highlighter li {
+	display: list-item !important;
+}
+.dp-highlighter .tools {
+	font: 9px/normal Verdana, Geneva, Arial, Helvetica, sans-serif; =
+padding: 3px 8px 10px 10px; color: silver; border-left-color: rgb(108, =
+226, 108); border-left-width: 3px; border-left-style: solid; =
+font-size-adjust: none; font-stretch: normal; background-color: rgb(248, =
+248, 248); text-align1: right;
+}
+.nogutter.dp-highlighter .tools {
+	border-left-color: currentColor; border-left-width: 0px; =
+border-left-style: none;
+}
+.collapsed.dp-highlighter .tools {
+	border-bottom-color: currentColor; border-bottom-width: 0px; =
+border-bottom-style: none;
+}
+.dp-highlighter .tools a {
+	color: rgb(160, 160, 160); font-size: 9px; text-decoration: none; =
+margin-right: 10px;
+}
+.dp-highlighter .tools a:hover {
+	color: red; text-decoration: underline;
+}
+.dp-about {
+	margin: 0px; padding: 0px; background-color: rgb(255, 255, 255);
+}
+.dp-about table {
+	width: 100%; height: 100%; font-family: Tahoma, Verdana, Arial, =
+sans-serif !important; font-size: 11px;
+}
+.dp-about td {
+	padding: 10px; vertical-align: top;
+}
+.dp-about .copy {
+	height: 95%; border-bottom-color: rgb(172, 168, 153); =
+border-bottom-width: 1px; border-bottom-style: solid;
+}
+.dp-about .title {
+	color: red; font-weight: bold;
+}
+.dp-about .para {
+	margin: 0px 0px 4px;
+}
+.dp-about .footer {
+	text-align: right; border-top-color: rgb(255, 255, 255); =
+border-top-width: 1px; border-top-style: solid; background-color: =
+rgb(236, 234, 219);
+}
+.dp-about .close {
+	width: 60px; height: 22px; font-family: Tahoma, Verdana, Arial, =
+sans-serif !important; font-size: 11px; background-color: rgb(236, 234, =
+219);
+}
+.dp-highlighter .comment {
+	color: rgb(0, 130, 0);
+}
+.dp-highlighter .comments {
+	color: rgb(0, 130, 0);
+}
+.dp-highlighter .string {
+	color: blue;
+}
+.dp-highlighter .keyword {
+	color: rgb(0, 102, 153); font-weight: bold;
+}
+.dp-highlighter .preprocessor {
+	color: gray;
+}
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shCore.js
+
+var =
+dp=3D{sh:{Toolbar:{},Utils:{},RegexLib:{},Brushes:{},Strings:{AboutDialog=
+:"<html><head><title>About...</title></head><body =
+class=3D\"dp-about\"><table cellspacing=3D\"0\"><tr><td =
+class=3D\"copy\"><p class=3D\"title\">dp.SyntaxHighlighter</div><div =
+class=3D\"para\">Version: {V}</p><p><a =
+href=3D\"http://www.dreamprojections.com/syntaxhighlighter/?ref=3Dabout\"=
+ =
+target=3D\"_blank\">http://www.dreamprojections.com/syntaxhighlighter</a>=
+</p>&copy;2004-2007 Alex Gorbatchev.</td></tr><tr><td =
+class=3D\"footer\"><input type=3D\"button\" class=3D\"close\" =
+value=3D\"OK\" =
+onClick=3D\"window.close()\"/></td></tr></table></body></html>"},Clipboar=
+dSwf:null,Version:"1.5"}};=0A=
+dp.SyntaxHighlighter=3Ddp.sh;=0A=
+dp.sh.Toolbar.Commands=3D{ExpandSource:{label:"+ expand =
+source",check:function(_1){=0A=
+return _1.collapse;=0A=
+},func:function(_2,_3){=0A=
+_2.parentNode.removeChild(_2);=0A=
+_3.div.className=3D_3.div.className.replace("collapsed","");=0A=
+}},ViewSource:{label:"view plain",func:function(_4,_5){=0A=
+var _6=3D_5.originalCode.replace(/</g,"&lt;");=0A=
+var _7=3Dwindow.open("","_blank","width=3D750, height=3D400, =
+location=3D0, resizable=3D1, menubar=3D0, scrollbars=3D0");=0A=
+_7.document.write("<textarea =
+style=3D\"width:99%;height:99%\">"+_6+"</textarea>");=0A=
+_7.document.close();=0A=
+}},CopyToClipboard:{label:"copy to clipboard",check:function(){=0A=
+return window.clipboardData!=3Dnull||dp.sh.ClipboardSwf!=3Dnull;=0A=
+},func:function(_8,_9){=0A=
+var _a=3D_9.originalCode;=0A=
+if(window.clipboardData){=0A=
+window.clipboardData.setData("text",_a);=0A=
+}else{=0A=
+if(dp.sh.ClipboardSwf!=3Dnull){=0A=
+var _b=3D_9.flashCopier;=0A=
+if(_b=3D=3Dnull){=0A=
+_b=3Ddocument.createElement("div");=0A=
+_9.flashCopier=3D_b;=0A=
+_9.div.appendChild(_b);=0A=
+}=0A=
+_b.innerHTML=3D"<embed src=3D\""+dp.sh.ClipboardSwf+"\" =
+FlashVars=3D\"clipboard=3D"+encodeURIComponent(_a)+"\" width=3D\"0\" =
+height=3D\"0\" type=3D\"application/x-shockwave-flash\"></embed>";=0A=
+}=0A=
+}=0A=
+alert("The code is in your clipboard now");=0A=
+}},PrintSource:{label:"print",func:function(_c,_d){=0A=
+var _e=3Ddocument.createElement("IFRAME");=0A=
+var _f=3Dnull;=0A=
+_e.style.cssText=3D"position:absolute;width:0px;height:0px;left:-500px;to=
+p:-500px;";=0A=
+document.body.appendChild(_e);=0A=
+_f=3D_e.contentWindow.document;=0A=
+dp.sh.Utils.CopyStyles(_f,window.document);=0A=
+_f.write("<div class=3D\""+_d.div.className.replace("collapsed","")+" =
+printing\">"+_d.div.innerHTML+"</div>");=0A=
+_f.close();=0A=
+_e.contentWindow.focus();=0A=
+_e.contentWindow.print();=0A=
+alert("Printing...");=0A=
+document.body.removeChild(_e);=0A=
+}},About:{label:"?",func:function(_10){=0A=
+var =
+wnd=3Dwindow.open("","_blank","dialog,width=3D300,height=3D150,scrollbars=
+=3D0");=0A=
+var doc=3Dwnd.document;=0A=
+dp.sh.Utils.CopyStyles(doc,window.document);=0A=
+doc.write(dp.sh.Strings.AboutDialog.replace("{V}",dp.sh.Version));=0A=
+doc.close();=0A=
+wnd.focus();=0A=
+}}};=0A=
+dp.sh.Toolbar.Create=3Dfunction(_13){=0A=
+var div=3Ddocument.createElement("DIV");=0A=
+div.className=3D"tools";=0A=
+for(var _15 in dp.sh.Toolbar.Commands){=0A=
+var cmd=3Ddp.sh.Toolbar.Commands[_15];=0A=
+if(cmd.check!=3Dnull&&!cmd.check(_13)){=0A=
+continue;=0A=
+}=0A=
+div.innerHTML+=3D"<a href=3D\"#\" =
+onclick=3D\"dp.sh.Toolbar.Command('"+_15+"',this);return =
+false;\">"+cmd.label+"</a>";=0A=
+}=0A=
+return div;=0A=
+};=0A=
+dp.sh.Toolbar.Command=3Dfunction(_17,_18){=0A=
+var n=3D_18;=0A=
+while(n!=3Dnull&&n.className.indexOf("dp-highlighter")=3D=3D-1){=0A=
+n=3Dn.parentNode;=0A=
+}=0A=
+if(n!=3Dnull){=0A=
+dp.sh.Toolbar.Commands[_17].func(_18,n.highlighter);=0A=
+}=0A=
+};=0A=
+dp.sh.Utils.CopyStyles=3Dfunction(_1a,_1b){=0A=
+var _1c=3D_1b.getElementsByTagName("link");=0A=
+for(var i=3D0;i<_1c.length;i++){=0A=
+if(_1c[i].rel.toLowerCase()=3D=3D"stylesheet"){=0A=
+_1a.write("<link type=3D\"text/css\" rel=3D\"stylesheet\" =
+href=3D\""+_1c[i].href+"\"></link>");=0A=
+}=0A=
+}=0A=
+};=0A=
+dp.sh.RegexLib=3D{MultiLineCComments:new =
+RegExp("/\\*[\\s\\S]*?\\*/","gm"),SingleLineCComments:new =
+RegExp("//.*$","gm"),SingleLinePerlComments:new =
+RegExp("#.*$","gm"),DoubleQuotedString:new =
+RegExp("\"(?:\\.|(\\\\\\\")|[^\\\"\"])*\"","g"),SingleQuotedString:new =
+RegExp("'(?:\\.|(\\\\\\')|[^\\''])*'","g")};=0A=
+dp.sh.Match=3Dfunction(_1e,_1f,css){=0A=
+this.value=3D_1e;=0A=
+this.index=3D_1f;=0A=
+this.length=3D_1e.length;=0A=
+this.css=3Dcss;=0A=
+};=0A=
+dp.sh.Highlighter=3Dfunction(){=0A=
+this.noGutter=3Dfalse;=0A=
+this.addControls=3Dtrue;=0A=
+this.collapse=3Dfalse;=0A=
+this.tabsToSpaces=3Dtrue;=0A=
+this.wrapColumn=3D80;=0A=
+this.showColumns=3Dtrue;=0A=
+};=0A=
+dp.sh.Highlighter.SortCallback=3Dfunction(m1,m2){=0A=
+if(m1.index<m2.index){=0A=
+return -1;=0A=
+}else{=0A=
+if(m1.index>m2.index){=0A=
+return 1;=0A=
+}else{=0A=
+if(m1.length<m2.length){=0A=
+return -1;=0A=
+}else{=0A=
+if(m1.length>m2.length){=0A=
+return 1;=0A=
+}=0A=
+}=0A=
+}=0A=
+}=0A=
+return 0;=0A=
+};=0A=
+dp.sh.Highlighter.prototype.CreateElement=3Dfunction(_23){=0A=
+var _24=3Ddocument.createElement(_23);=0A=
+_24.highlighter=3Dthis;=0A=
+return _24;=0A=
+};=0A=
+dp.sh.Highlighter.prototype.GetMatches=3Dfunction(_25,css){=0A=
+var _27=3D0;=0A=
+var _28=3Dnull;=0A=
+while((_28=3D_25.exec(this.code))!=3Dnull){=0A=
+this.matches[this.matches.length]=3Dnew =
+dp.sh.Match(_28[0],_28.index,css);=0A=
+}=0A=
+};=0A=
+dp.sh.Highlighter.prototype.AddBit=3Dfunction(str,css){=0A=
+if(str=3D=3Dnull||str.length=3D=3D0){=0A=
+return;=0A=
+}=0A=
+var _2b=3Dthis.CreateElement("SPAN");=0A=
+str=3Dstr.replace(/ /g,"&nbsp;");=0A=
+str=3Dstr.replace(/</g,"&lt;");=0A=
+str=3Dstr.replace(/\n/gm,"&nbsp;<br>");=0A=
+if(css!=3Dnull){=0A=
+if((/br/gi).test(str)){=0A=
+var _2c=3Dstr.split("&nbsp;<br>");=0A=
+for(var i=3D0;i<_2c.length;i++){=0A=
+_2b=3Dthis.CreateElement("SPAN");=0A=
+_2b.className=3Dcss;=0A=
+_2b.innerHTML=3D_2c[i];=0A=
+this.div.appendChild(_2b);=0A=
+if(i+1<_2c.length){=0A=
+this.div.appendChild(this.CreateElement("BR"));=0A=
+}=0A=
+}=0A=
+}else{=0A=
+_2b.className=3Dcss;=0A=
+_2b.innerHTML=3Dstr;=0A=
+this.div.appendChild(_2b);=0A=
+}=0A=
+}else{=0A=
+_2b.innerHTML=3Dstr;=0A=
+this.div.appendChild(_2b);=0A=
+}=0A=
+};=0A=
+dp.sh.Highlighter.prototype.IsInside=3Dfunction(_2e){=0A=
+if(_2e=3D=3Dnull||_2e.length=3D=3D0){=0A=
+return false;=0A=
+}=0A=
+for(var i=3D0;i<this.matches.length;i++){=0A=
+var c=3Dthis.matches[i];=0A=
+if(c=3D=3Dnull){=0A=
+continue;=0A=
+}=0A=
+if((_2e.index>c.index)&&(_2e.index<c.index+c.length)){=0A=
+return true;=0A=
+}=0A=
+}=0A=
+return false;=0A=
+};=0A=
+dp.sh.Highlighter.prototype.ProcessRegexList=3Dfunction(){=0A=
+for(var i=3D0;i<this.regexList.length;i++){=0A=
+this.GetMatches(this.regexList[i].regex,this.regexList[i].css);=0A=
+}=0A=
+};=0A=
+dp.sh.Highlighter.prototype.ProcessSmartTabs=3Dfunction(_32){=0A=
+var _33=3D_32.split("\n");=0A=
+var _34=3D"";=0A=
+var _35=3D4;=0A=
+var tab=3D"\t";=0A=
+function InsertSpaces(_37,pos,_39){=0A=
+var _3a=3D_37.substr(0,pos);=0A=
+var _3b=3D_37.substr(pos+1,_37.length);=0A=
+var _3c=3D"";=0A=
+for(var i=3D0;i<_39;i++){=0A=
+_3c+=3D" ";=0A=
+}=0A=
+return _3a+_3c+_3b;=0A=
+}=0A=
+function ProcessLine(_3e,_3f){=0A=
+if(_3e.indexOf(tab)=3D=3D-1){=0A=
+return _3e;=0A=
+}=0A=
+var pos=3D0;=0A=
+while((pos=3D_3e.indexOf(tab))!=3D-1){=0A=
+var _41=3D_3f-pos%_3f;=0A=
+_3e=3DInsertSpaces(_3e,pos,_41);=0A=
+}=0A=
+return _3e;=0A=
+}=0A=
+for(var i=3D0;i<_33.length;i++){=0A=
+_34+=3DProcessLine(_33[i],_35)+"\n";=0A=
+}=0A=
+return _34;=0A=
+};=0A=
+dp.sh.Highlighter.prototype.SwitchToList=3Dfunction(){=0A=
+var _43=3Dthis.div.innerHTML.replace(/<(br)\/?>/gi,"\n");=0A=
+var _44=3D_43.split("\n");=0A=
+if(this.addControls=3D=3Dtrue){=0A=
+this.bar.appendChild(dp.sh.Toolbar.Create(this));=0A=
+}=0A=
+if(this.showColumns){=0A=
+var div=3Dthis.CreateElement("div");=0A=
+var _46=3Dthis.CreateElement("div");=0A=
+var _47=3D10;=0A=
+var i=3D1;=0A=
+while(i<=3D150){=0A=
+if(i%_47=3D=3D0){=0A=
+div.innerHTML+=3Di;=0A=
+i+=3D(i+"").length;=0A=
+}else{=0A=
+div.innerHTML+=3D"&middot;";=0A=
+i++;=0A=
+}=0A=
+}=0A=
+_46.className=3D"columns";=0A=
+_46.appendChild(div);=0A=
+this.bar.appendChild(_46);=0A=
+}=0A=
+for(var i=3D0,lineIndex=3Dthis.firstLine;i<_44.length-1;i++,lineIndex++){=0A=
+var li=3Dthis.CreateElement("LI");=0A=
+var _4b=3Dthis.CreateElement("SPAN");=0A=
+li.className=3D(i%2=3D=3D0)?"alt":"";=0A=
+_4b.innerHTML=3D_44[i]+"&nbsp;";=0A=
+li.appendChild(_4b);=0A=
+this.ol.appendChild(li);=0A=
+}=0A=
+this.div.innerHTML=3D"";=0A=
+};=0A=
+dp.sh.Highlighter.prototype.Highlight=3Dfunction(_4c){=0A=
+function Trim(str){=0A=
+return str.replace(/^\s*(.*?)[\s\n]*$/g,"$1");=0A=
+}=0A=
+function Chop(str){=0A=
+return str.replace(/\n*$/,"").replace(/^\n*/,"");=0A=
+}=0A=
+function Unindent(str){=0A=
+var _50=3Dstr.split("\n");=0A=
+var _51=3Dnew Array();=0A=
+var _52=3Dnew RegExp("^\\s*","g");=0A=
+var min=3D1000;=0A=
+for(var i=3D0;i<_50.length&&min>0;i++){=0A=
+if(Trim(_50[i]).length=3D=3D0){=0A=
+continue;=0A=
+}=0A=
+var _55=3D_52.exec(_50[i]);=0A=
+if(_55!=3Dnull&&_55.length>0){=0A=
+min=3DMath.min(_55[0].length,min);=0A=
+}=0A=
+}=0A=
+if(min>0){=0A=
+for(var i=3D0;i<_50.length;i++){=0A=
+_50[i]=3D_50[i].substr(min);=0A=
+}=0A=
+}=0A=
+return _50.join("\n");=0A=
+}=0A=
+function Copy(_57,_58,_59){=0A=
+return _57.substr(_58,_59-_58);=0A=
+}=0A=
+var pos=3D0;=0A=
+if(_4c=3D=3Dnull){=0A=
+_4c=3D"";=0A=
+}=0A=
+this.originalCode=3D_4c;=0A=
+this.code=3DChop(Unindent(_4c));=0A=
+this.div=3Dthis.CreateElement("DIV");=0A=
+this.bar=3Dthis.CreateElement("DIV");=0A=
+this.ol=3Dthis.CreateElement("OL");=0A=
+this.matches=3Dnew Array();=0A=
+this.div.className=3D"dp-highlighter";=0A=
+this.div.highlighter=3Dthis;=0A=
+this.bar.className=3D"bar";=0A=
+this.ol.start=3Dthis.firstLine;=0A=
+if(this.CssClass!=3Dnull){=0A=
+this.ol.className=3Dthis.CssClass;=0A=
+}=0A=
+if(this.collapse){=0A=
+this.div.className+=3D" collapsed";=0A=
+}=0A=
+if(this.noGutter){=0A=
+this.div.className+=3D" nogutter";=0A=
+}=0A=
+if(this.tabsToSpaces=3D=3Dtrue){=0A=
+this.code=3Dthis.ProcessSmartTabs(this.code);=0A=
+}=0A=
+this.ProcessRegexList();=0A=
+if(this.matches.length=3D=3D0){=0A=
+this.AddBit(this.code,null);=0A=
+this.SwitchToList();=0A=
+this.div.appendChild(this.ol);=0A=
+return;=0A=
+}=0A=
+this.matches=3Dthis.matches.sort(dp.sh.Highlighter.SortCallback);=0A=
+for(var i=3D0;i<this.matches.length;i++){=0A=
+if(this.IsInside(this.matches[i])){=0A=
+this.matches[i]=3Dnull;=0A=
+}=0A=
+}=0A=
+for(var i=3D0;i<this.matches.length;i++){=0A=
+var _5d=3Dthis.matches[i];=0A=
+if(_5d=3D=3Dnull||_5d.length=3D=3D0){=0A=
+continue;=0A=
+}=0A=
+this.AddBit(Copy(this.code,pos,_5d.index),null);=0A=
+this.AddBit(_5d.value,_5d.css);=0A=
+pos=3D_5d.index+_5d.length;=0A=
+}=0A=
+this.AddBit(this.code.substr(pos),null);=0A=
+this.SwitchToList();=0A=
+this.div.appendChild(this.bar);=0A=
+this.div.appendChild(this.ol);=0A=
+};=0A=
+dp.sh.Highlighter.prototype.GetKeywords=3Dfunction(str){=0A=
+return "\\b"+str.replace(/ /g,"\\b|\\b")+"\\b";=0A=
+};=0A=
+dp.sh.HighlightAll=3Dfunction(_5f,_60,_61,_62,_63,_64){=0A=
+function FindValue(){=0A=
+var a=3Darguments;=0A=
+for(var i=3D0;i<a.length;i++){=0A=
+if(a[i]=3D=3Dnull){=0A=
+continue;=0A=
+}=0A=
+if(typeof (a[i])=3D=3D"string"&&a[i]!=3D""){=0A=
+return a[i]+"";=0A=
+}=0A=
+if(typeof (a[i])=3D=3D"object"&&a[i].value!=3D""){=0A=
+return a[i].value+"";=0A=
+}=0A=
+}=0A=
+return null;=0A=
+}=0A=
+function IsOptionSet(_67,_68){=0A=
+for(var i=3D0;i<_68.length;i++){=0A=
+if(_68[i]=3D=3D_67){=0A=
+return true;=0A=
+}=0A=
+}=0A=
+return false;=0A=
+}=0A=
+function GetOptionValue(_6a,_6b,_6c){=0A=
+var _6d=3Dnew RegExp("^"+_6a+"\\[(\\w+)\\]$","gi");=0A=
+var _6e=3Dnull;=0A=
+for(var i=3D0;i<_6b.length;i++){=0A=
+if((_6e=3D_6d.exec(_6b[i]))!=3Dnull){=0A=
+return _6e[1];=0A=
+}=0A=
+}=0A=
+return _6c;=0A=
+}=0A=
+function FindTagsByName(_70,_71,_72){=0A=
+var _73=3Ddocument.getElementsByTagName(_72);=0A=
+for(var i=3D0;i<_73.length;i++){=0A=
+if(_73[i].getAttribute("name")=3D=3D_71){=0A=
+_70.push(_73[i]);=0A=
+}=0A=
+}=0A=
+}=0A=
+var _75=3D[];=0A=
+var _76=3Dnull;=0A=
+var _77=3D{};=0A=
+var _78=3D"innerHTML";=0A=
+FindTagsByName(_75,_5f,"pre");=0A=
+FindTagsByName(_75,_5f,"textarea");=0A=
+if(_75.length=3D=3D0){=0A=
+return;=0A=
+}=0A=
+for(var _79 in dp.sh.Brushes){=0A=
+var _7a=3Ddp.sh.Brushes[_79].Aliases;=0A=
+if(_7a=3D=3Dnull){=0A=
+continue;=0A=
+}=0A=
+for(var i=3D0;i<_7a.length;i++){=0A=
+_77[_7a[i]]=3D_79;=0A=
+}=0A=
+}=0A=
+for(var i=3D0;i<_75.length;i++){=0A=
+var _7d=3D_75[i];=0A=
+var =
+_7e=3DFindValue(_7d.attributes["class"],_7d.className,_7d.attributes["lan=
+guage"],_7d.language);=0A=
+var _7f=3D"";=0A=
+if(_7e=3D=3Dnull){=0A=
+continue;=0A=
+}=0A=
+_7e=3D_7e.split(":");=0A=
+_7f=3D_7e[0].toLowerCase();=0A=
+if(_77[_7f]=3D=3Dnull){=0A=
+continue;=0A=
+}=0A=
+_76=3Dnew dp.sh.Brushes[_77[_7f]]();=0A=
+_7d.style.display=3D"none";=0A=
+_76.noGutter=3D(_60=3D=3Dnull)?IsOptionSet("nogutter",_7e):!_60;=0A=
+_76.addControls=3D(_61=3D=3Dnull)?!IsOptionSet("nocontrols",_7e):_61;=0A=
+_76.collapse=3D(_62=3D=3Dnull)?IsOptionSet("collapse",_7e):_62;=0A=
+_76.showColumns=3D(_64=3D=3Dnull)?IsOptionSet("showcolumns",_7e):_64;=0A=
+if(_76.Style){=0A=
+document.write("<style>"+_76.Style+"</style>");=0A=
+}=0A=
+_76.firstLine=3D(_63=3D=3Dnull)?parseInt(GetOptionValue("firstline",_7e,1=
+)):_63;=0A=
+_76.Highlight(_7d[_78]);=0A=
+_76.source=3D_7d;=0A=
+_7d.parentNode.insertBefore(_76.div,_7d);=0A=
+}=0A=
+};=0A=
+=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCSharp.js
+
+dp.sh.Brushes.CSharp =3D function()=0A=
+{=0A=
+	var keywords =3D	'abstract as base bool break byte case catch char =
+checked class const ' +=0A=
+					'continue decimal default delegate do double else enum event =
+explicit ' +=0A=
+					'extern false finally fixed float for foreach get goto if implicit =
+in int ' +=0A=
+					'interface internal is lock long namespace new null object operator =
+out ' +=0A=
+					'override params private protected public readonly ref return sbyte =
+sealed set ' +=0A=
+					'short sizeof stackalloc static string struct switch this throw =
+true try ' +=0A=
+					'typeof uint ulong unchecked unsafe ushort using virtual void =
+while';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		// There's a slight problem with matching single line comments and =
+figuring out=0A=
+		// a difference between // and ///. Using lookahead and lookbehind =
+solves the=0A=
+		// problem, unfortunately JavaScript doesn't support lookbehind. So =
+I'm at a =0A=
+		// loss how to translate that regular expression to JavaScript =
+compatible one.=0A=
+//		{ regex: new =
+RegExp('(?<!/)//(?!/).*$|(?<!/)////(?!/).*$|/\\*[^\\*]*(.)*?\\*/', =
+'gm'),	css: 'comment' },			// one line comments starting with anything =
+BUT '///' and multiline comments=0A=
+//		{ regex: new RegExp('(?<!/)///(?!/).*$', 'gm'),											css: =
+'comments' },		// XML comments starting with ///=0A=
+=0A=
+		{ regex: dp.sh.RegexLib.SingleLineCComments,				css: 'comment' },			// =
+one line comments=0A=
+		{ regex: dp.sh.RegexLib.MultiLineCComments,					css: 'comment' },			// =
+multiline comments=0A=
+		{ regex: dp.sh.RegexLib.DoubleQuotedString,					css: 'string' },			// =
+strings=0A=
+		{ regex: dp.sh.RegexLib.SingleQuotedString,					css: 'string' },			// =
+strings=0A=
+		{ regex: new RegExp('^\\s*#.*', 'gm'),						css: 'preprocessor' },		// =
+preprocessor tags like #region and #endregion=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),		css: 'keyword' =
+}			// c# keyword=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-c';=0A=
+	this.Style =3D '.dp-c .vars { color: #d00; }';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.CSharp.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.CSharp.Aliases	=3D ['c#', 'c-sharp', 'csharp'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushPhp.js
+
+dp.sh.Brushes.Php =3D function()=0A=
+{=0A=
+	var funcs	=3D	'abs acos acosh addcslashes addslashes ' +=0A=
+					'array_change_key_case array_chunk array_combine array_count_values =
+array_diff '+=0A=
+					'array_diff_assoc array_diff_key array_diff_uassoc array_diff_ukey =
+array_fill '+=0A=
+					'array_filter array_flip array_intersect array_intersect_assoc =
+array_intersect_key '+=0A=
+					'array_intersect_uassoc array_intersect_ukey array_key_exists =
+array_keys array_map '+=0A=
+					'array_merge array_merge_recursive array_multisort array_pad =
+array_pop array_product '+=0A=
+					'array_push array_rand array_reduce array_reverse array_search =
+array_shift '+=0A=
+					'array_slice array_splice array_sum array_udiff array_udiff_assoc '+=0A=
+					'array_udiff_uassoc array_uintersect array_uintersect_assoc '+=0A=
+					'array_uintersect_uassoc array_unique array_unshift array_values =
+array_walk '+=0A=
+					'array_walk_recursive atan atan2 atanh base64_decode base64_encode =
+base_convert '+=0A=
+					'basename bcadd bccomp bcdiv bcmod bcmul bindec bindtextdomain =
+bzclose bzcompress '+=0A=
+					'bzdecompress bzerrno bzerror bzerrstr bzflush bzopen bzread =
+bzwrite ceil chdir '+=0A=
+					'checkdate checkdnsrr chgrp chmod chop chown chr chroot chunk_split =
+class_exists '+=0A=
+					'closedir closelog copy cos cosh count count_chars date decbin =
+dechex decoct '+=0A=
+					'deg2rad delete ebcdic2ascii echo empty end ereg ereg_replace eregi =
+eregi_replace error_log '+=0A=
+					'error_reporting escapeshellarg escapeshellcmd eval exec exit exp =
+explode extension_loaded '+=0A=
+					'feof fflush fgetc fgetcsv fgets fgetss file_exists =
+file_get_contents file_put_contents '+=0A=
+					'fileatime filectime filegroup fileinode filemtime fileowner =
+fileperms filesize filetype '+=0A=
+					'floatval flock floor flush fmod fnmatch fopen fpassthru fprintf =
+fputcsv fputs fread fscanf '+=0A=
+					'fseek fsockopen fstat ftell ftok getallheaders getcwd getdate =
+getenv gethostbyaddr gethostbyname '+=0A=
+					'gethostbynamel getimagesize getlastmod getmxrr getmygid getmyinode =
+getmypid getmyuid getopt '+=0A=
+					'getprotobyname getprotobynumber getrandmax getrusage getservbyname =
+getservbyport gettext '+=0A=
+					'gettimeofday gettype glob gmdate gmmktime ini_alter ini_get =
+ini_get_all ini_restore ini_set '+=0A=
+					'interface_exists intval ip2long is_a is_array is_bool is_callable =
+is_dir is_double '+=0A=
+					'is_executable is_file is_finite is_float is_infinite is_int =
+is_integer is_link is_long '+=0A=
+					'is_nan is_null is_numeric is_object is_readable is_real =
+is_resource is_scalar is_soap_fault '+=0A=
+					'is_string is_subclass_of is_uploaded_file is_writable is_writeable =
+mkdir mktime nl2br '+=0A=
+					'parse_ini_file parse_str parse_url passthru pathinfo readlink =
+realpath rewind rewinddir rmdir '+=0A=
+					'round str_ireplace str_pad str_repeat str_replace str_rot13 =
+str_shuffle str_split '+=0A=
+					'str_word_count strcasecmp strchr strcmp strcoll strcspn strftime =
+strip_tags stripcslashes '+=0A=
+					'stripos stripslashes stristr strlen strnatcasecmp strnatcmp =
+strncasecmp strncmp strpbrk '+=0A=
+					'strpos strptime strrchr strrev strripos strrpos strspn strstr =
+strtok strtolower strtotime '+=0A=
+					'strtoupper strtr strval substr substr_compare';=0A=
+=0A=
+	var keywords =3D	'and or xor __FILE__ __LINE__ array as break case ' +=0A=
+					'cfunction class const continue declare default die do else ' +=0A=
+					'elseif empty enddeclare endfor endforeach endif endswitch endwhile =
+' +=0A=
+					'extends for foreach function include include_once global if ' +=0A=
+					'new old_function return static switch use require require_once ' +=0A=
+					'var while __FUNCTION__ __CLASS__ ' +=0A=
+					'__METHOD__ abstract interface public implements extends private =
+protected throw';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: dp.sh.RegexLib.SingleLineCComments,				css: 'comment' },			// =
+one line comments=0A=
+		{ regex: dp.sh.RegexLib.MultiLineCComments,					css: 'comment' },			// =
+multiline comments=0A=
+		{ regex: dp.sh.RegexLib.DoubleQuotedString,					css: 'string' },			// =
+double quoted strings=0A=
+		{ regex: dp.sh.RegexLib.SingleQuotedString,					css: 'string' },			// =
+single quoted strings=0A=
+		{ regex: new RegExp('\\$\\w+', 'g'),						css: 'vars' },				// =
+variables=0A=
+		{ regex: new RegExp(this.GetKeywords(funcs), 'gmi'),		css: 'func' },			=
+	// functions=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),		css: 'keyword' =
+}			// keyword=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-c';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Php.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Php.Aliases	=3D ['php'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushJScript.js
+
+dp.sh.Brushes.JScript =3D function()=0A=
+{=0A=
+	var keywords =3D	'abstract boolean break byte case catch char class =
+const continue debugger ' +=0A=
+					'default delete do double else enum export extends false final =
+finally float ' +=0A=
+					'for function goto if implements import in instanceof int interface =
+long native ' +=0A=
+					'new null package private protected public return short static =
+super switch ' +=0A=
+					'synchronized this throw throws transient true try typeof var void =
+volatile while with';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: dp.sh.RegexLib.SingleLineCComments,				css: 'comment' },			// =
+one line comments=0A=
+		{ regex: dp.sh.RegexLib.MultiLineCComments,					css: 'comment' },			// =
+multiline comments=0A=
+		{ regex: dp.sh.RegexLib.DoubleQuotedString,					css: 'string' },			// =
+double quoted strings=0A=
+		{ regex: dp.sh.RegexLib.SingleQuotedString,					css: 'string' },			// =
+single quoted strings=0A=
+		{ regex: new RegExp('^\\s*#.*', 'gm'),						css: 'preprocessor' },		// =
+preprocessor tags like #region and #endregion=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),		css: 'keyword' =
+}			// keywords=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-c';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.JScript.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.JScript.Aliases	=3D ['js', 'jscript', 'javascript'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushJava.js
+
+dp.sh.Brushes.Java =3D function()=0A=
+{=0A=
+	var keywords =3D	'abstract assert boolean break byte case catch char =
+class const ' +=0A=
+			'continue default do double else enum extends ' +=0A=
+			'false final finally float for goto if implements import ' +=0A=
+			'instanceof int interface long native new null ' +=0A=
+			'package private protected public return ' +=0A=
+			'short static strictfp super switch synchronized this throw throws =
+true ' +=0A=
+			'transient try void volatile while';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: dp.sh.RegexLib.SingleLineCComments,							css: 'comment' },		=
+// one line comments=0A=
+		{ regex: dp.sh.RegexLib.MultiLineCComments,								css: 'comment' },		=
+// multiline comments=0A=
+		{ regex: dp.sh.RegexLib.DoubleQuotedString,								css: 'string' },		=
+// strings=0A=
+		{ regex: dp.sh.RegexLib.SingleQuotedString,								css: 'string' },		=
+// strings=0A=
+		{ regex: new RegExp('\\b([\\d]+(\\.[\\d]+)?|0x[a-f0-9]+)\\b', 'gi'),	=
+css: 'number' },		// numbers=0A=
+		{ regex: new RegExp('(?!\\@interface\\b)\\@[\\$\\w]+\\b', 'g'),			css: =
+'annotation' },	// annotation @anno=0A=
+		{ regex: new RegExp('\\@interface\\b', 'g'),							css: 'keyword' },		=
+// @interface keyword=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),					css: =
+'keyword' }		// java keyword=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-j';=0A=
+	this.Style =3D	'.dp-j .annotation { color: #646464; }' +=0A=
+					'.dp-j .number { color: #C00000; }';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Java.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Java.Aliases	=3D ['java'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushVb.js
+
+dp.sh.Brushes.Vb =3D function()=0A=
+{=0A=
+	var keywords =3D	'AddHandler AddressOf AndAlso Alias And Ansi As =
+Assembly Auto ' +=0A=
+					'Boolean ByRef Byte ByVal Call Case Catch CBool CByte CChar CDate ' =
++=0A=
+					'CDec CDbl Char CInt Class CLng CObj Const CShort CSng CStr CType ' =
++=0A=
+					'Date Decimal Declare Default Delegate Dim DirectCast Do Double =
+Each ' +=0A=
+					'Else ElseIf End Enum Erase Error Event Exit False Finally For =
+Friend ' +=0A=
+					'Function Get GetType GoSub GoTo Handles If Implements Imports In ' =
++=0A=
+					'Inherits Integer Interface Is Let Lib Like Long Loop Me Mod Module =
+' +=0A=
+					'MustInherit MustOverride MyBase MyClass Namespace New Next Not =
+Nothing ' +=0A=
+					'NotInheritable NotOverridable Object On Option Optional Or OrElse =
+' +=0A=
+					'Overloads Overridable Overrides ParamArray Preserve Private =
+Property ' +=0A=
+					'Protected Public RaiseEvent ReadOnly ReDim REM RemoveHandler =
+Resume ' +=0A=
+					'Return Select Set Shadows Shared Short Single Static Step Stop =
+String ' +=0A=
+					'Structure Sub SyncLock Then Throw To True Try TypeOf Unicode Until =
+' +=0A=
+					'Variant When While With WithEvents WriteOnly Xor';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: new RegExp('\'.*$', 'gm'),							css: 'comment' },			// one =
+line comments=0A=
+		{ regex: dp.sh.RegexLib.DoubleQuotedString,					css: 'string' },			// =
+strings=0A=
+		{ regex: new RegExp('^\\s*#.*', 'gm'),						css: 'preprocessor' },		// =
+preprocessor tags like #region and #endregion=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),		css: 'keyword' =
+}			// c# keyword=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-vb';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Vb.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Vb.Aliases	=3D ['vb', 'vb.net'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushSql.js
+
+dp.sh.Brushes.Sql =3D function()=0A=
+{=0A=
+	var funcs	=3D	'abs avg case cast coalesce convert count =
+current_timestamp ' +=0A=
+					'current_user day isnull left lower month nullif replace right ' +=0A=
+					'session_user space substring sum system_user upper user year';=0A=
+=0A=
+	var keywords =3D	'absolute action add after alter as asc at =
+authorization begin bigint ' +=0A=
+					'binary bit by cascade char character check checkpoint close =
+collate ' +=0A=
+					'column commit committed connect connection constraint contains =
+continue ' +=0A=
+					'create cube current current_date current_time cursor database date =
+' +=0A=
+					'deallocate dec decimal declare default delete desc distinct double =
+drop ' +=0A=
+					'dynamic else end end-exec escape except exec execute false fetch =
+first ' +=0A=
+					'float for force foreign forward free from full function global =
+goto grant ' +=0A=
+					'group grouping having hour ignore index inner insensitive insert =
+instead ' +=0A=
+					'int integer intersect into is isolation key last level load local =
+max min ' +=0A=
+					'minute modify move name national nchar next no numeric of off on =
+only ' +=0A=
+					'open option order out output partial password precision prepare =
+primary ' +=0A=
+					'prior privileges procedure public read real references relative =
+repeatable ' +=0A=
+					'restrict return returns revoke rollback rollup rows rule schema =
+scroll ' +=0A=
+					'second section select sequence serializable set size smallint =
+static ' +=0A=
+					'statistics table temp temporary then time timestamp to top =
+transaction ' +=0A=
+					'translation trigger true truncate uncommitted union unique update =
+values ' +=0A=
+					'varchar varying view when where with work';=0A=
+=0A=
+	var operators =3D	'all and any between cross in join like not null or =
+outer some';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: new RegExp('--(.*)$', 'gm'),						css: 'comment' },			// one =
+line and multiline comments=0A=
+		{ regex: dp.sh.RegexLib.DoubleQuotedString,					css: 'string' },			// =
+double quoted strings=0A=
+		{ regex: dp.sh.RegexLib.SingleQuotedString,					css: 'string' },			// =
+single quoted strings=0A=
+		{ regex: new RegExp(this.GetKeywords(funcs), 'gmi'),		css: 'func' },			=
+	// functions=0A=
+		{ regex: new RegExp(this.GetKeywords(operators), 'gmi'),	css: 'op' },		=
+		// operators and such=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gmi'),		css: =
+'keyword' }			// keyword=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-sql';=0A=
+	this.Style =3D	'.dp-sql .func { color: #ff1493; }' +=0A=
+					'.dp-sql .op { color: #808080; }';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Sql.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Sql.Aliases	=3D ['sql'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushXml.js
+
+dp.sh.Brushes.Xml =3D function()=0A=
+{=0A=
+	this.CssClass =3D 'dp-xml';=0A=
+	this.Style =3D	'.dp-xml .cdata { color: #ff1493; }' +=0A=
+					'.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; =
+}' +=0A=
+					'.dp-xml .attribute { color: red; }' +=0A=
+					'.dp-xml .attribute-value { color: blue; }';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Xml.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Xml.Aliases	=3D ['xml', 'xhtml', 'xslt', 'html', 'xhtml'];=0A=
+=0A=
+dp.sh.Brushes.Xml.prototype.ProcessRegexList =3D function()=0A=
+{=0A=
+	function push(array, value)=0A=
+	{=0A=
+		array[array.length] =3D value;=0A=
+	}=0A=
+	=0A=
+	/* If only there was a way to get index of a group within a match, the =
+whole XML=0A=
+	   could be matched with the expression looking something like that:=0A=
+	=0A=
+	   (<!\[CDATA\[\s*.*\s*\]\]>)=0A=
+	   | (<!--\s*.*\s*?-->)=0A=
+	   | (<)*(\w+)*\s*(\w+)\s*=3D\s*(".*?"|'.*?'|\w+)(/*>)*=0A=
+	   | (</?)(.*?)(/?>)=0A=
+	*/=0A=
+	var index	=3D 0;=0A=
+	var match	=3D null;=0A=
+	var regex	=3D null;=0A=
+=0A=
+	// Match CDATA in the following format <![ ... [ ... ]]>=0A=
+	// (\&lt;|<)\!\[[\w\s]*?\[(.|\s)*?\]\](\&gt;|>)=0A=
+	this.GetMatches(new =
+RegExp('(\&lt;|<)\\!\\[[\\w\\s]*?\\[(.|\\s)*?\\]\\](\&gt;|>)', 'gm'), =
+'cdata');=0A=
+	=0A=
+	// Match comments=0A=
+	// (\&lt;|<)!--\s*.*\s*?--(\&gt;|>)=0A=
+	this.GetMatches(new RegExp('(\&lt;|<)!--\\s*.*\\s*?--(\&gt;|>)', 'gm'), =
+'comments');=0A=
+=0A=
+	// Match attributes and their values=0A=
+	// (:|\w+)\s*=3D\s*(".*?"|\'.*?\'|\w+)*=0A=
+	regex =3D new =
+RegExp('([:\\w-\.]+)\\s*=3D\\s*(".*?"|\'.*?\'|\\w+)*|(\\w+)', 'gm'); // =
+Thanks to Tomi Blinnikka of Yahoo! for fixing namespaces in attributes=0A=
+	while((match =3D regex.exec(this.code)) !=3D null)=0A=
+	{=0A=
+		if(match[1] =3D=3D null)=0A=
+		{=0A=
+			continue;=0A=
+		}=0A=
+			=0A=
+		push(this.matches, new dp.sh.Match(match[1], match.index, =
+'attribute'));=0A=
+	=0A=
+		// if xml is invalid and attribute has no property value, ignore it	=0A=
+		if(match[2] !=3D undefined)=0A=
+		{=0A=
+			push(this.matches, new dp.sh.Match(match[2], match.index + =
+match[0].indexOf(match[2]), 'attribute-value'));=0A=
+		}=0A=
+	}=0A=
+=0A=
+	// Match opening and closing tag brackets=0A=
+	// (\&lt;|<)/*\?*(?!\!)|/*\?*(\&gt;|>)=0A=
+	this.GetMatches(new RegExp('(\&lt;|<)/*\\?*(?!\\!)|/*\\?*(\&gt;|>)', =
+'gm'), 'tag');=0A=
+=0A=
+	// Match tag names=0A=
+	// (\&lt;|<)/*\?*\s*(\w+)=0A=
+	regex =3D new RegExp('(?:\&lt;|<)/*\\?*\\s*([:\\w-\.]+)', 'gm');=0A=
+	while((match =3D regex.exec(this.code)) !=3D null)=0A=
+	{=0A=
+		push(this.matches, new dp.sh.Match(match[1], match.index + =
+match[0].indexOf(match[1]), 'tag-name'));=0A=
+	}=0A=
+}=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushDelphi.js
+
+/* Delphi brush is contributed by Eddie Shipman */=0A=
+dp.sh.Brushes.Delphi =3D function()=0A=
+{=0A=
+	var keywords =3D	'abs addr and ansichar ansistring array as asm begin =
+boolean byte cardinal ' +=0A=
+					'case char class comp const constructor currency destructor div do =
+double ' +=0A=
+					'downto else end except exports extended false file finalization =
+finally ' +=0A=
+					'for function goto if implementation in inherited int64 =
+initialization ' +=0A=
+					'integer interface is label library longint longword mod nil not =
+object ' +=0A=
+					'of on or packed pansichar pansistring pchar pcurrency pdatetime =
+pextended ' + =0A=
+					'pint64 pointer private procedure program property pshortstring =
+pstring ' + =0A=
+					'pvariant pwidechar pwidestring protected public published raise =
+real real48 ' +=0A=
+					'record repeat set shl shortint shortstring shr single smallint =
+string then ' +=0A=
+					'threadvar to true try type unit until uses val var varirnt while =
+widechar ' +=0A=
+					'widestring with word write writeln xor';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: new RegExp('\\(\\*[\\s\\S]*?\\*\\)', 'gm'),		css: 'comment' =
+},  			// multiline comments (* *)=0A=
+		{ regex: new RegExp('{(?!\\$)[\\s\\S]*?}', 'gm'),			css: 'comment' },  =
+			// multiline comments { }=0A=
+		{ regex: dp.sh.RegexLib.SingleLineCComments,				css: 'comment' },  			=
+// one line=0A=
+		{ regex: dp.sh.RegexLib.SingleQuotedString,					css: 'string' },			// =
+strings=0A=
+		{ regex: new RegExp('\\{\\$[a-zA-Z]+ .+\\}', 'g'),			css: 'directive' =
+},			// Compiler Directives and Region tags=0A=
+		{ regex: new RegExp('\\b[\\d\\.]+\\b', 'g'),				css: 'number' },			// =
+numbers 12345=0A=
+		{ regex: new RegExp('\\$[a-zA-Z0-9]+\\b', 'g'),				css: 'number' },			=
+// numbers $F5D3=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),		css: 'keyword' =
+}			// keyword=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-delphi';=0A=
+	this.Style =3D	'.dp-delphi .number { color: blue; }' +=0A=
+					'.dp-delphi .directive { color: #008284; }' +=0A=
+					'.dp-delphi .vars { color: #000; }';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Delphi.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Delphi.Aliases	=3D ['delphi', 'pascal'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushPython.js
+
+/* Python 2.3 syntax contributed by Gheorghe Milas */=0A=
+dp.sh.Brushes.Python =3D function()=0A=
+{=0A=
+    var keywords =3D  'and assert break class continue def del elif else =
+' +=0A=
+                    'except exec finally for from global if import in is =
+' +=0A=
+                    'lambda not or pass print raise return try yield =
+while';=0A=
+=0A=
+    var special =3D  'None True False self cls class_'=0A=
+=0A=
+    this.regexList =3D [=0A=
+        { regex: dp.sh.RegexLib.SingleLinePerlComments, css: 'comment' },=0A=
+        { regex: new RegExp("^\\s*@\\w+", 'gm'), css: 'decorator' },=0A=
+        { regex: new RegExp("(['\"]{3})([^\\1])*?\\1", 'gm'), css: =
+'comment' },=0A=
+        { regex: new RegExp('"(?!")(?:\\.|\\\\\\"|[^\\""\\n\\r])*"', =
+'gm'), css: 'string' },=0A=
+        { regex: new RegExp("'(?!')*(?:\\.|(\\\\\\')|[^\\''\\n\\r])*'", =
+'gm'), css: 'string' },=0A=
+        { regex: new RegExp("\\b\\d+\\.?\\w*", 'g'), css: 'number' },=0A=
+        { regex: new RegExp(this.GetKeywords(keywords), 'gm'), css: =
+'keyword' },=0A=
+        { regex: new RegExp(this.GetKeywords(special), 'gm'), css: =
+'special' },=0A=
+        ];=0A=
+=0A=
+    this.CssClass =3D 'dp-py';=0A=
+	this.Style =3D	'.dp-py .builtins { color: #ff1493; }' +=0A=
+					'.dp-py .magicmethods { color: #808080; }' +=0A=
+					'.dp-py .exceptions { color: brown; }' +=0A=
+					'.dp-py .types { color: brown; font-style: italic; }' +=0A=
+					'.dp-py .commonlibs { color: #8A2BE2; font-style: italic; }';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Python.prototype  =3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Python.Aliases    =3D ['py', 'python'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushRuby.js
+
+/* Ruby 1.8.4 syntax contributed by Erik Peterson */=0A=
+dp.sh.Brushes.Ruby =3D function()=0A=
+{=0A=
+  var keywords =3D	'alias and BEGIN begin break case class def =
+define_method defined do each else elsif ' +=0A=
+					'END end ensure false for if in module new next nil not or raise =
+redo rescue retry return ' +=0A=
+					'self super then throw true undef unless until when while yield';=0A=
+=0A=
+  var builtins =3D	'Array Bignum Binding Class Continuation Dir =
+Exception FalseClass File::Stat File Fixnum Fload ' +=0A=
+					'Hash Integer IO MatchData Method Module NilClass Numeric Object =
+Proc Range Regexp String Struct::TMS Symbol ' +=0A=
+					'ThreadGroup Thread Time TrueClass'=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: dp.sh.RegexLib.SingleLinePerlComments,			css: 'comment' },	// =
+one line comments=0A=
+		{ regex: dp.sh.RegexLib.DoubleQuotedString,				css: 'string' },	// =
+double quoted strings=0A=
+		{ regex: dp.sh.RegexLib.SingleQuotedString,				css: 'string' },	// =
+single quoted strings=0A=
+		{ regex: new RegExp(':[a-z][A-Za-z0-9_]*', 'g'),		css: 'symbol' },	// =
+symbols=0A=
+		{ regex: new RegExp('(\\$|@@|@)\\w+', 'g'),				css: 'variable' },	// =
+$global, @instance, and @@class variables=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),	css: 'keyword' =
+},	// keywords=0A=
+		{ regex: new RegExp(this.GetKeywords(builtins), 'gm'),	css: 'builtin' =
+}	// builtins=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-rb';=0A=
+	this.Style =3D	'.dp-rb .symbol { color: #a70; }' +=0A=
+					'.dp-rb .variable { color: #a70; font-weight: bold; }';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Ruby.prototype =3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Ruby.Aliases =3D ['ruby', 'rails', 'ror'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCss.js
+
+dp.sh.Brushes.CSS =3D function()=0A=
+{=0A=
+	var keywords =3D	'ascent azimuth background-attachment background-color =
+background-image background-position ' +=0A=
+					'background-repeat background baseline bbox border-collapse =
+border-color border-spacing border-style border-top ' +=0A=
+					'border-right border-bottom border-left border-top-color =
+border-right-color border-bottom-color border-left-color ' +=0A=
+					'border-top-style border-right-style border-bottom-style =
+border-left-style border-top-width border-right-width ' +=0A=
+					'border-bottom-width border-left-width border-width border bottom =
+cap-height caption-side centerline clear clip color ' +=0A=
+					'content counter-increment counter-reset cue-after cue-before cue =
+cursor definition-src descent direction display ' +=0A=
+					'elevation empty-cells float font-size-adjust font-family font-size =
+font-stretch font-style font-variant font-weight font ' +=0A=
+					'height letter-spacing line-height list-style-image =
+list-style-position list-style-type list-style margin-top ' +=0A=
+					'margin-right margin-bottom margin-left margin marker-offset marks =
+mathline max-height max-width min-height min-width orphans ' +=0A=
+					'outline-color outline-style outline-width outline overflow =
+padding-top padding-right padding-bottom padding-left padding page ' +=0A=
+					'page-break-after page-break-before page-break-inside pause =
+pause-after pause-before pitch pitch-range play-during position ' +=0A=
+					'quotes richness right size slope src speak-header speak-numeral =
+speak-punctuation speak speech-rate stemh stemv stress ' +=0A=
+					'table-layout text-align text-decoration text-indent text-shadow =
+text-transform unicode-bidi unicode-range units-per-em ' +=0A=
+					'vertical-align visibility voice-family volume white-space widows =
+width widths word-spacing x-height z-index important';=0A=
+=0A=
+	var values =3D	'above absolute all always aqua armenian attr aural auto =
+avoid baseline behind below bidi-override black blink block blue bold =
+bolder '+=0A=
+					'both bottom braille capitalize caption center center-left =
+center-right circle close-quote code collapse compact condensed '+=0A=
+					'continuous counter counters crop cross crosshair cursive dashed =
+decimal decimal-leading-zero default digits disc dotted double '+=0A=
+					'embed embossed e-resize expanded extra-condensed extra-expanded =
+fantasy far-left far-right fast faster fixed format fuchsia '+=0A=
+					'gray green groove handheld hebrew help hidden hide high higher =
+icon inline-table inline inset inside invert italic '+=0A=
+					'justify landscape large larger left-side left leftwards level =
+lighter lime line-through list-item local loud lower-alpha '+=0A=
+					'lowercase lower-greek lower-latin lower-roman lower low ltr marker =
+maroon medium message-box middle mix move narrower '+=0A=
+					'navy ne-resize no-close-quote none no-open-quote no-repeat normal =
+nowrap n-resize nw-resize oblique olive once open-quote outset '+=0A=
+					'outside overline pointer portrait pre print projection purple red =
+relative repeat repeat-x repeat-y rgb ridge right right-side '+=0A=
+					'rightwards rtl run-in screen scroll semi-condensed semi-expanded =
+separate se-resize show silent silver slower slow '+=0A=
+					'small small-caps small-caption smaller soft solid speech spell-out =
+square s-resize static status-bar sub super sw-resize '+=0A=
+					'table-caption table-cell table-column table-column-group =
+table-footer-group table-header-group table-row table-row-group teal '+=0A=
+					'text-bottom text-top thick thin top transparent tty tv =
+ultra-condensed ultra-expanded underline upper-alpha uppercase =
+upper-latin '+=0A=
+					'upper-roman url visible wait white wider w-resize x-fast x-high =
+x-large x-loud x-low x-slow x-small x-soft xx-large xx-small yellow';=0A=
+	=0A=
+	var fonts =3D		'[mM]onospace [tT]ahoma [vV]erdana [aA]rial [hH]elvetica =
+[sS]ans-serif [sS]erif';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: dp.sh.RegexLib.MultiLineCComments,					css: 'comment' },	// =
+multiline comments=0A=
+		{ regex: dp.sh.RegexLib.DoubleQuotedString,					css: 'string' },	// =
+double quoted strings=0A=
+		{ regex: dp.sh.RegexLib.SingleQuotedString,					css: 'string' },	// =
+single quoted strings=0A=
+		{ regex: new RegExp('\\#[a-zA-Z0-9]{3,6}', 'g'),			css: 'colors' },	// =
+html colors=0A=
+		{ regex: new RegExp('(\\d+)(px|pt|\:)', 'g'),				css: 'string' },	// =
+size specifications=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),		css: 'keyword' =
+},	// keywords=0A=
+		{ regex: new RegExp(this.GetKeywords(values), 'g'),			css: 'string' },	=
+// values=0A=
+		{ regex: new RegExp(this.GetKeywords(fonts), 'g'),			css: 'string' }		=
+// fonts=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-css';=0A=
+	this.Style =3D	'.dp-css .colors { color: darkred; }' +=0A=
+					'.dp-css .vars { color: #d00; }';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.CSS.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.CSS.Aliases	=3D ['css'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://szymonrozga.net/blog/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCpp.js
+
+/**=0A=
+ * Code Syntax Highlighter for C++(Windows Platform).=0A=
+ * Version 0.0.2=0A=
+ * Copyright (C) 2006 Shin, YoungJin.=0A=
+ * http://www.jiniya.net/lecture/techbox/test.html=0A=
+ * =0A=
+ * This library is free software; you can redistribute it and/or modify =
+it under the terms of the GNU Lesser General =0A=
+ * Public License as published by the Free Software Foundation; either =
+version 2.1 of the License, or (at your option) =0A=
+ * any later version.=0A=
+ *=0A=
+ * This library is distributed in the hope that it will be useful, but =
+WITHOUT ANY WARRANTY; without even the implied =0A=
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See =
+the GNU Lesser General Public License for more =0A=
+ * details.=0A=
+ *=0A=
+ * You should have received a copy of the GNU Lesser General Public =
+License along with this library; if not, write to =0A=
+ * the Free Software Foundation, Inc., 59 Temple Place, Suite 330, =
+Boston, MA 02111-1307 USA =0A=
+ */=0A=
+=0A=
+dp.sh.Brushes.Cpp =3D function()=0A=
+{=0A=
+	var datatypes =3D =0A=
+	'ATOM BOOL BOOLEAN BYTE CHAR COLORREF DWORD DWORDLONG DWORD_PTR ' +=0A=
+	'DWORD32 DWORD64 FLOAT HACCEL HALF_PTR HANDLE HBITMAP HBRUSH ' + =0A=
+	'HCOLORSPACE HCONV HCONVLIST HCURSOR HDC HDDEDATA HDESK HDROP HDWP ' +=0A=
+	'HENHMETAFILE HFILE HFONT HGDIOBJ HGLOBAL HHOOK HICON HINSTANCE HKEY ' +=0A=
+	'HKL HLOCAL HMENU HMETAFILE HMODULE HMONITOR HPALETTE HPEN HRESULT ' +=0A=
+	'HRGN HRSRC HSZ HWINSTA HWND INT INT_PTR INT32 INT64 LANGID LCID LCTYPE =
+' +=0A=
+	'LGRPID LONG LONGLONG LONG_PTR LONG32 LONG64 LPARAM LPBOOL LPBYTE =
+LPCOLORREF ' +=0A=
+	'LPCSTR LPCTSTR LPCVOID LPCWSTR LPDWORD LPHANDLE LPINT LPLONG LPSTR =
+LPTSTR ' +=0A=
+	'LPVOID LPWORD LPWSTR LRESULT PBOOL PBOOLEAN PBYTE PCHAR PCSTR PCTSTR =
+PCWSTR ' +=0A=
+	'PDWORDLONG PDWORD_PTR PDWORD32 PDWORD64 PFLOAT PHALF_PTR PHANDLE PHKEY =
+PINT ' +=0A=
+	'PINT_PTR PINT32 PINT64 PLCID PLONG PLONGLONG PLONG_PTR PLONG32 PLONG64 =
+POINTER_32 ' +=0A=
+	'POINTER_64 PSHORT PSIZE_T PSSIZE_T PSTR PTBYTE PTCHAR PTSTR PUCHAR =
+PUHALF_PTR ' +=0A=
+	'PUINT PUINT_PTR PUINT32 PUINT64 PULONG PULONGLONG PULONG_PTR PULONG32 =
+PULONG64 ' +=0A=
+	'PUSHORT PVOID PWCHAR PWORD PWSTR SC_HANDLE SC_LOCK =
+SERVICE_STATUS_HANDLE SHORT ' + =0A=
+	'SIZE_T SSIZE_T TBYTE TCHAR UCHAR UHALF_PTR UINT UINT_PTR UINT32 UINT64 =
+ULONG ' +=0A=
+	'ULONGLONG ULONG_PTR ULONG32 ULONG64 USHORT USN VOID WCHAR WORD WPARAM =
+WPARAM WPARAM ' +=0A=
+	'char bool short int __int32 __int64 __int8 __int16 long float double =
+__wchar_t ' +=0A=
+	'clock_t _complex _dev_t _diskfree_t div_t ldiv_t _exception =
+_EXCEPTION_POINTERS ' +=0A=
+	'FILE _finddata_t _finddatai64_t _wfinddata_t _wfinddatai64_t =
+__finddata64_t ' +=0A=
+	'__wfinddata64_t _FPIEEE_RECORD fpos_t _HEAPINFO _HFILE lconv intptr_t =
+' +=0A=
+	'jmp_buf mbstate_t _off_t _onexit_t _PNH ptrdiff_t _purecall_handler ' +=0A=
+	'sig_atomic_t size_t _stat __stat64 _stati64 terminate_function ' +=0A=
+	'time_t __time64_t _timeb __timeb64 tm uintptr_t _utimbuf ' +=0A=
+	'va_list wchar_t wctrans_t wctype_t wint_t signed';=0A=
+=0A=
+	var keywords =3D =0A=
+	'break case catch class const __finally __exception __try ' +=0A=
+	'const_cast continue private public protected __declspec ' + =0A=
+	'default delete deprecated dllexport dllimport do dynamic_cast ' + =0A=
+	'else enum explicit extern if for friend goto inline ' + =0A=
+	'mutable naked namespace new noinline noreturn nothrow ' + =0A=
+	'register reinterpret_cast return selectany ' + =0A=
+	'sizeof static static_cast struct switch template this ' + =0A=
+	'thread throw true false try typedef typeid typename union ' + =0A=
+	'using uuid virtual void volatile whcar_t while';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: dp.sh.RegexLib.SingleLineCComments,				css: 'comment' },			// =
+one line comments=0A=
+		{ regex: dp.sh.RegexLib.MultiLineCComments,					css: 'comment' },			// =
+multiline comments=0A=
+		{ regex: dp.sh.RegexLib.DoubleQuotedString,					css: 'string' },			// =
+strings=0A=
+		{ regex: dp.sh.RegexLib.SingleQuotedString,					css: 'string' },			// =
+strings=0A=
+		{ regex: new RegExp('^ *#.*', 'gm'),						css: 'preprocessor' },=0A=
+		{ regex: new RegExp(this.GetKeywords(datatypes), 'gm'),		css: =
+'datatypes' },=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),		css: 'keyword' =
+}=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-cpp';=0A=
+	this.Style =3D	'.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; =
+}';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Cpp.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Cpp.Aliases	=3D ['cpp', 'c', 'c++'];=0A=
+
+------=_NextPart_000_0027_01CC79EA.9063CEB0--

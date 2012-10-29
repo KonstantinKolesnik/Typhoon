@@ -1,0 +1,691 @@
+From: =?windows-1251?B?0e718ODt5e3uIFdpbmRvd3MgSW50ZXJuZXQgRXhwbG9yZXIgOA==?=
+Subject: Using an open source USB firmware for PIC microcontrollers
+Date: Mon, 28 Mar 2011 02:24:31 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CBECEF.4527B480"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17514
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CBECEF.4527B480
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://openprog.altervista.org/USB_firm_eng.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang=3Den><HEAD><TITLE>Using an open source USB firmware for PIC =
+microcontrollers</TITLE>
+<META content=3D"text/html; charset=3DISO-8859-1" =
+http-equiv=3Dcontent-type><LINK=20
+rel=3D"SHORTCUT ICON" href=3D"USB1.ico">
+<META name=3Ddescription=20
+content=3D"Instructions and resources on how use an open source USB =
+firmware for PIC micros">
+<META name=3Dauthor content=3D"Alberto Maccioni"><LINK rel=3Dstylesheet =
+type=3Dtext/css=20
+href=3D"http://openprog.altervista.org/stile.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17537"></HEAD>
+<BODY style=3D"BACKGROUND-IMAGE: url(sfondo2.png)">
+<DIV style=3D"TEXT-ALIGN: left">last update: Jan 25, 2010<BR><A=20
+href=3D"http://openprog.altervista.org/USB_firm_ita.html">Italian=20
+version</A></DIV>
+<H2 style=3D"TEXT-ALIGN: center"><A name=3DTop></A><BIG>USB and PIC: =
+quick guide to=20
+an USB HID framework</BIG></H2>
+<DIV style=3D"TEXT-ALIGN: center; FONT-WEIGHT: bold">How to use an open =
+source USB=20
+framework with PIC microcontrollers </DIV><BR><BR>
+<DIV id=3Dindice><BR><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Intro">Introduct=
+ion</A><BR><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#ClasseHID">HID=20
+class</A><BR><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Uso">Using the=20
+firmware</A><BR>
+<DIV style=3D"MARGIN-LEFT: 20px"><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Compile">Compile=
+</A><BR><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Simulate">Simula=
+te</A></DIV><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#ComunicarePC">Co=
+mmunicate=20
+with a PC</A><BR>
+<DIV style=3D"MARGIN-LEFT: 20px"><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Linux">Linux</A>=
+<BR><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Win">Windows</A>=
+</DIV><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Download">Downlo=
+ad</A><BR><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Links">Links</A>=
+<BR><A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Contacts">Contac=
+ts</A><BR></DIV>
+<DIV id=3Dcorpo>
+<H3>Quick facts</H3>Open source GPL2 firmware<BR>USB 2.0 full =
+speed<BR>HID=20
+class<BR>Works on 18F2550, 2450, 2455, 2553, 4450, 4455, 4550, 4553<BR>C =
+code,=20
+to be compiled with MCC18 (evaluation version also)<BR>No need for=20
+drivers<BR>Communication example for Windows and Linux<BR>No need for =
+DDK or=20
+proprietary libraries<BR>Linux version uses hiddev, the native HID=20
+manager<BR><BR>
+<H3><A name=3DIntro></A>Introduction</H3>This guide is not meant to be =
+complete in=20
+any way. The purpose is to present and document a quick example of how =
+to=20
+implement an USB device using a PIC18 microcontroller, on both firmware =
+and=20
+software side.<BR>For more detailed info I suggest to read the <A=20
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Links">resources=
+</A>=20
+section.<BR><BR>The USB interface has been around for many years, but =
+only=20
+recently it has become common in the low cost microcontroller =
+world.<BR>It is=20
+now very easy to set up a USB peripheral with a PIC18, as shown in the =
+following=20
+diagram (LEDs only show the state of connection):<BR><IMG =
+style=3D"WIDTH: 500px"=20
+alt=3D"USB circuit" =
+src=3D"http://openprog.altervista.org/PIC-USB.png"><BR>Unlike=20
+serial and parallel interfaces, USB needs a complicated enumeration =
+process in=20
+order establish a communication channel.<BR>The so called USB frameworks =
+are=20
+code libraries that hide the details of the protocol, so that is =
+possible to use=20
+the interface very quickly to communicate with a PC.<BR>One of the most =
+used=20
+comes from Microchip, but has a closed license and a somewhat =
+complicated=20
+structure; in addition to it more or less all the compiler vendors give =
+a=20
+framework with their highly priced products.<BR>On the open source front =
+there=20
+are examples of generic USB frameworks, but here I want to document a =
+project=20
+that is virtually unknown and hard to find, that also implements the HID =
+
+class.<BR>The author is Alexander Enzmann; he released his work in 2005 =
+with the=20
+periodical Nuts&amp;Volts, but has not really documented or promoted his =
+
+wonderful project.<BR>I discovered this firmware only recently, and have =
+
+converted all my projects to use it (see my <A=20
+href=3D"http://openprog.altervista.org/OP_eng.html">USB =
+programmer</A>).<BR>Some=20
+changes were required to compile with MCC18; it originally required=20
+SDCC.<BR><BR>
+<H3><A name=3DClasseHID></A>The HID class</H3>The USB protocol divides =
+all=20
+peripherals in different classes, according to data transfer =
+requirements and=20
+limitations; it is even possible to specifiy a new class, but using a =
+standard=20
+one has the advantage that all major operating systems already include =
+the=20
+proper software driver.<BR>In particular the HID class (Human Interface =
+Device),=20
+which comprises keyboards and mice, is perfect for interfacing small=20
+microcontrollers: data is generally exchanged using interrupt transfers =
+with a=20
+maximum of 64 bytes per packet and a maximum speed of 64 KB/s.<BR>During =
+
+enumeration of HID devices the system reads a data structure called =
+<I>HID=20
+report descriptor</I>, which specifies how many bytes to transfer and =
+how to=20
+interpret the data.<BR>This method is very flexible and allows to define =
+all=20
+types of devices, for example a keyboard with extra keys or with =
+integrated=20
+pointer, and in general any combination that would not be explicitly =
+described=20
+in an operating system.<BR>For more information see the <A=20
+href=3D"http://www.usb.org/developers/hidpage/">specification of HID=20
+class</A>.<BR>However, in electronics projects we are often not =
+interested in=20
+describing to the system what single bits or bytes mean; if we only care =
+about=20
+transferring data the <I>report descriptor</I> will only specifiy the =
+packet=20
+size.<BR>Data is exchanged by means of an <I>output report</I> and an =
+<I>input=20
+report</I>, with direction respectively from and to the PC; it is also =
+possible=20
+to use a <I>feature report</I> in both directions.<BR><BR>
+<H3><A name=3DUso></A>Configuring and using the firmware</H3>The first =
+thing to do=20
+is to install MPLAB and MCC18 (the trial version is fine); dowload both =
+from the=20
+<A href=3D"http://www.microchip.com/">Microchip website</A>.<BR><A=20
+href=3D"http://openprog.altervista.org/PICHID_MPLAB.zip">Here</A> I put =
+an example=20
+of application; it includes C source files and an MPLAB project.<BR>The=20
+resulting device uses the first byte of the incoming packet to control =
+port B=20
+(PORTB&lt;7:2&gt;); RB1 and RB0 indicate the transfer method used:<BR>01 =
+=3D=20
+<I>output report</I> via <I>interrupt</I>, <BR>10 =3D <I>feature =
+report</I>,<BR>11=20
+=3D <I>output report</I> via <I>control endpoint</I>.<BR>The response is =
+composed=20
+by:<BR>the state of port A (1 byte);<BR>the transfer type, 0xF0 if=20
+<I>interrupt</I>, 0xF1 if <I>feature</I>, 0xF2 if <I>control</I>;<BR>a 2 =
+byte=20
+timestamp incremented every 10.93 ms;<BR>the remaining bytes =
+received.<BR>The=20
+source file usb.c contains the data structures that identify the =
+peripheral; the=20
+first to be read is the <I>device descriptor</I>: <PRE>	rom byte =
+deviceDescriptor[] =3D
+	{
+		0x12, 0x01, // bLength, bDescriptorType
+		0x00, 0x02, // bcdUSB (low byte), bcdUSB (high byte)
+		0x00, 0x00, // bDeviceClass, bDeviceSubClass
+		0x00, E0SZ, // bDeviceProtocl, bMaxPacketSize
+		0xD8, 0x04, // idVendor (low byte), idVendor (high byte)
+		0xFF, 0x01, // idProduct (low byte), idProduct (high byte)
+		0x01, 0x00, // bcdDevice (low byte), bcdDevice (high byte)
+		0x01, 0x02, // iManufacturer, iProduct
+		0x00, 0x01  // iSerialNumber (none), bNumConfigurations
+	};
+</PRE>Vid and Pid are usually assigned by the USB consortium under =
+payment, but=20
+of course for non commercial projects it's possible to use any number, =
+for=20
+example 4D8 1FF; 0x4D8 is the Microchip ID.<BR>The <I>report =
+descriptor</I>=20
+specifies a 64 bytes report with reserved application; this means that =
+the=20
+system won't attempt to decode and use it, as it would with keyboards =
+and mice;=20
+the <I>feature report</I> is also 64 bytes long: <PRE>	rom byte =
+HIDReport[HID_REPORT_SIZE] =3D {
+		0x06, 0xa0, 0xff, 	// USAGE_PAGE (Vendor Defined Page 1)
+		0x09, 0x01,       	// USAGE (Vendor Usage 1)
+		0xa1, 0x01,       	// COLLECTION (Application)
+
+		// The Input report
+		0x09, 0x03,     	// Usage ID - vendor defined
+		0x15, 0x00,     	// Logical Minimum (0)
+		0x26, 0xFF, 0x00, 	// Logical Maximum (255)
+		0x75, 0x08,     	// Report Size (8 bits)
+		0x95, 0x40,     	// Report Count (64 fields)
+		0x81, 0x02,     	// Input (Data, Variable, Absolute)
+
+		// The Output report
+		0x09, 0x04,     	// Usage ID - vendor defined
+		0x15, 0x00,     	// Logical Minimum (0)
+		0x26, 0xFF, 0x00, 	// Logical Maximum (255)
+		0x75, 0x08,     	// Report Size (8 bits)
+		0x95, 0x40,     	// Report Count (64 fields)
+		0x91, 0x02,      	// Output (Data, Variable, Absolute)
+
+		// The Feature report
+		0x09, 0x01,     	// Usage ID - vendor defined
+		0x15, 0x00,     	// Logical Minimum (0)
+		0x26, 0xFF, 0x00, 	// Logical Maximum (255)
+		0x75, 0x08,     	// Report Size (8 bits)
+		0x95, 0x40,     	// Report Count (64 fields)
+		0xB1, 0x02,      	// Feature (Data, Variable, Absolute)
+
+		0xc0              	// END_COLLECTION
+	};
+</PRE>The difference between <I>input/output report</I> and <I>feature=20
+report</I> is that the former uses generally an <I>interrupt</I> =
+transfer=20
+(64KB/s max) to endpoint 1, the latter always a <I>control</I> transfer =
+to=20
+endpoint 0, which is shared with the standard USB message flow; in this =
+case,=20
+unlike <I>interrupt</I> transfers, the operating system does not =
+guarantee a=20
+maximum latency but balances the data flow as it thinks is better; =
+transfers are=20
+split in packets of <I>bMaxPacketSize0</I>, which is specified in the =
+<I>device=20
+descriptor</I>; in usb.h it is defined as E0SZ.<BR>The <I>feature =
+report</I> was=20
+conceived to sporadically transfer configuration options or attributes =
+to other=20
+data (for example the state of keyboard LEDs); <I>input/output =
+reports</I> would=20
+carry the real data; it is however up to the designer to choose which =
+one(s) to=20
+use.<BR>If there's no need for a <I>feature report</I> it's possible to =
+delete=20
+the corresponding section from the <I>report descriptor</I>; also delete =
+
+<I>HIDFeatureBuffer[HID_FEATURE_REPORT_BYTES]</I> and functions=20
+<I>SetupFeatureReport(byte reportID)</I>, <I>SetFeatureReport(byte=20
+reportID)</I>, and <I>GetFeatureReport(byte reportID)</I>; finally =
+delete the=20
+calls to those functions in <I>ProcessControlTransfer(void)</I> and=20
+<I>ProcessHIDRequest(void)</I><BR>Another way to access <I>input/output=20
+reports</I> is using HID messages GET_REPORT and SET_REPORT directed to =
+endpoint=20
+0 (<I>control</I> mode); it is similar to the <I>feature report</I> =
+transfer,=20
+and the same considerations made before apply here as well; however the=20
+operating system documentation advises to use <I>interrupt</I> mode for=20
+continuous transfers.<BR>If there's no need to use GET_REPORT and =
+SET_REPORT=20
+it's possible to delete functions <I>SetupOutputReport(byte =
+reportID)</I>,=20
+<I>SetOutputReport(byte reportID)</I>, and <I>GetInputReport(byte =
+reportID)</I>;=20
+also delete calls in <I>ProcessControlTransfer(void)</I> and=20
+<I>ProcessHIDRequest(void)</I>.<BR>Back to the configuration, string =
+descriptors=20
+are read by the system to give a textual description of vendor and =
+product; they=20
+must be 2 byte unicode as the following example: <PRE>	rom byte =
+stringDescriptor1[] =3D
+	{
+	    18, STRING_DESCRIPTOR, // bLength, bDscType
+	    'S',0,'t',0,'r',0,'i',0,'n',0,'g',0,' ',0,'1',0,
+	};
+</PRE>In usb.h is specified the size of data reports; these must of =
+course match=20
+what is written in the <I>report descriptor</I>: <PRE>#define =
+HID_INPUT_REPORT_BYTES   64
+#define HID_OUTPUT_REPORT_BYTES  64
+#define HID_FEATURE_REPORT_BYTES 64
+</PRE>USB communication routines are implemented without interrupts; =
+this is=20
+possible because the protocol specifies very long response times (after=20
+enumeration there's a 5 second limit for data transfers) and the USB =
+peripheral=20
+keeps sending NAck packets automatically if new data is not =
+available.<BR>The=20
+advantage is that user functions can take full control of the=20
+microcontroller.<BR>The main cycle repeatedly calls the USB transaction =
+manager=20
+and the user function <I>ProcessIO()</I>: <PRE>	while(1){
+		EnableUSBModule();
+		if(UCFGbits.UTEYE !=3D 1) ProcessUSBTransactions();
+		ProcessIO();
+	}
+</PRE>Evidently <I>ProcessUSBTransactions()</I> handles the protocol, =
+i.e. what=20
+comes to endpoint 0.<BR>What is interesting to the user is how to send =
+and=20
+receive data; input and output reports are transferred to endpoint1 =
+buffers=20
+(<I>HIDRxBuffer</I> and <I>HIDTxBuffer</I>, in USB RAM), and from there =
+they=20
+must be copied to a user location by calling the reading function: <PRE>	=
+number_of_bytes_read =3D HIDRxReport(receive_buffer, =
+HID_OUTPUT_REPORT_BYTES);
+</PRE>Reading data empties the input buffer and allows the device to =
+receive a=20
+new report; up to that point all incoming data is not accepted.<BR>Here =
+is the=20
+corresponding write: <PRE>	number_of_bytes_written =3D =
+HIDTxReport(transmit_buffer, HID_INPUT_REPORT_BYTES);
+</PRE>When using GET_REPORT and SET_REPORT it's necessary to insert user =
+code in=20
+functions <I>SetOutputReport(byte reportID)</I> and =
+<I>GetInputReport(byte=20
+reportID)</I>.<BR>So with <I>interrupt</I> transfers the user code must =
+check if=20
+something was received; with <I>control</I> transfers it is the protocol =
+
+handling routine that calls the user function whenever a transfer is=20
+complete.<BR>Regarding the <I>feature report</I>, the procedure is =
+similar to=20
+that described above, only change functions: <I>SetFeatureReport(byte=20
+reportID)</I> and <I>GetFeatureReport(byte reportID)</I>.<BR><BR>
+<H4><A name=3DCompile></A>How to compile</H4>This MPLAB project uses the =
+MCC18=20
+compiler, but probably the executable path will be different; the first =
+time you=20
+compile MPLAB will report this and will allow to use the right =
+paths.<BR>It's=20
+also necessary to change the library path: from project options, section =
+
+<I>directories</I>, click on <I>suite defaults</I> or set paths =
+manually.<BR>If=20
+you want to change device (presently is 18F2550), go to =
+Configure-&gt;Select=20
+Device.<BR>It will be necessary to change configuration bits =
+accordingly, and to=20
+specify a new linker script; default scripts are ok, except for devices =
+with=20
+less RAM, as 18F2450 and 4450: here you need to reduce stack size to =
+something=20
+like 40 bytes.<BR>The quartz oscillator can run at any multiple of 4 =
+MHz, as=20
+long as the input divider is set accordingly; now it runs at 12 MHz.<BR>
+<H4><A name=3DSimulate></A>How to simulate</H4>MPSIM does not presently =
+support=20
+USB peripherals, but anyways it wouldn't be useful to simulate the =
+enumeration=20
+process; what is important is to check the code that uses the =
+transferred=20
+data.<BR>It can be done as follows:<BR>add a breakpoint on the line =
+<PRE>	if((deviceState &lt; CONFIGURED)||(UCONbits.SUSPND=3D=3D1)) =
+return;
+</PRE>execute (Run, F9, or go button);<BR>from <I>File registers</I> or=20
+<I>Watch</I> window change the value of <I>deviceState</I> to 5 (which=20
+corresponds to CONFIGURED state).<BR>This way you skip enumeration; now =
+you have=20
+to stop after function <I>HIDRxReport</I> and change the number of bytes =
+read=20
+(<I>number_of_bytes_read</I> variable).<BR>Transferred data should be =
+written=20
+manually on <I>HIDrxBuffer</I>.<BR>From now on it's like a regular =
+debugging=20
+session.<BR>To simulate transmission is sufficient to change=20
+<I>number_of_bytes_written</I>, if used.<BR><BR>
+<H3><A name=3DComunicarePC></A>Communication with PC</H3>Communication =
+code=20
+depends from the operating system; it is generally possible to use =
+all-in-one=20
+libraries that take care of device detection and communication, but I =
+prefer not=20
+to depend from external packages (which carry their own licensing =
+problems) and=20
+to use the operating system directly.<BR>
+<H4><A name=3DWin></A>Windows</H4>My <A=20
+href=3D"http://openprog.altervista.org/HidCom.zip">C example</A> =
+(compiled with <A=20
+href=3D"http://www.bloodshed.net/devcpp.html">DevC++</A>) is a command =
+line=20
+program that sends and receives a 64 byte packet using various =
+methods.<BR>To=20
+avoid using the DDK (driver development kit) I link explicitly the =
+system=20
+libraries needed, hid.dll and setupapi.dll, and load manually the =
+functions=20
+needed.<BR>The program scans all HID devices until it finds one with the =
+correct=20
+vid&amp;pid.<BR>There are 3 methods to exchange data: with =
+<I>input/output=20
+report</I> in <I>interrupt</I> mode, in <I>control</I> mode, or with a=20
+<I>feature report</I>.<BR>The firmware must of course support the method =
+you=20
+choose.<BR>Microsoft advises to use <I>interrupt</I> mode for continuous =
+
+transfers; in this case the functions are similar to file I/O: <PRE>	=
+Result=3DWriteFile(WriteHandle,bufferU,DIMBUF,&amp;BytesWritten,NULL);
+</PRE>to write, and <PRE>	Result =3D =
+ReadFile(ReadHandle,bufferI,DIMBUF,&amp;NumberOfBytesRead,(LPOVERLAPPED) =
+&amp;HIDOverlapped);
+	Result =3D WaitForSingleObject(hEventObject,10);
+	ResetEvent(hEventObject);
+</PRE>to read.<BR>This is an asynchronous read, i.e. <I>ReadFile</I> =
+returns=20
+immediately and you have to call <I>WaitForSingleObject</I> to wait for =
+I/O=20
+completion.<BR>Communication in <I>control</I> mode (through SET_REPORT =
+and=20
+GET_REPORT) can be commanded with: <PRE>	=
+HidD_SetOutputReport(DeviceHandle,bufferOut,n)
+</PRE>to write, and <PRE>	HidD_GetOutputReport(DeviceHandle,bufferIn,n)
+</PRE>to read.<BR>Similarly to use the <I>feature report</I>: <PRE>	=
+HidD_SetFeature(DeviceHandle,bufferOut,n)
+</PRE>to write, and <PRE>	HidD_GetFeature(DeviceHandle,bufferIn,n)
+</PRE>to read.<BR>In all these cases the first byte transferred =
+indicates the=20
+<I>report ID</I> (usually 0); other data follows, so the total size =
+increases by=20
+one (here 65 byte).<BR>If you request less data than specified in the =
+<I>report=20
+descriptor</I> the system reports an error; if you request more the =
+response is=20
+padded with zeroes.<BR>See actual code for details.<BR><BR>HidCom =
+options: <PRE>-h, --help     	 help
+-c, --control    use control transfer [no]\
+-d, --delay    	 read delay (ms) [0]
+-f, --feature  	 use feature report [no]
+-i, --info     	 device info [no]
+-I, --increment	 increment byte 6 every transfer [no]\
+-p, --pid      	 Product ID [0x1FF]
+-q, --quiet    	 print response only [no]
+-r, --repeat   	 repeat N times [1]
+-s, --size     	 report size [64]
+-v, --vid      	 Vendor ID [0x4D8]
+</PRE>Example:<BR>HidCom -i -r 5 -d 16 1 2 3 4 5 6 7 8 9 a b c d e f =
+0<BR>
+<H4><A name=3DLinux></A>Linux</H4>Of all possible methods to communicate =
+with HID=20
+devices I use what is probably the lowest level: interacting with =
+hiddev, the=20
+Linux HID driver; in this way there's no need for external =
+libraries.<BR>After=20
+plugging an HID peripheral the operating system creates a device=20
+/dev/usb/hiddevX, where X is a progressive number.<BR>You need reading =
+rights to=20
+communicate with it:<BR><PRE>	&gt;sudo chmod a+r /dev/usb/hiddev0
+</PRE>To permanently enable a user do the following (on Ubuntu and other =
+Debian=20
+based distributions, check for others):<BR>as root create a file=20
+/etc/udev/rules.d/99-hiddev.rules<BR>if you want to enable a user group =
+write: <PRE>	KERNEL=3D=3D"hiddev[0-9]", SUBSYSTEM=3D=3D"usb", =
+SYSFS{idProduct}=3D=3D"01ff", SYSFS{idVendor}=3D=3D"04d8", =
+GROUP=3D"&lt;group&gt;"
+</PRE>where &lt;group&gt; is one of the user groups (to get a list type=20
+"groups"); select a suitable group and if your user desn't belong to it =
+execute=20
+"addgroup &lt;user&gt; &lt;group&gt;".<BR><BR>Or, if you want to enable =
+all=20
+users, change reading permissions: <PRE>	KERNEL=3D=3D"hiddev[0-9]", =
+SUBSYSTEM=3D=3D"usb", SYSFS{idProduct}=3D=3D"01ff", =
+SYSFS{idVendor}=3D=3D"04d8", MODE=3D"0664"
+</PRE>restart udev to apply changes: <PRE>	&gt;/etc/init.d/udev reload
+</PRE>Pid and vid come from the example firmware, change them according =
+to what=20
+is in the device.<BR><BR>The <A=20
+href=3D"http://openprog.altervista.org/HidCom.tar.gz">program</A> =
+communicates=20
+using <I>ioctl</I> calls, passing as parameter some data srutctures that =
+specify=20
+the transfer mode.<BR><PRE>	struct hiddev_report_info =
+rep_info_i,rep_info_u;
+	struct hiddev_usage_ref_multi ref_multi_i,ref_multi_u;
+</PRE>Hiddev was developed for classic input/output devices, so has many =
+
+functions to check the single <I>usages</I> specified in the <I>report=20
+descriptor</I>; however we need a way to transfer the whole report in =
+one time;=20
+this is possible with HIDIOCSUSAGES and HIDIOCGUSAGES; data is in=20
+<I>ref_multi_u.values</I> and =
+<I>ref_multi_i.values</I>.<BR><I>Interrupt</I>=20
+transfer: <PRE>	ioctl(fd,HIDIOCSUSAGES, &amp;ref_multi_u); //Write =
+ref_multi_u.values
+	ioctl(fd,HIDIOCSREPORT, &amp;rep_info_u);
+	...
+	ioctl(fd,HIDIOCGUSAGES, &amp;ref_multi_i); //Read to ref_multi_i.values
+	ioctl(fd,HIDIOCGREPORT, &amp;rep_info_i);
+</PRE><I>Control</I> transfer: <PRE>	ioctl(fd,HIDIOCSUSAGES, =
+&amp;ref_multi_u); //Write ref_multi_u.values
+	ioctl(fd,HIDIOCSREPORT, &amp;rep_info_u);
+	...
+	ioctl(fd,HIDIOCGREPORT, &amp;rep_info_i);
+	ioctl(fd,HIDIOCGUSAGES, &amp;ref_multi_i); //Read to ref_multi_i.values
+</PRE>In reality only reads are forced to <I>control endpoint</I>; I =
+couldn't=20
+find a way to force writes.<BR>Anyways there's no reason to choose=20
+<I>control</I> transfers when <I>interrupt</I> is available; and if a =
+device=20
+doesn't support <I>interrupt</I> it is not given to=20
+<I>hiddev</I>.<BR><BR>Transfer using the <I>feature report</I> (after =
+specifying=20
+HID_REPORT_TYPE_FEATURE in the data structures): <PRE>	=
+ioctl(fd,HIDIOCSUSAGES, &amp;ref_multi_u); //Write ref_multi_u.values
+	ioctl(fd,HIDIOCSREPORT, &amp;rep_info_u);
+	...
+	ioctl(fd,HIDIOCGREPORT, &amp;rep_info_i);
+	ioctl(fd,HIDIOCGUSAGES, &amp;ref_multi_i); //Read to ref_multi_i.values
+</PRE>See actual code for details.<BR><BR>HidCom options: <PRE>-h, =
+--help     	 help
+-c, --control    use control transfer [no]\
+-d, --delay    	 read delay (ms) [0]
+-f, --feature  	 use feature report [no]
+-i, --info     	 device info [no]
+-I, --increment	 increment byte 6 every transfer [no]\
+--path           device path [/dev/usb/hiddev0]\
+-p, --pid      	 Product ID [0x1FF]
+-q, --quiet    	 print response only [no]
+-r, --repeat   	 repeat N times [1]
+-s, --size     	 report size [64]
+-v, --vid      	 Vendor ID [0x4D8]
+</PRE>Example:<BR>HidCom -i -r 5 -I 16 1 2 3 4 5 6 7 8 9 a b c d e f =
+0<BR>
+<H3><A name=3DDownload></A>Downloads</H3>Firmware: <A=20
+href=3D"http://openprog.altervista.org/PICHID_MPLAB.zip">complete MPLAB=20
+project</A> or <A =
+href=3D"http://openprog.altervista.org/PIC_HID.hex">compiled=20
+firmware for 18F2550</A> (.hex)<BR><A=20
+href=3D"http://openprog.altervista.org/HidCom.tar.gz">HidCom</A> for =
+Linux<BR><A=20
+href=3D"http://openprog.altervista.org/HidCom.zip">HidCom</A> for =
+Windows<BR><BR>
+<H3><A name=3DLinks></A>Links</H3><A=20
+href=3D"http://www.usb.org/developers/docs/">DevC++</A><BR><A=20
+href=3D"http://www.usb.org/developers/docs/">USB 2.0 standard</A><BR><A=20
+href=3D"http://www.usb.org/developers/hidpage/">HID page on =
+USB.org</A><BR><A=20
+href=3D"http://www.lvr.com/usb.htm">USB Central</A><BR><A=20
+href=3D"http://www.alanmacek.com/usb/">USB &amp; PIC</A><BR><A=20
+href=3D"http://www.microchip.com/">Microchip</A><BR><A=20
+href=3D"http://www.gelato.unsw.edu.au/lxr/source/Documentation/usb/hiddev=
+.txt">hiddev=20
+documentation</A><BR><A =
+href=3D"http://www.gnu.org/licenses/">GNU/GPL</A><BR><BR>
+<H3><A name=3DContacts></A>Contacts</H3>For informations or =
+comments:<BR>Alberto=20
+Maccioni &nbsp;<IMG style=3D"WIDTH: 167px; HEIGHT: 21px" alt=3Demail.png =
+
+align=3Dmiddle src=3D"http://openprog.altervista.org/email.png">=20
+<H3><A =
+href=3D"http://openprog.altervista.org/USB_firm_eng.html#Top">Top</A></H3=
+>
+<H3><A href=3D"http://openprog.altervista.org/OP_eng.html">Main=20
+page</A></H3></DIV></BODY></HTML>
+
+------=_NextPart_000_0000_01CBECEF.4527B480
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://openprog.altervista.org/PIC-USB.png
+
+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
+
+------=_NextPart_000_0000_01CBECEF.4527B480
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://openprog.altervista.org/email.png
+
+iVBORw0KGgoAAAANSUhEUgAAAKcAAAAVBAMAAADROuOhAAAAAXNSR0IArs4c6QAAABhQTFRFAQEB
+CQkJKioqT09PjY2Nurq66+vr/v7+ZvtxDQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9gH
+CQ44HPSRasYAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAABiUlEQVQ4y+2U
+QW7EIAxFHUXcYChbUJQLdMOWLHqDKGwrTlAhhK/fb0gnmVFbtdJ010goBOyX/4Md4sdfb/QP/SNo
+MsmcVl9O80Ckqh36LN6lV1fdD6FF3UJ9wkAMf0L4AlpoEOgFeYUU5wsBIbPwPBTRtsTkk65THl5X
+z8G4MloTsE9mV1rI8CkDUJEBKNHYDGYaLXmZYRCi68yAmuIt0TZDwlJkY6iWxh0aoOuU0exLTlII
+mDDNCvarjckELCbNRVRQTCsQcU66DAXAzUWuU4diPWynDIGmptTwssp7shboxEUHLOMp+QZdVs2O
+ZzzBPlAuVrsrRTSfMw77O1Rnc4J6hITIAfclGyj7gE7stqv9M9R3aIjhsM/coc1MD3ENqpasy1h8
+s9+gqyrjvf0DenNQXqD7QbUQycKmER9qie2gOpS6UgTgoOKR0UtqNdeSGkVptb2kOlS8ofiTD08W
+xdxKSqAxqGWHFtJ8ZPyiTVtHtDe4B/Z+8DKyfKYH/lBCawV0xv//9HvoOw7clrmYqHs+AAAAAElF
+TkSuQmCC
+
+------=_NextPart_000_0000_01CBECEF.4527B480
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://openprog.altervista.org/stile.css
+
+#indice {
+	PADDING-LEFT: 1em; WIDTH: 15%; MAX-WIDTH: 100em; FLOAT: left
+}
+#corpo {
+	TEXT-ALIGN: justify; PADDING-LEFT: 1.5em; WIDTH: 78%; PADDING-RIGHT: =
+1em; MAX-WIDTH: 200em; FLOAT: left
+}
+
+------=_NextPart_000_0000_01CBECEF.4527B480--

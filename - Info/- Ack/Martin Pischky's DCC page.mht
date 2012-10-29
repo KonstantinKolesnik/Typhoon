@@ -1,0 +1,160 @@
+Content-Type: multipart/related; start=<op.mhtml.1298889701390.c6c2d65b5d50b498@192.168.144.112>; boundary=----------3sXBzrObWd8kdcAR1LKrWx
+Content-Location: http://reocities.com/CapeCanaveral/Lab/2459/DCC.HTM
+Subject: =?utf-8?Q?Martin=20Pischky's=20DCC=20page?=
+MIME-Version: 1.0
+
+------------3sXBzrObWd8kdcAR1LKrWx
+Content-Disposition: inline; filename=DCC.HTM
+Content-Type: text/html; charset=iso-8859-1; name=DCC.HTM
+Content-ID: <op.mhtml.1298889701390.c6c2d65b5d50b498@192.168.144.112>
+Content-Location: http://reocities.com/CapeCanaveral/Lab/2459/DCC.HTM
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <META NAME="Author" CONTENT="Martin Pischky">
+   <META NAME="KeyWords" CONTENT="modelrailroad, Digital Command Control, DCC, NMRA, DCC-MB, TMWDCC">
+   <TITLE>Martin Pischky's DCC page</TITLE>
+</HEAD>
+<BODY>
+<script type='text/javascript' src='/js/header.js'>
+</script>
+
+
+
+<H1>Digital Command Control</H1>
+
+<H2> Tips for building your own DCC System </H2>
+
+<P>I have successfully build a Digital Command Control System basesed on
+<A HREF="LINKS.HTM#DCCMB">DCC-MB</A> and <A HREF="LINKS.HTM#TMWDCC">TMWDCC</A>.
+Thanks a lot to Michael Brandt, Lars Lundgren, Andreas Hansson and all
+those who gave us the <A HREF="LINKS.HTM#NMRA_DCC_RP">NMRA DCC Standards
+and RPs</A> (realy a great work).</P>
+
+<P>If I have redrawn all the schematics and pcbs, I&nbsp;will publish them
+here with all enhancements I've done to the hardware. (this will take a
+few weeks)</P>
+
+<P>If my software is ready (will take some more weeks)&nbsp;you will find
+it also here.</P>
+
+<P>At this time here are two different Acknowledge-Detectors:</P>
+
+<UL>
+   <LI><A HREF="ACKDET01.HTM">ACKDET01</A></LI>
+   <LI><A HREF="ACKDET02.HTM">ACKDET02</A></LI>
+</UL>
+
+<H2> Simple Loconet Throttle </H2>
+<UL>
+   <LI>
+      Information about the Hardware of a Simple LocoNet THRottle: 
+      <A HREF="slnthr.htm">SLNTHR</A>
+   </LI>
+</UL>
+
+<H2> Other DCC Stuff </H2>
+<UL>
+   <LI>
+      <A HREF="lnmon.htm">LNMON: a LocoNet-Monitor - see whats going on on the loconet</A>
+      <BR>still having some strange bugs  ... please wait
+   </LI>
+   <LI>
+      <A HREF="dectest.htm">DECTEST: a simple decoder tester</A>
+   </LI>
+   <LI>
+      <A HREF="arnold_81220/index.html">Arnold Decoder 81220</A>
+   </LI>
+   <LI>
+      <A HREF="lnbox/">Loconet Box</A>
+   </LI>
+   <LI>
+      <A HREF="dcc/v52/index.html">DCC V52 (Bemo)</A>
+   </LI>
+   <!--
+   <LI>
+      <A HREF="dcc/v22/index.html">DCC V22 (Bemo)</A>
+   </LI>
+   -->
+</UL>
+
+
+<HR>
+
+<P ALIGN=CENTER><A HREF="index.html">BACK TO MY HOMEPAGE</A>
+
+<HR ALIGN=LEFT WIDTH="100%">
+
+<P><TT><FONT SIZE=-1>&copy; 1997 by Martin Pischky (<A HREF="mailto:martin.pischky@al-data.de">martin.pischky@al-data.de</A>)
+<BR>[ http://www.reocities.com/CapeCanaveral/Lab/2459/DCC.HTM | creation 970216 | version 020330 ]</FONT></TT></P>
+
+</BODY>
+</HTML>
+
+------------3sXBzrObWd8kdcAR1LKrWx
+Content-Disposition: inline; filename=header.js
+Content-Type: application/javascript; charset=iso-8859-1; name=header.js
+Content-Location: http://reocities.com/js/header.js
+Content-Transfer-Encoding: Base64
+
+aWYgKHRvcC5sb2NhdGlvbiA9PSBsb2NhdGlvbikgewpkb2N1bWVudC53cml0ZWxu
+KCJcCjxzdHlsZT5cCmJvZHkgeyBtYXJnaW46IDAgMCA7IHBhZGRpbmc6IDA7IH0g
+XApkaXYjcmVvY2l0aWVzX2JhciB7IHBvc2l0aW9uOiByZWxhdGl2ZTsgdG9wOiAw
+cHg7IGxlZnQ6IDBweDsgYmFja2dyb3VuZDogIzExMTsgbWFyZ2luOjAgYXV0bzsg
+d2lkdGg6MTAwJTsgaGVpZ2h0OjExNXB4OyAgfSBcCmRpdiNyZW9jaXRpZXNfYmFy
+IGgxIHsgcG9zaXRpb246YWJzb2x1dGU7IHRvcDowcHg7IGxlZnQ6MHB4OyBtYXJn
+aW46IDBweDsgcGFkZGluZzogMHB4OyBiYWNrZ3JvdW5kOnVybCgvc3RhdGljL2lt
+YWdlcy9sb2dvLmdpZik7IHdpZHRoOjMyMHB4OyBoZWlnaHQ6MTE1cHg7IH0gXApk
+aXYjcmVvY2l0aWVzX2JhciBoMSBhIHsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyB0
+ZXh0LWluZGVudDotOTk5OTk5cHg7IGRpc3BsYXk6YmxvY2s7IGhlaWdodDoxMDAl
+OyB3aWR0aDoxMDAlOyBjdXJzb3I6cG9pbnRlcjsgICAgfSBcCmRpdiNyZW9jaXRp
+ZXNfYmFyIHVsIHsgbWFyZ2luLXRvcDo3NnB4OyBmbG9hdDpyaWdodDsgaGVpZ2h0
+OjQwcHg7IH0gXApkaXYjcmVvY2l0aWVzX2JhciB1bCBsaSB7IGxpc3Qtc3R5bGU6
+IG5vbmU7IGZsb2F0OmxlZnQ7IG1hcmdpbi1sZWZ0OjEwcHg7IH0gXApkaXYjcmVv
+Y2l0aWVzX2JhciB1bCBsaSBhIHsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyBwYWRk
+aW5nOjRweCA4cHg7IGxldHRlci1zcGFjaW5nOi0xcHg7IHRleHQtdHJhbnNmb3Jt
+OnVwcGVyY2FzZTsgZm9udC13ZWlnaHQ6Ym9sZDsgZm9udC1zaXplOjE0cHg7IGNv
+bG9yOiNmZmY7IGZsb2F0OmxlZnQ7IGZvbnQtZmFtaWx5OidIZWx2ZXRpY2EgTmV1
+ZScsQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7IC1tb3otYm9yZGVyLXJhZGl1
+czo0cHg7IC13ZWJraXQtYm9yZGVyLXJhZGl1czo0cHg7IH0gXApkaXYjcmVvY2l0
+aWVzX2JhciB1bCBsaSBhOmhvdmVyLCBkaXYjcmVvY2l0aWVzX2JhciB1bCBsaSBh
+LmFjdGl2ZSB7IGJhY2tncm91bmQ6I2ZmZjsgY29sb3I6IzMzMzsgfSA8L3N0eWxl
+PglcCiAgICA8ZGl2IGlkPVwicmVvY2l0aWVzX2JhclwiIHN0eWxlPSdjbGVhcjog
+Ym90aDsnPiBcCiAgICAgICAgPGgxPjxhIGhyZWY9XCJodHRwOi8vd3d3LnJlb2Np
+dGllcy5jb21cIj5SZW9jaXRpZXM8L2E+PC9oMT4gXAogICAgICAgIDx1bCBpZD1c
+Im5hdlwiPiBcCgkgICAgPGxpPlwKPGZvcm0gbmFtZT0ndGFnJyBtZXRob2Q9J1BP
+U1QnIGFjdGlvbj0nL3BocC90YWcucGhwJz5cCiAgICA8aW5wdXQgdHlwZT0naGlk
+ZGVuJyBuYW1lPSd1cmwnPlwKICAgIDxpbnB1dCB0eXBlPSd0ZXh0JyBzaXplPTIw
+IG5hbWU9J3RhZ3MnPlwKICAgIDxpbnB1dCB0eXBlPSdzdWJtaXQnIHZhbHVlPSd0
+YWcgdGhpcyBwYWdlISc+XAo8L2Zvcm0+XAo8c2NyaXB0IHR5cGU9J3RleHQvamF2
+YXNjcmlwdCc+XAp1cmwgPSBkb2N1bWVudC5sb2NhdGlvbi5ocmVmO1wKaWYgKHVy
+bC5pbmRleE9mKCc/JykgPiAwKSB7XAoJcSA9IHVybC5zdWJzdHJpbmcodXJsLmlu
+ZGV4T2YoJz8nKSsxKTtcCglpZiAocS5zdWJzdHJpbmcoMCw0KSA9PSAnbXNnPScp
+IHtcCgkJYWxlcnQodW5lc2NhcGUocS5zdWJzdHJpbmcoNCkpKTtcCgl9XAp9XApk
+b2N1bWVudC50YWcudXJsLnZhbHVlPWRvY3VtZW50LmxvY2F0aW9uLmhyZWY7XAo8
+L3NjcmlwdD5cCiAgICAgICAgICAgIDwvbGk+XAogICAgICAgICAgICA8bGk+PGEg
+dGFyZ2V0PSdfdG9wJyBocmVmPVwiL1wiPkhvbWU8L2E+PC9saT4gXAogICAgICAg
+ICAgICA8bGk+PGEgdGFyZ2V0PSdfdG9wJyBocmVmPVwiL25laWdoYm9yaG9vZHMv
+XCI+TmVpZ2hib3Job29kczwvYT48L2xpPiBcCiAgICAgICAgICAgIDxsaT48YSB0
+YXJnZXQ9J190b3AnIGhyZWY9XCIvbmV3aG9tZS9tYWtpbmdvZi5odG1sXCI+TWFr
+aW5nIE9mPC9hPjwvbGk+IFwKICAgICAgICA8L3VsPiBcCiAgICA8ZGl2IHN0eWxl
+PSdjbGVhcjogYm90aDsnPjwvZGl2PiBcCjxkaXYgaWQ9J2Jhbm5lcl9kaXYnIHN0
+eWxlPSd3aWR0aDogNDY4cHg7IGhlaWdodDogNjBweDsgb3ZlcmZsb3c6aGlkZGVu
+OyBwb3NpdGlvbjphYnNvbHV0ZTsgcmlnaHQ6MTBweDsgdG9wOjRweDsgYmFja2dy
+b3VuZDogI0ZGRjsgdGV4dC1hbGlnbjogcmlnaHQ7Jz5cCjxhIGhyZWY9J2h0dHA6
+Ly93dy5jb20vJz48aW1nIGJvcmRlcj0wIHNyYz0naHR0cDovL3d3LmNvbS9pbWFn
+ZXMvYmFubmVyLmdpZic+PC9hPlwKPC9kaXY+XAo8L2Rpdj5cCjxzY3JpcHQgdHlw
+ZT1cInRleHQvamF2YXNjcmlwdFwiPlwKdmFyIGdhSnNIb3N0ID0gKChcImh0dHBz
+OlwiID09IGRvY3VtZW50LmxvY2F0aW9uLnByb3RvY29sKSA/IFwiaHR0cHM6Ly9z
+c2wuXCIgOiBcImh0dHA6Ly93d3cuXCIpO1wKZG9jdW1lbnQud3JpdGUodW5lc2Nh
+cGUoXCIlM0NzY3JpcHQgc3JjPSdcIiArIGdhSnNIb3N0ICsgXCJnb29nbGUtYW5h
+bHl0aWNzLmNvbS9nYS5qcycgdHlwZT0ndGV4dC9qYXZhc2NyaXB0JyUzRSUzQy9z
+Y3JpcHQlM0VcIikpO1wKPC9zY3JpcHQ+XAo8c2NyaXB0IHR5cGU9XCJ0ZXh0L2ph
+dmFzY3JpcHRcIj5cCnRyeSB7XAp2YXIgcGFnZVRyYWNrZXIgPSBfZ2F0Ll9nZXRU
+cmFja2VyKFwiVUEtNjc0OTQ5OC0zXCIpO1wKcGFnZVRyYWNrZXIuX3RyYWNrUGFn
+ZXZpZXcoKTtcCn0gY2F0Y2goZXJyKSB7fTwvc2NyaXB0PlwKIik7Cn0K
+
+------------3sXBzrObWd8kdcAR1LKrWx--
