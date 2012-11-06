@@ -259,8 +259,6 @@ namespace Typhoon.Server
                 Beeper.PlaySound(mainBooster.IsActive ? Beeper.SoundID.PowerOn : Beeper.SoundID.PowerOff);
             if (e.Property == "IsActive" || e.Property == "IsOverloaded")
                 BroadcastPowerState();
-            //if (e.Property == "Current")
-            //    BroadcastBoostersCurrent();
         }
 
         private static void TimerBustersCurrent_Tick(object o)

@@ -556,7 +556,7 @@ namespace MFE.Net
 
             if (path == "\\")
                 path = "\\index.html";
-            Debug.Print("File: " + path);
+            //Debug.Print("File: " + path);
 
             if (OnGetRequest != null)
                 OnGetRequest(path, parameters, response);
@@ -572,10 +572,7 @@ namespace MFE.Net
             //    ProcessPasswordProtectedArea(request, response);
             //    return;
             //}
-
-
-
-        }
+  }
         private static void ProcessClientPostRequest(HttpListenerContext context)
         {
             const int BUFFER_SIZE = 1024;

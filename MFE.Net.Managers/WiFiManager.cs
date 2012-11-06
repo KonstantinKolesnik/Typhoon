@@ -121,14 +121,14 @@ namespace MFE.Net.Managers
         #region Event handlers
         private void NetworkChange_NetworkAvailabilityChanged(object sender, NetworkAvailabilityEventArgs e)
         {
-            Debug.Print("Network Availability Event Triggered");
+            //Debug.Print("Network Availability Event Triggered");
             if (e.IsAvailable)
             {
                 if (WiFi.IsEnabled) // make sure that the event is fired by WiFi interface, not other networking interface.
                     if (WiFi.IsLinkConnected)
                     {
                         blocker.Set();
-                        Debug.Print("WiFi connection was established!");
+                        //Debug.Print("WiFi connection was established!");
                     }
             }
             else
@@ -137,7 +137,7 @@ namespace MFE.Net.Managers
                     if (!WiFi.IsLinkConnected)
                     {
                         blocker.Set();
-                        Debug.Print("WiFi connection was dropped or disconnected!");
+                        //Debug.Print("WiFi connection was dropped or disconnected!");
                         if (Stopped != null)
                             Stopped(this, EventArgs.Empty);
 
@@ -152,7 +152,7 @@ namespace MFE.Net.Managers
         {
             try
             {
-                Thread.Sleep(2000);
+                //Thread.Sleep(2000);
                 WiFi.Enable(WiFi.HardwareModule.RS9110_N_11_21_1_Compatible, _spi, _cs, _extInt, _reset);
             }
             catch (WiFi.WiFiException e)
@@ -166,24 +166,24 @@ namespace MFE.Net.Managers
                     case WiFi.WiFiException.ErrorCode.HardwareCommunicationFailure:
                     case WiFi.WiFiException.ErrorCode.HardwareNotEnabled:
                     case WiFi.WiFiException.ErrorCode.HardwareCommunicationTimeout:
-                        Debug.Print("Error Message: " + e.ErrorMsg);
-                        Debug.Print("Check WiFi module hardware connections and SPI/signals configurations.");
+                        //Debug.Print("Error Message: " + e.ErrorMsg);
+                        //Debug.Print("Check WiFi module hardware connections and SPI/signals configurations.");
                         WiFi.Enable(WiFi.HardwareModule.RS9110_N_11_21_1_Compatible, _spi, _cs, _extInt, _reset);
                         break;
                     default:
-                        Debug.Print("Error Message: " + e.ErrorMsg);
+                        //Debug.Print("Error Message: " + e.ErrorMsg);
                         return false;
                 }
             }
             catch (Exception e)
             {
-                Debug.Print("Error Message: " + e.Message);
+                //Debug.Print("Error Message: " + e.Message);
                 return false;
             }
             
             if (WiFi.IsEnabled)
             {
-                Debug.Print("\nEnabled successfully!\nAt this point, the on-board LED on RS9110_N_11_21_1_Compatible module is ON.\n");
+                //Debug.Print("\nEnabled successfully!\nAt this point, the on-board LED on RS9110_N_11_21_1_Compatible module is ON.\n");
                 return true;
             }
 
@@ -231,15 +231,15 @@ namespace MFE.Net.Managers
             while (nis == null)
             {
                 Thread.Sleep(500);
-                Debug.Print("Searching for WiFi access point with required SSID...\n");
+                //Debug.Print("Searching for WiFi access point with required SSID...\n");
                 nis = WiFi.Scan(ssid);
             }
-            Debug.Print(WiFiNetworkInfoToString(nis[0]));
+            //Debug.Print(WiFiNetworkInfoToString(nis[0]));
             return nis[0];
         }
         private bool Connect(WiFiNetworkInfo ni)
         {
-            Debug.Print("Connecting to " + ni.SSID + "...");
+            //Debug.Print("Connecting to " + ni.SSID + "...");
             blocker.Reset();
             try
             {
@@ -252,17 +252,17 @@ namespace MFE.Net.Managers
                     case WiFi.WiFiException.ErrorCode.AuthenticationFailed: Debug.Print("AuthenticationFailed"); break;
                     default: Debug.Print(e.errorCode.ToString()); break;
                 }
-                Debug.Print("Error Message: " + e.ErrorMsg);
+                //Debug.Print("Error Message: " + e.ErrorMsg);
                 return false;
             }
             //Debug.Print("Done connecting...\n");
             blocker.WaitOne();
-            Debug.Print("We got NetworkAvailable event. WiFi link is ready!\n");
+            //Debug.Print("We got NetworkAvailable event. WiFi link is ready!\n");
             return true;
         }
         private bool EnableDHCP()
         {
-            Debug.Print("Enable DHCP...\n");
+            //Debug.Print("Enable DHCP...\n");
             try
             {
                 NetworkInterface[] nis = NetworkInterface.GetAllNetworkInterfaces();
@@ -280,17 +280,17 @@ namespace MFE.Net.Managers
                 //netif[0].EnableStaticDns(new string[] { "10.1.10.1" });
                 #endregion
 
-                Debug.Print("Network settings:");
-                Debug.Print("IP Address: " + nis[0].IPAddress);
-                Debug.Print("Subnet Mask: " + nis[0].SubnetMask);
-                Debug.Print("Default Getway: " + nis[0].GatewayAddress);
-                Debug.Print("DNS Server: " + nis[0].DnsAddresses[0]);
+                //Debug.Print("Network settings:");
+                //Debug.Print("IP Address: " + nis[0].IPAddress);
+                //Debug.Print("Subnet Mask: " + nis[0].SubnetMask);
+                //Debug.Print("Default Getway: " + nis[0].GatewayAddress);
+                //Debug.Print("DNS Server: " + nis[0].DnsAddresses[0]);
 
                 return true;
             }
             catch (SocketException e)
             {
-                Debug.Print("DHCP faild");
+                //Debug.Print("DHCP faild");
                 if (e.ErrorCode == 11003)
                     Debug.Print("Re-Enable the module.");
             }
@@ -299,7 +299,7 @@ namespace MFE.Net.Managers
         }
         private void Disconnect()
         {
-            Debug.Print("Disconnect WiFi link.");
+            //Debug.Print("Disconnect WiFi link.");
             blocker.Reset();
             WiFi.Disconnect();
             blocker.WaitOne();
