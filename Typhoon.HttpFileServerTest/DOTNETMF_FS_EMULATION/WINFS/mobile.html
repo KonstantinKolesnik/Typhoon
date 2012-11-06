@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 
@@ -51,15 +51,25 @@
 <body>
     <section data-role="layout" data-id="default">
         <header data-role="header">
-            <div data-role="navbar">Typhoon</div>
+            <div data-role="navbar">
+                <!--Typhoon-->
+                <!--<a class="nav-button" data-align="left" data-role="backbutton">Back</a>-->
+                <span data-role="view-title"></span>
+                <!--<a data-align="right" data-role="button" class="nav-button" href="#viewCab">Index</a>-->
+            </div>
+
         </header>
 
         <!--View content will render here-->
         
         <footer data-role="footer">
             <div data-role="tabstrip">
-                <a href="#viewMain">Home</a>
-                <a href="#viewLayout">Layout</a>
+                <a href="#viewCab" data-icon="play">Cab</a>
+                <a href="#viewLocomotives"><img src="./Resources/Locomotive.ico" alt="" height="auto"/>Locomotives</a>
+                <a href="#viewTurnouts"><img src="./Resources/Turnout.ico" alt="" height="auto"/>Turnouts</a>
+                <a href="#viewSignals"><img src="./Resources/Signal.ico" alt="" height="auto"/>Signals</a>
+                <a href="#viewSettings" data-icon="settings">Settings</a>
+                <a href="#viewInfo" data-icon="info">Info</a>
             </div> 
         </footer>
     </section>
@@ -68,14 +78,84 @@
 
 
 
-    <div data-role="view" data-layout="default" id="viewMain">
+    <div data-role="view" data-layout="default" id="viewCab" data-title="Cab">
         Hello Mobile World!
     </div>
-    <div data-role="view" data-layout="default" id="viewLayout">
+
+    <div data-role="view" data-layout="default" id="viewLocomotives" data-title="Locomotives">
         ...
     </div>
 
+    <div data-role="view" data-layout="default" id="viewTurnouts" data-title="Turnouts">
+        ...
+    </div>
 
+    <div data-role="view" data-layout="default" id="viewSignals" data-title="Signals">
+        ...
+    </div>
+    
+    <div data-role="view" data-layout="default" id="viewSettings" data-title="Settings">
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li><h3>Power settings</h3>
+                <ul>
+                    <li><label>Main track I max, mA:</label><input id="mti" type="number" data-bind="value: Options.MainBridgeCurrentThreshould"/></li>
+                    <li><label>Program track I max, mA:</label><input id="pti" type="number" data-bind="value: Options.ProgBridgeCurrentThreshould"/></li>
+                    <li><label>Broadcast boosters current:</label><input id="Checkbox2" type="checkbox" data-role="switch" data-bind="checked: Options.BroadcastBoostersCurrent"/></li>
+                </ul>
+            </li>
+
+            <li><h3>Wi-Fi settings</h3>
+                <ul>
+                    <li><label>Use Wi-Fi:</label><input id="Checkbox1" type="checkbox" data-role="switch" data-bind="checked: Options.UseWiFi"/></li>
+                    <li><label>Wi-Fi SSID:</label><input id="wifiSSID" type="text" class="k-textbox" data-bind="value: Options.WiFiSSID"/></li>
+                    <li><label>Wi-Fi password:</label><input id="wifiPassword" type="text" class="k-textbox" data-bind="value: Options.WiFiPassword"/></li>
+                </ul>
+            </li>
+        </ul>
+        <br /><br />
+        <button class="k-button" style="width: 120px;" onclick="model.SetOptions();"><span class="k-icon k-i-tick"></span>Save</button>
+        <br />
+        <br />
+    </div>
+
+    <div data-role="view" data-layout="default" id="viewInfo" data-title="Information">
+        <div style="padding: 0px;" data-role="scroller">
+            <p>
+                <img src="./Resources/StationConnected.png" alt="" width="80px" style="margin-left:10px;"/>
+                <label style="color: white; font-size: 32px; vertical-align: top; display: inline-block; margin-top: 15px; text-transform: uppercase;">Typhoon</label>
+            </p>
+            <p>When you launch Typhoon, it loads information about locomotives and accessories from the command station, and you are good to go.</p>
+            <p>Typhoon remembers where you were last time and picks up where you left with the same locomotive selected if possible.</p>
+            <p>Typhoon speaks six languages: English, German, Spanis, French, Danish and Swedish. For now, however, this instruction is only available in English.</p>
+            
+            <h1>Tabs</h1>
+            <p>At the bottom of the screen, you can select Typhoon screens from a row of tabs. Touch the tabs to navigate like any other tabbed application.</p>
+            <h2>Cab tab</h2>
+            <p>Where you control locomotives.</p>
+            <h2>Locomotive List tab</h2>
+            <p>Where you select locomotives.</p>
+            <h2>Turnouts tab</h2>
+            <p>Where you control routes and turnouts.</p>
+            <h2>Signals tab</h2>
+            <p>Where you control signals, lights, decouplers and doors.</p>
+            <h2>Options tab</h2>
+            <p>Where you set TouchCab options.</p>
+
+            <h1>Cab screen</h1>
+            <p>The Cab screen is where you control your trains and locomotives. A lot of features are in this screen, and they are not all visible.</p>
+            <p>At the top left, you can see the name of the locomotive you are controlling. Tapping the button with the name displays the last four selected locomotives. To go to the locomotive list, touch and hold the button, or simply touch the locomotive tab in the bottom of the screen.</p>
+            <p>Track Status / Emergency Stop</p>
+            <p>The big green button is the emergency stop button, which shows the status of the track power. Tap the button to cause a layout-wide emergency stop. When stopped, the button turns red. Tap the button again to resume operation. 
+            If a short circuit occurs on the layout, the command station shuts off power to the tracks and the button turns yellow with the text ”SHUTDOWN”. Fix the short and tap the button to resume operation.
+            </p>
+            
+
+
+            <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+
+
+        </div>
+    </div>
 
 
 
