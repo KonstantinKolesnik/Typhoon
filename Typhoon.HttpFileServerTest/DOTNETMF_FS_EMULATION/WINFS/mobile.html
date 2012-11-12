@@ -15,6 +15,7 @@
     <!--<link href="KendoUI/styles/kendo.blueopal.min.css" rel="stylesheet" type="text/css" />-->
     <!--<link href="KendoUI/styles/kendo.metro.min.css" rel="stylesheet" type="text/css" />-->
     <!--<link href="KendoUI/styles/kendo.silver.min.css" rel="stylesheet" type="text/css" />-->
+
     
     <script src="KendoUI/js/jquery.min.js" type="text/javascript"></script>
     
@@ -23,22 +24,20 @@
     <!--<script src="KendoUI/js/kendo.mobile.min.js" type="text/javascript"></script>-->
     
     <!--Typhoon-->
-    <link href="Style/Typhoon.css" rel="stylesheet" type="text/css"/>
+    <link href="Style/Typhoon.mobile.css" rel="stylesheet" type="text/css"/>
 
     <script type="text/javascript">
         $(document).bind("APP_READY", function () {
             //$("#preLoad").fadeOut();
-            //$("#preLoad").css("opacity", "0").css("visibility", "hidden");
+            $("#preLoad").css("opacity", "0").css("visibility", "hidden");
         });
 
-        //$(window).bind("resize", onWindowResize);
+//        $(document).ready(function () {
+//            detectDevice();
+//            //onDocumentReady();
 
-        $(document).ready(function () {
-            //onDocumentReady();
-            detectDevice();
-
-            $(document).trigger("APP_READY");
-        });
+//            $(document).trigger("APP_READY");
+//        });
     </script>
 </head>
 
@@ -68,15 +67,22 @@
     </section>
 
 
-
-
-
     <div data-role="view" data-layout="default" id="viewCab" data-title="Cab">
         Hello Mobile World!
     </div>
 
     <div data-role="view" data-layout="default" id="viewLocomotives" data-title="Locomotives">
-        ...
+        <ul id="lvLocomotives"></ul>
+        <script type="text/x-kendo-template" id="customListViewTemplate">
+            <div>
+                <img src="./Resources/Locomotive.ico" height="auto" />
+                <label>${Name}</label>
+                <div>
+                    <label>${Data.Address}</label><br/>
+                    <label>${Data.Protocol}</label>
+                </div>
+            </div>
+        </script><!--<a data-role="button" class="details-link">Order</a>--><!--<p class="item-info">${Description}</p>-->
     </div>
 
     <div data-role="view" data-layout="default" id="viewTurnouts" data-title="Turnouts">
@@ -89,7 +95,8 @@
     
     <div data-role="view" data-layout="default" id="viewSettings" data-title="Settings">
         <ul data-role="listview" data-style="inset" data-type="group">
-            <li><h3>Power settings</h3>
+            <li>
+                <h3>Power settings</h3>
                 <ul>
                     <li><label>Main track I max, mA:</label><input id="mti" type="number" data-bind="value: Options.MainBridgeCurrentThreshould"/></li>
                     <li><label>Program track I max, mA:</label><input id="pti" type="number" data-bind="value: Options.ProgBridgeCurrentThreshould"/></li>
@@ -97,7 +104,8 @@
                 </ul>
             </li>
 
-            <li><h3>Wi-Fi settings</h3>
+            <li>
+                <h3>Wi-Fi settings</h3>
                 <ul>
                     <li><label>Use Wi-Fi:</label><input id="Checkbox1" type="checkbox" data-role="switch" data-bind="checked: Options.UseWiFi"/></li>
                     <li><label>Wi-Fi SSID:</label><input id="wifiSSID" type="text" class="k-textbox" data-bind="value: Options.WiFiSSID"/></li>
@@ -114,7 +122,7 @@
     </div>
 
     <div data-role="view" data-layout="default" id="viewInfo" data-title="Information">
-        <div style="padding: 0px;" data-role="scroller">
+        <div data-role="scroller">
             <p>
                 <img src="./Resources/StationConnected.png" alt="" width="80px" style="margin-left:10px;"/>
                 <label style="font-size: 32px; vertical-align: top; display: inline-block; margin-top: 15px; text-transform: uppercase;">Typhoon</label><!--color: white; -->
@@ -123,20 +131,20 @@
             <p>Typhoon remembers where you were last time and picks up where you left with the same locomotive selected if possible.</p>
             <p>Typhoon speaks six languages: English, German, Spanis, French, Danish and Swedish. For now, however, this instruction is only available in English.</p>
             
-            <h1>Tabs</h1>
+            <h2>Tabs</h2>
             <p>At the bottom of the screen, you can select Typhoon screens from a row of tabs. Touch the tabs to navigate like any other tabbed application.</p>
-            <h2>Cab tab</h2>
+            <h3>Cab tab</h3>
             <p>Where you control locomotives.</p>
-            <h2>Locomotive List tab</h2>
+            <h3>Locomotive List tab</h3>
             <p>Where you select locomotives.</p>
-            <h2>Turnouts tab</h2>
+            <h3>Turnouts tab</h3>
             <p>Where you control routes and turnouts.</p>
-            <h2>Signals tab</h2>
+            <h3>Signals tab</h3>
             <p>Where you control signals, lights, decouplers and doors.</p>
-            <h2>Options tab</h2>
+            <h3>Options tab</h3>
             <p>Where you set TouchCab options.</p>
 
-            <h1>Cab screen</h1>
+            <h2>Cab screen</h2>
             <p>The Cab screen is where you control your trains and locomotives. A lot of features are in this screen, and they are not all visible.</p>
             <p>At the top left, you can see the name of the locomotive you are controlling. Tapping the button with the name displays the last four selected locomotives. To go to the locomotive list, touch and hold the button, or simply touch the locomotive tab in the bottom of the screen.</p>
             <p>Track Status / Emergency Stop</p>
@@ -152,12 +160,20 @@
         </div>
     </div>
 
+    <div id="preLoad">
+        <div>
+            <img src="KendoUI/styles/black/loading-image.gif" alt="" style="width:48px;" />
+            <br />Loading...
+        </div>
+    </div>
+
     <script src="Script/NetworkMessageID.js" type="text/javascript"></script>
     <script src="Script/NetworkMessage.js" type="text/javascript"></script>
     <script src="Script/MessageManager.js" type="text/javascript"></script>
     <script src="Script/LocomotiveOperator.js" type="text/javascript"></script>
     <script src="Script/Model.js" type="text/javascript"></script>
     <script src="Script/Typhoon.js" type="text/javascript"></script>
+
 
     <script type="text/javascript">
         function detectDevice() {
@@ -168,6 +184,45 @@
                 transition: 'slide'
             });
         }
+
+        $(document).ready(function () {
+            detectDevice();
+            //onDocumentReady();
+
+            $(document).trigger("APP_READY");
+
+
+            var baseUrl = document.location.origin;
+            $("#lvLocomotives").kendoMobileListView({
+                //dataSource: kendo.data.DataSource.create({ data: groupedData, group: "letter" }),
+                dataSource: {
+                    transport: {
+//                        create: {
+//                            url: baseUrl + "/Content/Layout/Create.json",
+//                            dataType: "json"
+//                        },
+                        read: {
+                            url: baseUrl + "/Content/Layout.json",
+                            dataType: "json"
+                        }
+                        //                update: {
+                        //                    url: baseUrl + "/Content/Update.json",
+                        //                    dataType: "jsonp"
+                        //                },
+                        //                destroy: {
+                        //                    url: baseUrl + "/Content/Destroy.json",
+                        //                    dataType: "jsonp"
+                        //                }
+                    },
+                    //serverPaging: true,
+                    pageSize: 10
+                },
+                template: $("#customListViewTemplate").html()
+                //headerTemplate: "<h2>Letter ${value}</h2>"
+            });
+            $("#lvLocomotives").data("kendoMobileListView").dataSource.filter( { field: "Type", operator: "eq", value: "Locomotive"} );
+
+        });
     </script>
 
 </body>
