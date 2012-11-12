@@ -49,13 +49,41 @@
                 <!--<a class="nav-button" data-align="left" data-role="backbutton">Back</a>-->
                 <span data-role="view-title"></span>
                 <!--<a data-align="right" data-role="button" class="nav-button" href="#viewCab">Index</a>-->
+
             </div>
         </header>
 
         <!--View content will render here-->
         
         <footer data-role="footer">
-            <div data-role="tabstrip">
+                <!--<button class="k-button" onclick="model.SetPower();"><img data-bind="attr: { src: BtnPowerImage}" alt="" width="48px" height="48px"/></button>
+                <span class="ButtonSpan">Power</span>-->
+
+            <!--<div>
+                <table style="margin: 0px 10px 0 0; float:right;">
+                    <tr>
+                        <td><span>Connection:</span></td>
+                        <td colspan="3">
+                            <img src="./Resources/LedGrey_16.ico" alt="" data-bind="visible: Disconnected"/>
+                            <img src="./Resources/LedGreen_16.ico" alt="" data-bind="visible: Connected"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Main track:</label></td>
+                        <td><img data-bind="attr: { src: LEDMainBoosterImage}" alt=""/></td>
+                        <td style="text-align:right; width:30px;"><span data-bind="text: MainBoosterCurrent"></span></td>
+                        <td><span>mA</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Program track:</span></td>
+                        <td><img data-bind="attr: { src: LEDProgBoosterImage}" alt=""/></td>
+                        <td style="text-align:right; width:30px;"><span data-bind="text: ProgBoosterCurrent"></span></td>
+                        <td><span>mA</span></td>
+                    </tr>
+                </table>
+            </div>-->
+
+            <div data-role="tabstrip" class="k-header">
                 <a href="#viewCab" data-icon="play">Cab</a>
                 <a href="#viewLocomotives"><img src="./Resources/Locomotive.ico" alt="" height="auto"/>Locomotives</a>
                 <a href="#viewTurnouts"><img src="./Resources/Turnout.ico" alt="" height="auto"/>Turnouts</a>
@@ -74,15 +102,26 @@
     <div data-role="view" data-layout="default" id="viewLocomotives" data-title="Locomotives">
         <ul id="lvLocomotives"></ul>
         <script type="text/x-kendo-template" id="customListViewTemplate">
+            <label>${Name}</label>
             <div>
-                <img src="./Resources/Locomotive.ico" height="auto" />
-                <label>${Name}</label>
-                <div>
-                    <label>${Data.Address}</label><br/>
-                    <label>${Data.Protocol}</label>
-                </div>
+            <a data-role="detailbutton" data-style="detaildisclose"></a>
             </div>
-        </script><!--<a data-role="button" class="details-link">Order</a>--><!--<p class="item-info">${Description}</p>-->
+
+        </script>
+        <!--<a data-role="button" class="details-link">Order</a>--><!--<p class="item-info">${Description}</p>-->
+<!--<img src="./Resources/Locomotive.ico" height="auto" />-->
+
+<!--                    <label>${Data.Address}</label><br/>
+                    <label>${Data.Protocol}</label>
+            <div>
+                
+            </div>
+--><!--<table>
+                <tr>
+                    <td><img src="./Resources/Locomotive.ico" height="auto" /></td>
+                    <td valign="top"><label>${Name}</label></td>
+                </tr>
+            </table>-->
     </div>
 
     <div data-role="view" data-layout="default" id="viewTurnouts" data-title="Turnouts">
