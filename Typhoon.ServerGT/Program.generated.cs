@@ -25,6 +25,8 @@ namespace Typhoon.ServerGT
         Gadgeteer.Modules.GHIElectronics.PulseInOut pulseInOut;
         Gadgeteer.Modules.LoveElectronics.PHTemp pHTemp;
 
+        //Gadgeteer.Modules.GHIElectronics.WiFi_RS21 wifi;
+
         public static void Main()
         {
             //Important to initialize the Mainboard first
@@ -43,6 +45,7 @@ namespace Typhoon.ServerGT
 		
             ledArray = new GTM.LoveElectronics.LedArray(7);
 
+            //wifi = new GTM.GHIElectronics.WiFi_RS21(4);
         }
     }
 }

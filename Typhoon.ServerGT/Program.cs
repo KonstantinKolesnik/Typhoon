@@ -1,19 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Threading;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Presentation;
-using Microsoft.SPOT.Presentation.Controls;
-using Microsoft.SPOT.Presentation.Media;
-using Microsoft.SPOT.Touch;
-
-using Gadgeteer.Networking;
+﻿using Microsoft.SPOT;
+using Microsoft.SPOT.IO;
 using GT = Gadgeteer;
-using GTM = Gadgeteer.Modules;
-using Gadgeteer.Modules.LoveElectronics;
-using Gadgeteer.Modules.GHIElectronics;
-using GHI.Premium.Net;
-using Microsoft.SPOT.Hardware;
 
 namespace Typhoon.ServerGT
 {
@@ -51,7 +38,7 @@ namespace Typhoon.ServerGT
             //WiFiRS9110 wifi = new WiFiRS9110(SPI.SPI_module.SPI1, chipSelect, externalInterrupt, resetPin);
 
 
-
+            //InitDB();
 
 
         }
@@ -59,12 +46,33 @@ namespace Typhoon.ServerGT
         void timer_Tick(GT.Timer timer)
         {
             if (n > 6)
+            {
                 n = 0;
+                //Debug.Print("RAM: " + Debug.GC(false));
+            }
 
             ledArray.Clear();
             ledArray[n] = true;
 
             n++;
+        }
+
+        void InitDB()
+        {
+            RemovableMedia.Insert += new InsertEventHandler(RemovableMedia_Insert);
+            bool res = Mainboard.MountStorageDevice("SD1");
+
+            bool q = res;
+
+            int a = 0;
+            int b = a;
+
+
+        }
+
+        void RemovableMedia_Insert(object sender, MediaEventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
