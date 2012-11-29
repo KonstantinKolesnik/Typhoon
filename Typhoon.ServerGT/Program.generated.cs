@@ -24,8 +24,7 @@ namespace Typhoon.ServerGT
         Gadgeteer.Modules.GHIElectronics.UsbClientDP usbClientDP;
         Gadgeteer.Modules.GHIElectronics.PulseInOut pulseInOut;
         Gadgeteer.Modules.LoveElectronics.PHTemp pHTemp;
-
-        //Gadgeteer.Modules.GHIElectronics.WiFi_RS21 wifi;
+        Gadgeteer.Modules.Seeed.MoistureSensor moistureSensor;
 
         public static void Main()
         {
@@ -41,11 +40,14 @@ namespace Typhoon.ServerGT
         private void InitializeModules()
         {   
             // Initialize GTM.Modules and event handlers here.		
+            moistureSensor = new GTM.Seeed.MoistureSensor(3);
+		
+            relay = new GTM.LoveElectronics.Relay(5);
+		
             power = new GTM.LoveElectronics.USBDCPower(6);
 		
             ledArray = new GTM.LoveElectronics.LedArray(7);
 
-            //wifi = new GTM.GHIElectronics.WiFi_RS21(4);
         }
     }
 }

@@ -53,7 +53,13 @@
       <module Id="6bfa69cd-f6b2-4945-b865-dfe711bcf2cc" cachedDefinition="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ModuleDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; Name=&quot;Relay&quot; Type=&quot;Gadgeteer.Modules.LoveElectronics.Relay&quot; HardwareVersion=&quot;1.1&quot; Image=&quot;C:\Program Files\Love Electronics Ltd\Microsoft .NET Gadgeteer\Modules\Relay\Resources\Relay.png&quot; BoardWidth=&quot;77.4&quot; BoardHeight=&quot;72.4&quot; MinimumGadgeteerCoreVersion=&quot;2.42.500&quot; HelpUrl=&quot;&quot; UniqueId=&quot;a0aa4e1e-8a77-4f52-806a-13e74fd0f28f&quot; Manufacturer=&quot;Love Electronics&quot; Description=&quot;A Relay module&quot; InstanceName=&quot;relay&quot; ModuleSuppliesPower=&quot;false&quot;&gt;&#xD;&#xA;  &lt;ProvidedSockets /&gt;&#xD;&#xA;  &lt;Assemblies&gt;&#xD;&#xA;    &lt;Assembly MFVersion=&quot;4.1&quot; Name=&quot;GTM.LoveElectronics.Relay&quot; /&gt;&#xD;&#xA;    &lt;Assembly MFVersion=&quot;4.2&quot; Name=&quot;GTM.LoveElectronics.Relay&quot; /&gt;&#xD;&#xA;  &lt;/Assemblies&gt;&#xD;&#xA;  &lt;LibrariesProvided /&gt;&#xD;&#xA;  &lt;Sockets&gt;&#xD;&#xA;    &lt;Socket Orientation=&quot;270&quot; Left=&quot;38.7&quot; Top=&quot;4.7&quot; TypesLabel=&quot;Y&quot; ConstructorOrder=&quot;1&quot; Optional=&quot;false&quot;&gt;&#xD;&#xA;      &lt;Types&gt;&#xD;&#xA;        &lt;Type&gt;Y&lt;/Type&gt;&#xD;&#xA;      &lt;/Types&gt;&#xD;&#xA;      &lt;Pins&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;3&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;4&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;5&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;6&lt;/Pin&gt;&#xD;&#xA;      &lt;/Pins&gt;&#xD;&#xA;    &lt;/Socket&gt;&#xD;&#xA;  &lt;/Sockets&gt;&#xD;&#xA;  &lt;ExtraLibrariesRequired /&gt;&#xD;&#xA;&lt;/ModuleDefinition&gt;" name="relay" moduleType="Gadgeteer.Modules.LoveElectronics.Relay" moduleDefinitionId="a0aa4e1e-8a77-4f52-806a-13e74fd0f28f">
         <socketUses>
           <moduleHasSocketUses Id="5641cb01-cce8-417f-abcb-0710b84b0b9b">
-            <socketUse Id="ecd9c28a-ca99-47d1-8e7c-2c0008b1900f" label="Y" />
+            <socketUse Id="ecd9c28a-ca99-47d1-8e7c-2c0008b1900f" label="Y">
+              <socket>
+                <socketUseReferencesSocket Id="300bff65-ebf3-482f-a905-da39935580f7">
+                  <socketMoniker Id="518dff43-7dd9-4b2e-97a7-1857239497a2" />
+                </socketUseReferencesSocket>
+              </socket>
+            </socketUse>
           </moduleHasSocketUses>
         </socketUses>
       </module>
@@ -134,6 +140,21 @@
         <socketUses>
           <moduleHasSocketUses Id="a2d55de4-8466-4d80-9579-a93a09fe638f">
             <socketUse Id="eb225007-4a6c-44df-9596-61b889bbc80b" label="I" />
+          </moduleHasSocketUses>
+        </socketUses>
+      </module>
+    </gadgeteerModelHasGadgeteerHardware>
+    <gadgeteerModelHasGadgeteerHardware Id="bdda0e42-3fbd-4c89-a53d-8130e7e23f9d">
+      <module Id="43b46f55-0d75-47c2-973f-d2be68066fb9" cachedDefinition="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ModuleDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; Name=&quot;MoistureSensor&quot; Type=&quot;Gadgeteer.Modules.Seeed.MoistureSensor&quot; HardwareVersion=&quot;1.0&quot; Image=&quot;C:\Program Files\Seeed\Seeed .NET Gadgeteer SDK\Modules\MoistureSensor\Resources\Image.jpg&quot; BoardWidth=&quot;32&quot; BoardHeight=&quot;70&quot; MinimumGadgeteerCoreVersion=&quot;2.42.500&quot; HelpUrl=&quot;&quot; UniqueId=&quot;c7af6314-eb3e-4629-a47b-1e09eaaecbc3&quot; Manufacturer=&quot;Seeed&quot; Description=&quot;A MoistureSensor module&quot; InstanceName=&quot;moistureSensor&quot; ModuleSuppliesPower=&quot;false&quot;&gt;&#xD;&#xA;  &lt;ProvidedSockets /&gt;&#xD;&#xA;  &lt;Assemblies&gt;&#xD;&#xA;    &lt;Assembly MFVersion=&quot;4.1&quot; Name=&quot;GTM.Seeed.MoistureSensor&quot; /&gt;&#xD;&#xA;    &lt;Assembly MFVersion=&quot;4.2&quot; Name=&quot;GTM.Seeed.MoistureSensor&quot; /&gt;&#xD;&#xA;  &lt;/Assemblies&gt;&#xD;&#xA;  &lt;LibrariesProvided /&gt;&#xD;&#xA;  &lt;Sockets&gt;&#xD;&#xA;    &lt;Socket Orientation=&quot;270&quot; Left=&quot;15&quot; Top=&quot;3&quot; TypesLabel=&quot;A&quot; ConstructorOrder=&quot;1&quot; Optional=&quot;false&quot;&gt;&#xD;&#xA;      &lt;Types&gt;&#xD;&#xA;        &lt;Type&gt;A&lt;/Type&gt;&#xD;&#xA;      &lt;/Types&gt;&#xD;&#xA;      &lt;Pins&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;3&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;6&lt;/Pin&gt;&#xD;&#xA;      &lt;/Pins&gt;&#xD;&#xA;    &lt;/Socket&gt;&#xD;&#xA;  &lt;/Sockets&gt;&#xD;&#xA;  &lt;ExtraLibrariesRequired /&gt;&#xD;&#xA;&lt;/ModuleDefinition&gt;" name="moistureSensor" moduleType="Gadgeteer.Modules.Seeed.MoistureSensor" moduleDefinitionId="c7af6314-eb3e-4629-a47b-1e09eaaecbc3">
+        <socketUses>
+          <moduleHasSocketUses Id="738b3486-a9f3-4c03-9baf-e6b0553780a8">
+            <socketUse Id="fd724acd-c1eb-44c6-b2fe-316112f63678" label="A">
+              <socket>
+                <socketUseReferencesSocket Id="a18a656b-651f-4c94-8bd0-94aefe9cdd2b">
+                  <socketMoniker Id="4d6f9369-1230-4cdd-8d9a-ca77ca3da4e4" />
+                </socketUseReferencesSocket>
+              </socket>
+            </socketUse>
           </moduleHasSocketUses>
         </socketUses>
       </module>
