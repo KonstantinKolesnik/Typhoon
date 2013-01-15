@@ -5,7 +5,6 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using Microsoft.SPOT;
-using Typhoon.Layouts;
 
 namespace Typhoon.MF.Layouts
 {
@@ -54,17 +53,6 @@ namespace Typhoon.MF.Layouts
                     if (item.Name == name)
                         return item;
                 return null;
-            }
-        }
-        public ArrayList this[LayoutItemType type]
-        {
-            get
-            {
-                ArrayList res = new ArrayList();
-                foreach (LayoutItem item in items)
-                    if (item.Type == type)
-                        res.Add(item);
-                return res;
             }
         }
         #endregion

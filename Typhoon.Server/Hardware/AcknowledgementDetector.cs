@@ -1,13 +1,11 @@
-using System;
-using Microsoft.SPOT;
-using GHIElectronics.NETMF.Hardware;
+using Microsoft.SPOT.Hardware;
 
 namespace Typhoon.Server.Hardware
 {
     public class AcknowledgementDetector
     {
         #region Fields
-        private AnalogIn sensorPin;
+        private AnalogInput portSense;
 
         //private bool isProgPhase = false;
         //private bool isAckDetected = false;
@@ -15,10 +13,10 @@ namespace Typhoon.Server.Hardware
         #endregion
 
         #region Constructor
-        public AcknowledgementDetector(AnalogIn.Pin sensorPin)
+        public AcknowledgementDetector(Cpu.AnalogChannel sensorPin)
         {
-            //this.sensorPin = new AnalogIn(sensorPin);
-            //this.sensorPin.SetLinearScale(0, 3300);
+            portSense = new AnalogInput(sensorPin);
+            portSense.Scale = 3300;
         }
         #endregion
     }

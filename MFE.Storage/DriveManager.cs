@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.IO;
 using System.Threading;
-using GHIElectronics.NETMF.IO;
-using GHIElectronics.NETMF.USBHost;
+using GHI.Premium.IO;
+using GHI.Premium.System;
+using GHI.Premium.USBHost;
 using MFE.Device;
 using Microsoft.SPOT.IO;
+using Microsoft.SPOT;
 
 namespace MFE.Storage
 {
@@ -14,6 +16,7 @@ namespace MFE.Storage
         #region Fields
         private static ArrayList drives = new ArrayList();
         private static PersistentStorage sd;
+        private static PersistentStorage flash;
         #endregion
 
         #region Properties
@@ -44,6 +47,10 @@ namespace MFE.Storage
         {
             get { return sd != null; }
         }
+        public static bool IsFlashMounted
+        {
+            get { return flash != null; }
+        }
         #endregion
 
         #region Events
@@ -54,7 +61,7 @@ namespace MFE.Storage
         #region Constructor
         static DriveManager()
         {
-            if (DeviceManager.ActiveDevice == DeviceType.Emulator)
+            if (DeviceManager.IsEmulator)
             {
                 VolumeInfo emulatedRoot = VolumeInfo.GetVolumes()[0];
                 emulatedRoot.Format(0);
@@ -79,7 +86,18 @@ namespace MFE.Storage
 
                 RemovableMedia.Insert += RemovableMedia_Inserted;
                 RemovableMedia.Eject += RemovableMedia_Ejected;
-                new Thread(SDWatcher) { Priority = ThreadPriority.AboveNormal }.Start();
+                new Thread(SDWatcher) { Priority = ThreadPriority.BelowNormal }.Start();
+
+                try
+                {
+                    flash = new PersistentStorage("NAND");
+                    flash.MountFileSystem();
+                    //string rootDirectory = VolumeInfo.GetVolumes()[0].RootDirectory;
+                }
+                catch (Exception e)
+                {
+                    Debug.Print(e.Message);
+                }
             }
         }
         #endregion

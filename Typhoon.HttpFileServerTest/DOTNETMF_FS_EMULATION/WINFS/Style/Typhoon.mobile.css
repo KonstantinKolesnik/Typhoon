@@ -1,3 +1,4 @@
+/*
 label, span, input, .k-textbox
 {
     font-size: 0.7em;
@@ -10,6 +11,7 @@ p
 {
     font-size: 0.7em;
 }
+*/
 
 /*------------------------------------------------------------------------------*/
 #preLoad {           
@@ -33,3 +35,57 @@ p
     margin-left: -24px;
 }
 /*------------------------------------------------------------------------------*/
+div
+{
+    font-size: 12px;
+}
+span, label
+{
+    color: #cccccc;
+    font-size: 12px;
+}
+.ButtonSpan
+{
+    color: #f1f1f1;
+    /*font-size: 14px;*/
+}
+.TitleSpan
+{
+    color: #ffffff;
+    /*font-size: 22px;*/
+    font-size: 1em;
+    margin: auto;
+    text-transform: uppercase;
+}
+.TitleImage 
+{
+    height: 54px;
+    vertical-align: middle;
+    margin: auto 20px ;
+}
+/*------------------------------------------------------------------------------*/
+.toolbar
+{
+    margin-right: 10px;
+    float: right;
+    text-align: center;
+}
+.toolbar ul
+{
+    display: block;
+    overflow: hidden;
+}
+.toolbar li
+{
+    margin: auto 2px auto 2px;
+    list-style: none;
+    float: left;
+}
+.toolbar .k-button
+{
+    vertical-align: top;
+    width: 64px;
+    height: 32px;
+    display: block;
+    margin: auto;
+}

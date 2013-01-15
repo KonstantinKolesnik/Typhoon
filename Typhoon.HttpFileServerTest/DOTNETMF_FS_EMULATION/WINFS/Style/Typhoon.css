@@ -1,16 +1,18 @@
 ﻿body 
 {
-    width: 1200px;
-    margin: 0 auto;
+    /*width: 1200px;*/
+    /*height: 800px;
+    width: 100%;
+    height: 100%;*/
+    
+    /*margin: 0 auto;*/
     background-color: #3d3d3d;
 }
-header, footer, nav, article {display: block;}
-
-.k-block
+body::before, body::after
 {
-    width: 100%;
-    height: auto;
+    height: 0;
 }
+
 
 /*------------------------------------------------------------------------------*/
 .toolbar
@@ -105,7 +107,7 @@ span, label
 }
 /*------------------------------------------------------------------------------*/
 #preLoad {           
-    width:100%;
+    /*width:100%;
     height:100%;
     background:#FFF;
     position:absolute;
@@ -114,24 +116,24 @@ span, label
     -moz-transition: visibility 0s linear 1s, opacity 1s ease-in-out 0s;
     -webkit-transition: visibility 0s linear 1s, opacity 1s ease-in-out 0s;
     -o-transition: visibility 0s linear 1s, opacity 1s ease-in-out 0s;
-    transition: visibility 0s linear 1s, opacity 1s ease-in-out 0s;
+    transition: visibility 0s linear 1s, opacity 1s ease-in-out 0s;*/
 }
 #preLoad div {
-    position:absolute;
+    /*position:absolute;
     top: 50%;
     left: 50%;
     height:60px;
     margin-top: -30px;
-    margin-left: -24px;
+    margin-left: -24px;*/
 }
 /*------------------------------------------------------------------------------*/
 .MainMenuItem
 {
-    float: left;/**/
-    width: 350px;
+    float: left;
+    width: 381px;
     height: 202px;
-    margin: 5px;
-    padding: 5px;/**/
+    margin: 3px;
+    padding: 5px;
     background-image: none;
     cursor: pointer;
     
@@ -145,23 +147,28 @@ span, label
 }
 .MainMenuItem img
 {
-    float: left;/**/
     width: 192px;
     height: 192px;
+    margin-left: 20px;
     
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+.MainMenuItem div
+{
+    display: inline-block;
+}
 .MainMenuItem h3
 {
-    float: left;/**/
-    margin: 80px 0 0 0;
-    padding: 10px 10px 10px 20px;
+    display: inline-block;
+    /*margin: 10px 0 0 0;
+    padding: 10px 10px 10px 20px;*/
     font-size: 1em;
     max-width: 120px;
     text-transform: uppercase;
 }
+
 .k-listview: after, .MainMenuItem h3:after
 {
     content: ".";
@@ -175,8 +182,9 @@ span, label
     border: 0;
     min-width: 0;
 }
-/*
-*/
+/**/
+
+
 /*------------------------------------------------------------------------------*/
 .OperationItem
 {

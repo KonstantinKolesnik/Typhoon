@@ -1,4 +1,4 @@
-﻿using GHIElectronics.NETMF.System;
+﻿using GHI.Premium.System;
 using MFE;
 using MFE.LCD;
 using Microsoft.SPOT.Hardware;

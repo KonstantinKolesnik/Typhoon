@@ -1,4 +1,4 @@
-﻿using GHIElectronics.NETMF.System;
+﻿using GHI.Premium.System;
 using MFE.Device;
 using MFE.Graphics;
 using MFE.Graphics.Controls;
@@ -24,7 +24,7 @@ namespace MFE.Demo
                 bool reboot = false;
                 reboot |= LCDManager.SetLCDConfiguration_800_480();
                 //reboot |= LCDManager.SetLCDConfiguration_320_240();
-                reboot |= LCDManager.SetBootLogo(null, 0, 0);
+                //reboot |= LCDManager.SetBootLogo(null, 0, 0);
                 reboot |= LCDManager.SetLCDBootupMessages(true);
 
                 if (reboot)

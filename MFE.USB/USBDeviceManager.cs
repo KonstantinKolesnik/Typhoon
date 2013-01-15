@@ -1,5 +1,6 @@
 using System;
-using GHIElectronics.NETMF.USBHost;
+using GHI.Premium.System;
+using GHI.Premium.USBHost;
 using MFE.Device;
 
 namespace MFE.USB

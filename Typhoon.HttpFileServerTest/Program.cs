@@ -4,7 +4,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading;
-using GHIElectronics.NETMF.SQLite;
+using GHI.Premium.SQLite;
 using MFE.Net;
 using Microsoft.SPOT;
 
@@ -13,10 +13,12 @@ namespace Typhoon.HttpFileServerTest
     public class Program
     {
         private static string root = @"\WINFS";// \\NAND
-        private static HttpServer httpServer = new HttpServer();
+        //private static string root = @"\SD";
+        private static HttpServer httpServer;
 
         public static void Main()
         {
+            httpServer = new HttpServer();
             httpServer.OnGetRequest += new GETRequestHandler(httpServer_OnGetRequest);
             //httpServer.Start("http", -1);
             httpServer.Start("http", 81);
@@ -26,7 +28,6 @@ namespace Typhoon.HttpFileServerTest
 
             //NameService ns = new NameService(); // Declare as global, name service will stop once the object gets disposed
             //ns.AddName("Typhoon", NameService.NameType.Unique, NameService.MsSuffix.Default); // register your fez as FEZCOBRA on the local network
-
 
             //DbTest();
 
@@ -51,6 +52,9 @@ namespace Typhoon.HttpFileServerTest
 
             if (path.ToLower() == @"\content\decoders")
                 DecodersRead(root + path, response);
+            else if (path.ToLower() == @"\content\consists")
+                LayoutRead(root + path, response);
+            
             else if (path.ToLower() == @"\content\layout")
                 LayoutRead(root + path, response);
             else if (path.ToLower() == @"\content\layout\create")

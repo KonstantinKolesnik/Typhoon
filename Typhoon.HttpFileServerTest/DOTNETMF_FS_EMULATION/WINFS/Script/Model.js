@@ -18,7 +18,7 @@ function Model() {
     this.ProgBoosterIsOverloaded = false;
     this.ProgBoosterCurrent = 0;
     this.Options = {
-        MainBridgeCurrentThreshould: 500,
+        MainBridgeCurrentThreshould: 3500,
         ProgBridgeCurrentThreshould: 500,
         BroadcastBoostersCurrent: false,
         UseWiFi: true,
@@ -33,26 +33,26 @@ function Model() {
     this.UIState = UIStateType.Main;
 
     this.LEDConnectionImage = function () {
-        return "./Resources/Led" + (this.get("Connected") ? "Green" : "Grey") + "_16.ico";
+        return "Resources/Led" + (this.get("Connected") ? "Green" : "Grey") + "_16.ico";
     }
     this.LEDMainBoosterImage = function () {
         if (this.get("MainBoosterIsOverloaded"))
-            return "./Resources/LedRed_16.ico";
+            return "Resources/LedRed_16.ico";
         else if (this.get("MainBoosterIsActive"))
-            return "./Resources/LedGreen_16.ico";
+            return "Resources/LedGreen_16.ico";
         else
-            return "./Resources/LedGrey_16.ico";
+            return "Resources/LedGrey_16.ico";
     }
     this.LEDProgBoosterImage = function () {
         if (this.get("ProgBoosterIsOverloaded"))
-            return "./Resources/LedRed_16.ico";
+            return "Resources/LedRed_16.ico";
         else if (this.get("ProgBoosterIsActive"))
-            return "./Resources/LedGreen_16.ico";
+            return "Resources/LedGreen_16.ico";
         else
-            return "./Resources/LedGrey_16.ico";
+            return "Resources/LedGrey_16.ico";
     }
     this.BtnPowerImage = function () {
-        return "./Resources/Power" + (this.get("StationPower") ? "On" : "Off") + ".png";
+        return "Resources/Power" + (this.get("StationPower") ? "On" : "Off") + ".png";
     }
 
     this.IsMainVisible = function () { return this.get("UIState") == UIStateType.Main; }
@@ -97,26 +97,25 @@ function Model() {
         else
             showDialog("No WebSocket support! Please try another browser.", "Warning");
         //alert("No WebSocket support! Please try another browser.");
-
         function onSocketOpen() {
             model.set("Connected", true);
             model.MessageManager.GetPower();
         }
         function onSocketClose() {
-            //showDialog("WebSocket closed");
             model.set("Connected", false);
-            socket = null;
+            closeWebSocket();
             createWebSocket();
         }
         function onSocketError(e) {
-            showDialog("WebSocket error: " + e.data);
+            //showDialog("WebSocket error: " + e);
         }
     }
-    //    function closeWebSocket() {
-    //        if (socket)
-    //            socket.close();
-    //        socket = null;
-    //    }
+    function closeWebSocket() {
+        if (socket)
+            socket.close();
+        socket = null;
+    }
+
     function showDialog(txt, title) {
         var win = $("#dlg").kendoWindow({
             actions: ["Close"],
@@ -138,10 +137,10 @@ function Model() {
 
     // Event handlers:
     function onServerMessage(networkMessage) {
-        var response = processMessage(networkMessage);
+        var response = processServerMessage(networkMessage);
         model.MessageManager.Send(response);
     }
-    function processMessage(msg) {
+    function processServerMessage(msg) {
         var response = null;
 
         switch (msg.GetID()) {

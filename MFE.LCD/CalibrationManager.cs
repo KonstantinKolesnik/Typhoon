@@ -1,4 +1,4 @@
-using GHIElectronics.NETMF.System;
+using GHI.Premium.System;
 using MFE.Device;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Touch;

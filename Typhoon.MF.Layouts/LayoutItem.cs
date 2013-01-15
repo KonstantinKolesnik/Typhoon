@@ -3,8 +3,6 @@ using System.Ext.Xml;
 using System.Xml;
 using MFE.Utilities;
 using Microsoft.SPOT;
-using Typhoon.Layouts;
-using Typhoon.MF.Layouts.LayoutItems;
 
 namespace Typhoon.MF.Layouts
 {
@@ -12,10 +10,8 @@ namespace Typhoon.MF.Layouts
     {
         #region Fields
         private Guid id = Guid.Empty;
-        private LayoutItemType type;
         private string name = "";
         private string description = "";
-        //private Image image = null;
         private object user = null;
         #endregion
 
@@ -23,10 +19,6 @@ namespace Typhoon.MF.Layouts
         public Guid ID
         {
             get { return id; }
-        }
-        public LayoutItemType Type
-        {
-            get { return type; }
         }
         public string Name
         {
@@ -54,32 +46,6 @@ namespace Typhoon.MF.Layouts
                 }
             }
         }
-        //public Image Image
-        //{
-        //    get { return image; }
-        //    set
-        //    {
-        //        if (image != value)
-        //        {
-        //            image = value;
-        //            OnPropertyChanged(new PropertyChangedEventArgs("Image"));
-        //            OnPropertyChanged(new PropertyChangedEventArgs("ImageSource"));
-        //        }
-        //    }
-        //}
-        //public BitmapSource ImageSource
-        //{
-        //    get { return (image != null ? Helpers.BitmapSourceFromImage(image) : null); }
-        //    set
-        //    {
-        //        if (value != null)
-        //        {
-        //            Image = Image.FromStream(Helpers.BitmapSourceToStream(value));
-        //            OnPropertyChanged(new PropertyChangedEventArgs("ImageSource"));
-        //            OnPropertyChanged(new PropertyChangedEventArgs("Image"));
-        //        }
-        //    }
-        //}
         public object User
         {
             get { return user; }
@@ -105,16 +71,14 @@ namespace Typhoon.MF.Layouts
         #endregion
 
         #region Constructors
-        public LayoutItem(LayoutItemType type)
-            : this(Guid.NewGuid(), type)
+        public LayoutItem()
+            : this(Guid.NewGuid())
         {
         }
-        public LayoutItem(Guid id, LayoutItemType type)
+        public LayoutItem(Guid id)
         {
             this.id = id;
-            this.type = type;
-
-            name = "Untitled";// LanguageDictionary.Current.Translate<string>("Untitled", "Text", "Untitled");
+            name = "Untitled";
         }
         #endregion
 
@@ -122,7 +86,6 @@ namespace Typhoon.MF.Layouts
         public virtual void WriteToXml(XmlWriter xmlWriter)
         {
             xmlWriter.WriteAttributeString("ID", Utils.ToBase64String(id));
-            xmlWriter.WriteAttributeString("Type", ((int)type).ToString());
             if (!Utils.IsStringNullOrEmpty(name))
                 xmlWriter.WriteAttributeString("Name", Utils.ToBase64String(name));
             if (!Utils.IsStringNullOrEmpty(description))
@@ -135,26 +98,11 @@ namespace Typhoon.MF.Layouts
                 name = Utils.FromBase64StringToString(xmlReader.GetAttribute("Name"));
             if (!Utils.IsStringNullOrEmpty(xmlReader.GetAttribute("Description")))
                 description = Utils.FromBase64StringToString(xmlReader.GetAttribute("Description"));
-            //image = Helpers.ImageFromString(el.GetAttribute("Image"));
         }
         public static LayoutItem FromXml(XmlReader xmlReader)
         {
-            LayoutItem item = null;
-            
-            LayoutItemType t = (LayoutItemType)(int.Parse(xmlReader.GetAttribute("Type")));
-            switch (t)
-            {
-                case LayoutItemType.Locomotive: item = new Locomotive(); break;
-                //case LayoutItemType.Consist: item = new Consist(); break;
-                //case LayoutItemType.Turnout: item = new Turnout(); break;
-                //case LayoutItemType.Signal: item = new Signal(); break;
-                //case LayoutItemType.Turntable: item = new Turntable(); break;
-                //case LayoutItemType.AccessoryGroup: item = new AccessoryGroup(); break;
-                default: break;
-            }
-            if (item != null)
-                item.ReadFromXml(xmlReader);
-
+            LayoutItem item = new LayoutItem();
+            item.ReadFromXml(xmlReader);
             return item;
         }
         #endregion

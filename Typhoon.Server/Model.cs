@@ -4,14 +4,16 @@ using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading;
-using GHIElectronics.NETMF.Hardware;
 using MFE.Net;
 using MFE.Net.Managers;
 using MFE.Net.Messaging;
 using MFE.Storage;
+using MFE.Utilities;
 using Microsoft.SPOT;
 using Typhoon.API;
 using Typhoon.DCC;
+using Typhoon.MF.Layouts;
+using Typhoon.MF.Layouts.LayoutItems;
 using Typhoon.Server.Hardware;
 
 namespace Typhoon.Server
@@ -22,6 +24,8 @@ namespace Typhoon.Server
         private static Options options;
         private const uint optionsID = 0;
         private static string root = @"\SD";
+
+        private static DBManager dbManager;
 
         private static Booster mainBooster;
         private static Booster progBooster;
@@ -36,7 +40,6 @@ namespace Typhoon.Server
         private static WebSocketServer wsServer;
 
         private static HttpServer httpServer;
-        //private static NameService nameService;
 
         private static Buttons btns;
         #endregion
@@ -86,6 +89,7 @@ namespace Typhoon.Server
 
             InitData();
             InitHardware();
+            //InitDB();
             InitNetwork();
 
             // for test only!!!
@@ -104,7 +108,9 @@ namespace Typhoon.Server
         private static void InitHardware()
         {
             mainBooster = new Booster(
+                true,
                 HardwareConfiguration.PinMainBoosterEnable,
+                HardwareConfiguration.PinMainBoosterEnableLED,
                 HardwareConfiguration.PinMainBoosterSense,
                 HardwareConfiguration.PinMainBoosterOverloadLED,
                 HardwareConfiguration.SenseResistor,
@@ -115,7 +121,9 @@ namespace Typhoon.Server
             mainBooster.PropertyChanged += new PropertyChangedEventHandler(Booster_PropertyChanged);
 
             progBooster = new Booster(
+                true,
                 HardwareConfiguration.PinProgBoosterEnable,
+                HardwareConfiguration.PinProgBoosterEnableLED,
                 HardwareConfiguration.PinProgBoosterSense,
                 HardwareConfiguration.PinProgBoosterOverloadLED,
                 HardwareConfiguration.SenseResistor,
@@ -128,7 +136,7 @@ namespace Typhoon.Server
             if (options.BroadcastBoostersCurrent)
                 timerBoostersCurrent = new Timer(TimerBustersCurrent_Tick, null, 0, 1000);
 
-            //ackDetector = new AcknowledgementDetector(AnalogIn.Pin.Ain2);
+            //ackDetector = new AcknowledgementDetector(HardwareConfiguration.PinAcknowledgementSense);
 
             btns = new Buttons();
         }
@@ -137,9 +145,9 @@ namespace Typhoon.Server
             //discoveryListener = new DiscoveryListener();
 
             //tcpServer = new TCPServer(Options.IPPort);
-            //tcpServer.SessionConnected += new NetworkClientHandler(Session_Connected);
-            //tcpServer.SessionDataReceived += new NetworkClientDataReceived(Session_DataReceived);
-            //tcpServer.SessionDisconnected += new NetworkClientHandler(Session_Disconnected);
+            //tcpServer.SessionConnected += new TCPSessionEventHandler(Session_Connected);
+            //tcpServer.SessionDataReceived += new TCPSessionDataReceived(Session_DataReceived);
+            //tcpServer.SessionDisconnected += new TCPSessionEventHandler(Session_Disconnected);
 
             wsServer = new WebSocketServer(Options.WSPort);
             wsServer.SessionConnected += new TCPSessionEventHandler(Session_Connected);
@@ -150,9 +158,9 @@ namespace Typhoon.Server
             httpServer.OnGetRequest += new GETRequestHandler(httpServer_OnGetRequest);
 
             if (options.UseWiFi)
-                networkManager = new WiFiManager((PWM.Pin)HardwareConfiguration.PinNetworkLED, options.WiFiSSID, options.WiFiPassword);
+                networkManager = new WiFiManager(true, HardwareConfiguration.PinNetworkLED, options.WiFiSSID, options.WiFiPassword);
             else
-                networkManager = new EthernetManager((PWM.Pin)HardwareConfiguration.PinNetworkLED);
+                networkManager = new EthernetManager(HardwareConfiguration.PinNetworkLED);
             networkManager.Started += new EventHandler(Network_Started);
             networkManager.Stopped += new EventHandler(Network_Stopped);
 
@@ -161,6 +169,42 @@ namespace Typhoon.Server
         private static void StartNetwork()
         {
             new Thread(delegate { networkManager.Start(); }).Start();
+        }
+        private static void InitDB()
+        {
+            dbManager = new DBManager();
+            //root = @"\NAND";
+            dbManager.Open(root + "\\Layout.dat");
+
+            //dbManager.Add(new Consist() { Name = "Consist 1", });
+            //dbManager.Add(new Consist() { Name = "Consist 2", });
+            //dbManager.Add(new Consist() { Name = "Consist 3", });
+
+            //dbManager.Add(new Locomotive() { Name = "Loco 1", Protocol = ProtocolType.DCC14 });
+            //dbManager.Add(new Locomotive() { Name = "Loco 2", Protocol = ProtocolType.DCC28 });
+            //dbManager.Add(new Locomotive() { Name = "Loco 3", Protocol = ProtocolType.DCC128 });
+
+            Debug.Print(Utils.FreeRAM(true));
+
+            for (int i = 0; i < 100; i++)
+                dbManager.Add(new Locomotive() { Name = "Loco " + i, Protocol = ProtocolType.DCC28 });
+
+            Debug.Print("DB size: " + Utils.FormatSize(dbManager.Size));
+
+
+
+            Debug.Print(Utils.FreeRAM(true));
+            ArrayList locos = dbManager.GetLocomotives();
+            Debug.Print(Utils.FreeRAM(true));
+
+            //Locomotive loc = (Locomotive)locos[0];
+            //Locomotive loc2 = dbManager.GetLocomotive(loc.ID);
+            //Debug.Print(loc2.Name);
+
+            //ArrayList consists = dbManager.GetConsists();
+            //Consist consist = (Consist)consists[1];
+            //Consist consist2 = dbManager.GetConsist(consist.ID);
+            //Debug.Print(consist2.Name);
         }
 
         private static void ApplyOptions()
@@ -235,7 +279,9 @@ namespace Typhoon.Server
 
             httpServer.Start("http", 80);
             wsServer.Start();
-            //nameService.AddName("Typhoon", NameService.NameType.Unique, NameService.MsSuffix.Default);
+
+            NameService ns = new NameService();
+            ns.AddName("TYPHOON", NameService.NameType.Unique, NameService.MsSuffix.Default);
 
             Beeper.PlaySound(Beeper.SoundID.Click);
         }
@@ -308,12 +354,12 @@ namespace Typhoon.Server
         {
             path = Path.GetDirectoryName(path) + "\\" + Path.GetFileNameWithoutExtension(path);
 
-            if (path.ToLower() == @"\content\decoders")
-                DecodersRead(root + path, response);
-            else if (path.ToLower() == @"\content\layout")
-                LayoutRead(root + path, response);
-            else if (path.ToLower() == @"\content\layout\create")
-                LayoutCreate(root + path, response);
+            //if (path.ToLower() == @"\content\decoders")
+            //    DecodersRead(root + path, response);
+            //else if (path.ToLower() == @"\content\layout")
+            //    LayoutRead(root + path, response);
+            //else if (path.ToLower() == @"\content\layout\create")
+            //    LayoutCreate(root + path, response);
 
 
         }

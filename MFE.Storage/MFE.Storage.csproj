@@ -8,8 +8,9 @@
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{085C8341-8EA5-43F5-8B9E-07FED9B79563}</ProjectGuid>
-    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
     <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,9 +37,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GHIElectronics.NETMF.IO, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHIElectronics.NETMF.System, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHIElectronics.NETMF.USBHost, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.IO, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.System, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.USBHost, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SPOT.IO" />
     <Reference Include="Microsoft.SPOT.Native">
     </Reference>

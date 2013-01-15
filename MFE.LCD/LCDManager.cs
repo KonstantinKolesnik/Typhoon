@@ -1,8 +1,9 @@
 using System.Threading;
-using GHIElectronics.NETMF.Hardware;
+//using GHIElectronics.NETMF.Hardware;
 using MFE.Device;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
+using GHI.Premium.Hardware;
 
 namespace MFE.LCD
 {
@@ -49,45 +50,38 @@ namespace MFE.LCD
         #region Public Methods
         public static bool SetBootLogo(Bitmap logo, int x, int y)
         {
-            if (DeviceManager.IsEmulator)
+            //if (DeviceManager.IsEmulator)
                 return false;
 
-            if (logo != null)
-            {
-                // New settings were saved, must reboot
-                // The start-up logo will take effect after the first reset
-                bool res = Configuration.StartUpLogo.Set(logo.GetBitmap(), x, y);
-                Thread.Sleep(1000); // to set logo bitmap
-                Configuration.StartUpLogo.Enabled = true;
+            //if (logo != null)
+            //{
+            //    // New settings were saved, must reboot
+            //    // The start-up logo will take effect after the first reset
+            //    bool res = Configuration.StartUpLogo.Set(logo.GetBitmap(), x, y);
+            //    Thread.Sleep(1000); // to set logo bitmap
+            //    Configuration.StartUpLogo.Enabled = true;
 
-                return res;
-                //return Configuration.StartUpLogo.Set(logo.GetBitmap(), (int)(ScreenWidth - logo.Width) / 2, (int)(ScreenHeight - logo.Height) / 2);
-            }
-            else
-            {
-                if (Configuration.StartUpLogo.Enabled)
-                {
-                    Configuration.StartUpLogo.Enabled = false;
-                    return true;
-                }
-                else
-                    return false;
-            }
+            //    return res;
+            //    //return Configuration.StartUpLogo.Set(logo.GetBitmap(), (int)(ScreenWidth - logo.Width) / 2, (int)(ScreenHeight - logo.Height) / 2);
+            //}
+            //else
+            //{
+            //    if (Configuration.StartUpLogo.Enabled)
+            //    {
+            //        Configuration.StartUpLogo.Enabled = false;
+            //        return true;
+            //    }
+            //    else
+            //        return false;
+            //}
         }
         public static bool SetLCDBootupMessages(bool show)
         {
-            if (DeviceManager.IsEmulator)
-                return false;
-
-            return Configuration.LCD.EnableLCDBootupMessages(show);
+            return DeviceManager.IsEmulator ? false : Configuration.LCD.EnableLCDBootupMessages(show);
         }
-        
         public static bool SetLCDRotation(Configuration.LCD.Rotation rotation)
         {
-            if (DeviceManager.IsEmulator)
-                return false;
-
-            return Configuration.LCD.SetRotation(rotation);
+            return DeviceManager.IsEmulator ? false : Configuration.LCD.SetRotation(rotation);
         }
 
         public static bool SetLCDConfiguration_800_480() // 7" LCD with resolution of 800x480
@@ -95,15 +89,15 @@ namespace MFE.LCD
             if (DeviceManager.IsEmulator)
                 return false;
 
-            if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 4)) // 4 MB
-                return true;
+            //if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 4)) // 4 MB
+            //    return true;
 
             Configuration.LCD.Configurations lcdConfig = new Configuration.LCD.Configurations();
 
             lcdConfig.Width = 800;
             lcdConfig.Height = 480;
 
-            lcdConfig.PriorityEnable = true;
+            //lcdConfig.PriorityEnable = true;
             lcdConfig.OutputEnableIsFixed = false;
             lcdConfig.OutputEnablePolarity = true;
             lcdConfig.PixelPolarity = false;
@@ -120,7 +114,8 @@ namespace MFE.LCD
             lcdConfig.VerticalBackPorch = 2;
             lcdConfig.VerticalFrontPorch = 2;
 
-            lcdConfig.PixelClockDivider = 4;
+            //lcdConfig.PixelClockDivider = 4;
+            lcdConfig.PixelClockRateKHz = 18000;
 
             return Configuration.LCD.Set(lcdConfig);
         }
@@ -129,15 +124,15 @@ namespace MFE.LCD
             if (DeviceManager.IsEmulator)
                 return false;
 
-            if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 2)) // 2 MB
-                return true;
+            //if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 2)) // 2 MB
+            //    return true;
 
             Configuration.LCD.Configurations lcdConfig = new Configuration.LCD.Configurations();
 
             lcdConfig.Width = 480;
             lcdConfig.Height = 480;
 
-            lcdConfig.PriorityEnable = true; // VGA requires high refresh rate, enable bus priority.
+            //lcdConfig.PriorityEnable = true; // VGA requires high refresh rate, enable bus priority.
             lcdConfig.OutputEnableIsFixed = true;
             lcdConfig.OutputEnablePolarity = true;
             lcdConfig.PixelPolarity = true;
@@ -153,7 +148,8 @@ namespace MFE.LCD
             lcdConfig.VerticalBackPorch = 32;
             lcdConfig.VerticalFrontPorch = 11;
 
-            lcdConfig.PixelClockDivider = 4;
+            //lcdConfig.PixelClockDivider = 4;
+            lcdConfig.PixelClockRateKHz = 18000;
 
             return Configuration.LCD.Set(lcdConfig);
         }
@@ -162,15 +158,15 @@ namespace MFE.LCD
             if (DeviceManager.IsEmulator)
                 return false;
 
-            if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 2)) // 2 MB
-                return true;
+            //if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 2)) // 2 MB
+            //    return true;
 
             Configuration.LCD.Configurations lcdConfig = new Configuration.LCD.Configurations();
 
             lcdConfig.Width = 480;
             lcdConfig.Height = 272;
 
-            lcdConfig.PriorityEnable = false;
+            //lcdConfig.PriorityEnable = false;
             lcdConfig.OutputEnableIsFixed = true;
             lcdConfig.OutputEnablePolarity = true;
             lcdConfig.PixelPolarity = false;
@@ -186,8 +182,10 @@ namespace MFE.LCD
             lcdConfig.VerticalBackPorch = 2;
             lcdConfig.VerticalFrontPorch = 2;
 
-            lcdConfig.PixelClockDivider = 8; // for EMX
+            //lcdConfig.PixelClockDivider = 8; // for EMX
+            lcdConfig.PixelClockRateKHz = 9000;
             //lcdConfig.PixelClockDivider = 4; // for ChipworkX
+            //lcdConfig.PixelClockRateKHz = 18000;
 
             return Configuration.LCD.Set(lcdConfig);
         }
@@ -196,15 +194,15 @@ namespace MFE.LCD
             if (DeviceManager.IsEmulator)
                 return false;
 
-            if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 2)) // 2 MB
-                return true;
+            //if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 2)) // 2 MB
+            //    return true;
 
             Configuration.LCD.Configurations lcdConfig = new Configuration.LCD.Configurations();
 
             lcdConfig.Width = 320;
             lcdConfig.Height = 240;
 
-            lcdConfig.PriorityEnable = false;
+            //lcdConfig.PriorityEnable = false;
             lcdConfig.OutputEnableIsFixed = true;
             lcdConfig.OutputEnablePolarity = true;
             lcdConfig.PixelPolarity = false;//true
@@ -219,7 +217,8 @@ namespace MFE.LCD
             lcdConfig.VerticalBackPorch = 8;
             lcdConfig.VerticalFrontPorch = 16;
 
-            lcdConfig.PixelClockDivider = 8;
+            //lcdConfig.PixelClockDivider = 8;
+            lcdConfig.PixelClockRateKHz = 9000;
 
             return Configuration.LCD.Set(lcdConfig);
         }
@@ -228,8 +227,8 @@ namespace MFE.LCD
             if (DeviceManager.IsEmulator)
                 return false;
 
-            if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 2)) // 2 MB
-                return true;
+            //if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 2)) // 2 MB
+            //    return true;
 
             return Configuration.LCD.Set(Configuration.LCD.HeadlessConfig);
         }

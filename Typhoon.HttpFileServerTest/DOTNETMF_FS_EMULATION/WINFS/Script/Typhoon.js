@@ -14,17 +14,20 @@ function onWindowResize() {
 
     //$("#content").height($(document).height() - $("header").height() - $("footer").height());
     
-    var gridElement = $("#gridLayout"),
-        newHeight = gridElement.innerHeight(),
-        otherElements = gridElement.children().not(".k-grid-content"),
-        otherElementsHeight = 0;
-    otherElements.each(function () {
-        otherElementsHeight += $(this).outerHeight();
-    });
-    gridElement.children(".k-grid-content").height(newHeight - otherElementsHeight);
+//    var gridElement = $("#gridLayout"),
+//        newHeight = gridElement.innerHeight(),
+//        otherElements = gridElement.children().not(".k-grid-content"),
+//        otherElementsHeight = 0;
+//    otherElements.each(function () {
+//        otherElementsHeight += $(this).outerHeight();
+//    });
+//    gridElement.children(".k-grid-content").height(newHeight - otherElementsHeight);
 }
 function onDocumentReady() {
     model = kendo.observable(new Model());
+    model.Init();
+    kendo.bind($("body"), model);
+    return;
 
     createMainMenu();
     createLayout();
@@ -32,10 +35,8 @@ function onDocumentReady() {
     //createDecoders();
     createOptions();
 
-    model.Init();
-    kendo.bind($("body"), model);
 
-    onWindowResize();
+//    onWindowResize();
 
     // for test!!!
     var loco1 = new Locomotive(1, "MKV", "aaaaaaa", new LocomotiveAddress(7, false), Protocol.DCC28);
@@ -101,7 +102,7 @@ function onDocumentReady() {
 }
 //----------------------------------------------------------------------------------------------------------------------
 function createMainMenu() {
-    var items = [
+    var mainMenuItems = [
         { Name: "Layout", Url: "Database.png", Action: "model.set('UIState', UIStateType.Layout);" },
         { Name: "Operation", Url: "Operation.png", Action: "model.set('UIState', UIStateType.Operation);" },
         { Name: "Decoders", Url: "Decoder.png", Action: "model.set('UIState', UIStateType.Decoders);" },
@@ -110,7 +111,7 @@ function createMainMenu() {
         { Name: "Firmware", Url: "Update.png", Action: "model.set('UIState', UIStateType.Firmware); model.MessageManager.GetVersion();" }
         ];
 
-    $("#lvMainMenu").kendoListView({ template: kendo.template($("#tmpltMainMenuItem").html()), dataSource: { data: items } });
+    $("#lvMainMenu").kendoListView({ template: kendo.template($("#tmpltMainMenuItem").html()), dataSource: { data: mainMenuItems } });
 }
 //    function getLayouts() {
 //        var crudServiceBaseUrl = "http://demos.kendoui.com/service",
@@ -168,7 +169,8 @@ function createMainMenu() {
 //    }
 
 function createLayout() {
-    var baseUrl = document.location.origin;
+    var baseUrl = "http://" + document.location.host;//.origin;
+    //alert(baseUrl);
     var gridLayout = $("#gridLayout").kendoGrid({
         dataSource: {
             transport: {
@@ -230,7 +232,7 @@ function createLayout() {
 
         //aggregate: [{ field: "Type", aggregate: "count"}],
         columns: [
-              { title: "&nbsp;", filterable: false, sortable: false, width: 50, template: '<img src="./Resources/${Type}.ico" height="24px" alt=""/>' },
+              { title: "&nbsp;", filterable: false, sortable: false, width: 50, template: '<img src="Resources/${Type}.ico" height="24px" alt=""/>' },
               { field: "Type", title: "Type", filterable: false, sortable: false },
               { field: "Name", title: "Name" },
               { field: "Description", title: "Description", filterable: false, sortable: false },

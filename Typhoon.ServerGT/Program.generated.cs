@@ -25,6 +25,7 @@ namespace Typhoon.ServerGT
         Gadgeteer.Modules.GHIElectronics.PulseInOut pulseInOut;
         Gadgeteer.Modules.LoveElectronics.PHTemp pHTemp;
         Gadgeteer.Modules.Seeed.MoistureSensor moistureSensor;
+        Gadgeteer.Modules.GHIElectronics.MotorControllerL298 motorControllerL298;
 
         public static void Main()
         {
@@ -40,13 +41,9 @@ namespace Typhoon.ServerGT
         private void InitializeModules()
         {   
             // Initialize GTM.Modules and event handlers here.		
-            moistureSensor = new GTM.Seeed.MoistureSensor(3);
-		
             relay = new GTM.LoveElectronics.Relay(5);
 		
             power = new GTM.LoveElectronics.USBDCPower(6);
-		
-            ledArray = new GTM.LoveElectronics.LedArray(7);
 
         }
     }

@@ -33,7 +33,7 @@
 
 using System;
 using System.Collections;
-using MFE.Utilities;
+using System.Text;
 
 namespace MFE.RegularExpressions
 {

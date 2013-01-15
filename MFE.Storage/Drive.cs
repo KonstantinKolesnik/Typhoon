@@ -1,6 +1,6 @@
 using System;
-using GHIElectronics.NETMF.IO;
-using GHIElectronics.NETMF.USBHost;
+using GHI.Premium.IO;
+using GHI.Premium.System;
 using Microsoft.SPOT.IO;
 
 namespace MFE.Storage

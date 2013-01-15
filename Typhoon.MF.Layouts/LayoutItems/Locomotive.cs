@@ -2,7 +2,7 @@
 using System.Xml;
 using MFE.Utilities;
 using Microsoft.SPOT;
-using Typhoon.Layouts;
+using System;
 //using Typhoon.Decoders;
 
 namespace Typhoon.MF.Layouts.LayoutItems
@@ -11,9 +11,10 @@ namespace Typhoon.MF.Layouts.LayoutItems
     {
         #region Fields
         private ProtocolType protocol;
+        private Guid consistID = Guid.Empty;
+        private bool consistForward = true;
         //private Decoder decoder = null;
         //private Decoder decoderSound = null;
-        private bool isUsedInConsist = false;
         #endregion
 
         #region Properties
@@ -26,24 +27,36 @@ namespace Typhoon.MF.Layouts.LayoutItems
                 {
                     ProtocolType old = protocol;
                     protocol = value;
-                    OnPropertyChanged(new PropertyChangedEventArgs("Name", old, protocol));
+                    OnPropertyChanged(new PropertyChangedEventArgs("Protocol", old, protocol));
                 }
-
             }
         }
-        public bool IsUsedInConsist
+        public Guid ConsistID
         {
-            get { return isUsedInConsist; }
+            get { return consistID; }
             set
             {
-                if (isUsedInConsist != value)
+                if (consistID.ToString() != value.ToString())
                 {
-                    isUsedInConsist = value;
-                    OnPropertyChanged(new PropertyChangedEventArgs("IsUsedInConsist", !isUsedInConsist, isUsedInConsist));
+                    Guid old = consistID;
+                    consistID = value;
+                    OnPropertyChanged(new PropertyChangedEventArgs("ConsistID", old, consistID));
                 }
             }
         }
-
+        public bool ConsistForward
+        {
+            get { return consistForward; }
+            set
+            {
+                if (consistForward != value)
+                {
+                    bool old = consistForward;
+                    consistForward = value;
+                    OnPropertyChanged(new PropertyChangedEventArgs("ConsistForward", old, consistForward));
+                }
+            }
+        }
         //public Decoder DecoderMobile
         //{
         //    get { return decoder; }
@@ -84,9 +97,13 @@ namespace Typhoon.MF.Layouts.LayoutItems
         //public event EventHandler BeforeDecoderMobileClear;
         #endregion
 
-        #region Constructor
+        #region Constructors
         public Locomotive()
-            :base(LayoutItemType.Locomotive)
+            : this(Guid.NewGuid())
+        {
+        }
+        public Locomotive(Guid id)
+            : base(id)
         {
             protocol = ProtocolType.DCC28;
         }
@@ -108,7 +125,11 @@ namespace Typhoon.MF.Layouts.LayoutItems
         {
             base.WriteToXml(xmlWriter);
 
-            xmlWriter.WriteAttributeString("IsUsedInConsist", IsUsedInConsist ? bool.TrueString : bool.FalseString);
+            if (consistID.ToString() != Guid.Empty.ToString())
+            {
+                xmlWriter.WriteAttributeString("ConsistID", Utils.ToBase64String(consistID));
+                xmlWriter.WriteAttributeString("ConsistForward", consistForward ? bool.TrueString : bool.FalseString);
+            }
             //if (decoder != null)
             //    xmlWriter.WriteAttributeString("Decoder", decoder.SaveToXml());
         }
@@ -116,19 +137,22 @@ namespace Typhoon.MF.Layouts.LayoutItems
         {
             base.ReadFromXml(xmlReader);
 
-            if (!Utils.IsStringNullOrEmpty(xmlReader.GetAttribute("IsUsedInConsist")))
-                IsUsedInConsist = xmlReader.GetAttribute("IsUsedInConsist") == bool.TrueString;
-
-        //    if (el.HasAttribute("Decoder"))
-        //    {
-        //        decoder = null;
-        //        Decoder d = new Decoder();
-        //        if (d.LoadFromXml(el.GetAttribute("Decoder")))
-        //        {
-        //            decoder = d;
-        //            decoder.PropertyChanged += Decoder_PropertyChanged;
-        //        }
-        //    }
+            if (!Utils.IsStringNullOrEmpty(xmlReader.GetAttribute("ConsistID")))
+            {
+                consistID = Utils.FromBase64StringToGuid(xmlReader.GetAttribute("ConsistID"));
+                if (!Utils.IsStringNullOrEmpty(xmlReader.GetAttribute("ConsistForward")))
+                    consistForward = xmlReader.GetAttribute("ConsistForward") == bool.TrueString;
+            }
+            //if (el.HasAttribute("Decoder"))
+            //{
+            //    decoder = null;
+            //    Decoder d = new Decoder();
+            //    if (d.LoadFromXml(el.GetAttribute("Decoder")))
+            //    {
+            //        decoder = d;
+            //        decoder.PropertyChanged += Decoder_PropertyChanged;
+            //    }
+            //}
         }
         #endregion
     }

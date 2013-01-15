@@ -25,7 +25,7 @@
 
 using System;
 using System.IO;
-using MFE.Utilities;
+using System.Text;
 
 namespace MFE.RegularExpressions
 {

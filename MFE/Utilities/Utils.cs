@@ -3,8 +3,8 @@ using System;
 //using System.Net.Sockets;
 using System.Text;
 using Microsoft.SPOT;
-using Microsoft.SPOT.Presentation;
-using Microsoft.SPOT.Input;
+//using Microsoft.SPOT.Presentation;
+//using Microsoft.SPOT.Input;
 
 namespace MFE.Utilities
 {
@@ -12,16 +12,16 @@ namespace MFE.Utilities
     {
         static readonly char[] hchars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
 
-        public static int TextWidth(string text, Font font)
-        {
-            int width = 0;
+        //public static int TextWidth(string text, Font font)
+        //{
+        //    int width = 0;
 
-            char[] chars = text.ToCharArray();
-            for (int i = 0; i < chars.Length; i++)
-                width += font.CharWidth(chars[i]);
+        //    char[] chars = text.ToCharArray();
+        //    for (int i = 0; i < chars.Length; i++)
+        //        width += font.CharWidth(chars[i]);
 
-            return width;
-        }
+        //    return width;
+        //}
         public static bool IsStringNullOrEmpty(string str)
         {
             return str == null || str == "" || str == String.Empty || str.Length == 0;
@@ -62,7 +62,10 @@ namespace MFE.Utilities
         //}
 
 
-
+        public static string Quotate(string s)
+        {
+            return "'" + s + "'";
+        }
 
 
         //public static DateTime GetNetworkTime()//double timeZone)
@@ -126,17 +129,17 @@ namespace MFE.Utilities
             return new Guid(ConvertBase64My.FromBase64String(s));
         }
 
-        public static Bitmap ImageFromBytes(byte[] data)
-        {
-            if (data[0] == 0xFF && data[1] == 0xD8)// JPEG
-                return new Bitmap(data, Bitmap.BitmapImageType.Jpeg);
-            if (data[0] == 0x42 && data[1] == 0x4D)// BMP
-                return new Bitmap(data, Bitmap.BitmapImageType.Bmp);
-            if (data[0] == 0x47 && data[1] == 0x49 && data[2] == 0x46 && data[3] == 0x38)// GIF
-                return new Bitmap(data, Bitmap.BitmapImageType.Gif);
+        //public static Bitmap ImageFromBytes(byte[] data)
+        //{
+        //    if (data[0] == 0xFF && data[1] == 0xD8)// JPEG
+        //        return new Bitmap(data, Bitmap.BitmapImageType.Jpeg);
+        //    if (data[0] == 0x42 && data[1] == 0x4D)// BMP
+        //        return new Bitmap(data, Bitmap.BitmapImageType.Bmp);
+        //    if (data[0] == 0x47 && data[1] == 0x49 && data[2] == 0x46 && data[3] == 0x38)// GIF
+        //        return new Bitmap(data, Bitmap.BitmapImageType.Gif);
 
-            return null;
-        }
+        //    return null;
+        //}
 
         public static string byteToHex(byte input)
         {
@@ -155,28 +158,48 @@ namespace MFE.Utilities
         public static string FreeRAM(bool formatOutput)
         {
             uint iFree = Debug.GC(false);
-            
-            if (!formatOutput) // Unformatted
-                return iFree.ToString();
-            else // Formatted
-            {
-                
-                byte index = 0;
-                while (iFree > 1024)
-                {
-                    iFree = iFree / 1024;
-                    index++;
-                    if (index == 4)
-                        break;
-                }
 
-                string[] sSize = new string[] { " bytes", " KB", " MB", "GB", " TB" };
-                string sFree = iFree.ToString();
-                if (sFree.IndexOf('.') > 0)
-                    sFree = sFree.Substring(0, sFree.IndexOf('.') + 3);
-                return sFree + sSize[index];
-            }
+            if (!formatOutput)
+                return iFree.ToString();
+            else
+                return FormatSize(iFree);
         }
+
+        public static string FormatSize(uint size)
+        {
+            byte index = 0;
+            while (size > 1024)
+            {
+                size = size / 1024;
+                index++;
+                if (index == 4)
+                    break;
+            }
+
+            string[] sSize = new string[] { " bytes", " KB", " MB", "GB", " TB" };
+            string sFree = size.ToString();
+            if (sFree.IndexOf('.') > 0)
+                sFree = sFree.Substring(0, sFree.IndexOf('.') + 3);
+            return sFree + sSize[index];
+        }
+        public static string FormatSize(long size)
+        {
+            byte index = 0;
+            while (size > 1024)
+            {
+                size = size / 1024;
+                index++;
+                if (index == 4)
+                    break;
+            }
+
+            string[] sSize = new string[] { " bytes", " KB", " MB", "GB", " TB" };
+            string sFree = size.ToString();
+            if (sFree.IndexOf('.') > 0)
+                sFree = sFree.Substring(0, sFree.IndexOf('.') + 3);
+            return sFree + sSize[index];
+        }
+
     }
 
     public static class ConvertBase64My

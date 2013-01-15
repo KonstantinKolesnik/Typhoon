@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Threading;
-using GHIElectronics.NETMF.FEZ;
-using GHIElectronics.NETMF.Hardware;
+using GHI.Premium.Hardware;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using Typhoon.DCC;
@@ -23,15 +22,17 @@ namespace Typhoon.Server.Hardware
         }
 
         #region Fields
-        private OutputPort portEnable;
 
         private const int MaxTimingsCount = 200;
-        private OutputCompare portGenerator;
+        private SignalGenerator portGenerator;
         private Queue commands = new Queue();
         private uint[] idleTimings;
         
+        private bool ledToVcc = false;
+        private OutputPort portEnable;
+        private OutputPort portEnableLED;
         private OutputPort portOverloadLED;
-        private AnalogIn portSense;
+        private AnalogInput portSense;
         private int checkOverloadPeriod = 200; // in msec
         private int blockPeriod = 5000; // in msec
         private short senseResistor; // in mOhms
@@ -49,6 +50,7 @@ namespace Typhoon.Server.Hardware
                 if (portEnable.Read() != value)
                 {
                     portEnable.Write(value);
+                    portEnableLED.Write(ledToVcc ? !value : value);
                     OnPropertyChanged(new PropertyChangedEventArgs("IsActive", !value, value));
                     IsOverloaded = false;
                 }
@@ -67,7 +69,7 @@ namespace Typhoon.Server.Hardware
                     if (overloaded)
                     {
                         // IsActive is already set to false
-                        portOverloadLED.Write(true);
+                        portOverloadLED.Write(!ledToVcc);
                         new Timer(TimerBlock_Expired, null, blockPeriod, 0);
                     }
 
@@ -106,25 +108,29 @@ namespace Typhoon.Server.Hardware
 
         #region Constructor
         public Booster(
-            FEZ_Pin.Digital pinEnable,
-            FEZ_Pin.AnalogIn pinSense,
-            FEZ_Pin.Digital pinOverloadLED,
+            bool ledToVcc,
+            Cpu.Pin pinEnable,
+            Cpu.Pin pinEnableLED,
+            Cpu.AnalogChannel pinSense,
+            Cpu.Pin pinOverloadLED,
             short senseResistor,
             int currentThreshould,
-            FEZ_Pin.Digital pinGenerator,
+            Cpu.Pin pinGenerator,
             uint[] idleTimings
             )
         {
-            portEnable = new OutputPort((Cpu.Pin)pinEnable, false);
-            
-            portOverloadLED = new OutputPort((Cpu.Pin)pinOverloadLED, false);
-            portSense = new AnalogIn((AnalogIn.Pin)pinSense);
-            portSense.SetLinearScale(0, 3300);
+            portEnable = new OutputPort(pinEnable, false);
+            portEnableLED = new OutputPort(pinEnableLED, ledToVcc);
+
+            this.ledToVcc = ledToVcc;
+            portOverloadLED = new OutputPort(pinOverloadLED, ledToVcc);
+            portSense = new AnalogInput(pinSense);
+            portSense.Scale = 3300;
             this.senseResistor = senseResistor;
             this.currentThreshould = currentThreshould;
             new Timer(TimerCurrent_Tick, null, 0, checkOverloadPeriod);
 
-            portGenerator = new OutputCompare((Cpu.Pin)pinGenerator, false, MaxTimingsCount);
+            portGenerator = new SignalGenerator((Cpu.Pin)pinGenerator, false, MaxTimingsCount);
             this.idleTimings = idleTimings;
 
             //new Thread(GeneratorWork) { Priority = ThreadPriority.AboveNormal }.Start();
@@ -152,13 +158,13 @@ namespace Typhoon.Server.Hardware
         #region Event handlers
         private void TimerBlock_Expired(object o)
         {
-            portOverloadLED.Write(false);
+            portOverloadLED.Write(ledToVcc);
             IsActive = true;
         }
         private void TimerCurrent_Tick(object o)
         {
-            int voltage = portSense.Read(); // mV
-            Current = 1000 * voltage / senseResistor; // mA
+            double voltage = portSense.Read(); // mV
+            Current = (int)(1000 * voltage / senseResistor); // mA
             if (Current > CurrentThreshould) // short circuit
             {
                 IsActive = false;
@@ -173,14 +179,14 @@ namespace Typhoon.Server.Hardware
         #endregion
 
         #region Generator
-        private void GeneratorWork()
-        {
-            while (true)
-            {
-                Thread.Sleep(0); // necessary!!!
-                ReadCommand();
-            }
-        }
+        //private void GeneratorWork()
+        //{
+        //    while (true)
+        //    {
+        //        Thread.Sleep(0); // necessary!!!
+        //        ReadCommand();
+        //    }
+        //}
         private void ReadCommand()
         {
             lock (commands.SyncRoot)
@@ -197,10 +203,7 @@ namespace Typhoon.Server.Hardware
         private void Output(uint[] buffer, byte repeats)
         {
             for (byte i = 0; i < repeats; i++)
-            {
-                //Debug.Print(repeats.ToString());
                 portGenerator.SetBlocking(true, buffer, 0, buffer.Length, 0, false);
-            }
         }
         #endregion
     }

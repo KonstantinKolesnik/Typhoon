@@ -7,55 +7,50 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--<meta name="viewport" content="width=device-width; height=device-height; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes"/>-->
     <!--<meta name="viewport" content="width=device-width; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes"/>-->
+    <meta name="viewport" content="height=device-height; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes"/>
 
     
-    <link href="/KendoUI/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="KendoUI/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
     <!--<link href="/Typhoon/KendoUI/styles/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />-->
-    <link href="/KendoUI/styles/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" /> 
+    <!--<link href="KendoUI/styles/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />--> 
     
-    <!--<link href="/Typhoon/KendoUI/styles/kendo.default.min.css" rel="stylesheet" type="text/css" />-->
-    <link href="/KendoUI/styles/kendo.black.min.css" rel="stylesheet" type="text/css" />
-    <!--<link href="/Typhoon/KendoUI/styles/kendo.blueopal.min.css" rel="stylesheet" type="text/css" />-->
-    <!--<link href="/Typhoon/KendoUI/styles/kendo.metro.min.css" rel="stylesheet" type="text/css" />-->
-    <!--<link href="/Typhoon/KendoUI/styles/kendo.silver.min.css" rel="stylesheet" type="text/css" />-->
-    
-    
-    <script src="/KendoUI/js/jquery.min.js" type="text/javascript"></script>
-    
-    <script src="/KendoUI/js/kendo.all.min.js" type="text/javascript"></script>
-    <!--<script src="/KendoUI/js/kendo.web.min.js" type="text/javascript"></script>-->
-    <!--<script src="/KendoUI/js/kendo.dataviz.min.js" type="text/javascript"></script>-->
-    <!--<script src="/KendoUI/js/kendo.mobile.min.js" type="text/javascript"></script>-->
-    
+    <!--<link href="KendoUI/styles/kendo.default.min.css" rel="stylesheet" type="text/css" />-->
+    <link href="KendoUI/styles/kendo.black.min.css" rel="stylesheet" type="text/css" />
+    <!--<link href="KendoUI/styles/kendo.blueopal.min.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="KendoUI/styles/kendo.bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="KendoUI/styles/kendo.highcontrast.min.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="KendoUI/styles/kendo.metro.min.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="KendoUI/styles/kendo.metroblack.min.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="KendoUI/styles/kendo.metro.min.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="KendoUI/styles/kendo.silver.min.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="KendoUI/styles/kendo.uniform.min.css" rel="stylesheet" type="text/css" />-->
     
     <!--Typhoon-->
-    <link href="/Style/Typhoon.css" rel="stylesheet" type="text/css"/>
-    <script src="/Script/NetworkMessageID.js" type="text/javascript"></script>
-    <script src="/Script/NetworkMessage.js" type="text/javascript"></script>
-    <script src="/Script/MessageManager.js" type="text/javascript"></script>
-    <script src="/Script/LocomotiveOperator.js" type="text/javascript"></script>
-    <script src="/Script/Model.js" type="text/javascript"></script>
-    <script src="/Script/Typhoon.js" type="text/javascript"></script>
-
-    <!--<script src="/KendoUI/examples/content/shared/js/console.js"></script>-->
+    <link href="Style/Typhoon.css" rel="stylesheet" type="text/css"/>
+    
+    <script src="KendoUI/js/jquery.min.js" type="text/javascript"></script>
+    <script src="KendoUI/js/kendo.all.min.js" type="text/javascript"></script>
+    <script src="Script/NetworkMessageID.js" type="text/javascript"></script>
+    <script src="Script/NetworkMessage.js" type="text/javascript"></script>
+    <script src="Script/MessageManager.js" type="text/javascript"></script>
+    <script src="Script/LocomotiveOperator.js" type="text/javascript"></script>
+    <script src="Script/Model.js" type="text/javascript"></script>
+    <script src="Script/Typhoon.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-        $(document).bind("APP_READY", function () {
-            //$("#preLoad").fadeOut();
-            $("#preLoad").css("opacity", "0").css("visibility", "hidden");
-        });
+//        $(document).bind("APP_READY", function () {
+//            //$("#preLoad").fadeOut();
+//            $("#preLoad").css("opacity", "0").css("visibility", "hidden");
+//        });
 
-        $(window).bind("resize", onWindowResize);
-
-        $(document).ready(function () {
-            onDocumentReady();
-            $(document).trigger("APP_READY");
-        });
+//        $(window).bind("resize", onWindowResize);
+//        kendo.ui.progress($("#preLoad"), true);
     </script>
 </head>
 
-<body>
-    <header class="k-header k-inset">
+<body data-role="pane" class="km-pane km-ios km-vertical">
+
+    <div class="k-header" style="padding: 5px">
         <img src="./Resources/StationConnected.png" alt="" width="80px" style="margin-left:10px;"/>
         <label style="color: white; font-size: 38px; vertical-align: top; display: inline-block; margin-top: 15px; text-transform: uppercase;">Typhoon</label>
         
@@ -88,21 +83,16 @@
                 <td><span>mA</span></td>
             </tr>
         </table>
-    </header>
+    </div>
     
-    <div id="dlg"></div>
-
-    <div id="content" class="k-block k-shadow">
+    <div id="content" class="k-block" style="padding: 5px 0;"><!--display:none;-->
             
-        <div class="k-block k-shadow" data-bind="visible: IsMainVisible"><!-- style="position:relative;"-->
-            <!--<img src="./Resources/Train.jpg" alt="" width="100%" height="100%" style="position:absolute; top:0; left:0; opacity:0.2; filter:alpha(opacity=20);"/>-->
-             
-            <div id="lvMainMenu" style="height:500px;"></div>
-
+        <div class="k-block k-shadow" data-bind="visible: IsMainVisible">
+            <div id="lvMainMenu" style="height:436px;"></div>
             <script type="text/x-kendo-template" id="tmpltMainMenuItem">
                 <div class="MainMenuItem" onclick="${Action}">
-                    <img src="./Resources/${Url}" alt="${Name}"/>
-                    <h3>${Name}</h3>
+                    <img src="Resources/${Url}" alt="${Name}"/>
+                    <div><h3>${Name}</h3></div>
                 </div>
             </script>
         </div>
@@ -559,7 +549,7 @@
             </div>
         </div>
 
-        <div class="k-block k-shadow" data-bind="visible: IsInformationVisible">
+        <div class="k-block k-shadow info" data-bind="visible: IsInformationVisible">
             <div class="k-header k-inset" style="height: auto;">
                 <img class="TitleImage" src="./Resources/Info.png" alt=""/>
                 <span class="TitleSpan">Information</span>
@@ -568,36 +558,77 @@
             </div>
             
             <div style="padding: 30px;">
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis pretium dolor, sed condimentum urna porta et. Maecenas non tellus id ante ornare ullamcorper. Duis ipsum nulla, sodales ac tempus non, tempor eu libero. Proin sit amet eros nec mauris consectetur porttitor. Mauris tristique pulvinar libero, ac adipiscing lorem condimentum non. Mauris erat velit, euismod sodales sagittis eu, placerat consectetur ligula. Suspendisse vehicula vulputate turpis non laoreet. Praesent euismod lectus sit amet nunc euismod bibendum fringilla ipsum pulvinar. Ut eget nisi in turpis eleifend iaculis accumsan ut ligula. Cras a tortor turpis. Cras rutrum, neque in fermentum consequat, nunc erat euismod nisi, posuere laoreet turpis libero vitae nisl.
-                </p>
-                <p>
-                Nulla facilisi. Nam quis lectus id ante tincidunt adipiscing. Maecenas fringilla consequat ligula ut malesuada. Etiam lacus mi, posuere sed feugiat vitae, tincidunt sed diam. Nunc volutpat tellus vel massa consectetur nec scelerisque sapien tristique. Nulla ullamcorper sem elit. Maecenas ac libero ac purus fermentum vulputate. Etiam pharetra tellus venenatis tellus fringilla id fermentum metus volutpat. Aliquam lacinia condimentum dolor, vitae imperdiet metus ultricies ac. Donec a tellus sed turpis dapibus varius. In at ante enim. Cras tristique tellus in enim imperdiet eu blandit diam gravida. Nam vehicula mauris et ligula bibendum a aliquam ante fringilla. Aliquam erat volutpat.
-                </p>
-                <p>
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam accumsan nunc nec neque tempor a faucibus quam lobortis. In vitae lorem augue. Vestibulum ut sapien purus. Nulla cursus auctor diam, vel venenatis justo rutrum in. Donec nisi enim, rhoncus quis convallis vitae, dapibus et nibh. Mauris tincidunt mattis velit, sit amet feugiat augue molestie vitae. Sed luctus volutpat commodo. Etiam adipiscing lectus nec lacus pulvinar eget suscipit ipsum fringilla.
-                </p>
-                <p>
-                Aenean consequat dolor non sapien porta hendrerit. Praesent in augue metus. Curabitur eget erat ut erat pulvinar convallis sit amet at dolor. Sed sed turpis justo. Donec commodo, dolor quis commodo porttitor, diam dui luctus leo, in ornare velit velit sit amet odio. Curabitur neque nulla, fermentum sit amet egestas in, egestas vitae turpis. Proin velit eros, vestibulum non gravida sit amet, lobortis sit amet urna.
-                </p>
-                <p>
-                Cras tempor lobortis dignissim. Quisque eu risus nec risus bibendum imperdiet et vel odio. Pellentesque vel mauris at felis euismod iaculis. Pellentesque augue massa, bibendum sit amet scelerisque et, ornare at nibh. Vestibulum vitae cursus ipsum. Curabitur porttitor pretium suscipit. Integer laoreet rhoncus mauris, vitae ornare arcu euismod quis. Curabitur luctus elementum ante ut imperdiet. Donec mollis adipiscing dui non lobortis. Duis malesuada semper condimentum. Quisque congue risus et tortor egestas viverra. Aenean massa ligula, condimentum nec interdum et, volutpat eu lacus. Etiam bibendum, sem et blandit cursus, est eros scelerisque massa, a vestibulum tortor lorem vitae risus. Aliquam imperdiet mi at odio ultricies eu elementum nunc consectetur.
-                </p>
-                <p>
-                Quisque et purus quis orci tincidunt ornare. Duis dapibus luctus tortor ac scelerisque. Nunc sollicitudin lacinia justo ac venenatis. Curabitur lobortis tortor sit amet nibh porta sed condimentum ipsum aliquam. Sed quis risus sit amet magna condimentum ultricies eget non risus. Duis sed est consequat sem rutrum aliquam non sit amet urna. Suspendisse vitae augue eros. Vivamus cursus tortor sit amet sapien tristique accumsan. Etiam tellus libero, euismod eget ultricies eget, mollis sit amet massa. Suspendisse potenti. Pellentesque et consequat quam.
-                </p>
-                <p>
-                Morbi odio augue, volutpat vel posuere sed, aliquet eget quam. Quisque commodo sollicitudin euismod. Quisque ultricies quam in erat placerat aliquet. Etiam at consequat nulla. Integer sed enim augue, vel pulvinar augue. Nunc sit amet eleifend magna. Suspendisse sed congue ipsum. Phasellus at convallis libero. In imperdiet, neque ut mollis luctus, nisi risus fermentum massa, vitae vulputate ante lorem a risus. In faucibus, mi vel imperdiet venenatis, mi ipsum posuere erat, nec vulputate erat leo eu nisl. Mauris et magna tellus. Sed fermentum libero quis urna venenatis quis tempus erat gravida. Nullam malesuada odio sed urna pretium in venenatis orci hendrerit.
-                </p>
-                <p>
-                Proin tristique sodales pulvinar. Suspendisse bibendum tortor ut nulla convallis ac accumsan quam condimentum. Praesent sit amet nisl nulla, at accumsan sapien. Maecenas sagittis iaculis arcu. Quisque eu mauris nibh. In euismod imperdiet odio, ut pellentesque magna ullamcorper quis. Nunc quis ante est. Fusce eleifend nibh eget orci vestibulum at mollis sapien molestie.
-                </p>
-                <p>
-                Nam adipiscing purus vel leo semper sed tincidunt nunc vestibulum. Phasellus scelerisque consequat tortor, at cursus turpis ornare a. Mauris porta adipiscing nibh. Pellentesque ut mi magna, sed ullamcorper orci. Pellentesque suscipit, nibh vel adipiscing vulputate, ligula lorem imperdiet libero, vel placerat nisi justo nec nulla. Aenean interdum lectus eu lorem feugiat ultricies et id tortor. Aenean nulla felis, pellentesque vitae placerat quis, blandit nec ligula. Nam aliquet sodales est, et euismod elit eleifend a. Nam feugiat viverra nulla. Aliquam erat volutpat. Pellentesque magna nibh, egestas non mollis vel, commodo eu ipsum. Quisque in purus sem, at rutrum urna.
-                </p>
-                <p>
-                Nam at risus ac velit vulputate tristique. Proin in nibh metus. Mauris euismod mollis risus sed elementum. Sed lacus mauris, pulvinar sed volutpat eu, venenatis et ante. Suspendisse potenti. In mauris ante, eleifend ut tempus et, rutrum sed arcu. Proin id augue ut nisi molestie cursus sit amet luctus urna.
-                </p>
+                <!--<p>
+                    <img src="./Resources/StationConnected.png" alt="" width="80px" style="margin-left:10px;"/>
+                    <label style="font-size: 32px; vertical-align: top; display: inline-block; margin-top: 15px; text-transform: uppercase;">Typhoon</label>
+                </p>-->
+
+<!--                <p>When you launch Typhoon, it loads information about locomotives and accessories from the command station, and you are good to go.</p>
+                <p>Typhoon remembers where you were last time and picks up where you left with the same locomotive selected if possible.</p>
+                <p>Typhoon speaks six languages: English, German, Spanis, French, Danish and Swedish. For now, however, this instruction is only available in English.</p>
+-->            
+                <p>When you launch Typhoon, it loads information about locomotives and accessories from the command station, and you are good to go.
+                Typhoon remembers where you were last time and picks up where you left with the same locomotive selected if possible.
+                Typhoon speaks six languages: English, German, Spanis, French, Danish and Swedish. For now, however, this instruction is only available in English.</p>
+
+                <div id="infoTabs">
+					<ul>
+						<li class="k-state-active">Tabs review</li>
+						<li>Cab</li>
+                        <li>Locomotive List</li>
+                        <li>Turnouts</li>
+                        <li>Signals</li>
+                        <li>Options</li>
+					</ul>
+					
+                    <div>
+                        <p>At the bottom of the screen, you can select Typhoon screens from a row of tabs. Touch the tabs to navigate like any other tabbed application.</p>
+                        <h3>Cab tab</h3>
+                        <p>Where you control locomotives.</p>
+                        <h3>Locomotive List tab</h3>
+                        <p>Where you select locomotives.</p>
+                        <h3>Turnouts tab</h3>
+                        <p>Where you control routes and turnouts.</p>
+                        <h3>Signals tab</h3>
+                        <p>Where you control signals, lights, decouplers and doors.</p>
+                        <h3>Options tab</h3>
+                        <p>Where you set Typhoon options.</p>
+					</div>
+
+					<div>
+                        <p>The Cab screen is where you control your trains and locomotives. A lot of features are in this screen, and they are not all visible.</p>
+                        <p>At the top left, you can see the name of the locomotive you are controlling. Tapping the button with the name displays the last four selected locomotives. To go to the locomotive list, touch and hold the button, or simply touch the locomotive tab in the bottom of the screen.</p>
+                        <p>Track Status / Emergency Stop</p>
+                        <p>The big green button is the emergency stop button, which shows the status of the track power. Tap the button to cause a layout-wide emergency stop. When stopped, the button turns red. Tap the button again to resume operation. 
+                        If a short circuit occurs on the layout, the command station shuts off power to the tracks and the button turns yellow with the text ”SHUTDOWN”. Fix the short and tap the button to resume operation.
+                        </p>
+					</div>
+                </div>
+
+                <style scoped>
+                .info li 
+                {
+                    color: cornflowerblue;
+                }
+                .info h3 
+                {
+                    color: lightgrey;
+                }
+                
+                </style>
+                <script>
+                    $(document).ready(function () {
+                        $("#infoTabs").kendoTabStrip({
+                            animation: {
+                                open: {
+                                    effects: "fadeIn"
+                                }
+                            }
+
+                        });
+                    });
+            </script>
+
             </div>
         </div>
 
@@ -626,18 +657,26 @@
         </div>
     </div>
 
-    <footer class="k-header k-inset" style="text-align:center;">
-        <a href="http://www.typhoon.at.ua" target="_blank" class="k-link">&copy Typhoon</a>
-    </footer>
+    <div class="k-header" style="text-align:center; padding: 5px 0;">
+        <a href="http://www.typhoon.at.ua" target="_blank" class="k-link">&copy;&nbsp;Typhoon</a>
+    </div>
 
-    <div id="preLoad">
-        <div>
-            <img src="/KendoUI/styles/black/loading-image.gif" alt="Loading Image" style="width:48px;" />
+    <div id="dlg" style="display:none;"></div>
+    <div id="preLoad" style="display:none;">
+        <!--<div>
+            <img src="KendoUI/styles/black/loading-image.gif" alt="Loading Image" />
             <br />Loading...
-        </div>
+        </div>-->
     </div>
 
     <script type="text/javascript">
+//        kendo.ui.progress($("#preLoad"), true);
+        $(document).ready(function () {
+            onDocumentReady();
+            //            $(document).trigger("APP_READY");
+//            kendo.ui.progress($("#preLoad"), false);
+        });
+        
         function showMain() {
             model.set('UIState', UIStateType.Main);
         }

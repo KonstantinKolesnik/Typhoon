@@ -1,5 +1,4 @@
 using Microsoft.SPOT.Hardware;
-using GHIElectronics.NETMF.System;
 
 namespace MFE.Device
 {
@@ -16,13 +15,13 @@ namespace MFE.Device
                 {
                     switch (SystemInfo.SystemID.Model)
                     {
-                        case (byte)SystemModelType.USBizi_100: return DeviceType.USBizi_100;
-                        case (byte)SystemModelType.USBizi_144: return DeviceType.USBizi_144;
-                        case (byte)SystemModelType.EmbeddedMasterModule_NonTFT: return DeviceType.EmbeddedMasterModule_NonTFT;
-                        case (byte)SystemModelType.EmbeddedMasterModule_TFT: return DeviceType.EmbeddedMasterModule_TFT;
-                        case (byte)SystemModelType.EMX: return DeviceType.EMX;
-                        case (byte)SystemModelType.ChipworkX: return DeviceType.ChipworkX;
-                        case (byte)SystemModelType.CANxtra: return DeviceType.CANxtra;
+                        case (byte)DeviceType.USBizi_100: return DeviceType.USBizi_100;
+                        case (byte)DeviceType.USBizi_144: return DeviceType.USBizi_144;
+                        case (byte)DeviceType.EmbeddedMasterModule_NonTFT: return DeviceType.EmbeddedMasterModule_NonTFT;
+                        case (byte)DeviceType.EmbeddedMasterModule_TFT: return DeviceType.EmbeddedMasterModule_TFT;
+                        case (byte)DeviceType.EMX: return DeviceType.EMX;
+                        case (byte)DeviceType.ChipworkX: return DeviceType.ChipworkX;
+                        case (byte)DeviceType.CANxtra: return DeviceType.CANxtra;
                         default: return DeviceType.Unknown;
                     }
                 }

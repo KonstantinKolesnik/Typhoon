@@ -8,8 +8,9 @@
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D462A667-3F02-4376-BA2A-F1D72BD00296}</ProjectGuid>
-    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
     <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,8 +35,8 @@
     <Compile Include="USBDeviceManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GHIElectronics.NETMF.System, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHIElectronics.NETMF.USBHost, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.System, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.USBHost, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SPOT.Native">
     </Reference>
   </ItemGroup>

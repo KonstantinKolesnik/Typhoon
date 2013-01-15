@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.IO;
 using System.Net;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using MFE.Utilities;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using Microsoft.SPOT.IO;
-using Microsoft.SPOT.Net.Security;
 
 namespace MFE.Net
 {

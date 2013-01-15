@@ -291,7 +291,7 @@
  */
 
 using System;
-using MFE.Utilities;
+using System.Text;
 
 namespace MFE.RegularExpressions
 {

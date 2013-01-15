@@ -1,4 +1,5 @@
-using GHIElectronics.NETMF.FEZ;
+using GHI.Premium.Hardware;
+using Microsoft.SPOT.Hardware;
 
 namespace Typhoon.Server.Hardware
 {
@@ -6,18 +7,20 @@ namespace Typhoon.Server.Hardware
     {
         public const short SenseResistor = 680; // in milliOhms
 
-        public const FEZ_Pin.Digital PinMainBoosterEnable = FEZ_Pin.Digital.IO20;
-        public const FEZ_Pin.Digital PinMainBoosterOverloadLED = FEZ_Pin.Digital.IO21;
-        public const FEZ_Pin.AnalogIn PinMainBoosterSense = FEZ_Pin.AnalogIn.AD6;
-        public const FEZ_Pin.Digital PinMainOutputGenerator = FEZ_Pin.Digital.IO16;
+        public const Cpu.Pin PinMainBoosterEnable = EMX.Pin.IO18;
+        public const Cpu.Pin PinMainBoosterEnableLED = EMX.Pin.IO20;
+        public const Cpu.Pin PinMainBoosterOverloadLED = EMX.Pin.IO21;
+        public const Cpu.AnalogChannel PinMainBoosterSense = Cpu.AnalogChannel.ANALOG_6;
+        public const Cpu.Pin PinMainOutputGenerator = EMX.Pin.IO16;
 
-        public const FEZ_Pin.Digital PinProgBoosterEnable = FEZ_Pin.Digital.IO22;
-        public const FEZ_Pin.Digital PinProgBoosterOverloadLED = FEZ_Pin.Digital.IO23;
-        public const FEZ_Pin.AnalogIn PinProgBoosterSense = FEZ_Pin.AnalogIn.AD5;
-        public const FEZ_Pin.Digital PinProgOutputGenerator = FEZ_Pin.Digital.IO17;
+        public const Cpu.Pin PinProgBoosterEnable = EMX.Pin.IO19;
+        public const Cpu.Pin PinProgBoosterEnableLED = EMX.Pin.IO22;
+        public const Cpu.Pin PinProgBoosterOverloadLED = EMX.Pin.IO23;
+        public const Cpu.AnalogChannel PinProgBoosterSense = Cpu.AnalogChannel.ANALOG_5;
+        public const Cpu.Pin PinProgOutputGenerator = EMX.Pin.IO17;
 
-        public const FEZ_Pin.PWM PinNetworkLED = FEZ_Pin.PWM.PWM1;
+        public const Cpu.PWMChannel PinNetworkLED = Cpu.PWMChannel.PWM_1;
 
-
+        public const Cpu.AnalogChannel PinAcknowledgementSense = Cpu.AnalogChannel.ANALOG_2;
     }
 }
