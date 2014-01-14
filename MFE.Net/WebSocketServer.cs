@@ -5,7 +5,7 @@ namespace MFE.Net
     public class WebSocketServer
     {
         #region Fields
-        private TCPServer tcpServer;
+        private TcpServer tcpServer;
         //private string origin;
         //private string location;
         #endregion
@@ -18,9 +18,9 @@ namespace MFE.Net
         #endregion
 
         #region Events
-        public event TCPSessionEventHandler SessionConnected;
-        public event TCPSessionDataReceived SessionDataReceived;
-        public event TCPSessionEventHandler SessionDisconnected;
+        public event TcpSessionEventHandler SessionConnected;
+        public event TcpSessionDataReceived SessionDataReceived;
+        public event TcpSessionEventHandler SessionDisconnected;
         #endregion
 
         #region Constructor
@@ -35,10 +35,10 @@ namespace MFE.Net
             //this.origin = origin;
             //this.location = location;
 
-            tcpServer = new TCPServer(port);
-            tcpServer.SessionConnected += new TCPSessionEventHandler(tcpServer_SessionConnected);
-            tcpServer.SessionDataReceived += new TCPSessionDataReceived(tcpServer_SessionReceived);
-            tcpServer.SessionDisconnected += new TCPSessionEventHandler(tcpServer_SessionDisconnected);
+            tcpServer = new TcpServer(port);
+            tcpServer.SessionConnected += new TcpSessionEventHandler(tcpServer_SessionConnected);
+            tcpServer.SessionDataReceived += new TcpSessionDataReceived(tcpServer_SessionReceived);
+            tcpServer.SessionDisconnected += new TcpSessionEventHandler(tcpServer_SessionDisconnected);
         }
         #endregion
 
@@ -62,12 +62,12 @@ namespace MFE.Net
         #endregion
 
         #region Event handlers
-        private void tcpServer_SessionConnected(TCPSession session)
+        private void tcpServer_SessionConnected(TcpSession session)
         {
             if (SessionConnected != null)
                 SessionConnected(session);
         }
-        private bool tcpServer_SessionReceived(TCPSession session, byte[] data)
+        private bool tcpServer_SessionReceived(TcpSession session, byte[] data)
         {
             if (!session.IsHandshaked)
             {
@@ -135,7 +135,7 @@ namespace MFE.Net
                 return SessionDataReceived != null ? SessionDataReceived(session, payload) : false;
             }
         }
-        private void tcpServer_SessionDisconnected(TCPSession session)
+        private void tcpServer_SessionDisconnected(TcpSession session)
         {
             if (SessionDisconnected != null)
                 SessionDisconnected(session);

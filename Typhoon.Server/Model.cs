@@ -150,9 +150,9 @@ namespace Typhoon.Server
             //tcpServer.SessionDisconnected += new TCPSessionEventHandler(Session_Disconnected);
 
             wsServer = new WebSocketServer(Options.WSPort);
-            wsServer.SessionConnected += new TCPSessionEventHandler(Session_Connected);
-            wsServer.SessionDataReceived += new TCPSessionDataReceived(Session_DataReceived);
-            wsServer.SessionDisconnected += new TCPSessionEventHandler(Session_Disconnected);
+            wsServer.SessionConnected += new TcpSessionEventHandler(Session_Connected);
+            wsServer.SessionDataReceived += new TcpSessionDataReceived(Session_DataReceived);
+            wsServer.SessionDisconnected += new TcpSessionEventHandler(Session_Disconnected);
 
             httpServer = new HttpServer();
             httpServer.OnGetRequest += new GETRequestHandler(httpServer_OnGetRequest);
@@ -312,11 +312,11 @@ namespace Typhoon.Server
             BroadcastBoostersCurrent();
         }
 
-        private static void Session_Connected(TCPSession session)
+        private static void Session_Connected(TcpSession session)
         {
             session.Tag = new NetworkMessageReceiver(msgFormat);
         }
-        private static bool Session_DataReceived(TCPSession session, byte[] data)
+        private static bool Session_DataReceived(TcpSession session, byte[] data)
         {
             networkManager.OnBeforeMessage();
 
@@ -334,7 +334,7 @@ namespace Typhoon.Server
 
             return false; // don't disconnect
         }
-        private static void Session_Disconnected(TCPSession session)
+        private static void Session_Disconnected(TcpSession session)
         {
             // TODO: release locos and accessories
         }

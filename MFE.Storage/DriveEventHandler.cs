@@ -1,5 +1,5 @@
 
 namespace MFE.Storage
 {
-    public delegate void DriveEventHandler(string Root);
+    public delegate void DriveEventHandler(string root);
 }

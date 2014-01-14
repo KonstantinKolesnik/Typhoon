@@ -37,8 +37,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GHI.Premium.Hardware, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHI.Premium.System, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.Hardware, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.System, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SPOT.Graphics" />
     <Reference Include="Microsoft.SPOT.Hardware" />
     <Reference Include="Microsoft.SPOT.Native">

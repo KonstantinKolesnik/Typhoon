@@ -1,6 +1,6 @@
-using System;
-using GHI.Premium.Hardware;
+using GHI.Hardware.EMX;
 using Microsoft.SPOT.Hardware;
+using System;
 using Typhoon.DCC;
 
 namespace Typhoon.Server.Hardware
@@ -11,13 +11,13 @@ namespace Typhoon.Server.Hardware
         
         public Buttons()
         {
-            btnUp = new InterruptPort(EMX.Pin.IO4, true, Port.ResistorMode.PullUp, Port.InterruptMode.InterruptEdgeLow);
+            btnUp = new InterruptPort(Pin.IO4, true, Port.ResistorMode.PullUp, Port.InterruptMode.InterruptEdgeLow);
             btnUp.OnInterrupt += new NativeEventHandler(btnUp_OnInterrupt);
 
-            btnSelect = new InterruptPort(EMX.Pin.IO30, true, Port.ResistorMode.PullUp, Port.InterruptMode.InterruptEdgeLow);
+            btnSelect = new InterruptPort(Pin.IO30, true, Port.ResistorMode.PullUp, Port.InterruptMode.InterruptEdgeLow);
             btnSelect.OnInterrupt += new NativeEventHandler(btnSelect_OnInterrupt);
 
-            btnDown = new InterruptPort(EMX.Pin.IO0, true, Port.ResistorMode.PullUp, Port.InterruptMode.InterruptEdgeLow);
+            btnDown = new InterruptPort(Pin.IO0, true, Port.ResistorMode.PullUp, Port.InterruptMode.InterruptEdgeLow);
             btnDown.OnInterrupt += new NativeEventHandler(btnDown_OnInterrupt);
 
             SetAddresses();

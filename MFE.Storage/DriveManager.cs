@@ -1,13 +1,13 @@
-using System;
-using System.Collections;
-using System.IO;
-using System.Threading;
 using GHI.Premium.IO;
 using GHI.Premium.System;
 using GHI.Premium.USBHost;
 using MFE.Device;
-using Microsoft.SPOT.IO;
 using Microsoft.SPOT;
+using Microsoft.SPOT.IO;
+using System;
+using System.Collections;
+using System.IO;
+using System.Threading;
 
 namespace MFE.Storage
 {

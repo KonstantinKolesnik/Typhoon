@@ -243,7 +243,7 @@ namespace MFE.Net
         {
             return CreateDataFrame(WebSocketOpCode.Ping, ping, 0, ping.Length);
         }
-        private static byte[] CreateDataFrame(int opCode, byte[] data, int offset, int length)
+        private static byte[] CreateDataFrame(WebSocketOpCode opCode, byte[] data, int offset, int length)
         {
             byte[] fragment;
 
@@ -276,7 +276,7 @@ namespace MFE.Net
                 }
             }
 
-            fragment[0] = (byte)(opCode | 0x80);
+            fragment[0] = (byte)((int)opCode | 0x80);
 
             if (length > 0)
                 Array.Copy(data, offset, fragment, fragment.Length - length, length);

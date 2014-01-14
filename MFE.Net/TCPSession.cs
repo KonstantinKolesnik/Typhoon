@@ -1,15 +1,15 @@
+using Microsoft.SPOT;
 using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-using Microsoft.SPOT;
 
 namespace MFE.Net
 {
-    public delegate void TCPSessionEventHandler(TCPSession session);
-    public delegate bool TCPSessionDataReceived(TCPSession session, byte[] data); // returns if session to be disconnected
+    public delegate void TcpSessionEventHandler(TcpSession session);
+    public delegate bool TcpSessionDataReceived(TcpSession session, byte[] data); // returns if session to be disconnected
     
-    public class TCPSession
+    public class TcpSession
     {
         #region Fields
         private Socket clientSocket;
@@ -22,12 +22,12 @@ namespace MFE.Net
         #endregion
 
         #region Events
-        internal event TCPSessionEventHandler Disconnected;
-        internal event TCPSessionDataReceived DataReceived;
+        internal event TcpSessionEventHandler Disconnected;
+        internal event TcpSessionDataReceived DataReceived;
         #endregion
 
         #region Constructor
-        internal TCPSession(Socket clientSocket)
+        internal TcpSession(Socket clientSocket)
         {
             this.clientSocket = clientSocket;
         }

@@ -7,7 +7,7 @@ using Microsoft.SPOT;
 
 namespace MFE.Net
 {
-    public class TCPServer
+    public class TcpServer
     {
         #region Fields
         private int port;
@@ -28,13 +28,13 @@ namespace MFE.Net
         #endregion
 
         #region Events
-        public event TCPSessionEventHandler SessionConnected;
-        public event TCPSessionDataReceived SessionDataReceived;
-        public event TCPSessionEventHandler SessionDisconnected;
+        public event TcpSessionEventHandler SessionConnected;
+        public event TcpSessionDataReceived SessionDataReceived;
+        public event TcpSessionEventHandler SessionDisconnected;
         #endregion
 
         #region Constructor
-        public TCPServer(int port)
+        public TcpServer(int port)
         {
             this.port = port;
         }
@@ -61,9 +61,9 @@ namespace MFE.Net
                             {
                                 if (serverSocket.Poll(1000 * 10, SelectMode.SelectRead))
                                 {
-                                    TCPSession session = new TCPSession(serverSocket.Accept());
-                                    session.DataReceived += new TCPSessionDataReceived(NetworkClient_DataReceived);
-                                    session.Disconnected += new TCPSessionEventHandler(NetworkClient_Disconnected);
+                                    TcpSession session = new TcpSession(serverSocket.Accept());
+                                    session.DataReceived += new TcpSessionDataReceived(NetworkClient_DataReceived);
+                                    session.Disconnected += new TcpSessionEventHandler(NetworkClient_Disconnected);
                                     sessions.Add(session);
                                     
                                     if (SessionConnected != null)
@@ -97,17 +97,17 @@ namespace MFE.Net
         }
         public void SendToAll(byte[] buffer)
         {
-            foreach (TCPSession session in sessions)
+            foreach (TcpSession session in sessions)
                 session.Send(buffer);
         }
         #endregion
 
         #region Event handlers
-        private bool NetworkClient_DataReceived(TCPSession session, byte[] data)
+        private bool NetworkClient_DataReceived(TcpSession session, byte[] data)
         {
             return SessionDataReceived != null ? SessionDataReceived(session, data) : false;
         }
-        private void NetworkClient_Disconnected(TCPSession session)
+        private void NetworkClient_Disconnected(TcpSession session)
         {
             if (SessionDisconnected != null)
                 SessionDisconnected(session);

@@ -37,7 +37,7 @@
     <Compile Include="WiFiManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GHI.Premium.Net, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.Net, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SPOT.Hardware" />
     <Reference Include="Microsoft.SPOT.Hardware.PWM" />
     <Reference Include="Microsoft.SPOT.Native">

@@ -37,9 +37,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GHI.Premium.IO, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHI.Premium.System, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHI.Premium.USBHost, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.IO, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.System, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.USBHost, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SPOT.IO" />
     <Reference Include="Microsoft.SPOT.Native">
     </Reference>

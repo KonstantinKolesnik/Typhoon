@@ -1,7 +1,7 @@
-using System;
 using GHI.Premium.IO;
 using GHI.Premium.System;
 using Microsoft.SPOT.IO;
+using System;
 
 namespace MFE.Storage
 {
