@@ -45,10 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GHI.Premium.Hardware, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHI.Premium.Hardware.EMX, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHI.Premium.SQLite, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHI.Premium.USBClient, Version=4.2.7.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Hardware.EMX, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.Hardware, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.SQLite, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.USBClient, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="MFDpwsExtensions" />
     <Reference Include="Microsoft.SPOT.Hardware" />
     <Reference Include="Microsoft.SPOT.Native">
