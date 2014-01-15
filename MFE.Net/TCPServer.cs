@@ -29,7 +29,7 @@ namespace MFE.Net
 
         #region Events
         public event TCPSessionEventHandler SessionConnected;
-        public event TCPSessionDataReceived SessionDataReceived;
+        public event TCPSessionDataReceivedEventHandler SessionDataReceived;
         public event TCPSessionEventHandler SessionDisconnected;
         #endregion
 
@@ -62,7 +62,7 @@ namespace MFE.Net
                                 if (serverSocket.Poll(1000 * 10, SelectMode.SelectRead))
                                 {
                                     TCPSession session = new TCPSession(serverSocket.Accept());
-                                    session.DataReceived += new TCPSessionDataReceived(NetworkClient_DataReceived);
+                                    session.DataReceived += new TCPSessionDataReceivedEventHandler(NetworkClient_DataReceived);
                                     session.Disconnected += new TCPSessionEventHandler(NetworkClient_Disconnected);
                                     sessions.Add(session);
                                     

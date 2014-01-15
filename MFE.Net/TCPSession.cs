@@ -7,7 +7,7 @@ using Microsoft.SPOT;
 namespace MFE.Net
 {
     public delegate void TCPSessionEventHandler(TCPSession session);
-    public delegate bool TCPSessionDataReceived(TCPSession session, byte[] data); // returns if session to be disconnected
+    public delegate bool TCPSessionDataReceivedEventHandler(TCPSession session, byte[] data); // returns if session to be disconnected
     
     public class TCPSession
     {
@@ -23,7 +23,7 @@ namespace MFE.Net
 
         #region Events
         internal event TCPSessionEventHandler Disconnected;
-        internal event TCPSessionDataReceived DataReceived;
+        internal event TCPSessionDataReceivedEventHandler DataReceived;
         #endregion
 
         #region Constructor

@@ -151,7 +151,7 @@ namespace Typhoon.Server
 
             wsServer = new WebSocketServer(Options.WSPort);
             wsServer.SessionConnected += new TCPSessionEventHandler(Session_Connected);
-            wsServer.SessionDataReceived += new TCPSessionDataReceived(Session_DataReceived);
+            wsServer.SessionDataReceived += new TCPSessionDataReceivedEventHandler(Session_DataReceived);
             wsServer.SessionDisconnected += new TCPSessionEventHandler(Session_Disconnected);
 
             httpServer = new HttpServer();

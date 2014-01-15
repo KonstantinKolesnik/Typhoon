@@ -19,7 +19,7 @@ namespace MFE.Net
 
         #region Events
         public event TCPSessionEventHandler SessionConnected;
-        public event TCPSessionDataReceived SessionDataReceived;
+        public event TCPSessionDataReceivedEventHandler SessionDataReceived;
         public event TCPSessionEventHandler SessionDisconnected;
         #endregion
 
@@ -37,7 +37,7 @@ namespace MFE.Net
 
             tcpServer = new TCPServer(port);
             tcpServer.SessionConnected += new TCPSessionEventHandler(tcpServer_SessionConnected);
-            tcpServer.SessionDataReceived += new TCPSessionDataReceived(tcpServer_SessionReceived);
+            tcpServer.SessionDataReceived += new TCPSessionDataReceivedEventHandler(tcpServer_SessionReceived);
             tcpServer.SessionDisconnected += new TCPSessionEventHandler(tcpServer_SessionDisconnected);
         }
         #endregion
