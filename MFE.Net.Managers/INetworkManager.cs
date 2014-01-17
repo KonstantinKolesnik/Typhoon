@@ -1,4 +1,3 @@
-using System;
 using Microsoft.SPOT;
 
 namespace MFE.Net.Managers
