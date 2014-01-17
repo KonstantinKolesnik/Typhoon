@@ -38,7 +38,7 @@ namespace MFE.Storage
 
                 string[] roots = new string[drvs.Length];
                 for (int i = 0; i < drvs.Length; i++)
-                    roots[i] = drvs[i].RootName;
+                    roots[i] = drvs[i].VolumeInfo.RootDirectory;
 
                 return roots;
             }
@@ -67,9 +67,6 @@ namespace MFE.Storage
                 emulatedRoot.Format(0);
 
                 Drive drive = new Drive();
-                drive.Formatted = emulatedRoot.IsFormatted;
-                drive.RootName = emulatedRoot.RootDirectory;
-                drive.VolumeName = emulatedRoot.Name;
                 drive.VolumeInfo = emulatedRoot;
                 drives.Add(drive);
 
@@ -210,9 +207,6 @@ namespace MFE.Storage
                 try
                 {
                     Drive drive = (Drive)drives[drives.Count - 1];
-                    drive.Formatted = e.Volume.IsFormatted;
-                    drive.RootName = e.Volume.RootDirectory;
-                    drive.VolumeName = e.Volume.Name;
                     drive.VolumeInfo = e.Volume;
                     drives[drives.Count - 1] = drive;
                 }
@@ -222,9 +216,6 @@ namespace MFE.Storage
             {
                 Drive drive = new Drive();
                 drive.VolumeInfo = e.Volume;
-                drive.Formatted = e.Volume.IsFormatted;
-                drive.RootName = e.Volume.RootDirectory;
-                drive.VolumeName = e.Volume.Name;
                 drive.ps = sd;
                 drives.Add(drive);
             }
@@ -254,7 +245,7 @@ namespace MFE.Storage
             for (int i = 0; i < drives.Count; i++)
             {
                 drive = (Drive)drives[i];
-                if (drive.RootName == e.Volume.RootDirectory)
+                if (drive.VolumeInfo.RootDirectory == e.Volume.RootDirectory)
                 {
                     drives.Remove(drive);
                     if (drive.Device != null)
