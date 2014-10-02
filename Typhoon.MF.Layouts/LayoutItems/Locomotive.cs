@@ -1,9 +1,8 @@
-﻿using System.Ext.Xml;
-using System.Xml;
-using MFE.Utilities;
+﻿using MFE.Core;
 using Microsoft.SPOT;
 using System;
-//using Typhoon.Decoders;
+using System.Ext.Xml;
+using System.Xml;
 
 namespace Typhoon.MF.Layouts.LayoutItems
 {
@@ -137,10 +136,10 @@ namespace Typhoon.MF.Layouts.LayoutItems
         {
             base.ReadFromXml(xmlReader);
 
-            if (!Utils.IsStringNullOrEmpty(xmlReader.GetAttribute("ConsistID")))
+            if (!Utils.StringIsNullOrEmpty(xmlReader.GetAttribute("ConsistID")))
             {
                 consistID = Utils.FromBase64StringToGuid(xmlReader.GetAttribute("ConsistID"));
-                if (!Utils.IsStringNullOrEmpty(xmlReader.GetAttribute("ConsistForward")))
+                if (!Utils.StringIsNullOrEmpty(xmlReader.GetAttribute("ConsistForward")))
                     consistForward = xmlReader.GetAttribute("ConsistForward") == bool.TrueString;
             }
             //if (el.HasAttribute("Decoder"))

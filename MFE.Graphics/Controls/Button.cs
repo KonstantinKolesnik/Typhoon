@@ -1,6 +1,6 @@
+using MFE.Core;
 using MFE.Graphics.Media;
 using MFE.Graphics.Touching;
-using MFE.Utilities;
 using Microsoft.SPOT;
 
 namespace MFE.Graphics.Controls
@@ -146,7 +146,7 @@ namespace MFE.Graphics.Controls
             #endregion
 
             bool hasForeground = foreground != null;
-            bool hasText = font != null && !Utils.IsStringNullOrEmpty(text);
+            bool hasText = font != null && !Utils.StringIsNullOrEmpty(text);
 
             if (hasForeground && !hasText)
             {

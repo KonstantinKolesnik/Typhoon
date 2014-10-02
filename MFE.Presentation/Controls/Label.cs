@@ -1,7 +1,7 @@
+using MFE.Core;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Presentation;
 using Microsoft.SPOT.Presentation.Media;
-using MFE.Utilities;
 
 namespace MFE.Presentation.Controls
 {
@@ -72,7 +72,7 @@ namespace MFE.Presentation.Controls
         #region Event handlers
         public override void OnRender(DrawingContext dc)
         {
-            if (font != null && !Utils.IsStringNullOrEmpty(text))
+            if (font != null && !Utils.StringIsNullOrEmpty(text))
                 dc.DrawText(text, font, foreColor, 0, 0);
         }
         #endregion
@@ -80,7 +80,7 @@ namespace MFE.Presentation.Controls
         #region Private methods
         private void CalculateSize()
         {
-            if (font != null && !Utils.IsStringNullOrEmpty(text))
+            if (font != null && !Utils.StringIsNullOrEmpty(text))
             {
                 int w, h;
                 font.ComputeExtent(text, out w, out h);

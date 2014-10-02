@@ -1,8 +1,8 @@
-using System.Collections;
+using MFE.Core;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Presentation;
 using Microsoft.SPOT.Presentation.Media;
-using MFE.Utilities;
+using System.Collections;
 
 namespace MFE.Presentation.Controls
 {
@@ -105,7 +105,7 @@ namespace MFE.Presentation.Controls
         }
         public override void OnRender(DrawingContext dc)
         {
-            if (!Utils.IsStringNullOrEmpty(activeBitmapID))
+            if (!Utils.StringIsNullOrEmpty(activeBitmapID))
             {
                 ImageBrush brush = (ImageBrush)brushes[activeBitmapID];
                 if (brush != null && brush.BitmapSource != null)

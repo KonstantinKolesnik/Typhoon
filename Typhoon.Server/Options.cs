@@ -1,5 +1,5 @@
+using MFE.Core;
 using MFE.Storage;
-using MFE.Utilities;
 using Microsoft.SPOT;
 using System;
 using System.Ext.Xml;
@@ -36,7 +36,7 @@ namespace Typhoon.Server
         #region Serialization / deserialization
         public static Options FromXml(string xml)
         {
-            return !Utils.IsStringNullOrEmpty(xml) ? Options.FromByteArray(Encoding.UTF8.GetBytes(xml)) : null;
+            return !Utils.StringIsNullOrEmpty(xml) ? Options.FromByteArray(Encoding.UTF8.GetBytes(xml)) : null;
         }
         public static Options FromByteArray(byte[] data)
         {
@@ -58,18 +58,18 @@ namespace Typhoon.Server
                             {
                                 res = new Options();
 
-                                if (!Utils.IsStringNullOrEmpty(reader.GetAttribute("MainBridgeCurrentThreshould")))
+                                if (!Utils.StringIsNullOrEmpty(reader.GetAttribute("MainBridgeCurrentThreshould")))
                                     res.MainBridgeCurrentThreshould = int.Parse(reader.GetAttribute("MainBridgeCurrentThreshould"));
-                                if (!Utils.IsStringNullOrEmpty(reader.GetAttribute("ProgBridgeCurrentThreshould")))
+                                if (!Utils.StringIsNullOrEmpty(reader.GetAttribute("ProgBridgeCurrentThreshould")))
                                     res.ProgBridgeCurrentThreshould = int.Parse(reader.GetAttribute("ProgBridgeCurrentThreshould"));
-                                if (!Utils.IsStringNullOrEmpty(reader.GetAttribute("BroadcastBoostersCurrent")))
+                                if (!Utils.StringIsNullOrEmpty(reader.GetAttribute("BroadcastBoostersCurrent")))
                                     res.BroadcastBoostersCurrent = reader.GetAttribute("BroadcastBoostersCurrent") == bool.TrueString;
 
-                                if (!Utils.IsStringNullOrEmpty(reader.GetAttribute("UseWiFi")))
+                                if (!Utils.StringIsNullOrEmpty(reader.GetAttribute("UseWiFi")))
                                     res.UseWiFi = reader.GetAttribute("UseWiFi") == bool.TrueString;
-                                if (!Utils.IsStringNullOrEmpty(reader.GetAttribute("WiFiSSID")))
+                                if (!Utils.StringIsNullOrEmpty(reader.GetAttribute("WiFiSSID")))
                                     res.WiFiSSID = reader.GetAttribute("WiFiSSID");
-                                if (!Utils.IsStringNullOrEmpty(reader.GetAttribute("WiFiPassword")))
+                                if (!Utils.StringIsNullOrEmpty(reader.GetAttribute("WiFiPassword")))
                                     res.WiFiPassword = reader.GetAttribute("WiFiPassword");
 
                             }

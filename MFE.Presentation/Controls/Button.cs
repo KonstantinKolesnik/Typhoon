@@ -4,7 +4,7 @@ using Microsoft.SPOT.Input;
 using Microsoft.SPOT.Presentation;
 using Microsoft.SPOT.Presentation.Controls;
 using Microsoft.SPOT.Presentation.Media;
-using MFE.Utilities;
+using MFE.Core;
 
 namespace MFE.Presentation.Controls
 {

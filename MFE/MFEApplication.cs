@@ -1,6 +1,4 @@
 using System.Threading;
-//using GHIElectronics.NETMF.System;
-//using MFE.Device;
 
 namespace MFE
 {

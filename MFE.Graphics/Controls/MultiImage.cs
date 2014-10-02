@@ -1,6 +1,6 @@
 using System.Collections;
 using MFE.Graphics.Media;
-using MFE.Utilities;
+using MFE.Core;
 
 namespace MFE.Graphics.Controls
 {
@@ -54,7 +54,7 @@ namespace MFE.Graphics.Controls
         #region Event handlers
         public override void OnRender(DrawingContext dc)
         {
-            if (!Utils.IsStringNullOrEmpty(activeBrushID))
+            if (!Utils.StringIsNullOrEmpty(activeBrushID))
             {
                 Brush brush = (Brush)brushes[activeBrushID];
                 if (brush != null)

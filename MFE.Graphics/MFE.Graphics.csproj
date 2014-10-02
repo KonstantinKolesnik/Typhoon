@@ -124,10 +124,6 @@
       <Project>{C1665195-8494-4964-A440-736834D0D402}</Project>
       <Name>MFE.LCD</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MFE\MFE.csproj">
-      <Project>{4CC63A08-2BAC-45F9-B20E-AAFB928C6630}</Project>
-      <Name>MFE</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="HTML Color Names_asp.mht" />

@@ -49,9 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MFE\MFE.csproj">
-      <Project>{4CC63A08-2BAC-45F9-B20E-AAFB928C6630}</Project>
-      <Name>MFE</Name>
+    <ProjectReference Include="..\..\MFE\MFE.Core\MFE.Core.csproj">
+      <Project>{8EE96EBA-F6D8-4433-A72E-AED3A5A0EFDA}</Project>
+      <Name>MFE.Core</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

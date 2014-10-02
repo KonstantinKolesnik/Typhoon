@@ -1,8 +1,8 @@
-﻿using System;
+﻿using MFE.Core;
+using Microsoft.SPOT;
+using System;
 using System.Ext.Xml;
 using System.Xml;
-using MFE.Utilities;
-using Microsoft.SPOT;
 
 namespace Typhoon.MF.Layouts
 {
@@ -86,17 +86,17 @@ namespace Typhoon.MF.Layouts
         public virtual void WriteToXml(XmlWriter xmlWriter)
         {
             xmlWriter.WriteAttributeString("ID", Utils.ToBase64String(id));
-            if (!Utils.IsStringNullOrEmpty(name))
+            if (!Utils.StringIsNullOrEmpty(name))
                 xmlWriter.WriteAttributeString("Name", Utils.ToBase64String(name));
-            if (!Utils.IsStringNullOrEmpty(description))
+            if (!Utils.StringIsNullOrEmpty(description))
                 xmlWriter.WriteAttributeString("Description", Utils.ToBase64String(description));
         }
         public virtual void ReadFromXml(XmlReader xmlReader)
         {
             id = Utils.FromBase64StringToGuid(xmlReader.GetAttribute("ID"));
-            if (!Utils.IsStringNullOrEmpty(xmlReader.GetAttribute("Name")))
+            if (!Utils.StringIsNullOrEmpty(xmlReader.GetAttribute("Name")))
                 name = Utils.FromBase64StringToString(xmlReader.GetAttribute("Name"));
-            if (!Utils.IsStringNullOrEmpty(xmlReader.GetAttribute("Description")))
+            if (!Utils.StringIsNullOrEmpty(xmlReader.GetAttribute("Description")))
                 description = Utils.FromBase64StringToString(xmlReader.GetAttribute("Description"));
         }
         public static LayoutItem FromXml(XmlReader xmlReader)

@@ -1,9 +1,9 @@
+using GHI.Premium.SQLite;
+using MFE.Core;
+using Microsoft.SPOT;
 using System;
 using System.Collections;
 using System.IO;
-using GHI.Premium.SQLite;
-using MFE.Utilities;
-using Microsoft.SPOT;
 using Typhoon.MF.Layouts;
 using Typhoon.MF.Layouts.LayoutItems;
 
@@ -19,7 +19,7 @@ namespace Typhoon.Server
             get
             {
                 long res = 0;
-                if (!Utils.IsStringNullOrEmpty(fileName) && File.Exists(fileName))
+                if (!Utils.StringIsNullOrEmpty(fileName) && File.Exists(fileName))
                     using (FileStream fs = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                         res = fs.Length;
                 return res;
@@ -62,18 +62,18 @@ namespace Typhoon.Server
                 Locomotive entity = (Locomotive)item;
                 db.ExecuteNonQuery(
                       "INSERT INTO Locomotives (ID, Name, Description, Protocol, ConsistID, ConsistForward) " +
-                      "VALUES (" + 
-                      Utils.Quotate(Utils.ToBase64String(entity.ID)) + ", " +
-                      Utils.Quotate(entity.Name) + ", " +
-                      Utils.Quotate(entity.Description) + ", " +
+                      "VALUES (" +
+                      Utils.StringQuotate(Utils.ToBase64String(entity.ID)) + ", " +
+                      Utils.StringQuotate(entity.Name) + ", " +
+                      Utils.StringQuotate(entity.Description) + ", " +
                       entity.Protocol + ", " +
-                      Utils.Quotate(Utils.ToBase64String(entity.ConsistID)) + ", " +
+                      Utils.StringQuotate(Utils.ToBase64String(entity.ConsistID)) + ", " +
                       (entity.ConsistForward ? 1 : 0) + ")");
             }
             else if (item is Consist)
                 db.ExecuteNonQuery(
                       "INSERT INTO Consists (ID, Name, Description) " +
-                      "VALUES (" + Utils.Quotate(Utils.ToBase64String(item.ID)) + ", " + Utils.Quotate(item.Name) + ", " + Utils.Quotate(item.Description) + ")");
+                      "VALUES (" + Utils.StringQuotate(Utils.ToBase64String(item.ID)) + ", " + Utils.StringQuotate(item.Name) + ", " + Utils.StringQuotate(item.Description) + ")");
 
 
 
@@ -126,7 +126,7 @@ namespace Typhoon.Server
         public ArrayList GetLocomotives(Guid consistId)
         {
             ArrayList res = new ArrayList();
-            SQLiteDataTable table = db.ExecuteQuery("SELECT * FROM Locomotives WHERE ConsistID=" + Utils.Quotate(Utils.ToBase64String(consistId)));
+            SQLiteDataTable table = db.ExecuteQuery("SELECT * FROM Locomotives WHERE ConsistID=" + Utils.StringQuotate(Utils.ToBase64String(consistId)));
             for (int row = 0; row < table.Rows; row++)
             {
                 Locomotive loco = new Locomotive(Utils.FromBase64StringToGuid(table.ReadRecord(0, row).ToString()))
@@ -144,7 +144,7 @@ namespace Typhoon.Server
         public Locomotive GetLocomotive(Guid id)
         {
             ArrayList res = new ArrayList();
-            SQLiteDataTable table = db.ExecuteQuery("SELECT * FROM Locomotives WHERE ID=" + Utils.Quotate(Utils.ToBase64String(id)));
+            SQLiteDataTable table = db.ExecuteQuery("SELECT * FROM Locomotives WHERE ID=" + Utils.StringQuotate(Utils.ToBase64String(id)));
             for (int row = 0; row < table.Rows; row++)
             {
                 Locomotive loco = new Locomotive(Utils.FromBase64StringToGuid(table.ReadRecord(0, row).ToString()))
@@ -178,7 +178,7 @@ namespace Typhoon.Server
         public Consist GetConsist(Guid id)
         {
             ArrayList res = new ArrayList();
-            SQLiteDataTable table = db.ExecuteQuery("SELECT * FROM Consists WHERE ID=" + Utils.Quotate(Utils.ToBase64String(id)));
+            SQLiteDataTable table = db.ExecuteQuery("SELECT * FROM Consists WHERE ID=" + Utils.StringQuotate(Utils.ToBase64String(id)));
             for (int row = 0; row < table.Rows; row++)
             {
                 Consist consist = new Consist(Utils.FromBase64StringToGuid(table.ReadRecord(0, row).ToString()))

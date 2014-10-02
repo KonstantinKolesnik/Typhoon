@@ -1,3 +1,4 @@
+using MFE.Core;
 using MFE.Net;
 using MFE.Net.Http;
 using MFE.Net.Managers;
@@ -5,7 +6,6 @@ using MFE.Net.Messaging;
 using MFE.Net.Tcp;
 using MFE.Net.WebSocket;
 using MFE.Storage;
-using MFE.Utilities;
 using Microsoft.SPOT;
 using System.Collections;
 using System.IO;
