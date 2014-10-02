@@ -1,6 +1,9 @@
 using MFE.Net;
+using MFE.Net.Http;
 using MFE.Net.Managers;
 using MFE.Net.Messaging;
+using MFE.Net.Tcp;
+using MFE.Net.WebSocket;
 using MFE.Storage;
 using MFE.Utilities;
 using Microsoft.SPOT;
@@ -37,7 +40,7 @@ namespace Typhoon.Server
         private static NetworkMessageFormat msgFormat = NetworkMessageFormat.Text;
         //private static DiscoveryListener discoveryListener;
         //private static TCPServer tcpServer;
-        private static WebSocketServer wsServer;
+        private static WSServer wsServer;
 
         private static HttpServer httpServer;
 
@@ -149,18 +152,18 @@ namespace Typhoon.Server
             //tcpServer.SessionDataReceived += new TCPSessionDataReceived(Session_DataReceived);
             //tcpServer.SessionDisconnected += new TCPSessionEventHandler(Session_Disconnected);
 
-            wsServer = new WebSocketServer(Options.WSPort);
+            wsServer = new WSServer(Options.WSPort);
             wsServer.SessionConnected += new TcpSessionEventHandler(Session_Connected);
-            wsServer.SessionDataReceived += new TcpSessionDataReceived(Session_DataReceived);
+            wsServer.SessionDataReceived += new TcpSessionDataReceivedEventHandler(Session_DataReceived);
             wsServer.SessionDisconnected += new TcpSessionEventHandler(Session_Disconnected);
 
             httpServer = new HttpServer();
-            httpServer.OnGetRequest += new GETRequestHandler(httpServer_OnGetRequest);
+            httpServer.OnGetRequest += new GETRequestEventHandler(httpServer_OnGetRequest);
 
-            if (options.UseWiFi)
-                networkManager = new WiFiManager(true, HardwareConfiguration.PinNetworkLED, options.WiFiSSID, options.WiFiPassword);
-            else
-                networkManager = new EthernetManager(HardwareConfiguration.PinNetworkLED);
+            //if (options.UseWiFi)
+            //    networkManager = new WiFiManager(true, options.WiFiSSID, options.WiFiPassword);
+            //else
+                networkManager = new EthernetManager();
             networkManager.Started += new EventHandler(Network_Started);
             networkManager.Stopped += new EventHandler(Network_Stopped);
 
@@ -229,30 +232,24 @@ namespace Typhoon.Server
         {
             if (wsServer != null && wsServer.IsActive)
             {
-                networkManager.OnBeforeMessage();
                 NetworkMessage msg = GetPowerMessage();
                 wsServer.SendToAll(msg.PackToString(msgFormat));
-                networkManager.OnAfterMessage();
             }
         }
         private static void BroadcastBoostersCurrent()
         {
             if (wsServer != null && wsServer.IsActive)
             {
-                networkManager.OnBeforeMessage();
                 NetworkMessage msg = GetBoostersCurrentMessage();
                 wsServer.SendToAll(msg.PackToString(msgFormat));
-                networkManager.OnAfterMessage();
             }
         }
         private static void BroadcastOptions()
         {
             if (wsServer != null && wsServer.IsActive)
             {
-                networkManager.OnBeforeMessage();
                 NetworkMessage msg = GetOptionsMessage();
                 wsServer.SendToAll(msg.PackToString(msgFormat));
-                networkManager.OnAfterMessage();
             }
         }
         
@@ -318,8 +315,6 @@ namespace Typhoon.Server
         }
         private static bool Session_DataReceived(TcpSession session, byte[] data)
         {
-            networkManager.OnBeforeMessage();
-
             NetworkMessageReceiver nmr = session.Tag as NetworkMessageReceiver;
             NetworkMessage[] msgs = nmr.Process(data);
             if (msgs != null)
@@ -327,10 +322,8 @@ namespace Typhoon.Server
                 {
                     NetworkMessage response = ProcessNetworkMessage(msg);
                     if (response != null)
-                        session.Send(WebSocketDataFrame.WrapString(response.PackToString(nmr.MessageFormat)));
+                        session.Send(WSDataFrame.WrapString(response.PackToString(nmr.MessageFormat)));
                 }
-
-            networkManager.OnAfterMessage();
 
             return false; // don't disconnect
         }

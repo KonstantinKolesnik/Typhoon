@@ -43,8 +43,8 @@
     <Reference Include="System.IO" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MFE.Net\MFE.Net.csproj">
-      <Project>{CBE6E45F-9C69-4855-86DF-271E5CA1B3B1}</Project>
+    <ProjectReference Include="..\..\MFE\MFE.Net\MFE.Net.csproj">
+      <Project>{D87CB0D5-ED06-4E01-AA00-FFCDD0A3D708}</Project>
       <Name>MFE.Net</Name>
     </ProjectReference>
   </ItemGroup>

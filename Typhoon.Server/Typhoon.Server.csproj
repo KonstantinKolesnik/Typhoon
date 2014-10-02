@@ -47,6 +47,7 @@
   <ItemGroup>
     <Reference Include="GHI.Hardware.EMX, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="GHI.Premium.Hardware, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.Net, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="GHI.Premium.SQLite, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="GHI.Premium.USBClient, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="MFDpwsExtensions" />
@@ -59,21 +60,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\MFE\MFE.Net.Managers\MFE.Net.Managers.csproj">
+      <Project>{A8ACC028-99A0-4E9F-84F7-33E9D08AF087}</Project>
+      <Name>MFE.Net.Managers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MFE\MFE.Net.Messaging\MFE.Net.Messaging.csproj">
+      <Project>{632B23F9-A020-4C66-93A3-DE9AF4529CB9}</Project>
+      <Name>MFE.Net.Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MFE\MFE.Net\MFE.Net.csproj">
+      <Project>{D87CB0D5-ED06-4E01-AA00-FFCDD0A3D708}</Project>
+      <Name>MFE.Net</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MFE.Device\MFE.Device.csproj">
       <Project>{27C90F37-990E-4881-AD82-BCE15A4342DD}</Project>
       <Name>MFE.Device</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MFE.Net.Managers\MFE.Net.Managers.csproj">
-      <Project>{A9BF75EB-309F-4C13-BD60-93DF443C0827}</Project>
-      <Name>MFE.Net.Managers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MFE.Net.Messaging\MFE.Net.Messaging.csproj">
-      <Project>{8FB4FEF0-9632-45BA-8C0A-39637F449DAB}</Project>
-      <Name>MFE.Net.Messaging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MFE.Net\MFE.Net.csproj">
-      <Project>{CBE6E45F-9C69-4855-86DF-271E5CA1B3B1}</Project>
-      <Name>MFE.Net</Name>
     </ProjectReference>
     <ProjectReference Include="..\MFE.Storage\MFE.Storage.csproj">
       <Project>{085C8341-8EA5-43F5-8B9E-07FED9B79563}</Project>

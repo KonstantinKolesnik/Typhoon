@@ -1,12 +1,13 @@
-﻿using System;
+﻿using GHI.Premium.SQLite;
+using MFE.Net.Http;
+using MFE.Net.WebSocket;
+using Microsoft.SPOT;
+using System;
 using System.Collections;
 using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading;
-using GHI.Premium.SQLite;
-using MFE.Net;
-using Microsoft.SPOT;
 
 namespace Typhoon.HttpFileServerTest
 {
@@ -19,11 +20,11 @@ namespace Typhoon.HttpFileServerTest
         public static void Main()
         {
             httpServer = new HttpServer();
-            httpServer.OnGetRequest += new GETRequestHandler(httpServer_OnGetRequest);
+            httpServer.OnGetRequest += new GETRequestEventHandler(httpServer_OnGetRequest);
             //httpServer.Start("http", -1);
             httpServer.Start("http", 81);
 
-            WebSocketServer wss = new WebSocketServer(12000);//, "http://localhost:81", "ws://localhost:2013");
+            WSServer wss = new WSServer(12000);//, "http://localhost:81", "ws://localhost:2013");
             wss.Start();
 
             //NameService ns = new NameService(); // Declare as global, name service will stop once the object gets disposed
