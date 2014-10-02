@@ -1,6 +1,6 @@
-using System;
-using GHIElectronics.NETMF.System;
+using GHI.Premium.System;
 using Microsoft.SPOT;
+using System;
 
 namespace MF.Engine.Managers
 {

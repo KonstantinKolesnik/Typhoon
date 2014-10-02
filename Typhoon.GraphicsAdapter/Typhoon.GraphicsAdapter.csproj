@@ -8,8 +8,9 @@
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{93939FA3-87ED-492C-9260-904926CA43F7}</ProjectGuid>
-    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
     <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,11 +51,10 @@
     <Compile Include="UI\MainWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FEZCobra_GHIElectronics.NETMF.FEZ, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHIElectronics.NETMF.Hardware, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHIElectronics.NETMF.Native, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHIElectronics.NETMF.System, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="GHIElectronics.NETMF.USBHost, Version=4.1.8.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.Hardware, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.Native, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.System, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GHI.Premium.USBHost, Version=4.2.11.1, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="MFDpwsExtensions" />
     <Reference Include="Microsoft.SPOT.Graphics" />
     <Reference Include="Microsoft.SPOT.Hardware" />

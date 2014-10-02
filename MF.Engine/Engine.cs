@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Threading;
-using GHIElectronics.NETMF.Hardware;
-using GHIElectronics.NETMF.System;
+using GHI.Premium.Hardware;
+using GHI.Premium.System;
 using MF.Engine.GUI;
 using MF.Engine.GUI.Controls;
 using MF.Engine.Managers;
@@ -10,6 +7,9 @@ using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using Microsoft.SPOT.Presentation.Media;
 using Microsoft.SPOT.Time;
+using System;
+using System.Collections;
+using System.Threading;
 
 namespace MF.Engine
 {
@@ -209,31 +209,31 @@ namespace MF.Engine
                 NormalBoot();
             else
             {
-                switch (SystemUpdate.GetMode())
-                {
-                    case SystemUpdate.SystemUpdateMode.NonFormatted:
-                        if (prepBootScreen != null)
-                        {
-                            // Display IFU Prep Screen
-                            bootThread = new Thread(prepBootScreen);
-                            bootThread.Priority = ThreadPriority.Highest;
-                            bootThread.Start();
-                        }
-                        SystemUpdate.EnableBootloader();
-                        break;
-                    case SystemUpdate.SystemUpdateMode.Bootloader:
-                        throw new Exception("Invalid Boot Mode!");
-                    case SystemUpdate.SystemUpdateMode.Application:
-                        if (bootScreen != null)
-                        {
-                            // Display Boot Screen
-                            bootThread = new Thread(bootScreen);
-                            bootThread.Priority = ThreadPriority.Highest;
-                            bootThread.Start();
-                        }
-                        NormalBoot();
-                        break;
-                }
+                //switch (SystemUpdate.GetMode())
+                //{
+                //    case SystemUpdate.SystemUpdateMode.NonFormatted:
+                //        if (prepBootScreen != null)
+                //        {
+                //            // Display IFU Prep Screen
+                //            bootThread = new Thread(prepBootScreen);
+                //            bootThread.Priority = ThreadPriority.Highest;
+                //            bootThread.Start();
+                //        }
+                //        SystemUpdate.EnableBootloader();
+                //        break;
+                //    case SystemUpdate.SystemUpdateMode.Bootloader:
+                //        throw new Exception("Invalid Boot Mode!");
+                //    case SystemUpdate.SystemUpdateMode.Application:
+                //        if (bootScreen != null)
+                //        {
+                //            // Display Boot Screen
+                //            bootThread = new Thread(bootScreen);
+                //            bootThread.Priority = ThreadPriority.Highest;
+                //            bootThread.Start();
+                //        }
+                //        NormalBoot();
+                //        break;
+                //}
             }
 
             // now returns to user Main entry

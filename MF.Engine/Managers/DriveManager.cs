@@ -1,9 +1,10 @@
+using GHI.Premium.IO;
+using GHI.Premium.System;
+using GHI.Premium.USBHost;
+using Microsoft.SPOT.IO;
 using System;
 using System.Collections;
 using System.Threading;
-using GHIElectronics.NETMF.IO;
-using GHIElectronics.NETMF.USBHost;
-using Microsoft.SPOT.IO;
 
 namespace MF.Engine.Managers
 {

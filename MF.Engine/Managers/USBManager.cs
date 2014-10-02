@@ -1,6 +1,7 @@
+using GHI.Premium.System;
+using GHI.Premium.USBHost;
 using System;
 using System.Collections;
-using GHIElectronics.NETMF.USBHost;
 
 namespace MF.Engine.Managers
 {

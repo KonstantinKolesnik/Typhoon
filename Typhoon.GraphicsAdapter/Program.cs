@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Reflection;
-using GHIElectronics.NETMF.System;
+﻿using GHI.Premium.System;
 using MFE;
 using MFE.Graphics;
-using MFE.Graphics.Controls;
 using MFE.Graphics.Media;
 using MFE.LCD;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
-using Typhoon.GraphicsAdapter.UI;
+using System.Collections;
+using System.Reflection;
 using Typhoon.Server;
 
 namespace Typhoon.GraphicsAdapter

@@ -1,7 +1,7 @@
-using System;
-using GHIElectronics.NETMF.Hardware;
+using GHI.Premium.Hardware;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
+using System;
 using System.Threading;
 
 namespace MF.Engine.Managers
@@ -103,15 +103,15 @@ namespace MF.Engine.Managers
             if (DeviceManager.IsEmulator)
                 return false;
 
-            if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 4)) // 4 MB
-                return true;
+            //if (Configuration.Heap.SetCustomHeapSize(1024 * 1024 * 4)) // 4 MB
+            //    return true;
 
             Configuration.LCD.Configurations lcdConfig = new Configuration.LCD.Configurations();
 
             lcdConfig.Width = 800;
             lcdConfig.Height = 480;
 
-            lcdConfig.PriorityEnable = true;
+            //lcdConfig.PriorityEnable = true;
             lcdConfig.OutputEnableIsFixed = false;
             lcdConfig.OutputEnablePolarity = true;
             lcdConfig.PixelPolarity = false;
@@ -128,7 +128,7 @@ namespace MF.Engine.Managers
             lcdConfig.VerticalBackPorch = 2;
             lcdConfig.VerticalFrontPorch = 2;
 
-            lcdConfig.PixelClockDivider = 4;
+            //lcdConfig.PixelClockDivider = 4;
 
             return Configuration.LCD.Set(lcdConfig);
         }
@@ -144,7 +144,7 @@ namespace MF.Engine.Managers
             lcdConfig.Width = 480;
             lcdConfig.Height = 480;
 
-            lcdConfig.PriorityEnable = true; // VGA requires high refresh rate, enable bus priority.
+            //lcdConfig.PriorityEnable = true; // VGA requires high refresh rate, enable bus priority.
             lcdConfig.OutputEnableIsFixed = true;
             lcdConfig.OutputEnablePolarity = true;
             lcdConfig.PixelPolarity = true;
@@ -160,7 +160,7 @@ namespace MF.Engine.Managers
             lcdConfig.VerticalBackPorch = 32;
             lcdConfig.VerticalFrontPorch = 11;
 
-            lcdConfig.PixelClockDivider = 4;
+            //lcdConfig.PixelClockDivider = 4;
 
             return Configuration.LCD.Set(lcdConfig);
         }
@@ -176,7 +176,7 @@ namespace MF.Engine.Managers
             lcdConfig.Width = 480;
             lcdConfig.Height = 272;
 
-            lcdConfig.PriorityEnable = false;
+            //lcdConfig.PriorityEnable = false;
             lcdConfig.OutputEnableIsFixed = true;
             lcdConfig.OutputEnablePolarity = true;
             lcdConfig.PixelPolarity = false;
@@ -192,7 +192,7 @@ namespace MF.Engine.Managers
             lcdConfig.VerticalBackPorch = 2;
             lcdConfig.VerticalFrontPorch = 2;
 
-            lcdConfig.PixelClockDivider = 8; // for EMX
+            //lcdConfig.PixelClockDivider = 8; // for EMX
             //lcdConfig.PixelClockDivider = 4; // for ChipworkX
 
             return Configuration.LCD.Set(lcdConfig);
@@ -209,7 +209,7 @@ namespace MF.Engine.Managers
             lcdConfig.Width = 320;
             lcdConfig.Height = 240;
 
-            lcdConfig.PriorityEnable = false;
+            //lcdConfig.PriorityEnable = false;
             lcdConfig.OutputEnableIsFixed = true;
             lcdConfig.OutputEnablePolarity = true;
             lcdConfig.PixelPolarity = false;//true
@@ -224,7 +224,7 @@ namespace MF.Engine.Managers
             lcdConfig.VerticalBackPorch = 8;
             lcdConfig.VerticalFrontPorch = 16;
 
-            lcdConfig.PixelClockDivider = 8;
+            //lcdConfig.PixelClockDivider = 8;
 
             return Configuration.LCD.Set(lcdConfig);
         }

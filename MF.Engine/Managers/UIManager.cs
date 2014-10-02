@@ -1,12 +1,12 @@
-using System;
-using System.Threading;
-using GHIElectronics.NETMF.System;
+using GHI.Premium.System;
 using MF.Engine.Graphics;
 using MF.Engine.GUI;
 using MF.Engine.GUI.Controls;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Presentation.Media;
 using Microsoft.SPOT.Touch;
+using System;
+using System.Threading;
 
 namespace MF.Engine.Managers
 {

@@ -1,10 +1,10 @@
-using System;
-using System.Threading;
-using GHIElectronics.NETMF.USBHost;
+using GHI.Premium.System;
+using GHI.Premium.USBHost;
 using MFE.Graphics.Controls;
 using MFE.Graphics.Media;
 using MFE.USB;
 using Microsoft.SPOT;
+using System;
 using Typhoon.Server;
 using Typhoon.Server.Hardware;
 
