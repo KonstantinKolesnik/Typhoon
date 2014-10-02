@@ -39,13 +39,13 @@
     <Reference Include="Microsoft.SPOT.Hardware" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\MFE\MFE.Core\MFE.Core.csproj">
+      <Project>{8EE96EBA-F6D8-4433-A72E-AED3A5A0EFDA}</Project>
+      <Name>MFE.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\MFE\MFE.LCD\MFE.LCD.csproj">
       <Project>{C1665195-8494-4964-A440-736834D0D402}</Project>
       <Name>MFE.LCD</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MFE\MFE.csproj">
-      <Project>{4CC63A08-2BAC-45F9-B20E-AAFB928C6630}</Project>
-      <Name>MFE</Name>
     </ProjectReference>
     <ProjectReference Include="..\Typhoon.Server\Typhoon.Server.csproj">
       <Project>{BF5044B8-D380-4018-BE40-723A5CAB3BB7}</Project>

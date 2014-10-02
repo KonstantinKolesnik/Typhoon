@@ -1,5 +1,5 @@
 ﻿using GHI.Premium.System;
-using MFE;
+using MFE.Core;
 using MFE.Graphics;
 using MFE.Graphics.Controls;
 using MFE.Graphics.Media;

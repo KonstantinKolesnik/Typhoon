@@ -1,5 +1,5 @@
 ﻿using GHI.Premium.System;
-using MFE;
+using MFE.Core;
 using MFE.LCD;
 using Microsoft.SPOT.Hardware;
 using Typhoon.Server;

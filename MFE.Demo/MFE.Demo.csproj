@@ -71,7 +71,7 @@
     </ProjectReference>
     <ProjectReference Include="..\MFE.Graphics\MFE.Graphics.csproj">
       <Project>{8CFF5B22-907F-470D-884B-1AA14D6F0710}</Project>
-      <Name>MFE.Graphics</Name>
+      <Name>MFE.Graphics %28MFE Engine\Deprecate\MFE.Graphics%29</Name>
     </ProjectReference>
     <ProjectReference Include="..\MFE\MFE.csproj">
       <Project>{4CC63A08-2BAC-45F9-B20E-AAFB928C6630}</Project>
