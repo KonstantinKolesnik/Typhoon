@@ -99,6 +99,10 @@
     <None Include="Resources\PowerOn.gif" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\MFE\MFE.LCD\MFE.LCD.csproj">
+      <Project>{C1665195-8494-4964-A440-736834D0D402}</Project>
+      <Name>MFE.LCD</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MFE.Device\MFE.Device.csproj">
       <Project>{27C90F37-990E-4881-AD82-BCE15A4342DD}</Project>
       <Name>MFE.Device</Name>
@@ -106,10 +110,6 @@
     <ProjectReference Include="..\MFE.Graphics\MFE.Graphics.csproj">
       <Project>{8CFF5B22-907F-470D-884B-1AA14D6F0710}</Project>
       <Name>MFE.Graphics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MFE.LCD\MFE.LCD.csproj">
-      <Project>{E885C50A-8B79-4D2F-9FA6-23D17E7E2BAC}</Project>
-      <Name>MFE.LCD</Name>
     </ProjectReference>
     <ProjectReference Include="..\MFE.USB\MFE.USB.csproj">
       <Project>{D462A667-3F02-4376-BA2A-F1D72BD00296}</Project>

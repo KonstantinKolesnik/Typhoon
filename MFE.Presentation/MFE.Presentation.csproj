@@ -64,8 +64,8 @@
     <Reference Include="Microsoft.SPOT.TinyCore" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MFE.LCD\MFE.LCD.csproj">
-      <Project>{E885C50A-8B79-4D2F-9FA6-23D17E7E2BAC}</Project>
+    <ProjectReference Include="..\..\MFE\MFE.LCD\MFE.LCD.csproj">
+      <Project>{C1665195-8494-4964-A440-736834D0D402}</Project>
       <Name>MFE.LCD</Name>
     </ProjectReference>
     <ProjectReference Include="..\MFE\MFE.csproj">
