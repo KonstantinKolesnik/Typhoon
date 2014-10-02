@@ -61,13 +61,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\MFE\MFE.Core\MFE.Core.csproj">
+      <Project>{8EE96EBA-F6D8-4433-A72E-AED3A5A0EFDA}</Project>
+      <Name>MFE.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\MFE\MFE.LCD\MFE.LCD.csproj">
       <Project>{C1665195-8494-4964-A440-736834D0D402}</Project>
       <Name>MFE.LCD</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MFE.Device\MFE.Device.csproj">
-      <Project>{27C90F37-990E-4881-AD82-BCE15A4342DD}</Project>
-      <Name>MFE.Device</Name>
     </ProjectReference>
     <ProjectReference Include="..\MFE.Graphics\MFE.Graphics.csproj">
       <Project>{8CFF5B22-907F-470D-884B-1AA14D6F0710}</Project>

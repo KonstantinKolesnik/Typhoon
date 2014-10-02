@@ -1,5 +1,5 @@
 ﻿using GHI.Premium.System;
-using MFE.Device;
+using MFE.Core;
 using MFE.Graphics;
 using MFE.Graphics.Controls;
 using MFE.Graphics.Media;
@@ -19,7 +19,7 @@ namespace MFE.Demo
 
         protected override void Run()
         {
-            if (!DeviceManager.IsEmulator)
+            if (!Utils.IsEmulator)
             {
                 bool reboot = false;
                 reboot |= LCDManager.SetLCDConfiguration_800_480();
