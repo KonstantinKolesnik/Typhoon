@@ -113,7 +113,7 @@
     </ProjectReference>
     <ProjectReference Include="..\MFE.Graphics\MFE.Graphics.csproj">
       <Project>{8CFF5B22-907F-470D-884B-1AA14D6F0710}</Project>
-      <Name>MFE.Graphics %28MFE Engine\Deprecate\MFE.Graphics%29</Name>
+      <Name>MFE.Graphics %28MFE Import\Deprecate\MFE.Graphics%29</Name>
     </ProjectReference>
     <ProjectReference Include="..\Typhoon.MF.Layouts\Typhoon.MF.Layouts.csproj">
       <Project>{A488DFF1-6E28-4A4C-A415-0E98F8B375E6}</Project>
