@@ -2,7 +2,7 @@ using GHI.Premium.System;
 using GHI.Premium.USBHost;
 using MFE.Graphics.Controls;
 using MFE.Graphics.Media;
-using MFE.USB;
+using MFE.USB.Host;
 using Microsoft.SPOT;
 using System;
 using Typhoon.Server;
